@@ -46,7 +46,7 @@ const IndexPageTemplate = ({
 
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <Image
-            className="h-56 w-full object-cover sm:h-72 md:h-92 lg:w-full lg:h-full"
+            className="h-full w-56 object-cover sm:h-72 md:h-92 lg:w-full lg:h-full"
             image={image}
             alt=""
           />
@@ -56,9 +56,9 @@ const IndexPageTemplate = ({
       {/* Featured projects */}
       <Container>
         <div className="flex justify-between items-baseline">
-          <SectionHeading>Our projects from all over the world</SectionHeading>
+          <SectionHeading>Les dernières actus du club</SectionHeading>
           <Link className="text-green-700 underline hover:text-green-800" to="/projects">
-            View all
+            Voir plus
           </Link>
         </div>
         <div className="mt-8">

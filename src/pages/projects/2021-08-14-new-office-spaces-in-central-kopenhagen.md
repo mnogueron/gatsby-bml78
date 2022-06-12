@@ -1,7 +1,7 @@
 ---
 templateKey: project-page
 title: New office spaces in central Kopenhagen
-date: 2021-08-14T15:04:51.597Z
+date: 2022-06-12T16:02:26.864Z
 featured: false
 featuredimage:
   image: /img/copernico-p_kicqcom4s-unsplash-1-.jpg

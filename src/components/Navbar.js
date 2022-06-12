@@ -47,6 +47,10 @@ const PartialNavLink = ({ children, ...rest }) => {
 const Navbar = ({ className }) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const handleMenuClose = () => {
+    setMenuOpen(false);
+  }
+
   return (
     <nav className={`fixed top-0 w-full z-30 bg-white shadow-xl ${className}`}>
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto md:flex md:justify-between md:items-center">
@@ -65,7 +69,7 @@ const Navbar = ({ className }) => {
             />
             <div className="text-xl font-bold tracking-wide lg:text-2xl">
               <span className="text-gray-800 font-semibold">Badminton</span>
-              <span className="text-green-700"> Maisons-Laffitte</span>
+              <span className="text-red-700"> Maisons-Laffitte</span>
             </div>
           </Link>
 
@@ -96,33 +100,31 @@ const Navbar = ({ className }) => {
           <div className="flex flex-col w-full md:flex-row md:mx-6 md:my-2 items-center">
             <ExactNavLink
               to="/"
-              onClick={() => {
-                setMenuOpen(false)
-              }}
+              onClick={handleMenuClose}
             >
-              Home
+              Accueil
             </ExactNavLink>
             <PartialNavLink
-              to="/projects"
-              onClick={() => {
-                setMenuOpen(false)
-              }}
+              to="/inscription"
+              onClick={handleMenuClose}
             >
-              Projects
+              Infos Pratiques
+            </PartialNavLink>
+            <PartialNavLink
+              to="/projects"
+              onClick={handleMenuClose}
+            >
+              Actualités
             </PartialNavLink>
             <ExactNavLink
               to="/about"
-              onClick={() => {
-                setMenuOpen(false)
-              }}
+              onClick={handleMenuClose}
             >
-              About
+              Nos Sections
             </ExactNavLink>
             <ExactNavLink
               to="/contact"
-              onClick={() => {
-                setMenuOpen(false)
-              }}
+              onClick={handleMenuClose}
             >
               Contact
             </ExactNavLink>

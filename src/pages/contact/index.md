@@ -1,8 +1,8 @@
 ---
 templateKey: contact-page
 title: Contact
-heading: Contact us
-subheading: Visit us in our offices or simply drop us a message
+heading: Nous contacter
+subheading: Venez nous rencontrer ou laissez nous un message
 contactform:
   heading: Let's work together!
   description: We'd love to hear from you. Send us a message using the form below,

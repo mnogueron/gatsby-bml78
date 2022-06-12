@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
-title: About
-heading: About us
+title: Nos Sections
+heading: Les Sections du BML
 subheading: Our values, mission and culture
 team:
   - name: Courtney Henry

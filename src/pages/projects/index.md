@@ -1,6 +1,6 @@
 ---
 templateKey: projects-page
-title: Projects
-heading: Our Projects
-subheading: Transforming urban spaces all over the world
+title: Actualités
+heading: L'Actualité du Club
+subheading: Retrouvez toutes les news du club ici
 ---

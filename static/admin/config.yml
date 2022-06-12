@@ -133,6 +133,32 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
+      - file: "src/pages/inscription/index.md"
+        label: "Inscription"
+        name: "inscription"
+        fields:
+          - {
+            label: "Template Key",
+            name: "templateKey",
+            widget: "hidden",
+            default: "inscription-page",
+          }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+            label: Team,
+            label_singular: Member,
+            name: team,
+            widget: list,
+            fields:
+              [
+                { label: Name, name: name, widget: string },
+                { label: Title, name: title, widget: string },
+                { label: Image, name: image, widget: image },
+              ],
+          }
       - file: "src/pages/contact/index.md"
         label: "Contact"
         name: "contact"

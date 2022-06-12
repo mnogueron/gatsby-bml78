@@ -1,6 +1,7 @@
 const siteUrl =
   process.env.URL || `https://objective-thompson-fe2703.netlify.app`
 
+// TODO change title and description
 module.exports = {
   siteMetadata: {
     title: "UrbanGarden",

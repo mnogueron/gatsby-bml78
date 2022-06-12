@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: jimmybutton/gatsby-netlifycms-tailwind-starter
-  branch: main
+  repo: mnogueron/gatsby-bml78
+  branch: master
 
 local_backend: true
 

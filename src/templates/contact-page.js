@@ -4,16 +4,16 @@ import MyHelmet from "../components/MyHelmet"
 import ContactPageTemplate from "./ContactPageTemplate"
 
 function ContactPage({ data }) {
-  const fm = data.markdownRemark.frontmatter
+  const { title, subheading, heading, contactform, office} = data.markdownRemark.frontmatter
 
   return (
     <>
-      <MyHelmet title={fm.title} description={fm.subheading} />
+      <MyHelmet title={title} description={subheading} />
       <ContactPageTemplate
-        heading={fm.heading}
-        subheading={fm.subheading}
-        contactform={fm.contactform}
-        office={fm.office}
+        heading={heading}
+        subheading={subheading}
+        contactform={contactform}
+        office={office}
       />
     </>
   )

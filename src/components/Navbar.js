@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { Heading } from "@chakra-ui/react";
 
 const NAVLINK_CLASSES =
   "my-1 py-3 px-3 text-center font-medium text-gray-600 border-b-4 border-white hover:border-green-700 md:mx-2 md:my-0"
@@ -67,10 +68,11 @@ const Navbar = ({ className }) => {
               backgroundColor="transparent"
               placeholder="blurred"
             />
-            <div className="text-xl font-bold tracking-wide lg:text-2xl">
+            <Heading size={'md'}>Badminton Maisons-Laffitte</Heading>
+            {/*<div className="text-xl font-bold tracking-wide lg:text-2xl">
               <span className="text-gray-800 font-semibold">Badminton</span>
               <span className="text-red-700"> Maisons-Laffitte</span>
-            </div>
+            </div>*/}
           </Link>
 
           {/* Mobile menu button */}

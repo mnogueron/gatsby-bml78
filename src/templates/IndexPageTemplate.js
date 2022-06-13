@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { SectionHeading, TextImageSplit } from "../components/Sections"
 import { PrimaryButton, SecondaryButton } from "../components/Buttons"
+import {Button} from '@chakra-ui/react';
 import { Container, CardSet } from "../components/Sections"
 import Image from "../components/Image"
 
@@ -36,9 +37,7 @@ const IndexPageTemplate = ({
                 <p className="mt-2 text-green-100 sm:mt-4 lg:mt-6 lg:text-xl">
                   {subheading}
                 </p>
-                <PrimaryButton to="/contact" className="mt-6 lg:mt-10">
-                  Contact us
-                </PrimaryButton>
+                <Button colorScheme='teal' size="lg" as={Link} to="/contact">Contact us</Button>
               </div>
             </div>
           </div>

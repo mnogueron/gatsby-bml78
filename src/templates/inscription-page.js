@@ -30,20 +30,6 @@ export const inscriptionPageQuery = graphql`
         title
         heading
         subheading
-        team {
-          name
-          title
-          image {
-            childImageSharp {
-              gatsbyImageData(
-                width: 640
-                placeholder: BLURRED
-                aspectRatio: 1.5
-                transformOptions: { fit: COVER, cropFocus: CENTER }
-              )
-            }
-          }
-        }
       }
     }
   }

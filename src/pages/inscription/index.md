@@ -5,6 +5,8 @@ heading: Rejoindre le BML
 subheading: Our values, mission and culture
 team: []
 ---
+`youtube: https://www.youtube.com/watch?v=SMDD1FqOPvY`
+
 ### Comment s'inscrire au BML
 
 ***Nouveauté : l'inscription se fait via l'application "MonClub" téléchargeable sous Apple Store ou Play Store (scanner le QR code à droite, code du club "badmintonml"). Veuillez télécharger les documents liés à votre section ci-dessous, les remplir et les charger dans l'application.***

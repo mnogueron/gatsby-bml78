@@ -1,37 +1,62 @@
-import React from "react"
+import React from 'react';
+import { Box, Heading, Text, Container } from '@chakra-ui/react';
 
 // A simple header without an image
 function Header({ heading, subheading }) {
   return (
-    <header className="bg-green-700 pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24">
-      <div className="mx-auto max-w-4xl text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
+    <Box
+      as="header"
+      backgroundColor="blue.700"
+      marginTop={{ base: '48px', sm: 68 }}
+      py={{ base: 12, sm: 16, md: 20, lg: 24 }}
+    >
+      <Container maxW="7xl" textAlign="center">
+        <Heading
+          as="h1"
+          fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+          color="white"
+        >
           {heading}
-        </h1>
-        {subheading ? (
-          <p className="mt-3 text-green-100 sm:text-lg lg:text-xl lg:mt-6">
+        </Heading>
+        {subheading && (
+          <Text fontSize={'xl'} color={'gray.100'} mt={6}>
             {subheading}
-          </p>
-        ) : null}
-      </div>
-    </header>
-  )
+          </Text>
+        )}
+      </Container>
+    </Box>
+  );
 }
 
 // A different header for the project page
 export function ProjectHeader({ heading, location, date }) {
   return (
-    <header className="bg-green-700 py-24 sm:pt-28 sm:pb-32 md:pt-32 md:pb-32 lg:py-36">
-      <div className="mx-auto max-w-4xl text-center px-4 sm:px-6 lg:px-8">
-        <div className="text-green-100 sm:text-lg lg:text-xl lg:mt-6">
+    <Box
+      as="header"
+      backgroundColor="blue.700"
+      marginTop={{ base: '48px', sm: 68 }}
+      py={{ base: 24, sm: 28, md: 32, lg: 36 }}
+      pb={{ base: 24, sm: 32 }}
+    >
+      <Container maxW="7xl" textAlign="center">
+        <Text
+          fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}
+          color={'gray.100'}
+          mt={6}
+        >
           {location} &bull; {date}
-        </div>
-        <h1 className="mt-2 text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
+        </Text>
+        <Heading
+          as="h1"
+          fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+          color="white"
+          mt={2}
+        >
           {heading}
-        </h1>
-      </div>
-    </header>
-  )
+        </Heading>
+      </Container>
+    </Box>
+  );
 }
 
-export default Header
+export default Header;

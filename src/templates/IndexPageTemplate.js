@@ -1,10 +1,32 @@
-import React from "react"
-import { Link } from "gatsby"
-import { SectionHeading, TextImageSplit } from "../components/Sections"
-import { PrimaryButton, SecondaryButton } from "../components/Buttons"
-import {Button} from '@chakra-ui/react';
-import { Container, CardSet } from "../components/Sections"
-import Image from "../components/Image"
+import React from 'react';
+import { Link } from 'gatsby';
+import { SectionHeading, TextImageSplit } from '../components/Sections';
+import { SecondaryButton } from '../components/Buttons';
+import {
+  Button,
+  Container,
+  Box,
+  VStack,
+  Heading,
+  Text,
+  Icon,
+} from '@chakra-ui/react';
+import { MdChevronRight } from 'react-icons/md';
+import { CardSet } from '../components/Sections';
+import Image from '../components/Image';
+
+const SeeMoreButton = ({ to }) => {
+  return (
+    <Button
+      variant="ghost"
+      as={Link}
+      to={to}
+      rightIcon={<Icon as={MdChevronRight} boxSize={8}/>}
+    >
+      Voir plus
+    </Button>
+  )
+}
 
 const IndexPageTemplate = ({
   heading,
@@ -16,7 +38,51 @@ const IndexPageTemplate = ({
   return (
     <div>
       {/* Header */}
-      <div className="relative bg-green-700 overflow-hidden">
+      <Box backgroundColor={'blue.700'} marginTop={{ base: '48px', sm: 68 }} position="relative">
+        <Container maxW="7xl" py={16} minHeight={{ base: 'calc(100vh - 48px)', sm: "500px" }}>
+          <VStack
+            h="100%"
+            justifyContent="center"
+            alignItems={{base: 'center', sm: "flex-start"}}
+            spacing={4}
+          >
+            <Heading size="2xl" color={'gray.100'} maxW={{ base: '100%', sm: "50%"}}>
+              {heading}
+            </Heading>
+            <Text fontSize="xl" color={'gray.200'} maxW={{base: '100%', sm: "50%"}}>
+              {subheading}
+            </Text>
+            <Button colorScheme="blue" size="lg" as={Link} to="/contact">
+              Nous contacter
+            </Button>
+          </VStack>
+        </Container>
+
+        <Box
+          display={{ base: 'none', sm: 'block'}}
+          height={{base: "300px", sm: "100%"}}
+          position={{ base: "relative", sm:"absolute"}}
+          top={0}
+          bottom={0}
+          right={0}
+          pt={{ base: 0, sm: 4 }}
+        >
+          <Box
+            as={Image}
+            image={image}
+            alt=""
+            sx={{
+              /*transform: 'scaleX(-1)',*/
+              height: {base: "100%", sm: "100%"},
+              '& > div': {
+                height: {base: "100%", sm: "100%"},
+              },
+            }}
+          />
+        </Box>
+      </Box>
+
+      {/*<div className="relative bg-green-700 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="relative z-10 pt-24 pb-12 bg-green-700 sm:pt-28 sm:pb-14 md:pt-32 md:pb-16 lg:w-1/2 lg:pt-44 lg:pb-24 xl:pt-48 xl:pb-32">
             <svg
@@ -50,18 +116,30 @@ const IndexPageTemplate = ({
             alt=""
           />
         </div>
-      </div>
+      </div>*/}
 
       {/* Featured projects */}
-      <Container>
+      <Container maxW="7xl" my={16}>
         <div className="flex justify-between items-baseline">
-          <SectionHeading>Les dernières actus du club</SectionHeading>
-          <Link className="text-green-700 underline hover:text-green-800" to="/projects">
-            Voir plus
-          </Link>
+          <Heading as="h2" size="xl">
+            Les dernières actus du club
+          </Heading>
+          <SeeMoreButton to="/articles" />
         </div>
         <div className="mt-8">
-          <CardSet posts={posts} />
+          <CardSet posts={posts} subheading={"Actualités"}/>
+        </div>
+      </Container>
+
+      <Container maxW="7xl" my={16}>
+        <div className="flex justify-between items-baseline">
+          <Heading as="h2" size="xl">
+            Les derniers résultats du club
+          </Heading>
+          <SeeMoreButton to="/articles" />
+        </div>
+        <div className="mt-8">
+          <CardSet posts={posts} subheading={"Résultats"}/>
         </div>
       </Container>
 
@@ -76,7 +154,7 @@ const IndexPageTemplate = ({
         </SecondaryButton>
       </TextImageSplit>
     </div>
-  )
-}
+  );
+};
 
-export default IndexPageTemplate
+export default IndexPageTemplate;

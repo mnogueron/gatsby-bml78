@@ -4,7 +4,7 @@ import Content from "../components/Content"
 import { ProjectHeader } from "../components/Header"
 import { Container } from "../components/Sections"
 
-function ProjectPageTemplate({ title, location, date, image, body }) {
+function ArticlePageTemplate({ title, location, date, image, body }) {
   return (
     <>
       <ProjectHeader heading={title} location={location} date={date} />
@@ -16,4 +16,4 @@ function ProjectPageTemplate({ title, location, date, image, body }) {
   )
 }
 
-export default ProjectPageTemplate
+export default ArticlePageTemplate

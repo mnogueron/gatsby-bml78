@@ -6,9 +6,9 @@ import {
   ArrowNarrowLeftIcon,
   ArrowNarrowRightIcon,
 } from "@heroicons/react/solid"
-import ProjectPageTemplate from "./ProjectPageTemplate"
+import ArticlePageTemplate from "./ArticlePageTemplate"
 
-const ProjectPage = ({ data, pageContext }) => {
+const ArticlePage = ({ data, pageContext }) => {
   const { next, previous } = pageContext
   const { markdownRemark: project } = data
   const { frontmatter: fm } = project
@@ -16,7 +16,7 @@ const ProjectPage = ({ data, pageContext }) => {
   return (
     <>
       <MyHelmet title={fm.title} description={project.excerpt} />
-      <ProjectPageTemplate
+      <ArticlePageTemplate
         location={fm.location}
         title={fm.title}
         date={fm.date}
@@ -67,26 +67,26 @@ const ProjectPage = ({ data, pageContext }) => {
   )
 }
 
-export default ProjectPage
+export default ArticlePage
 
-export const projectQuery = graphql`
-  query ProjectPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      excerpt
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        location
-        featuredimage {
-          alt
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 640, placeholder: BLURRED)
+export const articleQuery = graphql`
+    query ArticlePage($id: String!) {
+        markdownRemark(id: { eq: $id }) {
+            html
+            excerpt
+            frontmatter {
+                title
+                date(formatString: "MMMM DD, YYYY")
+                location
+                featuredimage {
+                    alt
+                    image {
+                        childImageSharp {
+                            gatsbyImageData(width: 640, placeholder: BLURRED)
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 `

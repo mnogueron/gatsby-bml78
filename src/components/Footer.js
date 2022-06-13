@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import {Heading} from "@chakra-ui/react";
 
 const Footer = () => {
   return (
@@ -11,24 +12,20 @@ const Footer = () => {
             <div className="px-4 sm:px-6 lg:px-8">
               <Link className="flex items-center gap-1" to="/">
                 <StaticImage
-                  src="../img/urbangarden-icon.png"
-                  alt="UrbanGarden icon"
+                  src="../img/bml-icon.png"
+                  alt="Badminton Maisons-Laffitte icon"
                   layout="fixed"
-                  width={40}
-                  height={40}
+                  width={114}
+                  height={85}
                   backgroundColor="transparent"
                   placeholder="blurred"
                 />
-                <div className="text-xl font-bold tracking-wide">
+                <Heading size={'sm'}>Badminton Maisons-Laffitte</Heading>
+                {/*<div className="text-xl font-bold tracking-wide">
                   <span className="text-gray-800 font-semibold">Urban</span>
                   <span className="text-green-700">Garden</span>
-                </div>
+                </div>*/}
               </Link>
-
-              <p className="max-w-md mt-2 text-gray-600 dark:text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis, nisi! Id.
-              </p>
             </div>
           </div>
 

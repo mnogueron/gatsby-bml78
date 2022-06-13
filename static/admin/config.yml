@@ -9,10 +9,10 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "projects"
-    label: "Projects"
-    folder: "src/pages/projects"
-    filter: {field: "templateKey", value: "project-page"}
+  - name: "articles"
+    label: "Articles"
+    folder: "src/pages/articles"
+    filter: {field: "templateKey", value: "article-page"}
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}"
@@ -21,7 +21,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "project-page",
+          default: "article-page",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -94,15 +94,15 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/projects/index.md"
-        label: "Projects"
-        name: "projects-index"
+      - file: "src/pages/articles/index.md"
+        label: "Articles"
+        name: "articles-index"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "projects-page",
+              default: "articles-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: Heading, name: heading, widget: string }

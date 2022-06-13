@@ -2,7 +2,7 @@ import React from "react"
 import Header from "../components/Header"
 import { Container, CardSet } from "../components/Sections"
 
-function ProjectsPageTemplate({ heading, subheading, posts = [] }) {
+function ArticlesPageTemplate({ heading, subheading, posts = [] }) {
   return (
     <div>
       <Header heading={heading} subheading={subheading} />
@@ -13,4 +13,4 @@ function ProjectsPageTemplate({ heading, subheading, posts = [] }) {
   )
 }
 
-export default ProjectsPageTemplate
+export default ArticlesPageTemplate

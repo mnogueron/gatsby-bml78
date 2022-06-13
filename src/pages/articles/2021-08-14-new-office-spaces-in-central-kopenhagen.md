@@ -1,5 +1,5 @@
 ---
-templateKey: project-page
+templateKey: article-page
 title: New office spaces in central Kopenhagen
 date: 2022-06-12T16:02:26.864Z
 featured: false

@@ -64,7 +64,7 @@ export const indexPageQuery = graphql`
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
         frontmatter: {
-          templateKey: { eq: "project-page" }
+          templateKey: { eq: "article-page" }
           featured: { eq: true }
         }
       }
@@ -79,7 +79,7 @@ export const indexPageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date
             location
             featuredimage {
               alt

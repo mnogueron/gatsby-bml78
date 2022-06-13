@@ -1,8 +1,8 @@
 import React from "react"
-import ProjectPageTemplate from "../../templates/ProjectPageTemplate"
+import ArticlePageTemplate from "../../templates/ArticlePageTemplate"
 const marked = require("marked")
 
-const ProjectPagePreview = ({ entry, getAsset }) => {
+const ArticlePagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS()
 
   if (data) {
@@ -19,7 +19,7 @@ const ProjectPagePreview = ({ entry, getAsset }) => {
     const body = data.body ? marked(data.body) : null
 
     return (
-      <ProjectPageTemplate
+      <ArticlePageTemplate
         location={data.location}
         title={data.title}
         date={new Date(data.date).toLocaleDateString("en-GB", {
@@ -37,4 +37,4 @@ const ProjectPagePreview = ({ entry, getAsset }) => {
   }
 }
 
-export default ProjectPagePreview
+export default ArticlePagePreview

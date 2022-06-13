@@ -1,12 +1,12 @@
 import React from "react"
-import ProjectsPageTemplate from "../../templates/ProjectsPageTemplate"
+import ArticlesPageTemplate from "../../templates/ArticlesPageTemplate"
 
-const ProjectsPagePreview = ({ entry, getAsset }) => {
+const ArticlesPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS()
 
   if (data) {
     return (
-      <ProjectsPageTemplate
+      <ArticlesPageTemplate
         heading={data.heading}
         subheading={data.subheading}
       />
@@ -16,4 +16,4 @@ const ProjectsPagePreview = ({ entry, getAsset }) => {
   }
 }
 
-export default ProjectsPagePreview
+export default ArticlesPagePreview

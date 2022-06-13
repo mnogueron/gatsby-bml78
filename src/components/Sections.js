@@ -55,7 +55,7 @@ export const TextImageSplit = ({ image, children, imageLeft = false }) => {
  * Cards for post previews, laid out in a grid
  * columns: 1 (xs), 2 (sm) and 3 (lg)
  */
-export const CardSet = ({ className, posts }) => {
+export const CardSet = ({ className, posts, subheading }) => {
   return (
     <div
       className={`grid grid-cols-1 mt-6 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-12 xl:gap-x-8 ${className}`}
@@ -67,7 +67,7 @@ export const CardSet = ({ className, posts }) => {
             image={fm.featuredimage}
             heading={fm.title}
             date={fm.date}
-            location={fm.location}
+            subheading={subheading || fm.location}
             to={post.fields.slug}
             key={idx}
           />

@@ -128,6 +128,7 @@ const Navbar = ({ className }) => {
                     key={menu.key}
                     label={menu.label}
                     options={menu.options}
+                    onClick={handleMenuClose}
                   />
                 );
               }

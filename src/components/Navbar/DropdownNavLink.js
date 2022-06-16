@@ -66,7 +66,11 @@ const DropdownNavLink = ({ label, options, onClick }) => {
         onMouseEnter={handleOpen}
         onMouseLeave={handleClose}
       >
-        <NavLabel label={label} isHover={isOpen} />
+        <NavLabel
+          label={label}
+          isHover={isOpen}
+          icon={<Icon as={MdExpandMore} boxSize={26} />}
+        />
       </MenuButton>
       <MenuList onMouseEnter={handleOpen} onMouseLeave={handleClose}>
         {options.map(({ label, to, key }) => (

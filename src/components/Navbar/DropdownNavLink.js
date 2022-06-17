@@ -42,6 +42,7 @@ const DropdownNavLink = ({ label, options, onClick }) => {
               <Icon as={MdExpandMore} boxSize={26} />
             )
           }
+          cursor="pointer"
         />
         <Collapse in={isOpen} animateOpacity>
           {options.map(({ label, to, key }) => (

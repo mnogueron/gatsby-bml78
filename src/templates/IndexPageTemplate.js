@@ -15,18 +15,19 @@ import { MdChevronRight } from 'react-icons/md';
 import { CardSet } from '../components/Sections';
 import Image from '../components/Image';
 
-const SeeMoreButton = ({ to }) => {
+const SeeMoreButton = ({ to, ...rest }) => {
   return (
     <Button
       variant="ghost"
       as={Link}
       to={to}
-      rightIcon={<Icon as={MdChevronRight} boxSize={8}/>}
+      rightIcon={<Icon as={MdChevronRight} boxSize={8} />}
+      {...rest}
     >
       Voir plus
     </Button>
-  )
-}
+  );
+};
 
 const IndexPageTemplate = ({
   heading,
@@ -38,18 +39,34 @@ const IndexPageTemplate = ({
   return (
     <div>
       {/* Header */}
-      <Box backgroundColor={'blue.700'} marginTop={{ base: '48px', sm: 68 }} position="relative">
-        <Container maxW="7xl" py={16} minHeight={{ base: 'calc(100vh - 48px)', sm: "500px" }}>
+      <Box
+        backgroundColor={'blue.700'}
+        marginTop={{ base: '48px', sm: 68 }}
+        position="relative"
+      >
+        <Container
+          maxW="7xl"
+          py={16}
+          minHeight={{ base: 'calc(100vh - 48px)', sm: '500px' }}
+        >
           <VStack
             h="100%"
             justifyContent="center"
-            alignItems={{base: 'center', sm: "flex-start"}}
+            alignItems={{ base: 'center', sm: 'flex-start' }}
             spacing={4}
           >
-            <Heading size="2xl" color={'gray.100'} maxW={{ base: '100%', sm: "50%"}}>
+            <Heading
+              size="2xl"
+              color={'gray.100'}
+              maxW={{ base: '100%', sm: '50%' }}
+            >
               {heading}
             </Heading>
-            <Text fontSize="xl" color={'gray.200'} maxW={{base: '100%', sm: "50%"}}>
+            <Text
+              fontSize="xl"
+              color={'gray.200'}
+              maxW={{ base: '100%', sm: '50%' }}
+            >
               {subheading}
             </Text>
             <Button colorScheme="blue" size="lg" as={Link} to="/contact">
@@ -59,9 +76,9 @@ const IndexPageTemplate = ({
         </Container>
 
         <Box
-          display={{ base: 'none', sm: 'block'}}
-          height={{base: "300px", sm: "100%"}}
-          position={{ base: "relative", sm:"absolute"}}
+          display={{ base: 'none', sm: 'block' }}
+          height={{ base: '300px', sm: '100%' }}
+          position={{ base: 'relative', sm: 'absolute' }}
           top={0}
           bottom={0}
           right={0}
@@ -73,9 +90,9 @@ const IndexPageTemplate = ({
             alt=""
             sx={{
               /*transform: 'scaleX(-1)',*/
-              height: {base: "100%", sm: "100%"},
+              height: { base: '100%', sm: '100%' },
               '& > div': {
-                height: {base: "100%", sm: "100%"},
+                height: { base: '100%', sm: '100%' },
               },
             }}
           />
@@ -124,11 +141,22 @@ const IndexPageTemplate = ({
           <Heading as="h2" size="xl">
             Les dernières actus du club
           </Heading>
-          <SeeMoreButton to="/articles" />
+          <SeeMoreButton
+            display={{ base: 'none', md: 'flex' }}
+            to="/articles"
+          />
         </div>
         <div className="mt-8">
-          <CardSet posts={posts} subheading={"Actualités"}/>
+          <CardSet posts={posts} subheading={'Actualités'} />
         </div>
+        <SeeMoreButton
+          display={{ base: 'flex', md: 'none' }}
+          to="/articles"
+          variant="outline"
+          my={4}
+          mx="auto"
+          maxW="2xs"
+        />
       </Container>
 
       <Container maxW="7xl" my={16}>
@@ -136,11 +164,22 @@ const IndexPageTemplate = ({
           <Heading as="h2" size="xl">
             Les derniers résultats du club
           </Heading>
-          <SeeMoreButton to="/articles" />
+          <SeeMoreButton
+            display={{ base: 'none', md: 'flex' }}
+            to="/articles"
+          />
         </div>
         <div className="mt-8">
-          <CardSet posts={posts} subheading={"Résultats"}/>
+          <CardSet posts={posts} subheading={'Résultats'} />
         </div>
+        <SeeMoreButton
+          display={{ base: 'flex', md: 'none' }}
+          to="/articles"
+          variant="outline"
+          my={4}
+          mx="auto"
+          maxW="2xs"
+        />
       </Container>
 
       {/* About section */}

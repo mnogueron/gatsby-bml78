@@ -65,9 +65,9 @@ export const indexPageQuery = graphql`
       filter: {
         frontmatter: {
           templateKey: { eq: "article-page" }
-          featured: { eq: true }
         }
       }
+      limit: 3
     ) {
       edges {
         node {

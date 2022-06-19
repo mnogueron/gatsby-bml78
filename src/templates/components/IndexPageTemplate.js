@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { SectionHeading, TextImageSplit } from '../../components/Sections';
-import { SecondaryButton } from '../../components/Buttons';
 import {
   Button,
   Container,
@@ -76,7 +74,7 @@ const IndexPageTemplate = ({
             >
               {subheading}
             </Text>
-            <Button colorScheme="blue" size="lg" as={Link} to="/inscription">
+            <Button colorScheme="blue" size="lg" as={Link} to="/infos-pratiques/inscription">
               Nous rejoindre
             </Button>
           </VStack>
@@ -188,7 +186,7 @@ const IndexPageTemplate = ({
       </Container>
 
       {/* About section */}
-      <TextImageSplit image={about.image}>
+      {/*<TextImageSplit image={about.image}>
         <SectionHeading>{about.heading}</SectionHeading>
         <p className="mt-2 text-gray-600 dark:text-gray-300">
           {about.description}
@@ -196,7 +194,7 @@ const IndexPageTemplate = ({
         <SecondaryButton to={about.button.url} className="mt-6 lg:mt-10">
           {about.button.label}
         </SecondaryButton>
-      </TextImageSplit>
+      </TextImageSplit>*/}
     </div>
   );
 };

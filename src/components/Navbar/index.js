@@ -16,6 +16,11 @@ const MENU = [
     label: 'Infos Pratiques',
     options: [
       {
+        key: 'sections',
+        label: 'Nos Sections',
+        to: '/infos-pratiques/sections',
+      },
+      {
         key: 'inscription',
         label: 'Inscription',
         to: '/infos-pratiques/inscription',
@@ -53,11 +58,6 @@ const MENU = [
     label: 'Actualités',
     to: '/articles',
     partial: true,
-  },
-  {
-    key: 'about',
-    label: 'Nos Sections',
-    to: '/about',
   },
   {
     key: 'contact',

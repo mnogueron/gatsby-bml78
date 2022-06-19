@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import MyHelmet from "../components/MyHelmet"
-import ContactPageTemplate from "./ContactPageTemplate"
+import ContactPageTemplate from "./components/ContactPageTemplate"
 
 function ContactPage({ data }) {
   const { title, subheading, heading, contactform, office} = data.markdownRemark.frontmatter

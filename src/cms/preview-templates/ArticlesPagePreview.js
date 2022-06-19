@@ -1,5 +1,5 @@
 import React from "react"
-import ArticlesPageTemplate from "../../templates/ArticlesPageTemplate"
+import ArticlesPageTemplate from "../../templates/components/ArticlesPageTemplate"
 
 const ArticlesPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS()

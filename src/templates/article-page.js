@@ -6,7 +6,7 @@ import {
   ArrowNarrowLeftIcon,
   ArrowNarrowRightIcon,
 } from "@heroicons/react/solid"
-import ArticlePageTemplate from "./ArticlePageTemplate"
+import ArticlePageTemplate from "./components/ArticlePageTemplate"
 
 const ArticlePage = ({ data, pageContext }) => {
   const { next, previous } = pageContext
@@ -21,7 +21,7 @@ const ArticlePage = ({ data, pageContext }) => {
         title={fm.title}
         date={fm.date}
         image={fm.featuredimage}
-        body={project.html}
+        body={project.htmlAst}
       />
 
       {/* Links to previous and next project */}
@@ -72,7 +72,7 @@ export default ArticlePage
 export const articleQuery = graphql`
     query ArticlePage($id: String!) {
         markdownRemark(id: { eq: $id }) {
-            html
+            htmlAst
             excerpt
             frontmatter {
                 title

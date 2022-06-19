@@ -1,6 +1,6 @@
 import React from "react"
-import Header from "../components/Header"
-import { Container, CardSet } from "../components/Sections"
+import Header from "../../components/Header"
+import { Container, CardSet } from "../../components/Sections"
 
 function ArticlesPageTemplate({ heading, subheading, posts = [] }) {
   return (

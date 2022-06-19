@@ -18,22 +18,22 @@ const MENU = [
       {
         key: 'inscription',
         label: 'Inscription',
-        to: '/inscription',
+        to: '/infos-pratiques/inscription',
       },
       {
         key: 'avantageclub',
         label: 'Avantage Club',
-        to: '/avantages',
+        to: '/infos-pratiques/avantages',
       },
       {
         key: 'entrainements',
         label: 'Entraînements',
-        to: '/entrainements',
+        to: '/infos-pratiques/entrainements',
       },
       {
         key: 'calendrier',
         label: 'Calendrier',
-        to: '/calendrier',
+        to: '/infos-pratiques/calendrier',
       },
     ],
   },

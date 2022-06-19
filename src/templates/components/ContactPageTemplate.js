@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from "../components/Header"
-import { TextImageSplit, SectionHeading } from "../components/Sections"
+import Header from "../../components/Header"
+import { TextImageSplit, SectionHeading } from "../../components/Sections"
 
 function ContactPageTemplate({
   heading,

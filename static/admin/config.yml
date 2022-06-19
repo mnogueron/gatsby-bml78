@@ -8,45 +8,24 @@ local_backend: true
 media_folder: static/img
 public_folder: /img
 
-collections:
-  - name: "articles"
-    label: "Articles"
-    folder: "src/pages/articles"
-    filter: {field: "templateKey", value: "article-page"}
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "article-page",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured", name: "featured", widget: boolean }
-      # - {label: "Description", name: "description", widget: "text"}
-      # - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {
-          label: "Featured Image",
-          name: "featuredimage",
-          widget: object,
-          fields:
-            [
-              { label: Image, name: image, widget: image },
-              { label: Alt, name: alt, widget: string },
-            ],
-        }
-      - { label: Location, name: location, widget: string }
-      - { label: "Body", name: "body", widget: "markdown" }
-      # - {label: "Tags", name: "tags", widget: "list"}
+project: &CONTENT_PAGE
+  - {
+    label: "Template Key",
+    name: "templateKey",
+    widget: "hidden",
+    default: "content-page",
+  }
+  - { label: "Title", name: "title", widget: "string" }
+  - { label: Heading, name: heading, widget: string }
+  - { label: Subheading, name: subheading, widget: string }
+  - { label: "Body", name: "body", widget: "markdown" }
 
+collections:
   - name: "pages"
     label: "Pages"
     files:
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Accueil"
         name: "index"
         fields:
           - {
@@ -95,7 +74,7 @@ collections:
                 ],
             }
       - file: "src/pages/articles/index.md"
-        label: "Articles"
+        label: "Actualités"
         name: "articles-index"
         fields:
           - {
@@ -108,7 +87,7 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
       - file: "src/pages/about/index.md"
-        label: "About"
+        label: "À propos"
         name: "about"
         fields:
           - {
@@ -133,20 +112,7 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
-      - file: "src/pages/inscription/index.md"
-        label: "Inscription"
-        name: "inscription"
-        fields:
-          - {
-            label: "Template Key",
-            name: "templateKey",
-            widget: "hidden",
-            default: "inscription-page",
-          }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
-          - { label: "Body", name: "body", widget: "markdown" }
+
       - file: "src/pages/contact/index.md"
         label: "Contact"
         name: "contact"
@@ -184,3 +150,61 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
+      - file: "src/pages/infos-pratiques/inscription.md"
+        label: "Inscription"
+        name: "inscription"
+        fields: *CONTENT_PAGE
+      - file: "src/pages/infos-pratiques/avantages.md"
+        label: "Avantages"
+        name: "avantages"
+        fields: *CONTENT_PAGE
+      - file: "src/pages/infos-pratiques/entrainements.md"
+        label: "Entraînements"
+        name: "entrainements"
+        fields: *CONTENT_PAGE
+      - file: "src/pages/infos-pratiques/calendrier.md"
+        label: "Calendrier"
+        name: "calendrier"
+        fields: *CONTENT_PAGE
+
+  - name: "articles"
+    label: "Articles"
+    folder: "src/pages/articles"
+    filter: {field: "templateKey", value: "article-page"}
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "article-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured", name: "featured", widget: boolean }
+      # - {label: "Description", name: "description", widget: "text"}
+      # - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+      - {
+          label: "Featured Image",
+          name: "featuredimage",
+          widget: object,
+          fields:
+            [
+              { label: Image, name: image, widget: image },
+              { label: Alt, name: alt, widget: string },
+            ],
+        }
+      - { label: Location, name: location, widget: string }
+      - { label: "Body", name: "body", widget: "markdown" }
+      # - {label: "Tags", name: "tags", widget: "list"}
+  - name: "results"
+    label: "Résultats"
+    label_singular: "Résultat"
+    folder: "src/pages/results"
+    filter: { field: "templateKey", value: "content-page" }
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}"
+    fields: *CONTENT_PAGE

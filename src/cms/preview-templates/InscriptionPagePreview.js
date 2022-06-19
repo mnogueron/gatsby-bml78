@@ -1,5 +1,5 @@
 import React from "react"
-import AboutPageTemplate from "../../templates/AboutPageTemplate"
+import AboutPageTemplate from "../../templates/components/AboutPageTemplate"
 const marked = require("marked")
 
 const InscriptionPagePreview = ({ entry, getAsset }) => {

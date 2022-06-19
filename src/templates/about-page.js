@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import MyHelmet from "../components/MyHelmet"
-import AboutPageTemplate from "./AboutPageTemplate"
+import AboutPageTemplate from "./components/AboutPageTemplate"
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data

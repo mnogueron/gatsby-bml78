@@ -3,7 +3,7 @@ templateKey: index-page
 title: Badminton Maisons-Laffitte
 image: /img/bml_cheval.png
 heading: Badminton Maisons-Laffitte
-subheading: "*A Gatsby v3 starter template set up with Netlify CMS and Tailwind CSS."
+subheading: Ouverture des inscriptions pour l'année 2022 - 2023
 about:
   heading: Who we are
   description: Our team of architects, gardeners and enginners is working with

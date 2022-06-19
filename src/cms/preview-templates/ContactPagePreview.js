@@ -1,5 +1,5 @@
 import React from "react"
-import ContactPageTemplate from "../../templates/ContactPageTemplate"
+import ContactPageTemplate from "../../templates/components/ContactPageTemplate"
 const marked = require("marked")
 
 const ContactPagePreview = ({ entry, getAsset }) => {

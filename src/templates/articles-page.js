@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import MyHelmet from "../components/MyHelmet"
-import ArticlesPageTemplate from "./ArticlesPageTemplate"
+import ArticlesPageTemplate from "./components/ArticlesPageTemplate"
 
 const ArticlesPage = ({ data }) => {
   const { frontmatter: fm } = data.markdownRemark

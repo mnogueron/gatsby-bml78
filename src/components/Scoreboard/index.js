@@ -88,13 +88,13 @@ const ScoreCell = ({ children }) => {
   );
 };
 
-const Scoreboard = ({ teamA, teamB, score, hideHeader }) => {
+const Scoreboard = ({ matches, hideHeader }) => {
   return (
     <TableContainer maxW={'5xl'} margin="auto">
       <Table size="sm">
         {!hideHeader && (
           <Thead>
-            <Tr>
+            <Tr borderBottomWidth={3}>
               <Th width={'100px'}>Club</Th>
               <Th width={'150px'} textAlign="center">
                 Classement
@@ -105,76 +105,89 @@ const Scoreboard = ({ teamA, teamB, score, hideHeader }) => {
           </Thead>
         )}
         <Tbody>
-          <Tr>
-            <Td width={'100px'}>
-              <VStack alignItems={'flex-start'}>
-                <div>{teamA[0].club}</div>
-                <div>{teamA[1].club}</div>
-              </VStack>
-            </Td>
-            <Td width={'150px'}>
-              <VStack>
-                <RankingBadge ranking={teamA[0].classement} />
-                <RankingBadge ranking={teamA[1].classement} />
-              </VStack>
-            </Td>
-            <Td>
-              <VStack alignItems={'flex-start'}>
-                <div>{teamA[0].name}</div>
-                <div>{teamA[1].name}</div>
-              </VStack>
-            </Td>
-            <Td>
-              <Table size="sm">
+          {matches.map((match, index) => {
+            const {teamA, teamB, score} = match;
+            return (
+              <React.Fragment key={`match-${index}`}>
                 <Tr>
-                  <ScoreCell>{score[0][0]}</ScoreCell>
-                  <Center height="50px">
-                    <Divider orientation="vertical" />
-                  </Center>
-                  <ScoreCell>{score[1][0]}</ScoreCell>
-                  <Center height="50px">
-                    <Divider orientation="vertical" />
-                  </Center>
-                  <ScoreCell>{score[2][0]}</ScoreCell>
+                  <Td width={'100px'}>
+                    <VStack alignItems={'flex-start'}>
+                      {teamA.players.map(p => (
+                        <div key={`${p.name}-${p.club}`}>{p.club}</div>
+                      ))}
+                    </VStack>
+                  </Td>
+                  <Td width={'150px'}>
+                    <VStack>
+                      {teamA.players.map(p => (
+                        <RankingBadge key={`${p.name}-${p.ranking}`} ranking={p.ranking}/>
+                      ))}
+                    </VStack>
+                  </Td>
+                  <Td>
+                    <VStack alignItems={'flex-start'}>
+                      {teamA.players.map(p => (
+                        <div key={`${p.name}`}>{p.name}</div>
+                      ))}
+                    </VStack>
+                  </Td>
+                  <Td>
+                    <Table size="sm">
+                      <Tr>
+                        <ScoreCell>{score.set[0].scoreA}</ScoreCell>
+                        <Center height="50px">
+                          <Divider orientation="vertical" />
+                        </Center>
+                        <ScoreCell>{score.set[1].scoreA}</ScoreCell>
+                        <Center height="50px">
+                          <Divider orientation="vertical" />
+                        </Center>
+                        <ScoreCell>{score.set[2].scoreA}</ScoreCell>
+                      </Tr>
+                    </Table>
+                  </Td>
                 </Tr>
-              </Table>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td width={'100px'}>
-              <VStack alignItems={'flex-start'}>
-                <div>{teamB[0].club}</div>
-                <div>{teamB[1].club}</div>
-              </VStack>
-            </Td>
-            <Td width={'150px'}>
-              <VStack>
-                <RankingBadge ranking={teamB[0].classement} />
-                <RankingBadge ranking={teamB[1].classement} />
-              </VStack>
-            </Td>
-            <Td>
-              <VStack alignItems={'flex-start'}>
-                <div>{teamB[0].name}</div>
-                <div>{teamB[1].name}</div>
-              </VStack>
-            </Td>
-            <Td>
-              <Table size="sm">
-                <Tr>
-                  <ScoreCell>{score[0][1]}</ScoreCell>
-                  <Center height="50px">
-                    <Divider orientation="vertical" />
-                  </Center>
-                  <ScoreCell>{score[1][1]}</ScoreCell>
-                  <Center height="50px">
-                    <Divider orientation="vertical" />
-                  </Center>
-                  <ScoreCell>{score[2][1]}</ScoreCell>
+                <Tr borderBottomWidth={`${index < matches.length - 1 ? 4 : 1}px !important`}>
+                  <Td width={'100px'}>
+                    <VStack alignItems={'flex-start'}>
+                      {teamB.players.map(p => (
+                        <div key={`${p.name}-${p.club}`}>{p.club}</div>
+                      ))}
+                    </VStack>
+                  </Td>
+                  <Td width={'150px'}>
+                    <VStack>
+                      {teamB.players.map(p => (
+                        <RankingBadge key={`${p.name}-${p.ranking}`} ranking={p.ranking}/>
+                      ))}
+                    </VStack>
+                  </Td>
+                  <Td>
+                    <VStack alignItems={'flex-start'}>
+                      {teamB.players.map(p => (
+                        <div key={`${p.name}`}>{p.name}</div>
+                      ))}
+                    </VStack>
+                  </Td>
+                  <Td>
+                    <Table size="sm">
+                      <Tr>
+                        <ScoreCell>{score.set[0].scoreB}</ScoreCell>
+                        <Center height="50px">
+                          <Divider orientation="vertical" />
+                        </Center>
+                        <ScoreCell>{score.set[1].scoreB}</ScoreCell>
+                        <Center height="50px">
+                          <Divider orientation="vertical" />
+                        </Center>
+                        <ScoreCell>{score.set[2].scoreB}</ScoreCell>
+                      </Tr>
+                    </Table>
+                  </Td>
                 </Tr>
-              </Table>
-            </Td>
-          </Tr>
+              </React.Fragment>
+            )
+          })}
         </Tbody>
       </Table>
     </TableContainer>

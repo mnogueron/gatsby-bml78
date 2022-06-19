@@ -1,8 +1,8 @@
 import React from "react"
-import Image from "../components/Image"
-import Content from "../components/Content"
-import { ProjectHeader } from "../components/Header"
-import { Container } from "../components/Sections"
+import Image from "../../components/Image"
+import Content from "../../components/Content"
+import { ProjectHeader } from "../../components/Header"
+import { Container } from "../../components/Sections"
 
 function ArticlePageTemplate({ title, location, date, image, body }) {
   return (

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import MyHelmet from "../components/MyHelmet"
 
-import IndexPageTemplate from "./IndexPageTemplate"
+import IndexPageTemplate from "./components/IndexPageTemplate"
 
 const IndexPage = ({ data }) => {
   const { frontmatter: fm } = data.markdownRemark

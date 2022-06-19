@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { SectionHeading, TextImageSplit } from '../components/Sections';
-import { SecondaryButton } from '../components/Buttons';
+import { SectionHeading, TextImageSplit } from '../../components/Sections';
+import { SecondaryButton } from '../../components/Buttons';
 import {
   Button,
   Container,
@@ -12,8 +12,8 @@ import {
   Icon,
 } from '@chakra-ui/react';
 import { MdChevronRight } from 'react-icons/md';
-import { CardSet } from '../components/Sections';
-import Image from '../components/Image';
+import { CardSet } from '../../components/Sections';
+import Image from '../../components/Image';
 
 const SeeMoreButton = ({ to, ...rest }) => {
   return (
@@ -41,19 +41,26 @@ const IndexPageTemplate = ({
       {/* Header */}
       <Box
         backgroundColor={'blue.700'}
-        marginTop={{ base: '48px', sm: 68 }}
+        marginTop={{
+          base: 'bml.navbar.height.base',
+          sm: 'bml.navbar.height.sm',
+          md: 'bml.navbar.height.md',
+        }}
         position="relative"
       >
         <Container
           maxW="7xl"
           py={16}
           minHeight={{ base: 'calc(100vh - 48px)', sm: '500px' }}
+          display='flex'
+          alignItems='center'
         >
           <VStack
             h="100%"
             justifyContent="center"
             alignItems={{ base: 'center', sm: 'flex-start' }}
             spacing={4}
+            flex={1}
           >
             <Heading
               size="2xl"
@@ -69,17 +76,15 @@ const IndexPageTemplate = ({
             >
               {subheading}
             </Text>
-            <Button colorScheme="blue" size="lg" as={Link} to="/contact">
-              Nous contacter
+            <Button colorScheme="blue" size="lg" as={Link} to="/inscription">
+              Nous rejoindre
             </Button>
           </VStack>
         </Container>
 
         <Box
-          display={{ base: 'none', sm: 'block' }}
-          height={{ base: '300px', sm: '100%' }}
-          position={{ base: 'relative', sm: 'absolute' }}
-          top={0}
+          height={{ base: 'calc(100vh - 25%)', sm: '100%' }}
+          position={'absolute'}
           bottom={0}
           right={0}
           pt={{ base: 0, sm: 4 }}

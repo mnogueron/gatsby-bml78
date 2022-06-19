@@ -1,5 +1,5 @@
 import React from "react"
-import ArticlePageTemplate from "../../templates/ArticlePageTemplate"
+import ArticlePageTemplate from "../../templates/components/ArticlePageTemplate"
 const marked = require("marked")
 
 const ArticlePagePreview = ({ entry, getAsset }) => {

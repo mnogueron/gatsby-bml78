@@ -13,7 +13,7 @@ const InscriptionPage = ({ data }) => {
       <AboutPageTemplate
         heading={fm.heading}
         subheading={fm.subheading}
-        html={post.html}
+        html={post.htmlAst}
         team={fm.team}
       />
     </>
@@ -25,7 +25,7 @@ export default InscriptionPage
 export const inscriptionPageQuery = graphql`
   query InscriptionPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
+      htmlAst
       frontmatter {
         title
         heading

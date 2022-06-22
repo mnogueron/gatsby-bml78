@@ -19,6 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
                     slug
                   }
                   frontmatter {
+                    title
                     templateKey
                   }
                 }
@@ -56,15 +57,17 @@ exports.createPages = ({ graphql, actions }) => {
 
         edges.forEach(({ node, next, previous }) => {
           const id = node.id
+          const { title, templateKey } = node.frontmatter;
           createPage({
             path: node.fields.slug,
             // tags: edge.node.frontmatter.tags,
             component: path.resolve(
-              `src/templates/${String(node.frontmatter.templateKey)}.js`
+              `src/templates/${String(templateKey)}.js`
             ),
             // additional data can be passed via context
             context: {
               id,
+              title,
               next,
               previous,
             },

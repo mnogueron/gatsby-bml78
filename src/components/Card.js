@@ -4,6 +4,7 @@ import Image from '../components/Image';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import frLocale from 'date-fns/locale/fr';
 
+// TODO use default picture like a shuttle
 function Card({ image, heading, date, subheading, url, ...rest }) {
   return (
     <Link
@@ -12,8 +13,8 @@ function Card({ image, heading, date, subheading, url, ...rest }) {
       {...rest}
     >
       <Image
-        image={image.image}
-        alt={image.alt}
+        image={image?.image || {url: '/static/img/shuttle.jpg' }}
+        alt={image?.alt}
         className="rounded-md overflow-hidden"
       />
       <div className="mt-4 flex items-baseline gap-x-2 justify-between">

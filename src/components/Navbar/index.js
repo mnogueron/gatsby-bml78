@@ -1,73 +1,105 @@
-import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import React, {useMemo, useState} from 'react';
+import {graphql, Link, useStaticQuery} from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Heading } from '@chakra-ui/react';
 import NavLink from './NavLink';
 import DropdownNavLink from './DropdownNavLink';
 
-const MENU = [
-  {
-    key: 'accueil',
-    label: 'Accueil',
-    to: '/',
-  },
-  {
-    key: 'infospratiques',
-    label: 'Infos Pratiques',
-    options: [
-      {
-        key: 'sections',
-        label: 'Nos Sections',
-        to: '/infos-pratiques/sections',
-      },
-      {
-        key: 'inscription',
-        label: 'Inscription',
-        to: '/infos-pratiques/inscription',
-      },
-      {
-        key: 'avantageclub',
-        label: 'Avantage Club',
-        to: '/infos-pratiques/avantages',
-      },
-      {
-        key: 'entrainements',
-        label: 'Entraînements',
-        to: '/infos-pratiques/entrainements',
-      },
-      {
-        key: 'calendrier',
-        label: 'Calendrier',
-        to: '/infos-pratiques/calendrier',
-      },
-    ],
-  },
-  {
-    key: 'interclub',
-    label: 'Interclub',
-    options: [
-      {
-        key: 'n1',
-        label: 'N1',
-        to: '/interclub/n1',
-      },
-    ],
-  },
-  {
-    key: 'actus',
-    label: 'Actualités',
-    to: '/articles',
-    partial: true,
-  },
-  {
-    key: 'contact',
-    label: 'Contact',
-    to: '/contact',
-  },
-];
-
 const Navbar = ({ className }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { allMarkdownRemark } = useStaticQuery(
+    graphql`
+        query RESULT_CATEGORIES {
+            allMarkdownRemark(
+                sort: { order: DESC, fields: [frontmatter___date] }
+                filter: { frontmatter: { templateKey: { eq: "results-page" } } }
+            ) {
+                edges {
+                    node {
+                        excerpt(pruneLength: 400)
+                        id
+                        fields {
+                            slug
+                        }
+                        frontmatter {
+                            title
+                        }
+                    }
+                }
+            }
+        }
+    `
+  )
+  const {edges: sections} = allMarkdownRemark;
+
+  const MENU = useMemo(() => {
+    const resultCategories = sections.map(({node: category}) => ({
+      key: category.id,
+      label: category.frontmatter.title,
+      to: category.fields.slug,
+    }))
+    return [
+      {
+        key: 'accueil',
+        label: 'Accueil',
+        to: '/',
+      },
+      {
+        key: 'infospratiques',
+        label: 'Infos Pratiques',
+        options: [
+          {
+            key: 'sections',
+            label: 'Nos Sections',
+            to: '/infos-pratiques/sections',
+          },
+          {
+            key: 'inscription',
+            label: 'Inscription',
+            to: '/infos-pratiques/inscription',
+          },
+          {
+            key: 'avantageclub',
+            label: 'Avantage Club',
+            to: '/infos-pratiques/avantages',
+          },
+          {
+            key: 'entrainements',
+            label: 'Entraînements',
+            to: '/infos-pratiques/entrainements',
+          },
+          {
+            key: 'calendrier',
+            label: 'Calendrier',
+            to: '/infos-pratiques/calendrier',
+          },
+        ],
+      },
+      {
+        key: 'resultats',
+        label: 'Résultats',
+        options: [
+          {
+            key: 'allresults',
+            label: 'Tous les résultats',
+            to: '/results',
+          },
+          ...resultCategories
+        ],
+      },
+      {
+        key: 'actus',
+        label: 'Actualités',
+        to: '/articles',
+        partial: true,
+      },
+      {
+        key: 'contact',
+        label: 'Contact',
+        to: '/contact',
+      },
+    ];
+  }, [sections]);
 
   const handleMenuClose = () => {
     setMenuOpen(false);

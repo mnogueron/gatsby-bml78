@@ -32,6 +32,7 @@ const IndexPageTemplate = ({
   subheading,
   image,
   posts = [],
+  results = [],
   about,
 }) => {
   return (
@@ -50,8 +51,8 @@ const IndexPageTemplate = ({
           maxW="7xl"
           py={16}
           minHeight={{ base: 'calc(100vh - 48px)', sm: '500px' }}
-          display='flex'
-          alignItems='center'
+          display="flex"
+          alignItems="center"
         >
           <VStack
             h="100%"
@@ -74,7 +75,12 @@ const IndexPageTemplate = ({
             >
               {subheading}
             </Text>
-            <Button colorScheme="blue" size="lg" as={Link} to="/infos-pratiques/inscription">
+            <Button
+              colorScheme="blue"
+              size="lg"
+              as={Link}
+              to="/infos-pratiques/inscription"
+            >
               Nous rejoindre
             </Button>
           </VStack>
@@ -169,15 +175,15 @@ const IndexPageTemplate = ({
           </Heading>
           <SeeMoreButton
             display={{ base: 'none', md: 'flex' }}
-            to="/articles"
+            to="/results"
           />
         </div>
         <div className="mt-8">
-          <CardSet posts={posts} subheading={'Résultats'} />
+          <CardSet posts={results} subheading={'Résultats'} />
         </div>
         <SeeMoreButton
           display={{ base: 'flex', md: 'none' }}
-          to="/articles"
+          to="/results"
           variant="outline"
           my={4}
           mx="auto"

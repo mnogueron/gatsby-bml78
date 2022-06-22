@@ -7,8 +7,9 @@ import IndexPageTemplate from "./components/IndexPageTemplate"
 const IndexPage = ({ data }) => {
   const { frontmatter: fm } = data.markdownRemark
 
-  // featured posts
-  const { edges: posts } = data.allMarkdownRemark
+  // latest posts and results
+  const { edges: posts } = data.allPostsMarkdownRemark
+  const { edges: results } = data.allResultsMarkdownRemark
 
   return (
     <>
@@ -21,6 +22,7 @@ const IndexPage = ({ data }) => {
         subheading={fm.subheading}
         image={fm.image}
         posts={posts}
+        results={results}
         about={fm.about}
       />
     </>
@@ -60,7 +62,7 @@ export const indexPageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(
+    allPostsMarkdownRemark: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
         frontmatter: {
@@ -96,6 +98,43 @@ export const indexPageQuery = graphql`
           }
         }
       }
+    }
+    allResultsMarkdownRemark: allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: {
+            frontmatter: {
+                templateKey: { eq: "result-page" }
+            }
+        }
+        limit: 3
+    ) {
+        edges {
+            node {
+                excerpt(pruneLength: 400)
+                id
+                fields {
+                    slug
+                }
+                frontmatter {
+                    title
+                    templateKey
+                    date
+                    location
+                    featuredimage {
+                        alt
+                        image {
+                            childImageSharp {
+                                gatsbyImageData(
+                                    width: 640
+                                    placeholder: BLURRED
+                                    aspectRatio: 1.5
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
   }
 `

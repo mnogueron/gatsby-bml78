@@ -27,7 +27,7 @@ const ArticlePage = ({ data, pageContext }) => {
       {/* Links to previous and next project */}
       <Container>
         <div className="sm:flex sm:justify-between sm:items-center sm:gap-4 border-t py-4">
-          {previous && previous.frontmatter.templateKey === "project-page" ? (
+          {previous && previous.frontmatter.templateKey === "article-page" ? (
             <Link to={previous.fields.slug} className="group">
               <div className="flex items-center gap-x-2 text-gray-500">
                 <ArrowNarrowLeftIcon className="w-5 h-5" />
@@ -43,7 +43,7 @@ const ArticlePage = ({ data, pageContext }) => {
           ) : (
             <div />
           )}
-          {next && next.frontmatter.templateKey === "project-page" ? (
+          {next && next.frontmatter.templateKey === "article-page" ? (
             <div className="mt-6 sm:mt-0">
               <Link to={next.fields.slug} className="group sm:text-right">
                 <div className="flex items-center gap-x-2 text-gray-500 sm:justify-end">

@@ -108,8 +108,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `UrbanGarden`,
-        short_name: `UrbanGarden`,
+        name: `Badminton Maisons-Laffitte`,
+        short_name: `BML`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#047857`,

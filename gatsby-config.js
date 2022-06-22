@@ -4,9 +4,8 @@ const siteUrl =
 // TODO change title and description
 module.exports = {
   siteMetadata: {
-    title: "UrbanGarden",
-    description:
-      "Transforming and enriching our urban environments with green living spaces",
+    title: "Badminton Maisons-Laffitte",
+    description: "Retrouvez toutes les actus et info du club de badminton de Maisons-Laffitte",
     siteUrl: "https://objective-thompson-fe2703.netlify.app",
   },
   plugins: [
@@ -114,7 +113,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#047857`,
         display: `standalone`,
-        icon: `src/img/urbangarden-icon.png`,
+        icon: `src/img/bml-icon.png`,
       },
     },
     "gatsby-transformer-remark-frontmatter",

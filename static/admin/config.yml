@@ -117,6 +117,19 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
+      - file: "src/pages/results/index.md"
+        label: "Tous les résulats"
+        name: "all-results-index"
+        fields:
+          - {
+            label: "Template Key",
+            name: "templateKey",
+            widget: "hidden",
+            default: "all-results-page",
+          }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Subheading, name: subheading, widget: string, required: false }
       - file: "src/pages/about/index.md"
         label: "À propos"
         name: "about"
@@ -181,6 +194,10 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
+
+  - name: "informations"
+    label: "Infos Pratiques"
+    files:
       - file: "src/pages/infos-pratiques/inscription.md"
         label: "Inscription"
         name: "inscription"

@@ -116,7 +116,7 @@ const Score = ({ score, oppositeScore }) => {
 
 const Scoreboard = ({ matches, hideHeader }) => {
   return (
-    <TableContainer maxW={'5xl'} margin="auto">
+    <TableContainer my={10} mx={4}>
       <Table size="sm">
         {!hideHeader && (
           <Thead>

@@ -1,19 +1,16 @@
 import React from 'react';
 import { renderAst } from '../config/rehype.config';
+import {Container} from "@chakra-ui/react";
 
 /**
  * Section for markdown content (prose)
  * applies max width and padding
  */
-function Content({ className, html }) {
+function Content({ html }) {
   return (
-    <div
-      className={`max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 ${className}`}
-    >
-      <div className="prose mx-auto prose-green md:prose-lg">
+    <Container maxW="5xl" pt={20} pb={10}>
         {renderAst(html)}
-      </div>
-    </div>
+    </Container>
   );
 }
 

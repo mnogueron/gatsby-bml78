@@ -1,6 +1,7 @@
 ---
 templateKey: article-page
 title: Outdoor spaces of Paul Klee museum
+heading: Outdoor spaces of Paul Klee museum
 date: 2021-07-24T16:01:51.183Z
 featured: false
 featuredimage:

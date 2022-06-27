@@ -1,5 +1,5 @@
 import React from "react"
-import {graphql, useStaticQuery} from "gatsby"
+import {graphql} from "gatsby"
 import MyHelmet from "../components/MyHelmet"
 import ArticlesPageTemplate from "./components/ArticlesPageTemplate"
 
@@ -44,9 +44,10 @@ export const resultsPageQuery = graphql`
                     }
                     frontmatter {
                         title
+                        heading
                         templateKey
                         category
-                        date(formatString: "MMMM DD, YYYY")
+                        date
                         location
                         featuredimage {
                             alt

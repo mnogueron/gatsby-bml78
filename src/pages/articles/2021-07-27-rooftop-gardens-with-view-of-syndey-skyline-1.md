@@ -1,6 +1,7 @@
 ---
 templateKey: article-page
 title: Vertical garden wall at local park and café
+heading: Vertical garden wall at local park and café
 date: 2021-07-25T16:02:13.958Z
 featured: false
 featuredimage:

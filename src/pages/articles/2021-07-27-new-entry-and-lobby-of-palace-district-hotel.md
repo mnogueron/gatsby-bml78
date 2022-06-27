@@ -1,6 +1,7 @@
 ---
 templateKey: article-page
 title: New entry and lobby of Palace District hotel
+heading: New entry and lobby of Palace District hotel
 date: 2021-07-23T10:42:17.142Z
 featured: true
 featuredimage:

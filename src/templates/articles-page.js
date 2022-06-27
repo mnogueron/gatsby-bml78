@@ -44,8 +44,9 @@ export const articlesPageQuery = graphql`
                     }
                     frontmatter {
                         title
+                        heading
                         templateKey
-                        date(formatString: "MMMM DD, YYYY")
+                        date
                         location
                         featuredimage {
                             alt

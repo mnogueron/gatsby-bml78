@@ -22,7 +22,7 @@ const Navbar = ({ className }) => {
                             slug
                         }
                         frontmatter {
-                            title
+                            heading
                         }
                     }
                 }
@@ -35,7 +35,7 @@ const Navbar = ({ className }) => {
   const MENU = useMemo(() => {
     const resultCategories = sections.map(({node: category}) => ({
       key: category.id,
-      label: category.frontmatter.title,
+      label: category.frontmatter.heading,
       to: category.fields.slug,
     }))
     return [

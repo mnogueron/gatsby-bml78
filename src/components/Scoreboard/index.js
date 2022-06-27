@@ -85,19 +85,28 @@ const Score = ({ score, oppositeScore }) => {
   return (
     <HStack height={'100%'}>
       <Box flex={1} textAlign={'center'}>
-        <Text color={oppositeScore[0] < score[0] ? 'green.500' : 'black'} fontWeight={oppositeScore[0] < score[0] ? 'bold' : 'normal'}>
+        <Text
+          color={oppositeScore[0] < score[0] ? 'green.500' : 'black'}
+          fontWeight={oppositeScore[0] < score[0] ? 'bold' : 'normal'}
+        >
           {score[0] || '-'}
         </Text>
       </Box>
       <Divider orientation="vertical" />
       <Box flex={1} textAlign={'center'}>
-        <Text color={oppositeScore[1] < score[1] ? 'green.500' : 'black'} fontWeight={oppositeScore[1] < score[1] ? 'bold' : 'normal'}>
+        <Text
+          color={oppositeScore[1] < score[1] ? 'green.500' : 'black'}
+          fontWeight={oppositeScore[1] < score[1] ? 'bold' : 'normal'}
+        >
           {score[1] || '-'}
         </Text>
       </Box>
       <Divider orientation="vertical" />
       <Box flex={1} textAlign={'center'}>
-        <Text color={oppositeScore[2] < score[2] ? 'green.500' : 'black'} fontWeight={oppositeScore[2] < score[2] ? 'bold' : 'normal'}>
+        <Text
+          color={oppositeScore[2] < score[2] ? 'green.500' : 'black'}
+          fontWeight={oppositeScore[2] < score[2] ? 'bold' : 'normal'}
+        >
           {score[2] || '-'}
         </Text>
       </Box>
@@ -145,9 +154,9 @@ const Scoreboard = ({ matches, hideHeader }) => {
                       height={'100%'}
                       justifyContent="center"
                     >
-                      {teamA.players.map((p) => (
+                      {teamA.map((p) => (
                         <Flex
-                          key={`${p.name}-${p.club}`}
+                          key={`${p.lastname}-${p.firstname}-${p.club}`}
                           alignItems={'center'}
                           flex={1}
                         >
@@ -158,9 +167,9 @@ const Scoreboard = ({ matches, hideHeader }) => {
                   </Td>
                   <Td width={'150px'} height={'1px'}>
                     <VStack justifyContent="center" height={'100%'}>
-                      {teamA.players.map((p) => (
+                      {teamA.map((p) => (
                         <Flex
-                          key={`${p.name}-${p.ranking}`}
+                          key={`${p.lastname}-${p.firstname}-${p.ranking}`}
                           alignItems={'center'}
                           flex={1}
                         >
@@ -175,9 +184,21 @@ const Scoreboard = ({ matches, hideHeader }) => {
                       height={'100%'}
                       justifyContent="center"
                     >
-                      {teamA.players.map((p) => (
-                        <Flex key={`${p.name}`} alignItems={'center'} flex={1}>
-                          {p.name}
+                      {teamA.map((p) => (
+                        <Flex
+                          key={`${p.lastname}-${p.firstname}`}
+                          alignItems={'center'}
+                          flex={1}
+                        >
+                          <Text
+                            as="span"
+                            fontWeight={'bold'}
+                            marginRight={1}
+                            textTransform="uppercase"
+                          >
+                            {p.lastname}
+                          </Text>
+                          {p.firstname}
                         </Flex>
                       ))}
                     </VStack>
@@ -200,9 +221,9 @@ const Scoreboard = ({ matches, hideHeader }) => {
                       height={'100%'}
                       justifyContent="center"
                     >
-                      {teamB.players.map((p) => (
+                      {teamB.map((p) => (
                         <Flex
-                          key={`${p.name}-${p.club}`}
+                          key={`${p.lastname}-${p.firstname}-${p.club}`}
                           alignItems={'center'}
                           flex={1}
                         >
@@ -213,9 +234,9 @@ const Scoreboard = ({ matches, hideHeader }) => {
                   </Td>
                   <Td width={'150px'} height={'1px'}>
                     <VStack justifyContent="center" height={'100%'}>
-                      {teamB.players.map((p) => (
+                      {teamB.map((p) => (
                         <Flex
-                          key={`${p.name}-${p.ranking}`}
+                          key={`${p.lastname}-${p.firstname}-${p.ranking}`}
                           alignItems={'center'}
                           flex={1}
                         >
@@ -230,9 +251,21 @@ const Scoreboard = ({ matches, hideHeader }) => {
                       height={'100%'}
                       justifyContent="center"
                     >
-                      {teamB.players.map((p) => (
-                        <Flex key={`${p.name}`} alignItems={'center'} flex={1}>
-                          {p.name}
+                      {teamB.map((p) => (
+                        <Flex
+                          key={`${p.lastname}-${p.firstname}`}
+                          alignItems={'center'}
+                          flex={1}
+                        >
+                          <Text
+                            as="span"
+                            fontWeight={'bold'}
+                            marginRight={1}
+                            textTransform="uppercase"
+                          >
+                            {p.lastname}
+                          </Text>
+                          {p.firstname}
                         </Flex>
                       ))}
                     </VStack>

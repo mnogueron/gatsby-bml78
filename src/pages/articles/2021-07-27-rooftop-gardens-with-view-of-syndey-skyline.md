@@ -1,6 +1,7 @@
 ---
 templateKey: article-page
 title: Rooftop gardens with view of Syndey skyline
+heading: Rooftop gardens with view of Syndey skyline
 date: 2021-07-21T10:14:24.359Z
 featured: true
 featuredimage:

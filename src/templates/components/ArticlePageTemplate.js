@@ -7,7 +7,7 @@ import { Container } from "../../components/Sections"
 function ArticlePageTemplate({ title, location, date, image, body }) {
   return (
     <>
-      <ProjectHeader heading={title} location={location} date={date} />
+      <ProjectHeader heading={title} date={date} />
       <Container className="text-center -mt-24 sm:-mt-28 lg:-mt-36">
         <Image className="rounded-md" image={image.image} alt={image.alt} />
       </Container>

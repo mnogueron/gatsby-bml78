@@ -29,6 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
+                    heading
                     templateKey
                     location
                   }
@@ -39,6 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
+                    heading
                     templateKey
                     location
                   }

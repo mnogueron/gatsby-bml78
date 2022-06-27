@@ -16,6 +16,30 @@ content_page: &CONTENT_PAGE
     default: "content-page",
   }
   - { label: "Title", name: "title", widget: "string" }
+  - { label: Heading, name: heading, widget: string, required: false }
+  - { label: Subheading, name: subheading, widget: string, required: false }
+  - { label: "Body", name: "body", widget: "markdown" }
+  - {
+    label: "Featured Image",
+    name: "featuredimage",
+    widget: object,
+    collapsed: true,
+    fields:
+      [
+        { label: Image, name: image, widget: image, default: "/img/shuttle.jpg", },
+        { label: Alt, name: alt, widget: string, required: false },
+      ],
+  }
+
+result_page: &RESULT_PAGE
+  - {
+    label: "Template Key",
+    name: "templateKey",
+    widget: "hidden",
+    default: "result-page",
+  }
+  - { label: "Title", name: "title", widget: "string" }
+  - { label: "Publish Date", name: "date", widget: "datetime" }
   - {
     label: Category,
     name: category,
@@ -39,6 +63,7 @@ content_page: &CONTENT_PAGE
         { label: Alt, name: alt, widget: string, required: false },
       ],
   }
+
 
 header_fields: &HEADER_FIELDS
   - {
@@ -234,6 +259,7 @@ collections:
           default: "article-page",
         }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: Heading, name: heading, widget: string, required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured", name: "featured", widget: boolean }
       # - {label: "Description", name: "description", widget: "text"}
@@ -248,7 +274,6 @@ collections:
               { label: Alt, name: alt, widget: string },
             ],
         }
-      - { label: Location, name: location, widget: string }
       - { label: "Body", name: "body", widget: "markdown" }
       # - {label: "Tags", name: "tags", widget: "list"}
   - name: "results"
@@ -258,8 +283,8 @@ collections:
     filter: { field: "templateKey", value: "result-page" }
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}"
-    fields: *CONTENT_PAGE
+    summary: "{{title}} {{year}}-{{month}}-{{day}}"
+    fields: *RESULT_PAGE
 
   - name: "result-sections"
     label: "Catégories de résultat"
@@ -268,5 +293,5 @@ collections:
     filter: { field: "templateKey", value: "results-page" }
     create: true
     slug: "{{fields.title}}"
-    summary: "{{title}}"
+    summary: "{{fields.heading}}"
     fields: *HEADER_FIELDS

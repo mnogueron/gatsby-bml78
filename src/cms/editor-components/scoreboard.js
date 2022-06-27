@@ -1,7 +1,12 @@
 const playerFields = [
   {
-    name: 'name',
+    name: 'lastname',
     label: 'Nom',
+    widget: 'string',
+  },
+  {
+    name: 'firstname',
+    label: 'Prénom',
     widget: 'string',
   },
   {
@@ -17,14 +22,13 @@ const playerFields = [
 ];
 
 const players = {
-  name: 'players',
   label: 'Joueurs',
   label_singular: 'Joueur',
   max: 2,
   min: 1,
   widget: 'list',
   fields: playerFields,
-  summary: '{{fields.name}} - {{fields.club}} - {{fields.ranking}}',
+  summary: '{{fields.lastname}} {{fields.firstname}} - {{fields.club}} - {{fields.ranking}}',
 };
 
 const setFields = [
@@ -32,10 +36,7 @@ const setFields = [
     name: 'set',
     label: 'Sets',
     label_singular: 'Set',
-    default: [
-      [],
-      [],
-    ],
+    default: [0, 0],
     max: 3,
     min: 2,
     widget: 'list',
@@ -72,18 +73,12 @@ export default {
       widget: 'list',
       fields: [
         {
+          ...players,
           name: 'teamA',
-          label: 'Team A',
-          widget: 'object',
-          collapsed: false,
-          fields: [players],
         },
         {
+          ...players,
           name: 'teamB',
-          label: 'Team B',
-          widget: 'object',
-          collapsed: false,
-          fields: [players],
         },
         {
           name: 'score',

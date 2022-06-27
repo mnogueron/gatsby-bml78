@@ -26,7 +26,7 @@ team: []
 * remplir la notice sur le matériel
 * la cotisation
 
-### Pour une inscription en Adultes - Jeu Libre
+### Pour une inscription en Adultes - Jeu Libre
 
 * remplir le formulaire en ligne
 * remplir le formulaire de Licence

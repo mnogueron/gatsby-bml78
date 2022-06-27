@@ -8,7 +8,7 @@ Les séances de jeu libre et les entraînements se font sur les gymnases de Sart
 
 ### Sartrouville - Gymnase Jules Verne
 
-* Lundi 19h - 20h30 : Jeunes Compétiteurs
+* Lundi 19h - 20h30 : Jeunes Compétiteurs
 * Lundi 20h30 - 22h30 : Entrainements Adultes Compétiteurs
 * Mercredi 19h - 20h30 : Jeunes Compétiteurs
 * Mercredi 20h30 - 22h30 : Jeu libre Adultes / Entrainements Adultes Débutants

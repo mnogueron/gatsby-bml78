@@ -69,6 +69,11 @@ const Navbar = ({ className }) => {
             to: '/infos-pratiques/entrainements',
           },
           {
+            key: 'acces-horaires',
+            label: 'Accès / Horaires',
+            to: '/infos-pratiques/acces-horaires',
+          },
+          {
             key: 'calendrier',
             label: 'Calendrier',
             to: '/infos-pratiques/calendrier',

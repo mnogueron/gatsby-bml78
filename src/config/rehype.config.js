@@ -1,7 +1,13 @@
 import React, { useMemo } from 'react';
 import rehypeReact from 'rehype-react';
 import Scoreboard from '../components/Scoreboard';
-import { Heading, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import {
+  Heading,
+  ListItem,
+  OrderedList,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 const H1 = (props) => <Heading as="h1" size="2xl" mt={10} mb={8} {...props} />;
 const H2 = (props) => <Heading as="h2" size="xl" mt={8} mb={7} {...props} />;
@@ -19,19 +25,35 @@ const P = (props) => (
   />
 );
 const Ul = (props) => (
-  <UnorderedList mb={8} paddingStart={{ base: 3, md: 8 }} {...props} />
+  <UnorderedList
+    mb={8}
+    paddingStart={{ base: 3, md: 8 }}
+    sx={{
+      '& li::marker': {
+        color: 'gray.300',
+        borderRadius: '50%',
+      },
+    }}
+    {...props}
+  />
+);
+const Ol = (props) => (
+  <OrderedList
+    mb={8}
+    paddingStart={{ base: 3, md: 8 }}
+    sx={{
+      '& li::marker': {
+        color: 'gray.500',
+      },
+    }}
+    {...props}
+  />
 );
 const Li = (props) => (
   <ListItem
     my={{ base: 2, md: 4 }}
     fontSize={{ base: 'md', md: 'lg' }}
     lineHeight="tall"
-    sx={{
-      '&::marker': {
-        color: 'gray.300',
-        borderRadius: '50%',
-      },
-    }}
     {...props}
   />
 );
@@ -57,6 +79,7 @@ export const renderAst = new rehypeReact({
     h6: H6,
     p: P,
     ul: Ul,
+    ol: Ol,
     li: Li,
   },
 }).Compiler;

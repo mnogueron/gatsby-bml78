@@ -5,7 +5,14 @@ import {
   Heading,
   ListItem,
   OrderedList,
+  Table,
+  Tbody,
   Text,
+  Tfoot,
+  Thead,
+  Tr,
+  Td,
+  Th,
   UnorderedList,
 } from '@chakra-ui/react';
 
@@ -81,5 +88,12 @@ export const renderAst = new rehypeReact({
     ul: Ul,
     ol: Ol,
     li: Li,
+    table: Table,
+    thead: (props) => <Thead borderBottomWidth="4px" {...props} />,
+    tbody: Tbody,
+    tr: Tr,
+    th: Th,
+    td: Td,
+    tfoot: Tfoot,
   },
 }).Compiler;

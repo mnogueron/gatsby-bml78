@@ -40,11 +40,6 @@ const IndexPageTemplate = ({
       {/* Header */}
       <Box
         backgroundColor={'blue.700'}
-        marginTop={{
-          base: 'bml.navbar.height.base',
-          sm: 'bml.navbar.height.sm',
-          md: 'bml.navbar.height.md',
-        }}
         position="relative"
       >
         <Container

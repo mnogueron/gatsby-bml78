@@ -1,35 +1,35 @@
-import React from "react"
-import { graphql } from "gatsby"
-import MyHelmet from "../components/MyHelmet"
+import React from 'react';
+import { graphql } from 'gatsby';
+import MyHelmet from '../components/MyHelmet';
 
-import IndexPageTemplate from "./components/IndexPageTemplate"
+import IndexPageTemplate from './components/IndexPageTemplate';
+import PageLayout from '../components/PageLayout';
 
 const IndexPage = ({ data }) => {
-  const { frontmatter: fm } = data.markdownRemark
+  const { frontmatter: fm } = data.markdownRemark;
 
   // latest posts and results
-  const { edges: posts } = data.allPostsMarkdownRemark
-  const { edges: results } = data.allResultsMarkdownRemark
+  const { edges: posts } = data.allPostsMarkdownRemark;
+  const { edges: results } = data.allResultsMarkdownRemark;
 
   return (
     <>
-      <MyHelmet
-        title={fm.title}
-        description={fm.subheading}
-      />
-      <IndexPageTemplate
-        heading={fm.heading}
-        subheading={fm.subheading}
-        image={fm.image}
-        posts={posts}
-        results={results}
-        about={fm.about}
-      />
+      <MyHelmet title={fm.title} description={fm.subheading} />
+      <PageLayout>
+        <IndexPageTemplate
+          heading={fm.heading}
+          subheading={fm.subheading}
+          image={fm.image}
+          posts={posts}
+          results={results}
+          about={fm.about}
+        />
+      </PageLayout>
     </>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const indexPageQuery = graphql`
   query IndexPage($id: String!) {
@@ -64,11 +64,7 @@ export const indexPageQuery = graphql`
     }
     allPostsMarkdownRemark: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: {
-        frontmatter: {
-          templateKey: { eq: "article-page" }
-        }
-      }
+      filter: { frontmatter: { templateKey: { eq: "article-page" } } }
       limit: 3
     ) {
       edges {
@@ -101,42 +97,38 @@ export const indexPageQuery = graphql`
       }
     }
     allResultsMarkdownRemark: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: {
-            frontmatter: {
-                templateKey: { eq: "result-page" }
-            }
-        }
-        limit: 3
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "result-page" } } }
+      limit: 3
     ) {
-        edges {
-            node {
-                excerpt(pruneLength: 400)
-                id
-                fields {
-                    slug
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            heading
+            templateKey
+            date
+            location
+            featuredimage {
+              alt
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 640
+                    placeholder: BLURRED
+                    aspectRatio: 1.5
+                  )
                 }
-                frontmatter {
-                    title
-                    heading
-                    templateKey
-                    date
-                    location
-                    featuredimage {
-                        alt
-                        image {
-                            childImageSharp {
-                                gatsbyImageData(
-                                    width: 640
-                                    placeholder: BLURRED
-                                    aspectRatio: 1.5
-                                )
-                            }
-                        }
-                    }
-                }
+              }
             }
+          }
         }
+      }
     }
   }
-`
+`;

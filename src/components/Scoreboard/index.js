@@ -115,6 +115,10 @@ const Score = ({ score, oppositeScore }) => {
 };
 
 const Scoreboard = ({ matches, hideHeader }) => {
+  if (!matches) {
+    return null;
+  }
+
   return (
     <TableContainer my={10} mx={{base: 0, md: 4 }}>
       <Table size="sm">
@@ -132,7 +136,7 @@ const Scoreboard = ({ matches, hideHeader }) => {
         )}
         <Tbody>
           {matches.map((match, index) => {
-            const { teamA, teamB, score } = match;
+            const { teamA = [], teamB = [], score = [] } = match;
             const normalisedScore = [
               [
                 score.set[0]?.scoreA,

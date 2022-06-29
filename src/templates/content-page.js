@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import MyHelmet from '../components/MyHelmet';
 import ContentPageTemplate from './components/ContentPageTemplate';
+import PageLayout from '../components/PageLayout';
 
 const ContentPage = ({ data }) => {
   const { markdownRemark: post } = data;
@@ -10,12 +11,14 @@ const ContentPage = ({ data }) => {
   return (
     <>
       <MyHelmet title={fm.title} description={fm.subheading} />
-      <ContentPageTemplate
-        heading={fm.heading}
-        subheading={fm.subheading}
-        html={post.htmlAst}
-        team={fm.team}
-      />
+      <PageLayout>
+        <ContentPageTemplate
+          heading={fm.heading}
+          subheading={fm.subheading}
+          html={post.htmlAst}
+          team={fm.team}
+        />
+      </PageLayout>
     </>
   );
 };

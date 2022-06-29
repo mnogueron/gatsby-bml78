@@ -1,71 +1,73 @@
-import React from "react"
-import {graphql, useStaticQuery} from "gatsby"
-import MyHelmet from "../components/MyHelmet"
-import ArticlesPageTemplate from "./components/ArticlesPageTemplate"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import MyHelmet from '../components/MyHelmet';
+import ArticlesPageTemplate from './components/ArticlesPageTemplate';
+import PageLayout from '../components/PageLayout';
 
 const AllResultsPage = ({ data }) => {
   const { frontmatter: fm } = data.markdownRemark;
-  const { edges: posts } = data.allMarkdownRemark
+  const { edges: posts } = data.allMarkdownRemark;
 
   return (
     <>
-    <MyHelmet title={fm.title} description={fm.subheading} />
-      <ArticlesPageTemplate
-        heading={fm.heading}
-        subheading={fm.subheading}
-        posts={posts}
-      />
+      <MyHelmet title={fm.title} description={fm.subheading} />
+      <PageLayout>
+        <ArticlesPageTemplate
+          heading={fm.heading}
+          subheading={fm.subheading}
+          posts={posts}
+        />
+      </PageLayout>
     </>
-  )
-}
+  );
+};
 
-export default AllResultsPage
+export default AllResultsPage;
 
 export const allResultsPageQuery = graphql`
-    query AllResultsPage($id: String!) {
-        markdownRemark(id: { eq: $id }) {
-            html
-            frontmatter {
-                title
-                heading
-                subheading
-            }
-        }
-        allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "result-page" } } }
-        ) {
-            edges {
-                node {
-                    excerpt(pruneLength: 400)
-                    id
-                    fields {
-                        slug
-                    }
-                    frontmatter {
-                        title
-                        heading
-                        templateKey
-                        category
-                        date
-                        location
-                        featuredimage {
-                            alt
-                            image {
-                                childImageSharp {
-                                    gatsbyImageData(
-                                        width: 640
-                                        placeholder: BLURRED
-                                        aspectRatio: 1.5
-                                        transformOptions: { fit: COVER, cropFocus: CENTER }
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+  query AllResultsPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+        heading
+        subheading
+      }
     }
-`
-
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "result-page" } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            heading
+            templateKey
+            category
+            date
+            location
+            featuredimage {
+              alt
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 640
+                    placeholder: BLURRED
+                    aspectRatio: 1.5
+                    transformOptions: { fit: COVER, cropFocus: CENTER }
+                  )
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

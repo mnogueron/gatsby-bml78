@@ -9,7 +9,6 @@ function Header({ heading, subheading }) {
     <Box
       as="header"
       backgroundColor="blue.700"
-      marginTop={{ base: '48px', sm: 68 }}
       py={{ base: 12, sm: 16, md: 20, lg: 24 }}
     >
       <Container maxW="7xl" textAlign="center">
@@ -36,7 +35,6 @@ export function ProjectHeader({ heading, date }) {
     <Box
       as="header"
       backgroundColor="blue.700"
-      marginTop={{ base: '48px', sm: 68 }}
       py={{ base: 24, sm: 28, md: 32, lg: 36 }}
       pb={{ base: 24, sm: 32 }}
     >

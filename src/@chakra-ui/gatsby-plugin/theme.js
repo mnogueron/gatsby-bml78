@@ -4,8 +4,8 @@ const customSizes = {
   navbar: {
     height: {
       base: '48px',
-      sm: '48px',
-      md: '56px',
+      sm: '56px',
+      md: '68px',
     },
   },
 };

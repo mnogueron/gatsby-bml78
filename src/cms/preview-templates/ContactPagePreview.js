@@ -2,9 +2,7 @@ import React from "react"
 import ContactPageTemplate from "../../templates/components/ContactPageTemplate"
 const marked = require("marked")
 
-const ContactPagePreview = ({ entry, getAsset }) => {
-  const data = entry.getIn(["data"]).toJS()
-
+const ContactPagePreview = ({ data, getAsset }) => {
   // get image assets and transform markdown
   const contactform = {
     ...data.contactform,
@@ -20,18 +18,14 @@ const ContactPagePreview = ({ entry, getAsset }) => {
     phone: { html: marked(data.office.phone) },
   }
 
-  if (data) {
-    return (
-      <ContactPageTemplate
-        heading={data.heading}
-        subheading={data.subheading}
-        contactform={contactform}
-        office={office}
-      />
-    )
-  } else {
-    return <div>Loading...</div>
-  }
+  return (
+    <ContactPageTemplate
+      heading={data.heading}
+      subheading={data.subheading}
+      contactform={contactform}
+      office={office}
+    />
+  )
 }
 
 export default ContactPagePreview

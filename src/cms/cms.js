@@ -8,14 +8,15 @@ import ContentPagePreview from './preview-templates/ContentPagePreview'
 import ContactPagePreview from './preview-templates/ContactPagePreview'
 import youtubeEditorComponent from './editor-components/youtube'
 import scoreboardEditorComponent from "./editor-components/scoreboard";
+import withPreviewWrapper from "./withPreviewWrapper";
 
-CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('articles-index', ArticlesPagePreview)
-CMS.registerPreviewTemplate('articles', ArticlePagePreview)
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('inscription', ContentPagePreview)
-CMS.registerPreviewTemplate('results', ContentPagePreview)
-CMS.registerPreviewTemplate('contact', ContactPagePreview)
+CMS.registerPreviewTemplate('index', withPreviewWrapper(IndexPagePreview))
+CMS.registerPreviewTemplate('articles-index', withPreviewWrapper(ArticlesPagePreview))
+CMS.registerPreviewTemplate('articles', withPreviewWrapper(ArticlePagePreview))
+CMS.registerPreviewTemplate('about', withPreviewWrapper(AboutPagePreview))
+CMS.registerPreviewTemplate('inscription', withPreviewWrapper(ContentPagePreview))
+CMS.registerPreviewTemplate('results', withPreviewWrapper(ContentPagePreview))
+CMS.registerPreviewTemplate('contact', withPreviewWrapper(ContactPagePreview))
 
 CMS.registerEditorComponent(youtubeEditorComponent);
 CMS.registerEditorComponent(scoreboardEditorComponent);

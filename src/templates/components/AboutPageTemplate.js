@@ -8,7 +8,7 @@ function AboutPageTemplate({ heading, subheading, html, team }) {
   return (
     <>
       <Header heading={heading} subheading={subheading} />
-      <Content html={html} />
+      {html && <Content html={html} />}
       {team && (
         <Container>
           <div className="max-w-3xl mx-auto">

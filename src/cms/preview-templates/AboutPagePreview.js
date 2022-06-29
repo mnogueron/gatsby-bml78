@@ -1,10 +1,8 @@
 import React from "react"
 import AboutPageTemplate from "../../templates/components/AboutPageTemplate"
-const marked = require("marked")
+import useProcessedHAST from "../useProcessedHAST";
 
-const AboutPagePreview = ({ entry, getAsset }) => {
-  const data = entry.getIn(["data"]).toJS()
-
+const AboutPagePreview = ({ data, entry, getAsset }) => {
   // need to get the image assets and put them in the team array
   const team = data.team.map(member => {
     const image = getAsset(member.image)
@@ -14,21 +12,16 @@ const AboutPagePreview = ({ entry, getAsset }) => {
     }
   })
 
-  // render markdown for cms preview
-  const html = marked(data.body)
+  const html = useProcessedHAST(data.body);
 
-  if (data) {
-    return (
-      <AboutPageTemplate
-        heading={data.heading}
-        subheading={data.subheading}
-        html={html}
-        team={team}
-      />
-    )
-  } else {
-    return <div>Loading...</div>
-  }
+  return (
+    <AboutPageTemplate
+      heading={data.heading}
+      subheading={data.subheading}
+      html={html}
+      team={team}
+    />
+  )
 }
 
 export default AboutPagePreview

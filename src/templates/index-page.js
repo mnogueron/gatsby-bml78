@@ -20,6 +20,7 @@ const IndexPage = ({ data }) => {
           heading={fm.heading}
           subheading={fm.subheading}
           image={fm.image}
+          headerImage={fm.headerImage}
           posts={posts}
           results={results}
           about={fm.about}
@@ -38,6 +39,11 @@ export const indexPageQuery = graphql`
       frontmatter {
         title
         image {
+          childImageSharp {
+            gatsbyImageData(width: 1024, placeholder: BLURRED)
+          }
+        }
+        headerImage {
           childImageSharp {
             gatsbyImageData(width: 1024, placeholder: BLURRED)
           }

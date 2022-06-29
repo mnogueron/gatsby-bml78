@@ -26,6 +26,7 @@ const H6 = (props) => <Heading as="h6" size="xs" mt={4} mb={2} {...props} />;
 const P = (props) => (
   <Text
     my={6}
+    as={'div'}
     fontSize={{ base: 'md', md: 'lg' }}
     lineHeight="tall"
     {...props}

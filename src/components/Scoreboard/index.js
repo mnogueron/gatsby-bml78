@@ -1,289 +1,233 @@
 import React, { useMemo } from 'react';
 import {
-  Box,
-  Center,
-  Divider,
   Flex,
   Table,
   TableContainer,
   Tbody,
   Td,
-  Tfoot,
   Th,
   Thead,
   Tr,
   Text,
   VStack,
-  HStack,
 } from '@chakra-ui/react';
+import RankingBadge from './RankingBadge';
+import Score from './Score';
 
-const RankingBadge = ({ ranking }) => {
-  const textColor = useMemo(() => {
-    switch (ranking) {
-      case 'NC':
-        return 'white';
-      case 'P12':
-      case 'P11':
-      case 'P10':
-        return 'black';
-      case 'D9':
-      case 'D8':
-      case 'D7':
-        return 'black';
-      case 'R6':
-      case 'R5':
-      case 'R4':
-        return 'white';
-      case 'N3':
-      case 'N2':
-      case 'N1':
-        return 'white';
-    }
-    return 'black';
-  }, [ranking]);
+const NameCell = ({ player }) => (
+  <Flex alignItems={'center'} flex={1}>
+    <Text
+      as="span"
+      fontWeight={'bold'}
+      marginRight={1}
+      textTransform="uppercase"
+    >
+      {player.lastname}
+    </Text>
+    {player.firstname}
+  </Flex>
+);
 
-  const bgColor = useMemo(() => {
-    switch (ranking) {
-      case 'NC':
-        return 'gray.400';
-      case 'P12':
-      case 'P11':
-      case 'P10':
-        return '#f8e71c';
-      case 'D9':
-      case 'D8':
-      case 'D7':
-        return '#7ed321';
-      case 'R6':
-      case 'R5':
-      case 'R4':
-        return '#4a90e2';
-      case 'N3':
-      case 'N2':
-      case 'N1':
-        return '#f80220';
+const PlayersCell = ({ team }) => (
+  <VStack alignItems={'flex-start'} height={'100%'} justifyContent="center">
+    {team.map((p) => (
+      <NameCell key={`${p.lastname}-${p.firstname}`} player={p} />
+    ))}
+  </VStack>
+);
+
+const RankingsCell = ({ team }) => (
+  <VStack justifyContent="center" height={'100%'}>
+    {team.map((p) => (
+      <Flex
+        key={`${p.lastname}-${p.firstname}-${p.ranking}`}
+        alignItems={'center'}
+        flex={1}
+      >
+        <RankingBadge ranking={p.ranking} />
+      </Flex>
+    ))}
+  </VStack>
+);
+
+const ClubsCell = ({ team }) => {
+  const clubs = useMemo(() => {
+    const allClubs = team.map((p) => p.club);
+    if (new Set(allClubs).size === 1) {
+      return [allClubs[0]];
     }
-    return 'gray';
-  }, [ranking]);
+    return allClubs;
+  }, [team]);
 
   return (
-    <Flex
-      width={8}
-      height={8}
-      backgroundColor={bgColor}
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Text color={textColor} fontWeight="bold" letterSpacing="tight">
-        {ranking}
-      </Text>
-    </Flex>
+    <VStack alignItems={'flex-start'} height={'100%'} justifyContent="center">
+      {clubs.map((club, index) => (
+        <Flex key={`${club}-${index}`} alignItems={'center'} flex={1}>
+          {club}
+        </Flex>
+      ))}
+    </VStack>
   );
 };
 
-const Score = ({ score, oppositeScore }) => {
+const PointsCell = ({ team }) => (
+  <VStack justifyContent="center" height={'100%'}>
+    {team.map((p, index) => (
+      <Flex
+        key={`${p.lastname}-${p.firstname}-${index}`}
+        alignItems={'center'}
+        flex={1}
+      >
+        <Text as="span" fontWeight={'bold'}>
+          {p.points}
+        </Text>
+      </Flex>
+    ))}
+  </VStack>
+);
+
+const ScoreboardHeader = ({ hideClub, hideRanking, hidePoints }) => (
+  <Thead>
+    <Tr borderBottomWidth={3}>
+      {!hideClub && <Th width={'100px'}>Club</Th>}
+      {!hideRanking && (
+        <Th width={'150px'} textAlign="center">
+          Classement
+        </Th>
+      )}
+      <Th>Name</Th>
+      {!hidePoints && (
+        <Th width={'100px'} textAlign="center">
+          Points
+        </Th>
+      )}
+      <Th textAlign="center">Score</Th>
+    </Tr>
+  </Thead>
+);
+
+const ScoreboardLine = ({
+  team,
+  score,
+  scoreOpponent,
+  hideClub,
+  hideRanking,
+  hidePoints,
+  ...props
+}) => (
+  <Tr {...props}>
+    {!hideClub && (
+      <Td width={'100px'} height={'1px'}>
+        <ClubsCell team={team} />
+      </Td>
+    )}
+    {!hideRanking && (
+      <Td width={'150px'} height={'1px'}>
+        <RankingsCell team={team} />
+      </Td>
+    )}
+    <Td height={'1px'}>
+      <PlayersCell team={team} />
+    </Td>
+    {!hidePoints && (
+      <Td width={'100px'} height={'1px'}>
+        <PointsCell team={team} />
+      </Td>
+    )}
+    <Td height={'1px'}>
+      <Score score={score} oppositeScore={scoreOpponent} />
+    </Td>
+  </Tr>
+);
+
+const ScoreboardMatch = ({
+  match,
+  isLast,
+  hideClub,
+  hideRanking,
+  hidePoints,
+}) => {
+  const { teamA = [], teamB = [], score = [] } = match;
+  const normalisedScore = useMemo(
+    () => [
+      [score.set[0]?.scoreA, score.set[1]?.scoreA, score.set[2]?.scoreA],
+      [score.set[0]?.scoreB, score.set[1]?.scoreB, score.set[2]?.scoreB],
+    ],
+    [score]
+  );
   return (
-    <HStack height={'100%'}>
-      <Box flex={1} textAlign={'center'}>
-        <Text
-          color={oppositeScore[0] < score[0] ? 'green.500' : 'black'}
-          fontWeight={oppositeScore[0] < score[0] ? 'bold' : 'normal'}
-        >
-          {score[0] || '-'}
-        </Text>
-      </Box>
-      <Divider orientation="vertical" />
-      <Box flex={1} textAlign={'center'}>
-        <Text
-          color={oppositeScore[1] < score[1] ? 'green.500' : 'black'}
-          fontWeight={oppositeScore[1] < score[1] ? 'bold' : 'normal'}
-        >
-          {score[1] || '-'}
-        </Text>
-      </Box>
-      <Divider orientation="vertical" />
-      <Box flex={1} textAlign={'center'}>
-        <Text
-          color={oppositeScore[2] < score[2] ? 'green.500' : 'black'}
-          fontWeight={oppositeScore[2] < score[2] ? 'bold' : 'normal'}
-        >
-          {score[2] || '-'}
-        </Text>
-      </Box>
-    </HStack>
+    <>
+      <ScoreboardLine
+        team={teamA}
+        score={normalisedScore[0]}
+        scoreOpponent={normalisedScore[1]}
+        hideClub={hideClub}
+        hideRanking={hideRanking}
+        hidePoints={hidePoints}
+      />
+      <ScoreboardLine
+        team={teamB}
+        score={normalisedScore[1]}
+        scoreOpponent={normalisedScore[0]}
+        borderBottomWidth={`${isLast ? 1 : 4}px !important`}
+        hideClub={hideClub}
+        hideRanking={hideRanking}
+        hidePoints={hidePoints}
+      />
+    </>
+  );
+};
+
+const hasPlayerDataContent = (matches, key) => {
+  return matches?.some(
+    (m) =>
+      m.teamA?.some((p) => Boolean(p[key]) || p[key] === 0) ||
+      m.teamB?.some((p) => Boolean(p[key]) || p[key] === 0) ||
+      false
   );
 };
 
 const Scoreboard = ({ matches, hideHeader }) => {
+  const hideClub = useMemo(
+    () => !hasPlayerDataContent(matches, 'club'),
+    [matches]
+  );
+
+  const hideRanking = useMemo(
+    () => !hasPlayerDataContent(matches, 'ranking'),
+    [matches]
+  );
+
+  const hidePoints = useMemo(
+    () => !hasPlayerDataContent(matches, 'points'),
+    [matches]
+  );
+
   if (!matches) {
     return null;
   }
 
   return (
-    <TableContainer my={10} mx={{base: 0, md: 4 }}>
+    <TableContainer my={10} mx={{ base: 0, md: 4 }}>
       <Table size="sm">
         {!hideHeader && (
-          <Thead>
-            <Tr borderBottomWidth={3}>
-              <Th width={'100px'}>Club</Th>
-              <Th width={'150px'} textAlign="center">
-                Classement
-              </Th>
-              <Th>Name</Th>
-              <Th textAlign="center">Score</Th>
-            </Tr>
-          </Thead>
+          <ScoreboardHeader
+            hideClub={hideClub}
+            hideRanking={hideRanking}
+            hidePoints={hidePoints}
+          />
         )}
         <Tbody>
-          {matches.map((match, index) => {
-            const { teamA = [], teamB = [], score = [] } = match;
-            const normalisedScore = [
-              [
-                score.set[0]?.scoreA,
-                score.set[1]?.scoreA,
-                score.set[2]?.scoreA,
-              ],
-              [
-                score.set[0]?.scoreB,
-                score.set[1]?.scoreB,
-                score.set[2]?.scoreB,
-              ],
-            ];
-            return (
-              <React.Fragment key={`match-${index}`}>
-                <Tr>
-                  <Td width={'100px'} height={'1px'}>
-                    <VStack
-                      alignItems={'flex-start'}
-                      height={'100%'}
-                      justifyContent="center"
-                    >
-                      {teamA.map((p) => (
-                        <Flex
-                          key={`${p.lastname}-${p.firstname}-${p.club}`}
-                          alignItems={'center'}
-                          flex={1}
-                        >
-                          {p.club}
-                        </Flex>
-                      ))}
-                    </VStack>
-                  </Td>
-                  <Td width={'150px'} height={'1px'}>
-                    <VStack justifyContent="center" height={'100%'}>
-                      {teamA.map((p) => (
-                        <Flex
-                          key={`${p.lastname}-${p.firstname}-${p.ranking}`}
-                          alignItems={'center'}
-                          flex={1}
-                        >
-                          <RankingBadge ranking={p.ranking} />
-                        </Flex>
-                      ))}
-                    </VStack>
-                  </Td>
-                  <Td height={'1px'}>
-                    <VStack
-                      alignItems={'flex-start'}
-                      height={'100%'}
-                      justifyContent="center"
-                    >
-                      {teamA.map((p) => (
-                        <Flex
-                          key={`${p.lastname}-${p.firstname}`}
-                          alignItems={'center'}
-                          flex={1}
-                        >
-                          <Text
-                            as="span"
-                            fontWeight={'bold'}
-                            marginRight={1}
-                            textTransform="uppercase"
-                          >
-                            {p.lastname}
-                          </Text>
-                          {p.firstname}
-                        </Flex>
-                      ))}
-                    </VStack>
-                  </Td>
-                  <Td height={'1px'}>
-                    <Score
-                      score={normalisedScore[0]}
-                      oppositeScore={normalisedScore[1]}
-                    />
-                  </Td>
-                </Tr>
-                <Tr
-                  borderBottomWidth={`${
-                    index < matches.length - 1 ? 4 : 1
-                  }px !important`}
-                >
-                  <Td width={'100px'} height={'1px'}>
-                    <VStack
-                      alignItems={'flex-start'}
-                      height={'100%'}
-                      justifyContent="center"
-                    >
-                      {teamB.map((p) => (
-                        <Flex
-                          key={`${p.lastname}-${p.firstname}-${p.club}`}
-                          alignItems={'center'}
-                          flex={1}
-                        >
-                          {p.club}
-                        </Flex>
-                      ))}
-                    </VStack>
-                  </Td>
-                  <Td width={'150px'} height={'1px'}>
-                    <VStack justifyContent="center" height={'100%'}>
-                      {teamB.map((p) => (
-                        <Flex
-                          key={`${p.lastname}-${p.firstname}-${p.ranking}`}
-                          alignItems={'center'}
-                          flex={1}
-                        >
-                          <RankingBadge ranking={p.ranking} />
-                        </Flex>
-                      ))}
-                    </VStack>
-                  </Td>
-                  <Td height={'1px'}>
-                    <VStack
-                      alignItems={'flex-start'}
-                      height={'100%'}
-                      justifyContent="center"
-                    >
-                      {teamB.map((p) => (
-                        <Flex
-                          key={`${p.lastname}-${p.firstname}`}
-                          alignItems={'center'}
-                          flex={1}
-                        >
-                          <Text
-                            as="span"
-                            fontWeight={'bold'}
-                            marginRight={1}
-                            textTransform="uppercase"
-                          >
-                            {p.lastname}
-                          </Text>
-                          {p.firstname}
-                        </Flex>
-                      ))}
-                    </VStack>
-                  </Td>
-                  <Td height={'1px'}>
-                    <Score
-                      score={normalisedScore[1]}
-                      oppositeScore={normalisedScore[0]}
-                    />
-                  </Td>
-                </Tr>
-              </React.Fragment>
-            );
-          })}
+          {matches.map((match, index) => (
+            <ScoreboardMatch
+              key={`match-${index}`}
+              match={match}
+              isLast={index >= matches.length - 1}
+              hideClub={hideClub}
+              hideRanking={hideRanking}
+              hidePoints={hidePoints}
+            />
+          ))}
         </Tbody>
       </Table>
     </TableContainer>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import MyHelmet from '../components/MyHelmet';
 import ArticlesPageTemplate from './components/ArticlesPageTemplate';
 import PageLayout from '../components/PageLayout';

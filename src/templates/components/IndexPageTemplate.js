@@ -7,7 +7,7 @@ import {
   VStack,
   Heading,
   Text,
-  Icon,
+  Icon, Flex,
 } from '@chakra-ui/react';
 import { MdChevronRight } from 'react-icons/md';
 import { CardSet } from '../../components/Sections';
@@ -30,6 +30,7 @@ const SeeMoreButton = ({ to, ...rest }) => {
 const IndexPageTemplate = ({
   heading,
   subheading,
+  headerImage,
   image,
   posts = [],
   results = [],
@@ -45,29 +46,60 @@ const IndexPageTemplate = ({
         <Container
           maxW="7xl"
           py={16}
-          minHeight={{ base: 'calc(100vh - 48px)', sm: '500px' }}
+          minHeight={{ base: 'calc(100vh - 48px)', sm: '700px' }}
           display="flex"
           alignItems="center"
         >
-          <VStack
+          <Box
+            height={'100%'}
+            width={'100%'}
+            position={'absolute'}
+            bottom={0}
+            right={0}
+            left={0}
+            top={0}
+          >
+            <Box
+              as={Image}
+              /*image={{url: 'https://static.actu.fr/uploads/2018/06/25435-180625142930290-0-960x640.jpg'}}*/
+              image={headerImage}
+              alt=""
+              sx={{
+                objectFit: 'cover',
+                filter: 'blur(var(--chakra-blur-sm)) grayscale(50%) brightness(0.5)',
+                /*transform: 'scaleX(-1)',*/
+                height: { base: '100%', sm: '100%' },
+                width: { base: '100%', sm: '100%' },
+                '& > div': {
+                  height: { base: '100%', sm: '100%' },
+                  width: { base: '100%', sm: '100%' },
+                },
+              }}
+            />
+          </Box>
+
+          <Flex
             h="100%"
+            flexDirection="column"
             justifyContent="center"
-            alignItems={{ base: 'center', sm: 'flex-start' }}
-            textAlign={{ base: 'center', sm: 'left' }}
-            spacing={4}
+            alignItems={{ base: 'center', sm: 'center' }}
+            textAlign={{ base: 'center', sm: 'center' }}
             flex={1}
+            zIndex={100}
           >
             <Heading
-              size="2xl"
+              size="4xl"
               color={'gray.100'}
-              maxW={{ base: '100%', sm: '50%' }}
+              maxW={{ base: '100%', sm: '70%' }}
+              mb={5}
             >
               {heading}
             </Heading>
             <Text
-              fontSize="xl"
+              fontSize="2xl"
               color={'gray.200'}
-              maxW={{ base: '100%', sm: '50%' }}
+              maxW={{ base: '100%', sm: '70%' }}
+              mb={10}
             >
               {subheading}
             </Text>
@@ -77,26 +109,29 @@ const IndexPageTemplate = ({
               as={Link}
               to="/infos-pratiques/inscription"
             >
-              Nous rejoindre
+              Rejoindre le club
             </Button>
-          </VStack>
+          </Flex>
         </Container>
 
         <Box
-          display={{ base: 'none', sm: 'block' }}
-          height={{ base: 'calc(100vh - 25%)', sm: '100%' }}
+          display={{ base: 'none', md: 'block' }}
+          maxHeight={{ base: '80%', sm: '80%' }}
+          width={{ base: '10%', sm: '20%' }}
           position={'absolute'}
           bottom={0}
-          right={0}
-          pt={{ base: 0, sm: 4 }}
+          left={0}
         >
           <Box
             as={Image}
             image={image}
             alt=""
             sx={{
-              /*transform: 'scaleX(-1)',*/
-              height: { base: '100%', sm: '100%' },
+              transform: 'scaleX(-1)',
+              filter: 'brightness(0.9)',
+
+              height: '40vw',
+              maxHeight: '500px',
               '& > div': {
                 height: { base: '100%', sm: '100%' },
               },

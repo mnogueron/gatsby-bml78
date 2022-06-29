@@ -10,14 +10,24 @@ const playerFields = [
     widget: 'string',
   },
   {
-    name: 'club',
-    label: 'Club',
-    widget: 'string',
-  },
-  {
     name: 'ranking',
     label: 'Classement',
     widget: 'string',
+    required: false,
+  },
+  {
+    name: 'club',
+    label: 'Club',
+    widget: 'string',
+    required: false,
+  },
+  {
+    name: 'points',
+    label: 'Points',
+    widget: 'number',
+    required: false,
+    value_type: 'float',
+    min: 0,
   },
 ];
 
@@ -87,6 +97,13 @@ export default {
           collapsed: false,
           fields: setFields,
         },
+        {
+          name: 'matchType',
+          label: 'Type de match',
+          widget: 'select',
+          options: ['SH', 'SD', 'DH', 'DD', 'MX'],
+          required: false,
+        }
       ],
     },
   ],

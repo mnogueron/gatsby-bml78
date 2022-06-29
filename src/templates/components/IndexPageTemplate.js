@@ -53,6 +53,7 @@ const IndexPageTemplate = ({
             h="100%"
             justifyContent="center"
             alignItems={{ base: 'center', sm: 'flex-start' }}
+            textAlign={{ base: 'center', sm: 'left' }}
             spacing={4}
             flex={1}
           >
@@ -82,6 +83,7 @@ const IndexPageTemplate = ({
         </Container>
 
         <Box
+          display={{ base: 'none', sm: 'block' }}
           height={{ base: 'calc(100vh - 25%)', sm: '100%' }}
           position={'absolute'}
           bottom={0}

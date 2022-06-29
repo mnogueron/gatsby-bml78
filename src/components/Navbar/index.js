@@ -126,7 +126,7 @@ const Navbar = ({ className }) => {
               backgroundColor="transparent"
               placeholder="blurred"
             />
-            <Heading size={'md'}>Badminton Maisons-Laffitte</Heading>
+            <Heading fontSize={{ base: 'md', sm: 'lg'}}>Badminton Maisons-Laffitte</Heading>
             {/*<div className="text-xl font-bold tracking-wide lg:text-2xl">
               <span className="text-gray-800 font-semibold">Badminton</span>
               <span className="text-red-700"> Maisons-Laffitte</span>

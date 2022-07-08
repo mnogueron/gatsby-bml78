@@ -23,7 +23,7 @@ office:
 ---
 ### Les adresses du club
 
-Différentes adresses sont disponibles en fonction de la teneur de votre demande. Une question posée sur l'adresse adéquate sera plus rapidement répondue et évitera les transfert d'emails.
+Différentes adresses sont disponibles en fonction du sujet de votre demande. Une question posée sur l'adresse adéquate sera plus rapidement répondue et évitera les transferts d'emails.
 
 * Questions et communication générales : **[club.badml@gmail.com](mailto:club.badml@gmail.com)**
 * Secrétariat : **[secretaire.badml@gmail.com](mailto:secretaire.badml@gmail.com)**

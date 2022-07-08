@@ -33,7 +33,7 @@ const ArticlePage = ({ data, pageContext }) => {
               <Link to={previous.fields.slug} className="group">
                 <div className="flex items-center gap-x-2 text-gray-500">
                   <ArrowNarrowLeftIcon className="w-5 h-5" />
-                  Next
+                  Suivant
                 </div>
                 <p className="mt-4 uppercase text-green-600 font-bold text-xs tracking-wide">
                   {previous.frontmatter.location}
@@ -49,7 +49,7 @@ const ArticlePage = ({ data, pageContext }) => {
               <div className="mt-6 sm:mt-0">
                 <Link to={next.fields.slug} className="group sm:text-right">
                   <div className="flex items-center gap-x-2 text-gray-500 sm:justify-end">
-                    Previous
+                    Précédent
                     <ArrowNarrowRightIcon className="w-5 h-5" />
                   </div>
                   <p className="mt-4 uppercase text-green-600 font-bold text-xs tracking-wide">

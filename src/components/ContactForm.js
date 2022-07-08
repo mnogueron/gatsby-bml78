@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import {
+  Button,
   FormControl,
   FormLabel,
   Input,
   Select,
   Textarea,
 } from '@chakra-ui/react';
+import {Link} from "gatsby";
 
 const subjects = [
   {
@@ -120,12 +122,15 @@ const ContactForm = () => {
       </div>
 
       <div className="mt-2 py-3 text-right">
-        <button
+
+        <Button
+          colorScheme="blue"
           type="submit"
-          className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+          size="md"
+          disabled={!subject || !extendedSubject || !message}
         >
           Envoyer
-        </button>
+        </Button>
       </div>
     </form>
   );

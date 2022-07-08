@@ -6,8 +6,8 @@ subheading: Une question, un problème, une idée ? N'hésitez pas à nous conta
 contactform:
   heading: Formulaire de contact
   description: Si vous avez une question, une idée ou un problème à reporter,
-    utilisez ce formulaire ou les différentes adresses mails ci-dessus.
-  image: /img/copernico-p_kicqcom4s-unsplash-1-.jpg
+    utilisez ce formulaire ou les différentes adresses mails ci-dessous.
+  image: /img/photo-1626721105368-a69248e93b32.jpeg
 office:
   tagline: Our Office
   location: London Spitalfield

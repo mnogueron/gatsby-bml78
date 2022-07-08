@@ -1,8 +1,10 @@
 import React from "react"
 import ContactPageTemplate from "../../templates/components/ContactPageTemplate"
+import useProcessedHAST from "../useProcessedHAST";
 const marked = require("marked")
 
 const ContactPagePreview = ({ data, getAsset }) => {
+  const html = useProcessedHAST(data.body);
   // get image assets and transform markdown
   const contactform = {
     ...data.contactform,
@@ -24,6 +26,7 @@ const ContactPagePreview = ({ data, getAsset }) => {
       subheading={data.subheading}
       contactform={contactform}
       office={office}
+      body={html}
     />
   )
 }

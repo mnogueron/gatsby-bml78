@@ -5,8 +5,9 @@ import ContactPageTemplate from './components/ContactPageTemplate';
 import PageLayout from '../components/PageLayout';
 
 function ContactPage({ data }) {
+  const { markdownRemark: contact } = data;
   const { title, subheading, heading, contactform, office } =
-    data.markdownRemark.frontmatter;
+    contact.frontmatter;
 
   return (
     <>
@@ -17,6 +18,7 @@ function ContactPage({ data }) {
           subheading={subheading}
           contactform={contactform}
           office={office}
+          body={contact.htmlAst}
         />
       </PageLayout>
     </>
@@ -28,6 +30,7 @@ export default ContactPage;
 export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      htmlAst
       frontmatter {
         title
         heading

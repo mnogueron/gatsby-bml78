@@ -185,30 +185,31 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
           - {
-              label: ContactForm,
+              label: "Formulaire de contact",
               name: contactform,
               widget: object,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string },
+                  { label: "Titre", name: heading, widget: string },
                   { label: Description, name: description, widget: string },
                   { label: Image, name: image, widget: image },
                 ],
             }
-          - {
-              label: Office,
-              name: office,
-              widget: object,
-              fields:
-                [
-                  { label: Tagline, name: tagline, widget: string },
-                  { label: Location, name: location, widget: string },
-                  { label: Address, name: address, widget: markdown },
-                  { label: Phone, name: phone, widget: markdown },
-                  { label: Image, name: image, widget: image },
-                ],
-            }
+          #- {
+          #    label: Office,
+          #    name: office,
+          #    widget: object,
+          #    fields:
+          #      [
+          #        { label: Tagline, name: tagline, widget: string },
+          #        { label: Location, name: location, widget: string },
+          #        { label: Address, name: address, widget: markdown },
+          #        { label: Phone, name: phone, widget: markdown },
+          #        { label: Image, name: image, widget: image },
+          #      ],
+          #  }
 
   - name: "informations"
     label: "Infos Pratiques"

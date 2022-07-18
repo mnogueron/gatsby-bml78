@@ -3,7 +3,6 @@ import CMS from 'netlify-cms-app'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import ArticlesPagePreview from './preview-templates/ArticlesPagePreview'
 import ArticlePagePreview from './preview-templates/ArticlePagePreview'
-import AboutPagePreview from './preview-templates/AboutPagePreview'
 import ContentPagePreview from './preview-templates/ContentPagePreview'
 import ContactPagePreview from './preview-templates/ContactPagePreview'
 import youtubeEditorComponent from './editor-components/youtube'
@@ -16,7 +15,6 @@ const previewTemplates = {
   'index': IndexPagePreview,
   'articles-index': ArticlesPagePreview,
   'articles': ArticlePagePreview,
-  'about': AboutPagePreview,
   'contact': ContactPagePreview,
 
   'results': ContentPagePreview,

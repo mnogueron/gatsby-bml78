@@ -8,7 +8,7 @@ module.exports = {
     titleTemplate: "%s | BML",
     description: "Retrouvez toutes les actus et info du club de badminton de Maisons-Laffitte",
     siteUrl,
-    image: "/img/bml-icon.png"
+    image: "/assets/bml-icon.png"
   },
   plugins: [
     {
@@ -144,5 +144,6 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+    "gatsby-plugin-react-helmet",
   ],
 }

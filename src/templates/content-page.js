@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import MyHelmet from '../components/MyHelmet';
+import SEO from '../components/SEO';
 import ContentPageTemplate from './components/ContentPageTemplate';
 import PageLayout from '../components/PageLayout';
 
@@ -10,7 +10,7 @@ const ContentPage = ({ data }) => {
 
   return (
     <>
-      <MyHelmet title={fm.title} description={fm.subheading} />
+      <SEO title={fm.title} description={fm.subheading} />
       <PageLayout>
         <ContentPageTemplate
           heading={fm.heading}

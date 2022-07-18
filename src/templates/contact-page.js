@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import MyHelmet from '../components/MyHelmet';
+import SEO from '../components/SEO';
 import ContactPageTemplate from './components/ContactPageTemplate';
 import PageLayout from '../components/PageLayout';
 
@@ -11,7 +11,7 @@ function ContactPage({ data }) {
 
   return (
     <>
-      <MyHelmet title={title} description={subheading} />
+      <SEO title={title} description={subheading} />
       <PageLayout>
         <ContactPageTemplate
           heading={heading}

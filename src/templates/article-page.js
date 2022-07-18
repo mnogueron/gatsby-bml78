@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import MyHelmet from '../components/MyHelmet';
+import SEO from '../components/SEO';
 import { Container } from '../components/Sections';
 import {
   ArrowNarrowLeftIcon,
@@ -16,7 +16,7 @@ const ArticlePage = ({ data, pageContext }) => {
 
   return (
     <>
-      <MyHelmet title={fm.title} description={project.excerpt} />
+      <SEO title={fm.title} description={project.excerpt} />
       <PageLayout>
         <ArticlePageTemplate
           location={fm.location}

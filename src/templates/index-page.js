@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import MyHelmet from '../components/SEO';
+import SEO from '../components/SEO';
 
 import IndexPageTemplate from './components/IndexPageTemplate';
 import PageLayout from '../components/PageLayout';
@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <MyHelmet title={fm.title} description={fm.subheading} />
+      <SEO title={fm.title} description={fm.subheading} />
       <PageLayout>
         <IndexPageTemplate
           heading={fm.heading}

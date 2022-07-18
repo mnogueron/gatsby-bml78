@@ -47,7 +47,7 @@ const Footer = () => {
           spacing={{ base: 4, md: 8 }}
         >
           <Box mx="auto">
-            <Link className="flex items-center gap-1" to="/">
+            <Link className="flex items-center gap-1" to="/" textDecoration="none">
               <StaticImage
                 src="../img/bml-icon.png"
                 alt="Badminton Maisons-Laffitte icon"

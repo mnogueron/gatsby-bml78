@@ -37,34 +37,38 @@ const SEO = ({ title, description, image, article }) => {
   };
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
-      {seo.url && [
-          <meta property="og:url" content={seo.url} />,
-          <meta itemProp="url" content={seo.url} />
-        ]
-      }
-      <meta property="og:type" content={article ? 'article' : 'website'} />
-      {seo.title && [
-          <meta property="og:title" content={seo.title} />,
-          <meta itemProp="name" content={seo.title} />,
-          <meta name="twitter:title" content={seo.title} />,
-      ]}
-      {seo.description && [
-          <meta property="og:description" content={seo.description} />,
-          <meta itemProp="description" content={seo.description} />,
-          <meta name="twitter:description" content={seo.description} />,
-      ]}
-      {seo.image && [
-          <meta property="og:image" content={seo.image} />,
-          <meta itemProp="thumbnailUrl" content={seo.image} />,
-          <meta itemProp="image" content={seo.image} />,
-          <meta itemProp="imageUrl" content={seo.image} />,
-          <meta name="twitter:image" content={seo.image} />,
-      ]}
-      <meta name="twitter:card" content="summary_large_image" />
-    </Helmet>
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      meta={[
+        seo.description && { name: 'description', content: seo.description },
+        { name: 'image', content: seo.image },
+        seo.title && { name: 'twitter:title', content: seo.title },
+        seo.description && {
+          name: 'twitter:description',
+          content: seo.description,
+        },
+        seo.image && { name: 'twitter:image', content: seo.image },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        seo.url && { property: 'og:url', content: seo.url },
+        { property: 'og:type', content: article ? 'article' : 'website' },
+        seo.title && { property: 'og:title', content: seo.title },
+        seo.description && {
+          property: 'og:description',
+          content: seo.description,
+        },
+        seo.image && { property: 'og:image', content: seo.image },
+        seo.url && { itemProp: 'url', content: seo.url },
+        seo.title && { itemProp: 'name', content: seo.title },
+        seo.description && {
+          itemProp: 'description',
+          content: seo.description,
+        },
+        seo.image && { itemProp: 'thumbnailUrl', content: seo.image },
+        seo.image && { itemProp: 'image', content: seo.image },
+        seo.image && { itemProp: 'imageUrl', content: seo.image },
+      ].filter(Boolean)}
+    />
   );
 };
 

@@ -85,7 +85,7 @@ const IndexPageTemplate = ({
             alignItems={{ base: 'center', sm: 'center' }}
             textAlign={{ base: 'center', sm: 'center' }}
             flex={1}
-            zIndex={100}
+            zIndex={0}
           >
             <Heading
               size="4xl"

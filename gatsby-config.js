@@ -113,7 +113,7 @@ module.exports = {
         short_name: `BML`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#047857`,
+        theme_color: `#2C5282`,
         display: `standalone`,
         icon: `src/img/bml-icon.png`,
       },

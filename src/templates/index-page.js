@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import MyHelmet from '../components/MyHelmet';
+import MyHelmet from '../components/SEO';
 
 import IndexPageTemplate from './components/IndexPageTemplate';
 import PageLayout from '../components/PageLayout';

@@ -1,12 +1,12 @@
 const siteUrl =
-  process.env.URL || `https://objective-thompson-fe2703.netlify.app`
+  process.env.URL || `https://badml.com`
 
 // TODO change title and description
 module.exports = {
   siteMetadata: {
     title: "Badminton Maisons-Laffitte",
     description: "Retrouvez toutes les actus et info du club de badminton de Maisons-Laffitte",
-    siteUrl: "https://objective-thompson-fe2703.netlify.app",
+    siteUrl: "https://badml.com",
   },
   plugins: [
     {
@@ -28,7 +28,7 @@ module.exports = {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/static/img`,
+        path: `${__dirname}/static/assets`,
         name: "uploads",
       },
     },

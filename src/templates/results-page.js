@@ -56,7 +56,6 @@ export const resultsPageQuery = graphql`
             templateKey
             category
             date
-            location
             featuredimage {
               alt
               image {

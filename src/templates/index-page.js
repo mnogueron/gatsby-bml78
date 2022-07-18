@@ -50,22 +50,6 @@ export const indexPageQuery = graphql`
         }
         heading
         subheading
-        about {
-          description
-          heading
-          image {
-            alt
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 1024, placeholder: BLURRED)
-              }
-            }
-          }
-          button {
-            label
-            url
-          }
-        }
       }
     }
     allPostsMarkdownRemark: allMarkdownRemark(
@@ -85,7 +69,6 @@ export const indexPageQuery = graphql`
             heading
             templateKey
             date
-            location
             featuredimage {
               alt
               image {
@@ -119,7 +102,6 @@ export const indexPageQuery = graphql`
             heading
             templateKey
             date
-            location
             featuredimage {
               alt
               image {

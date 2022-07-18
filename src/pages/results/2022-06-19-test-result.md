@@ -6,7 +6,7 @@ category: equipe-1
 heading: Interclub - Équipe 1 - BML vs HB
 subheading: ""
 featuredimage:
-  image: /img/shuttle.jpg
+  image: /assets/shuttle.jpg
 ---
 |               | BML               | HB  |
 | ------------- | ----------------- | --- |

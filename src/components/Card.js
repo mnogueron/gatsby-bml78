@@ -13,7 +13,7 @@ function Card({ image, heading, date, subheading, url, ...rest }) {
       {...rest}
     >
       <Image
-        image={image?.image || {url: '/static/img/shuttle.jpg' }}
+        image={image?.image || {url: '/static/assets/shuttle.jpg' }}
         alt={image?.alt}
         className="rounded-md overflow-hidden"
       />

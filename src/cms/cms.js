@@ -8,6 +8,8 @@ import ContentPagePreview from './preview-templates/ContentPagePreview'
 import ContactPagePreview from './preview-templates/ContactPagePreview'
 import youtubeEditorComponent from './editor-components/youtube'
 import scoreboardEditorComponent from "./editor-components/scoreboard";
+import fileEditorComponent from "./editor-components/file";
+import gridEditorComponent from "./editor-components/grid";
 import withPreviewWrapper from "./withPreviewWrapper";
 
 const previewTemplates = {
@@ -34,3 +36,5 @@ Object.entries(previewTemplates).forEach(([templateKey, TemplateComponent]) => {
 
 CMS.registerEditorComponent(youtubeEditorComponent);
 CMS.registerEditorComponent(scoreboardEditorComponent);
+/*CMS.registerEditorComponent(fileEditorComponent);*/
+/*CMS.registerEditorComponent(gridEditorComponent);*/

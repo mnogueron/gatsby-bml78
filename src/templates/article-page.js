@@ -35,9 +35,9 @@ const ArticlePage = ({ data, pageContext }) => {
                   <ArrowNarrowLeftIcon className="w-5 h-5" />
                   Suivant
                 </div>
-                <p className="mt-4 uppercase text-green-600 font-bold text-xs tracking-wide">
+                {/*<p className="mt-4 uppercase text-green-600 font-bold text-xs tracking-wide">
                   {previous.frontmatter.location}
-                </p>
+                </p>*/}
                 <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
                   {previous.frontmatter.title}
                 </h3>
@@ -52,9 +52,9 @@ const ArticlePage = ({ data, pageContext }) => {
                     Précédent
                     <ArrowNarrowRightIcon className="w-5 h-5" />
                   </div>
-                  <p className="mt-4 uppercase text-green-600 font-bold text-xs tracking-wide">
+                  {/*<p className="mt-4 uppercase text-green-600 font-bold text-xs tracking-wide">
                     {next.frontmatter.location}
-                  </p>
+                  </p>*/}
                   <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
                     {next.frontmatter.title}
                   </h3>
@@ -80,7 +80,6 @@ export const articleQuery = graphql`
       frontmatter {
         title
         date
-        location
         featuredimage {
           alt
           image {

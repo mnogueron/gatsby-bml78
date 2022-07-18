@@ -32,6 +32,7 @@ const FooterLink = ({ to, children }) => (
     to={to}
     fontSize="sm"
     color="gray.600"
+    textDecoration="none"
   >
     {children}
   </Link>

@@ -5,23 +5,23 @@ heading: Les Sections du BML
 subheading: Our values, mission and culture
 team:
   - name: Courtney Henry
-    image: /img/joanna-nix-walkup-p7zgmc33s0u-unsplash.jpg
+    image: /assets/joanna-nix-walkup-p7zgmc33s0u-unsplash.jpg
     title: Founder / CEO
   - name: Michael Foster
     title: Architect
-    image: /img/rui-silvestre-hamjpesmede-unsplash.jpg
+    image: /assets/rui-silvestre-hamjpesmede-unsplash.jpg
   - name: Leslie Alexander
     title: Landscape Gardener
-    image: /img/brooke-cagle-norsyxmhgpi-unsplash-1-.jpg
+    image: /assets/brooke-cagle-norsyxmhgpi-unsplash-1-.jpg
   - name: Dries Vincent
     title: Manager, Business Relations
-    image: /img/bruce-mars-8yg31xn4dsw-unsplash-1-.jpg
+    image: /assets/bruce-mars-8yg31xn4dsw-unsplash-1-.jpg
 ---
 ### Reconnect people with nature
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dui, placerat nec suscipit nec, blandit nec felis. Nam imperdiet mattis sem id cursus. Nullam ipsum dui, elementum in dignissim et, molestie vel erat. Integer gravida sodales euismod. Nam hendrerit posuere leo, a mattis lorem gravida a. Quisque aliquet nisl quam, quis efficitur magna tempor vitae. Phasellus nec hendrerit metus. Vivamus quis massa fringilla, dapibus ligula a, porttitor libero. Nulla hendrerit non augue ut consectetur. Nulla vestibulum bibendum iaculis. Fusce vitae nunc eget metus suscipit facilisis ut non nulla. Vestibulum ac consectetur mi.
 
-![Rooftop gardens](/img/chuttersnap-nxjyzlbnyuq-unsplash.jpg "Rooftop gardens")
+![Rooftop gardens](/assets/chuttersnap-nxjyzlbnyuq-unsplash.jpg "Rooftop gardens")
 
 ### Improve air quality and micro-climate
 

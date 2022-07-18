@@ -13,7 +13,7 @@ import {
   Tr,
   Td,
   Th,
-  UnorderedList,
+  UnorderedList, Link, SimpleGrid,
 } from '@chakra-ui/react';
 
 const H1 = (props) => <Heading as="h1" size="2xl" mt={10} mb={8} {...props} />;
@@ -65,6 +65,13 @@ const Li = (props) => (
     {...props}
   />
 );
+const MediaFile = ({ file, title }) => {
+  return <Link href={file}>{title || file}</Link>
+}
+
+const Grid = ({ columns, children }) => {
+  return <SimpleGrid columns={JSON.parse(columns)} spacing={10}>{children}</SimpleGrid>
+}
 
 const withChildrenAsJSONProps = (Component) => {
   const PreparedComponent = ({ children }) => {
@@ -96,5 +103,8 @@ export const renderAst = new rehypeReact({
     th: Th,
     td: Td,
     tfoot: Tfoot,
+    a: Link,
+    mediafile: withChildrenAsJSONProps(MediaFile),
+    simplegrid: Grid,
   },
 }).Compiler;

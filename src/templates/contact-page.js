@@ -17,7 +17,6 @@ function ContactPage({ data }) {
           heading={heading}
           subheading={subheading}
           contactform={contactform}
-          office={office}
           body={contact.htmlAst}
         />
       </PageLayout>
@@ -35,21 +34,6 @@ export const contactPageQuery = graphql`
         title
         heading
         subheading
-        office {
-          tagline
-          location
-          address {
-            html
-          }
-          phone {
-            html
-          }
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 640, placeholder: BLURRED)
-            }
-          }
-        }
         contactform {
           heading
           description

@@ -5,8 +5,8 @@ backend:
 
 local_backend: true
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/assets
+public_folder: /assets
 
 content_page: &CONTENT_PAGE
   - {
@@ -48,7 +48,7 @@ result_page: &RESULT_PAGE
     collapsed: true,
     fields:
       [
-        { label: Image, name: image, widget: image, default: "/img/shuttle.jpg", },
+        { label: Image, name: image, widget: image, default: "/assets/shuttle.jpg", },
         { label: Alt, name: alt, widget: string, required: false },
       ],
   }
@@ -89,36 +89,36 @@ collections:
           # - {label: Description, name: description, widget: string}
           # - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           # - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {
-              label: "About",
-              name: "about",
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image,
-                    name: image,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Button,
-                    name: button,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Label, name: label, widget: string },
-                        { label: URL, name: url, widget: string },
-                      ],
-                  },
-                ],
-            }
+          # - {
+          #     label: "About",
+          #     name: "about",
+          #     widget: object,
+          #     fields:
+          #       [
+          #         { label: Heading, name: heading, widget: string },
+          #         { label: Description, name: description, widget: text },
+          #         {
+          #           label: Image,
+          #           name: image,
+          #           widget: object,
+          #           fields:
+          #             [
+          #               { label: Image, name: image, widget: image },
+          #               { label: Alt, name: alt, widget: string },
+          #             ],
+          #         },
+          #         {
+          #           label: Button,
+          #           name: button,
+          #           widget: object,
+          #           fields:
+          #             [
+          #               { label: Label, name: label, widget: string },
+          #               { label: URL, name: url, widget: string },
+          #             ],
+          #         },
+          #       ],
+          #   }
       - file: "src/pages/articles/index.md"
         label: "Actualités"
         name: "articles-index"
@@ -145,32 +145,32 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: Heading, name: heading, widget: string, required: false }
           - { label: Subheading, name: subheading, widget: string, required: false }
-      - file: "src/pages/about/index.md"
-        label: "À propos"
-        name: "about"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "about-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - {
-              label: Team,
-              label_singular: Member,
-              name: team,
-              widget: list,
-              fields:
-                [
-                  { label: Name, name: name, widget: string },
-                  { label: Title, name: title, widget: string },
-                  { label: Image, name: image, widget: image },
-                ],
-            }
+      # - file: "src/pages/about/index.md"
+      #   label: "À propos"
+      #   name: "about"
+      #   fields:
+      #     - {
+      #         label: "Template Key",
+      #         name: "templateKey",
+      #         widget: "hidden",
+      #         default: "about-page",
+      #       }
+      #     - { label: "Title", name: "title", widget: "string" }
+      #     - { label: Heading, name: heading, widget: string }
+      #     - { label: Subheading, name: subheading, widget: string }
+      #     - { label: "Body", name: "body", widget: "markdown" }
+      #     - {
+      #         label: Team,
+      #         label_singular: Member,
+      #         name: team,
+      #         widget: list,
+      #         fields:
+      #           [
+      #             { label: Name, name: name, widget: string },
+      #             { label: Title, name: title, widget: string },
+      #             { label: Image, name: image, widget: image },
+      #           ],
+      #       }
 
       - file: "src/pages/contact/index.md"
         label: "Contact"

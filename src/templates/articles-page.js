@@ -50,7 +50,6 @@ export const articlesPageQuery = graphql`
             heading
             templateKey
             date
-            location
             featuredimage {
               alt
               image {

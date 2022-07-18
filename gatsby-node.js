@@ -31,7 +31,6 @@ exports.createPages = ({ graphql, actions }) => {
                     title
                     heading
                     templateKey
-                    location
                   }
                 }
                 previous {
@@ -42,7 +41,6 @@ exports.createPages = ({ graphql, actions }) => {
                     title
                     heading
                     templateKey
-                    location
                   }
                 }
               }

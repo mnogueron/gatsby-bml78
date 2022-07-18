@@ -80,7 +80,6 @@ export const resultQuery = graphql`
         heading
         subheading
         date
-        location
         featuredimage {
           alt
           image {

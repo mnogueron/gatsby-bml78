@@ -1,4 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
+import Link from './components/link';
 
 const customSizes = {
   navbar: {
@@ -20,6 +21,9 @@ const theme = {
   space: {
     bml: customSizes,
   },
+  components: {
+    Link,
+  }
 };
 
 export default extendTheme(theme);

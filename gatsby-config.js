@@ -1,5 +1,5 @@
 const siteUrl =
-  process.env.URL || `https://badml.com`
+  process.env.URL || `https://gentle-sprinkles-6007b1.netlify.app/`
 
 // TODO change title and description
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
     title: "Badminton Maisons-Laffitte",
     titleTemplate: "%s | BML",
     description: "Retrouvez toutes les actus et info du club de badminton de Maisons-Laffitte",
-    siteUrl: "https://badml.com",
+    siteUrl,
     image: "/bml-icon.png"
   },
   plugins: [

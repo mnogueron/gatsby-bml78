@@ -7,27 +7,20 @@ team: []
 ---
 ### Comment s'inscrire au BML ?
 
-***Nouveauté : l'inscription se fait via l'application "MonClub" téléchargeable sous Apple Store ou Play Store (scanner le QR code ci-dessous, code du club "badmintonml"). Veuillez télécharger les documents liés à votre section ci-dessous, les remplir et les charger dans l'application.***
+***Pour s'inscrire, veuillez télécharger les documents liés à votre section ci-dessous, les remplir et nous les faire parvenir en séance ou par email à cette adresse* [secretaire.badml@gmail.com](mailto:secretaire.badml@gmail.com)*.***
 
-![code QR pour inscription au BML](/assets/qr-bml.png "Code QR pour inscription au BML")
-
-*Si vous ne souhaitez pas utiliser l'application, veuillez remplir les documents indiqués selon votre section.*
-
-*Vous devrez ensuite :*
-
-* *soit nous les envoyer par email à l'adresse de la section (cf rubrique "[Contact](/contact)") : fichiers pdf à remplir directement sur ordi/téléphone et scan du certificat médical rempli par le médecin, puis amener la cotisation en séance pour valider votre dossier ;*
-* *soit les imprimer et nous les amener en séance avec la cotisation.*
+*Pour la cotisation, celle-ci sera à **amener en séance si effectué par chèque** ou communiqué lors de la transmission des documents par mail si effectué par virement bancaire.*
 
 ### Pour une inscription en Jeunes
 
+* lire la [feuille d'information Jeune](/assets/information_jeune.pdf)
 * remplir le [formulaire de Licence Mineur](/assets/ffbad_-_mineurs_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
 * remplir le [questionnaire de Santé Mineur](/assets/ffbad_-_mineurs_questionnaire_sante.pdf)
 
-  * Pour tous les jeunes adhérents qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2018-2019. À remplir et à signer (la page 2 suffit)
+  * Pour tous les jeunes adhérents qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2019-2020. À remplir et à signer (la page 2 suffit)
 * remplir [l'attestation de sortie](/assets/sortie-seances-jeunes.pdf)
 
   * À remplir et à signer (signature des parents)
-* remplir la [notice sur le matériel](/assets/materiels-jeunes.pdf)
 * la cotisation
 
 ### Pour une inscription en Adultes - Jeu Libre
@@ -36,7 +29,7 @@ team: []
 * remplir le [formulaire de Licence](/assets/ffbad_-_adultes_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
 * fournir un [Certificat médical](/assets/ffbad_-_tous_certificat_medical_non_contre-indication.pdf) **OU** remplir le [questionnaire de Santé](/assets/ffbad_-_adultes_questionnaire_sante.pdf)
 
-  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2018-2019. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
+  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2019-2020. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
   * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2018/2019 et après. À imprimer, remplir et signer (la page 2 suffit).
 * la cotisation
 
@@ -46,7 +39,7 @@ team: []
 * remplir le [formulaire de Licence](/assets/ffbad_-_adultes_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
 * fournir un [Certificat médical](/assets/ffbad_-_tous_certificat_medical_non_contre-indication.pdf) **OU** remplir le [questionnaire de Santé](/assets/ffbad_-_adultes_questionnaire_sante.pdf)
 
-  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2018-2019. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
+  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2019-2020. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
   * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2018/2019 et après. À imprimer, remplir et signer (la page 2 suffit).
 * la cotisation
 
@@ -58,10 +51,11 @@ Pour tous les adhérents, règlement par chèque, espèces, coupons sport ou car
 
 |         |                             | Prix     |
 | ------- | --------------------------- | -------- |
-| Jeunes  | 1 cours                     | **160€** |
-|         | 2 cours                     | **190€** |
-|         | 3 cours                     | **220€** |
-| Parent  | Week-end                    | **100€** |
+| Jeunes  | 1 entraînement              | **180€** |
+|         | 2 entraînements             | **220€** |
+|         | 3 entraînements             | **250€** |
+|         | 4 entraînements             | **280€** |
+| Parents | Week-end                    | **120€** |
 | Adultes | Jeu libre                   | **170€** |
 |         | 1 entraînement débutant     | **210€** |
 |         | 1 entraînement compétition  | **250€** |

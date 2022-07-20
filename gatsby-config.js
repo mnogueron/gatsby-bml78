@@ -127,6 +127,8 @@ module.exports = {
          * `src/cms` directory.
          */
         modulePath: `${__dirname}/src/cms/cms.js`,
+        enableIdentityWidget: true,
+        htmlFavicon: `src/img/bml-icon.png`,
       },
     },
     "gatsby-plugin-postcss",

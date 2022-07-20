@@ -1,4 +1,5 @@
 import CMS from 'netlify-cms-app'
+import {fr} from 'netlify-cms-locales';
 
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import ArticlesPagePreview from './preview-templates/ArticlesPagePreview'
@@ -27,6 +28,8 @@ const previewTemplates = {
   'result-sections': ArticlesPagePreview,
   'all-results-index': ArticlesPagePreview,
 }
+
+CMS.registerLocale('fr', fr);
 
 Object.entries(previewTemplates).forEach(([templateKey, TemplateComponent]) => {
   CMS.registerPreviewTemplate(templateKey, withPreviewWrapper(TemplateComponent))

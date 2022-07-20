@@ -7,12 +7,13 @@ team: []
 ---
 ### Comment s'inscrire au BML ?
 
-***Pour s'inscrire, veuillez télécharger les documents liés à votre section ci-dessous, les remplir et nous les faire parvenir en séance ou par email à cette adresse* [secretaire.badml@gmail.com](mailto:secretaire.badml@gmail.com)*.***
+***Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre pré-inscription via le** [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)**.***
 
-*Pour la cotisation, celle-ci sera à **amener en séance si effectué par chèque** ou communiqué lors de la transmission des documents par mail si effectué par virement bancaire.*
+***Merci de noter que seuls les dossiers complets seront acceptés.***
 
 ### Pour une inscription en Jeunes
 
+* remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
 * lire la [feuille d'information Jeune](/assets/information_jeune.pdf)
 * remplir le [formulaire de Licence Mineur](/assets/ffbad_-_mineurs_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
 * remplir le [questionnaire de Santé Mineur](/assets/ffbad_-_mineurs_questionnaire_sante.pdf)
@@ -25,27 +26,28 @@ team: []
 
 ### Pour une inscription en Adultes - Jeu Libre
 
-* remplir le [formulaire en ligne](https://forms.gle/DWUKRwiG4UhJjWmEA)
+* remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
 * remplir le [formulaire de Licence](/assets/ffbad_-_adultes_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
 * fournir un [Certificat médical](/assets/ffbad_-_tous_certificat_medical_non_contre-indication.pdf) **OU** remplir le [questionnaire de Santé](/assets/ffbad_-_adultes_questionnaire_sante.pdf)
 
-  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2019-2020. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
-  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2018/2019 et après. À imprimer, remplir et signer (la page 2 suffit).
+  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2019/2020. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
+  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2019/2020 et après. À imprimer, remplir et signer (la page 2 suffit).
 * la cotisation
 
 ### Pour une inscription en Adultes - Compétition
 
 * envoyer un email au Responsable de la section : [competition.badml@gmail.com](mailto:competition.badml@gmail.com)
+* remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
 * remplir le [formulaire de Licence](/assets/ffbad_-_adultes_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
 * fournir un [Certificat médical](/assets/ffbad_-_tous_certificat_medical_non_contre-indication.pdf) **OU** remplir le [questionnaire de Santé](/assets/ffbad_-_adultes_questionnaire_sante.pdf)
 
-  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2019-2020. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
-  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2018/2019 et après. À imprimer, remplir et signer (la page 2 suffit).
+  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2019/2020. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
+  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2019/2020 et après. À imprimer, remplir et signer (la page 2 suffit).
 * la cotisation
 
 ### Cotisation
 
-Pour tous les adhérents, règlement par chèque, espèces, coupons sport ou carte bancaire avec l'application.
+Pour tous les adhérents, règlement par **chèque** à l'ordre du BML, **espèces**, **coupons sport** (à apporter lors d'une séance) ou **virement bancaire** (merci de bien vouloir indiquer nom et prénom dans les références du virement). Un RIB vous sera envoyé suite à votre inscription en ligne si vous avez choisi cette option.
 
 #### Tarifs cotisations (dont licence fédérale)
 
@@ -62,4 +64,7 @@ Pour tous les adhérents, règlement par chèque, espèces, coupons sport ou car
 |         | 2 entraînements compétition | **280€** |
 |         | 3 entraînement compétition  | **300€** |
 
-***10 € supplémentaires pour les non résidents à Maisons-Laffitte***
+***+10€ pour tout résident hors Maisons-Laffitte/Mesnil Le Roi,***
+
+**Tarifs dégressifs pour les adhésions famille/couple !**\
+**\-10€ de réduction** pour la 2ème adhésion et les suivantes au sein du même foyer.

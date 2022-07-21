@@ -4,7 +4,7 @@ title: Accès / Horaires
 heading: Gymnases / Horaires
 subheading: Où et quand jouer ?
 ---
-Les séances de jeu libre et les entraînements se font sur les gymnases de Sartrouville et de Maisons-Laffitte suivant les horaires suivants pour la saisons 2022/2023 :
+Les séances de jeu libre et les entraînements se font sur les gymnases de Sartrouville et de Maisons-Laffitte suivant les horaires suivants pour la saison 2022/2023 :
 
 ![horaires](/assets/horaires_bml.jpeg)
 

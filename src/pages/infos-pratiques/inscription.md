@@ -7,18 +7,18 @@ team: []
 ---
 ### Comment s'inscrire au BML ?
 
-***Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre pré-inscription via le** [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)**.***
+**\*Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre pré-inscription via le** [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)**.***
 
 ***Merci de noter que seuls les dossiers complets seront acceptés.***
 
 ### Pour une inscription en Jeunes
 
-* remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
 * lire la [feuille d'information Jeune](/assets/information_jeune.pdf)
+* remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
 * remplir le [formulaire de Licence Mineur](/assets/ffbad_-_mineurs_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
 * remplir le [questionnaire de Santé Mineur](/assets/ffbad_-_mineurs_questionnaire_sante.pdf)
 
-  * Pour tous les jeunes adhérents qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2019-2020. À remplir et à signer (la page 2 suffit)
+  * Pour tous les jeunes adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2020-2021**. À remplir et à signer (la page 2 suffit)
 * remplir [l'attestation de sortie](/assets/sortie-seances-jeunes.pdf)
 
   * À remplir et à signer (signature des parents)
@@ -30,8 +30,8 @@ team: []
 * remplir le [formulaire de Licence](/assets/ffbad_-_adultes_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
 * fournir un [Certificat médical](/assets/ffbad_-_tous_certificat_medical_non_contre-indication.pdf) **OU** remplir le [questionnaire de Santé](/assets/ffbad_-_adultes_questionnaire_sante.pdf)
 
-  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2019/2020. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
-  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2019/2020 et après. À imprimer, remplir et signer (la page 2 suffit).
+  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2020-2021**. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
+  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical **pour la saison 2020-2011 et après**. À imprimer, remplir et signer (la page 2 suffit).
 * la cotisation
 
 ### Pour une inscription en Adultes - Compétition
@@ -41,8 +41,8 @@ team: []
 * remplir le [formulaire de Licence](/assets/ffbad_-_adultes_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
 * fournir un [Certificat médical](/assets/ffbad_-_tous_certificat_medical_non_contre-indication.pdf) **OU** remplir le [questionnaire de Santé](/assets/ffbad_-_adultes_questionnaire_sante.pdf)
 
-  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical avant la saison 2019/2020. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
-  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical datant de la saison 2019/2020 et après. À imprimer, remplir et signer (la page 2 suffit).
+  * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2020-2021**. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
+  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical **pour la saison 2020-2021 et après**. À imprimer, remplir et signer (la page 2 suffit).
 * la cotisation
 
 ### Cotisation

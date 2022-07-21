@@ -57,7 +57,7 @@ Pour tous les adhérents, règlement par **chèque** à l'ordre du BML, **espèc
 |         | 2 entraînements             | **220€** |
 |         | 3 entraînements             | **250€** |
 |         | 4 entraînements             | **280€** |
-| Parents | Week-end                    | **120€** |
+| Adultes | Week-end                    | **120€** |
 | Adultes | Jeu libre                   | **170€** |
 |         | 1 entraînement débutant     | **210€** |
 |         | 1 entraînement compétition  | **250€** |

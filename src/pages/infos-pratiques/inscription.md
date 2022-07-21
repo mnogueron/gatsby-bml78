@@ -64,7 +64,7 @@ Pour tous les adhérents, règlement par **chèque** à l'ordre du BML, **espèc
 |         | 2 entraînements compétition      | **280€** |
 |         | 3 entraînement compétition       | **300€** |
 
-***+10€ pour tout résident hors Maisons-Laffitte/Mesnil Le Roi,***
+***+10€ pour tout résident hors Maisons-Laffitte.***
 
 **Tarifs dégressifs pour les adhésions famille/couple !**\
 **\-10€ de réduction** pour la 2ème adhésion et les suivantes au sein du même foyer.

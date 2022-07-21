@@ -1,7 +1,7 @@
 ---
 templateKey: article-page
 title: Forum des associations - 3 Septembre 2022
-heading: ""
+heading: Forum des associations - 3 Septembre 2022
 date: 2022-07-20T21:44:04.104Z
 featured: true
 featuredimage:

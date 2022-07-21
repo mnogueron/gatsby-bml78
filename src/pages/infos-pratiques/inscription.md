@@ -47,7 +47,9 @@ team: []
 
 ### Cotisation
 
-Pour tous les adhérents, règlement par **chèque** à l'ordre du BML, **espèces**, **coupons sport** (à apporter lors d'une séance) ou **virement bancaire** (merci de bien vouloir indiquer nom et prénom dans les références du virement). Un RIB vous sera envoyé suite à votre inscription en ligne si vous avez choisi cette option.
+Pour tous les adhérents, le règlement par **virement bancaire** **est à privilégier.** Merci de bien vouloir indiquer les nom et prénom de l'adhérent dans les références du virement. Un RIB vous sera envoyé suite à votre inscription en ligne si vous avez choisi cette option.
+
+Si vous ne souhaitez ou ne pouvez pas effectuer le paiement par virement, il vous est possible de le faire par chèque, espèces, Chèques Vacances, Coupons Sport, Pass + ou Pass'Sport.
 
 #### Tarifs cotisations (dont licence fédérale)
 

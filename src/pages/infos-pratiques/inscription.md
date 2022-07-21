@@ -24,7 +24,7 @@ team: []
   * À remplir et à signer (signature des parents)
 * la cotisation
 
-### Pour une inscription en Adultes - Jeu Libre
+### Pour une inscription en Adultes - Jeu Libre ou Entraînement débutant/confirmé
 
 * remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
 * remplir le [formulaire de Licence](/assets/ffbad_-_adultes_formulaire_licence_saisonniere_2021-2022.pdf) (la page 1 suffit)
@@ -51,18 +51,18 @@ Pour tous les adhérents, règlement par **chèque** à l'ordre du BML, **espèc
 
 #### Tarifs cotisations (dont licence fédérale)
 
-|         |                             | Prix     |
-| ------- | --------------------------- | -------- |
-| Jeunes  | 1 entraînement              | **180€** |
-|         | 2 entraînements             | **220€** |
-|         | 3 entraînements             | **250€** |
-|         | 4 entraînements             | **280€** |
-| Adultes | Week-end                    | **120€** |
-| Adultes | Jeu libre                   | **170€** |
-|         | 1 entraînement débutant     | **210€** |
-|         | 1 entraînement compétition  | **250€** |
-|         | 2 entraînements compétition | **280€** |
-|         | 3 entraînement compétition  | **300€** |
+|         |                                  | Prix     |
+| ------- | -------------------------------- | -------- |
+| Jeunes  | 1 entraînement                   | **180€** |
+|         | 2 entraînements                  | **220€** |
+|         | 3 entraînements                  | **250€** |
+|         | 4 entraînements                  | **280€** |
+| Adultes | Week-end                         | **120€** |
+| Adultes | Jeu libre                        | **170€** |
+|         | 1 entraînement débutant/confirmé | **210€** |
+|         | 1 entraînement compétition       | **250€** |
+|         | 2 entraînements compétition      | **280€** |
+|         | 3 entraînement compétition       | **300€** |
 
 ***+10€ pour tout résident hors Maisons-Laffitte/Mesnil Le Roi,***
 

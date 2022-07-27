@@ -8,26 +8,42 @@ local_backend: true
 media_folder: static/assets
 public_folder: /assets
 
+title: &TITLE { label: "Title", name: "title", widget: "string" }
+heading: &HEADING { label: Heading, name: heading, widget: string, required: false }
+subheading: &SUBHEADING { label: Subheading, name: subheading, widget: string, required: false }
+body: &BODY { label: "Body", name: "body", widget: "markdown" }
+template_base: &TEMPLATE_BASE {
+  label: "Template Key",
+  name: "templateKey",
+  widget: "hidden",
+}
+
+seo: &SEO
+  label: "SEO"
+  name: "seo"
+  widget: object
+  collapsed: true
+  required: false
+  fields:
+    - { label: "Titre", name: "title", widget: "string", required: false }
+    - { label: "Description", name: "description", widget: "string", required: false }
+    - { label: Image, name: image, widget: image, required: false }
+
 content_page: &CONTENT_PAGE
-  - {
-    label: "Template Key",
-    name: "templateKey",
-    widget: "hidden",
-    default: "content-page",
-  }
-  - { label: "Title", name: "title", widget: "string" }
-  - { label: Heading, name: heading, widget: string, required: false }
-  - { label: Subheading, name: subheading, widget: string, required: false }
-  - { label: "Body", name: "body", widget: "markdown" }
+  - <<: *TEMPLATE_BASE
+    default: "content-page"
+  - <<: *TITLE
+  - <<: *HEADING
+  - <<: *SUBHEADING
+  - <<: *BODY
+  - <<: *SEO
 
 result_page: &RESULT_PAGE
-  - {
-    label: "Template Key",
-    name: "templateKey",
-    widget: "hidden",
-    default: "result-page",
-  }
-  - { label: "Title", name: "title", widget: "string" }
+  - <<: *TEMPLATE_BASE
+    default: "result-page"
+  - <<: *TITLE
+  - <<: *HEADING
+  - <<: *SUBHEADING
   - { label: "Publish Date", name: "date", widget: "datetime" }
   - {
     label: Category,
@@ -38,9 +54,7 @@ result_page: &RESULT_PAGE
     value_field: "title",
     display_fields: [ "heading" ],
   }
-  - { label: Heading, name: heading, widget: string, required: false }
-  - { label: Subheading, name: subheading, widget: string, required: false }
-  - { label: "Body", name: "body", widget: "markdown" }
+  - <<: *BODY
   - {
     label: "Featured Image",
     name: "featuredimage",
@@ -52,18 +66,7 @@ result_page: &RESULT_PAGE
         { label: Alt, name: alt, widget: string, required: false },
       ],
   }
-
-
-header_fields: &HEADER_FIELDS
-  - {
-    label: "Template Key",
-    name: "templateKey",
-    widget: "hidden",
-    default: "results-page",
-  }
-  - { label: "Title", name: "title", widget: "string" }
-  - { label: Heading, name: heading, widget: string, required: false }
-  - { label: Subheading, name: subheading, widget: string, required: false }
+  - <<: *SEO
 
 collections:
   - name: "pages"
@@ -73,17 +76,13 @@ collections:
         label: "Accueil"
         name: "index"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "index-page",
-            }
+          - <<: *TEMPLATE_BASE
+            default: "index-page"
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Image de fond, name: headerImage, widget: image }
           - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
+          - { label: Subheading, name: subheading, widget: text }
           # - { label: "Body", name: "body", widget: "markdown" }
           # - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
           # - {label: Description, name: description, widget: string}
@@ -119,16 +118,13 @@ collections:
           #         },
           #       ],
           #   }
+          - <<: *SEO
       - file: "src/pages/articles/index.md"
         label: "Actualités"
         name: "articles-index"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "articles-page",
-            }
+          - <<: *TEMPLATE_BASE
+            default: "articles-page"
           - { label: "Title", name: "title", widget: "string" }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
@@ -136,15 +132,12 @@ collections:
         label: "Tous les résulats"
         name: "all-results-index"
         fields:
-          - {
-            label: "Template Key",
-            name: "templateKey",
-            widget: "hidden",
-            default: "all-results-page",
-          }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: Heading, name: heading, widget: string, required: false }
-          - { label: Subheading, name: subheading, widget: string, required: false }
+          - <<: *TEMPLATE_BASE
+            default: "all-results-page"
+          - <<: *TITLE
+          - <<: *HEADING
+          - <<: *SUBHEADING
+          - <<: *SEO
       # - file: "src/pages/about/index.md"
       #   label: "À propos"
       #   name: "about"
@@ -176,16 +169,12 @@ collections:
         label: "Contact"
         name: "contact"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "contact-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - <<: *TEMPLATE_BASE
+            default: "contact-page"
+          - <<: *TITLE
+          - <<: *HEADING
+          - <<: *SUBHEADING
+          - <<: *BODY
           - {
               label: "Formulaire de contact",
               name: contactform,
@@ -210,6 +199,7 @@ collections:
           #        { label: Image, name: image, widget: image },
           #      ],
           #  }
+          - <<: *SEO
 
   - name: "informations"
     label: "Infos Pratiques"
@@ -247,14 +237,10 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}"
     fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "article-page",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: Heading, name: heading, widget: string, required: false }
+      - <<: *TEMPLATE_BASE
+        default: "article-page"
+      - <<: *TITLE
+      - <<: *HEADING
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured", name: "featured", widget: boolean }
       # - {label: "Description", name: "description", widget: "text"}
@@ -269,7 +255,8 @@ collections:
               { label: Alt, name: alt, widget: string },
             ],
         }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - <<: *BODY
+      - <<: *SEO
       # - {label: "Tags", name: "tags", widget: "list"}
   - name: "results"
     label: "Résultats"
@@ -289,4 +276,10 @@ collections:
     create: true
     slug: "{{fields.title}}"
     summary: "{{fields.heading}}"
-    fields: *HEADER_FIELDS
+    fields:
+      - <<: *TEMPLATE_BASE
+        default: "results-page"
+      - <<: *TITLE
+      - <<: *HEADING
+      - <<: *SUBHEADING
+      - <<: *SEO

@@ -21,6 +21,17 @@ exports.createPages = ({ graphql, actions }) => {
                   frontmatter {
                     title
                     templateKey
+                    seo {
+                      title
+                      description
+                      image {
+                        childImageSharp {
+                          fixed {
+                            src
+                          }
+                        }
+                      }
+                    }
                   }
                 }
                 next {
@@ -58,6 +69,11 @@ exports.createPages = ({ graphql, actions }) => {
         edges.forEach(({ node, next, previous }) => {
           const id = node.id
           const { title, templateKey } = node.frontmatter;
+          const seo = {
+            title: node.frontmatter.seo?.title || undefined,
+            description: node.frontmatter.seo?.description || undefined,
+            image: node.frontmatter.seo?.image?.childImageSharp?.fixed?.src || undefined,
+          }
           createPage({
             path: node.fields.slug,
             // tags: edge.node.frontmatter.tags,
@@ -68,6 +84,7 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               id,
               title,
+              seo,
               next,
               previous,
             },

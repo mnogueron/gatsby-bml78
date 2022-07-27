@@ -51,8 +51,4 @@ Vous pouvez retrouver sa [boutique en ligne](http://badaddict.fr) ; nos adhéren
 
 Nous remercions notre très chère mairie de **Maisons-Laffitte** qui nous épaule au quotidien via la mise à disposition de créneaux ainsi que pour le matériel à disposition sur l’intégralité des évènements organisés par le club : Interclub Nationaux, Régionaux, Départementaux / Journée portes ouvertes ainsi que nos deux tournois annuels.
 
-![Département des Yvelines](/assets/yvelines-78.png "Département des Yvelines")
-
-![Ligue Badminton Île de France](/assets/ligue-idf.png "Ligue Badminton Île de France")
-
-![FFBad](/assets/ffbad.png "FFBad")
+![Département des Yvelines](/assets/yvelines-78.png "Département des Yvelines") ![Ligue Badminton Île de France](/assets/ligue-idf.png "Ligue Badminton Île de France") ![FFBad](/assets/ffbad.png "FFBad")

@@ -69,6 +69,11 @@ exports.createPages = ({ graphql, actions }) => {
         edges.forEach(({ node, next, previous }) => {
           const id = node.id
           const { title, templateKey } = node.frontmatter;
+
+          if (!templateKey) {
+            return;
+          }
+
           const seo = {
             title: node.frontmatter.seo?.title || undefined,
             description: node.frontmatter.seo?.description || undefined,

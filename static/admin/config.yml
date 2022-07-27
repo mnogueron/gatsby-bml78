@@ -283,3 +283,56 @@ collections:
       - <<: *HEADING
       - <<: *SUBHEADING
       - <<: *SEO
+  - name: "menus"
+    label: "Menus"
+    files:
+      - file: "src/pages/menus/infos-pratiques.md"
+        label: "Menu - Infos pratiques"
+        name: "infos-pratiques"
+        fields:
+          - label: "Menu key"
+            name: "menuKey"
+            widget: "hidden"
+            default: "infos-pratiques"
+          - label: Sections
+            label_singular: Section
+            name: items
+            widget: list
+            summary: "Titre de la section : {{fields.title}} - Page associée : {{fields.url}}"
+            fields:
+              - label: Titre
+                name: title
+                widget: string
+              - label: Page
+                name: url
+                widget: relation
+                collection: "informations"
+                search_fields: [ "title" ]
+                value_field: "/infos-pratiques/{{slug}}"
+                display_fields: [ "title" ]
+      - file: "src/pages/menus/resultats.md"
+        label: "Menu - Résultats"
+        name: "resultats"
+        fields:
+          - {
+            label: "Menu Key",
+            name: "menuKey",
+            widget: "hidden",
+            default: "resultats",
+          }
+          - label: Sections
+            label_singular: Section
+            name: items
+            widget: list
+            summary: "Titre de la section : {{fields.title}} - Page associée : {{fields.url}}"
+            fields:
+              - label: Titre
+                name: title
+                widget: string
+              - label: Page
+                name: url
+                widget: relation
+                collection: "result-sections"
+                search_fields: [ "heading" ]
+                value_field: "/results/{{slug}}"
+                display_fields: [ "heading" ]

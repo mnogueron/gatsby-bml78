@@ -47,7 +47,13 @@ const Footer = () => {
           spacing={{ base: 4, md: 8 }}
         >
           <Box mx="auto">
-            <Link className="flex items-center gap-1" to="/" textDecoration="none">
+            <Link
+              as={GatsbyLink}
+              className="flex items-center gap-1"
+              to="/"
+              textDecoration="none"
+              _hover={{ textDecoration: 'none' }}
+            >
               <StaticImage
                 src="../img/bml-icon.png"
                 alt="Badminton Maisons-Laffitte icon"
@@ -73,7 +79,10 @@ const Footer = () => {
                   spacing={{ base: 2, sm: 20, md: 10 }}
                   mt={2}
                 >
-                  <VStack spacing={2} alignItems={{base: 'center', sm: "flex-start"}}>
+                  <VStack
+                    spacing={2}
+                    alignItems={{ base: 'center', sm: 'flex-start' }}
+                  >
                     <FooterLink to="/infos-pratiques/sections">
                       Nos Sections
                     </FooterLink>
@@ -84,7 +93,10 @@ const Footer = () => {
                       Les entraînements
                     </FooterLink>
                   </VStack>
-                  <VStack spacing={2} alignItems={{base: 'center', sm: "flex-start"}}>
+                  <VStack
+                    spacing={2}
+                    alignItems={{ base: 'center', sm: 'flex-start' }}
+                  >
                     <FooterLink to="/infos-pratiques/avantages">
                       Les avantages du club
                     </FooterLink>
@@ -96,7 +108,11 @@ const Footer = () => {
               </Box>
               <Box>
                 <SectionHeader>Contact</SectionHeader>
-                <VStack spacing={2} alignItems={{base: 'center', md: "flex-start"}} mt={2}>
+                <VStack
+                  spacing={2}
+                  alignItems={{ base: 'center', md: 'flex-start' }}
+                  mt={2}
+                >
                   {/*<span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
                   +1 526 654 8965
                 </span>*/}

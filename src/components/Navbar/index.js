@@ -1,5 +1,5 @@
-import React, {useMemo, useState} from 'react';
-import {graphql, Link, useStaticQuery} from 'gatsby';
+import React, { useMemo, useState } from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Heading } from '@chakra-ui/react';
 import NavLink from './NavLink';
@@ -7,37 +7,51 @@ import DropdownNavLink from './DropdownNavLink';
 
 const Navbar = ({ className }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { allMarkdownRemark } = useStaticQuery(
+  const { infosPratiquesMenu, resultsMenu } = useStaticQuery(
     graphql`
-        query RESULT_CATEGORIES {
-            allMarkdownRemark(
-                sort: { order: DESC, fields: [frontmatter___date] }
-                filter: { frontmatter: { templateKey: { eq: "results-page" } } }
-            ) {
-                edges {
-                    node {
-                        excerpt(pruneLength: 400)
-                        id
-                        fields {
-                            slug
-                        }
-                        frontmatter {
-                            heading
-                        }
-                    }
+      query NAVBAR {
+        infosPratiquesMenu: markdownRemark(
+          frontmatter: { menuKey: { eq: "infos-pratiques" } }
+        ) {
+          frontmatter {
+            menuKey
+            items {
+              title
+              url
+            }
+          }
+        }
+
+        resultsMenu: markdownRemark(
+            frontmatter: { menuKey: { eq: "resultats" } }
+        ) {
+            frontmatter {
+                menuKey
+                items {
+                    title
+                    url
                 }
             }
         }
+      }
     `
-  )
-  const {edges: sections} = allMarkdownRemark;
+  );
 
   const MENU = useMemo(() => {
-    const resultCategories = sections.map(({node: category}) => ({
-      key: category.id,
-      label: category.frontmatter.heading,
-      to: category.fields.slug,
-    }))
+    const infoPratiquesCategories = infosPratiquesMenu.frontmatter.items.map(
+      (item) => ({
+        key: `${item.url} - ${item.title}`,
+        label: item.title,
+        to: item.url,
+      })
+    );
+    const resultsCategories = resultsMenu.frontmatter.items.map(
+      (item) => ({
+        key: `${item.url} - ${item.title}`,
+        label: item.title,
+        to: item.url,
+      })
+    );
     return [
       {
         key: 'accueil',
@@ -47,38 +61,7 @@ const Navbar = ({ className }) => {
       {
         key: 'infospratiques',
         label: 'Infos Pratiques',
-        options: [
-          {
-            key: 'sections',
-            label: 'Nos Sections',
-            to: '/infos-pratiques/sections',
-          },
-          {
-            key: 'inscription',
-            label: 'Inscription',
-            to: '/infos-pratiques/inscription',
-          },
-          {
-            key: 'avantageclub',
-            label: 'Avantage Club',
-            to: '/infos-pratiques/avantages',
-          },
-          {
-            key: 'entrainements',
-            label: 'Entraînements',
-            to: '/infos-pratiques/entrainements',
-          },
-          {
-            key: 'acces-horaires',
-            label: 'Accès / Horaires',
-            to: '/infos-pratiques/acces-horaires',
-          },
-          {
-            key: 'calendrier',
-            label: 'Calendrier',
-            to: '/infos-pratiques/calendrier',
-          },
-        ],
+        options: infoPratiquesCategories,
       },
       {
         key: 'resultats',
@@ -89,7 +72,7 @@ const Navbar = ({ className }) => {
             label: 'Tous les résultats',
             to: '/results',
           },
-          ...resultCategories
+          ...resultsCategories,
         ],
       },
       {
@@ -104,7 +87,7 @@ const Navbar = ({ className }) => {
         to: '/contact',
       },
     ];
-  }, [sections]);
+  }, [infosPratiquesMenu, resultsMenu]);
 
   const handleMenuClose = () => {
     setMenuOpen(false);
@@ -126,7 +109,9 @@ const Navbar = ({ className }) => {
               backgroundColor="transparent"
               placeholder="blurred"
             />
-            <Heading fontSize={{ base: 'md', sm: 'lg'}}>Badminton Maisons-Laffitte</Heading>
+            <Heading fontSize={{ base: 'md', sm: 'lg' }}>
+              Badminton Maisons-Laffitte
+            </Heading>
             {/*<div className="text-xl font-bold tracking-wide lg:text-2xl">
               <span className="text-gray-800 font-semibold">Badminton</span>
               <span className="text-red-700"> Maisons-Laffitte</span>

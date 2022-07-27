@@ -2,7 +2,7 @@
 templateKey: content-page
 title: Nos Sections
 heading: Les Sections du club
-subheading: ""
+subheading: Il y en a forcément une pour vous...
 team: []
 ---
 Créé en 1993, le club de badminton de Maisons-Laffitte propose des sections adaptées à tous les niveaux, les envies et les âges !

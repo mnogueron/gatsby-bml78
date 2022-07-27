@@ -64,7 +64,7 @@ Si vous ne souhaitez ou ne pouvez pas effectuer le paiement par virement, il vou
 |         | 1 entraînement débutant/confirmé | **210€** |
 |         | 1 entraînement compétition       | **250€** |
 |         | 2 entraînements compétition      | **280€** |
-|         | 3 entraînement compétition       | **300€** |
+|         | 3 entraînements compétition      | **300€** |
 
 ***+10€ pour tout résident hors Maisons-Laffitte.***
 

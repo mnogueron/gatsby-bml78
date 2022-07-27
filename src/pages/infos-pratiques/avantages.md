@@ -5,7 +5,7 @@ heading: Partenaires et sponsors
 subheading: ""
 team: []
 ---
-### ELa Bonne Humeur (Maisons-Laffitte)
+### La Bonne Humeur (Maisons-Laffitte)
 
 ![La Bonne Humeur](/assets/la-bonne-humeur.png "La Bonne Humeur")
 

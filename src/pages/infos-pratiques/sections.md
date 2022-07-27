@@ -41,8 +41,12 @@ Pour les joueuses et joueurs qui souhaiteraient débuter ou se perfectionner en 
 
 Enfin, de multiples événements sont organisés tout au long de la saison. N'hésitez pas à prendre contact avec nous si vous souhaitez faire une séance d'essai, gratuite et sans engagement !
 
+![Formules adultes loisirs et créneaux](/assets/section-loisirs-formules.png "Formules adultes loisirs et créneaux")
+
 ### Adultes "Compétition"
 
 La section **Adultes "compétition"** rassemble les joueurs classés qui désirent jouer à un niveau plus élevé et peuvent participer aux Interclubs. Des formules de 1 à 3 séances d'entrainement sont proposées aux compétiteurs. Le BML a 6 équipes de Compétition : 3 en Ligue Départementale, 2 en Régionale, et 1 en Nationale.
 
 Contacter le responsable de la section pour plus d'infos.
+
+![Formules adultes compétiteurs et créneaux](/assets/section-compet-formules.png "Formules adultes compétiteurs et créneaux")

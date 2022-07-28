@@ -31,7 +31,7 @@ team: []
 * fournir un [Certificat médical](/assets/ffbad_-_tous_certificat_medical_non_contre-indication.pdf) **OU** remplir le [questionnaire de Santé](/assets/ffbad_-_adultes_questionnaire_sante.pdf)
 
   * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2020-2021**. À imprimer, faire remplir  et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
-  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical **pour la saison 2020-2011 et après**. À imprimer, remplir et signer (la page 2 suffit).
+  * **Questionnaire de Santé :** Pour tous les adhérents adultes qui renouvellent leur adhésion et ont fourni un certificat médical **pour la saison 2020-2021 et après**. À imprimer, remplir et signer (la page 2 suffit).
 * la cotisation
 
 ### Pour une inscription en Adultes - Compétition

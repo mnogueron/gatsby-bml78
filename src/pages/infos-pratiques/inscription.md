@@ -47,7 +47,7 @@ team: []
 
 ### Cotisation
 
-Pour tous les adhérents, le règlement par **virement bancaire** **est à privilégier.** Merci de bien vouloir indiquer les nom et prénom de l'adhérent dans les références du virement. Un RIB vous sera envoyé suite à votre inscription en ligne si vous avez choisi cette option.
+Pour tous les adhérents, le règlement par **virement bancaire** **est à privilégier.** Merci de bien vouloir indiquer les nom et prénom de l'adhérent dans les références du virement. Vous trouverez le RIB du club en [cliquant ici](/assets/iban-bred-bml.pdf).
 
 Si vous ne souhaitez ou ne pouvez pas effectuer le paiement par virement, il vous est possible de le faire par chèque, espèces, Chèques Vacances, Coupons Sport, Pass + ou Pass'Sport.
 

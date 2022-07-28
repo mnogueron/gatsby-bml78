@@ -19,7 +19,7 @@ Vous pourrez nous y retrouver à l’occasion des repas organisés après les in
 
 ![IAD France](/assets/iad-france.png "IAD France")
 
-Depuis la saison 2021-2022, nous comptons **IAD France** au travers de **Lucas Bono** parmi nos précieux partenaires.
+Depuis la saison 2021-2022, nous comptons **IAD France** au travers de **Lucas Bono et Alexandre Mahia** parmi nos précieux partenaires.
 
 Lucas Bono vous accompagnera méthodiquement dans vos recherches de maison ou appartement aux alentours de Maisons-Laffitte et du Mesnil-le-Roi.
 

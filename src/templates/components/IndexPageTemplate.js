@@ -100,7 +100,7 @@ const IndexPageTemplate = ({
               color={'gray.200'}
               maxW={{ base: '100%', sm: '70%' }}
               mb={10}
-              whiteSpace="pre"
+              whiteSpace="pre-wrap"
             >
               {subheading}
             </Text>

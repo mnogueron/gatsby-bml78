@@ -5,7 +5,8 @@ import {
   Heading,
   ListItem,
   OrderedList,
-  Table,
+  TableContainer,
+  Table as TempoTable,
   Tbody,
   Text,
   Tfoot,
@@ -15,6 +16,8 @@ import {
   Th,
   UnorderedList, Link, SimpleGrid,
 } from '@chakra-ui/react';
+
+const Table = (props) => <TableContainer><TempoTable {...props} /></TableContainer>
 
 const H1 = (props) => <Heading as="h1" size="2xl" mt={10} mb={8} {...props} />;
 const H2 = (props) => <Heading as="h2" size="xl" mt={8} mb={7} {...props} />;

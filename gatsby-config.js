@@ -1,5 +1,5 @@
 const siteUrl =
-  process.env.URL || `https://gentle-sprinkles-6007b1.netlify.app/`
+  process.env.URL || `https://badml.com/`
 
 // TODO change title and description
 module.exports = {

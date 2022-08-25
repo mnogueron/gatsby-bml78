@@ -1,7 +1,7 @@
 ---
 templateKey: result-page
 title: interclub-equipe-1
-heading: Interclub - Équipe 1 - BML vs BBC
+heading: Saison 21-22 - Équipe 1 - BML vs BBC
 date: 2021-09-25T14:00:00.000Z
 category: equipe-1
 featuredimage:

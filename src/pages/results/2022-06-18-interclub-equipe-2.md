@@ -3,7 +3,7 @@ templateKey: result-page
 title: interclub-equipe-2
 date: 2022-04-24T15:00:34.114Z
 category: equipe-2
-heading: Interclub - Équipe 2 - BML vs CBC
+heading: Saison 21-22 - Équipe 2 - BML vs CBC
 subheading: ""
 featuredimage:
   image: /assets/shuttle.jpg

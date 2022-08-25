@@ -22,6 +22,7 @@ const NameCell = ({ player }) => (
       marginRight={1}
       textTransform="uppercase"
     >
+      {player.status && `${player.status}${player.status === 'AB.' ? ' - ' : ''}`}
       {player.lastname}
     </Text>
     {player.firstname}

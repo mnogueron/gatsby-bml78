@@ -1,7 +1,7 @@
 ---
 templateKey: result-page
 title: interclub-equipe-1
-heading: Interclub - Équipe 1 - BML vs LVA
+heading: Saison 21-22 - Équipe 1 - BML vs LVA
 date: 2021-11-20T15:00:00.000Z
 category: equipe-1
 featuredimage:

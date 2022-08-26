@@ -23,6 +23,14 @@ const theme = {
   },
   components: {
     Link,
+  },
+  styles: {
+    global: {
+      '.embedVideo-container': {
+        maxWidth: 800,
+        margin: 'auto',
+      }
+    }
   }
 };
 

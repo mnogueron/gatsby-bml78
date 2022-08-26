@@ -9,8 +9,9 @@ import {
   VStack,
   Link,
   Text,
-  Divider,
+  Divider, Icon, HStack,
 } from '@chakra-ui/react';
+import { FaInstagram, FaFacebookSquare, FaYoutube } from 'react-icons/fa';
 
 const SectionHeader = ({ children, ...rest }) => (
   <Heading
@@ -123,6 +124,20 @@ const Footer = () => {
                   >
                     club.badml@gmail.com
                   </Link>
+
+                  <HStack>
+                    <Link href="https://www.instagram.com/badminton_maisonslaffitte/">
+                      <Icon as={FaInstagram} boxSize={26} />
+                    </Link>
+
+                    <Link href="https://www.facebook.com/Badminton-Maisons-Laffitte-174696235978505">
+                      <Icon as={FaFacebookSquare} boxSize={26} />
+                    </Link>
+
+                    <Link href="https://www.youtube.com/channel/UC9cBewd4vtXbI2ZwGLY9OlQ">
+                      <Icon as={FaYoutube} boxSize={26} />
+                    </Link>
+                  </HStack>
                 </VStack>
               </Box>
             </Stack>

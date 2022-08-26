@@ -107,7 +107,7 @@ const Footer = () => {
                   </VStack>
                 </Stack>
               </Box>
-              <Box>
+              <Box as="address">
                 <SectionHeader>Contact</SectionHeader>
                 <VStack
                   spacing={2}

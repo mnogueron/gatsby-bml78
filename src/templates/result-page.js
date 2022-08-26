@@ -15,23 +15,21 @@ const ResultPage = ({ data, pageContext }) => {
   const { next, previous } = pageContext;
   const { markdownRemark: result } = data;
   const { frontmatter: fm } = result;
+  const date = format(new Date(fm.date), 'PP', { locale: frLocale });
 
   return (
     <>
-      <SEO title={fm.title} description={fm.subheading} />
+      <SEO data={data} pageContext={pageContext} />
       <PageLayout>
         <ContentPageTemplate
           heading={fm.heading}
-          subheading={
-            fm.subheading ||
-            format(new Date(fm.date), 'PP', { locale: frLocale })
-          }
+          subheading={fm.subheading || date}
           html={result.htmlAst}
           team={fm.team}
         />
 
         {/* Links to previous and next result */}
-        <Container>
+        <Container as="nav">
           <div className="sm:flex sm:justify-between sm:items-center sm:gap-4 border-t py-4">
             {previous && previous.frontmatter.templateKey === 'result-page' ? (
               <Link to={previous.fields.slug} className="group">
@@ -80,6 +78,7 @@ export const resultQuery = graphql`
         heading
         subheading
         date
+        templateKey
         featuredimage {
           alt
           image {

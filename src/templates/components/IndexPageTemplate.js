@@ -37,11 +37,12 @@ const IndexPageTemplate = ({
   about,
 }) => {
   return (
-    <div>
+    <>
       {/* Header */}
       <Box
         backgroundColor={'blue.700'}
         position="relative"
+        as="header"
       >
         <Container
           maxW="7xl"
@@ -88,6 +89,7 @@ const IndexPageTemplate = ({
             zIndex={0}
           >
             <Heading
+              as="h1"
               size="4xl"
               color={'gray.100'}
               maxW={{ base: '100%', sm: '70%' }}
@@ -97,6 +99,7 @@ const IndexPageTemplate = ({
             </Heading>
             <Text
               fontSize="2xl"
+              as="h2"
               color={'gray.200'}
               maxW={{ base: '100%', sm: '70%' }}
               mb={10}
@@ -178,7 +181,7 @@ const IndexPageTemplate = ({
       </div>*/}
 
       {/* Featured projects */}
-      <Container maxW="7xl" my={16}>
+      <Container maxW="7xl" my={16} as="section">
         <div className="flex justify-between items-baseline">
           <Heading as="h2" size="xl">
             Les dernières actus du club
@@ -201,7 +204,7 @@ const IndexPageTemplate = ({
         />
       </Container>
 
-      <Container maxW="7xl" my={16}>
+      <Container maxW="7xl" my={16} as="section">
         <div className="flex justify-between items-baseline">
           <Heading as="h2" size="xl">
             Les derniers résultats du club
@@ -234,7 +237,7 @@ const IndexPageTemplate = ({
           {about.button.label}
         </SecondaryButton>
       </TextImageSplit>*/}
-    </div>
+    </>
   );
 };
 

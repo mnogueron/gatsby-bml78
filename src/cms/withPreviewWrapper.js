@@ -14,29 +14,72 @@ import {
 } from '@chakra-ui/react';
 import { MdBugReport } from 'react-icons/md';
 import Image from '../components/Image';
+import format from "date-fns/format";
+import frLocale from "date-fns/locale/fr";
+
+const getSEOData = (data) => {
+  switch (data.templateKey) {
+    case 'article-page':
+      return {
+        title: data.title,
+        description: data.body.slice(0, 140) + '...',
+        image: data.featuredimage.image,
+        article: true,
+      };
+    case 'all-results-page':
+    case 'articles-page':
+    case 'contact-page':
+    case 'content-page':
+    case 'index-page':
+      return {
+        title: data.title,
+        description: data.subheading,
+      };
+    case 'result-page': {
+      const date = format(new Date(data.date), 'PP', { locale: frLocale });
+      return {
+        title: data.heading,
+        description: data.subheading || `${data.heading} - ${date}`,
+        article: true,
+      };
+    }
+    case 'results-page':
+      return {
+        title: data.heading,
+        description: data.subheading,
+      };
+    default:
+      return {};
+  }
+}
 
 const withPreviewWrapper = (Component) => {
   const WrapperComponent = (props) => {
     const data = props.entry.getIn(['data']).toJS();
+    //const pageContext = props.entry.getIn(['pageContext']).toJS();
 
     if (data) {
-      const { seo } = data;
+      const { seo: override } = data;
 
-      const titleTemplate = seo?.titleTemplate || '%s | BML';
+
+      const templateSeo = getSEOData(data)
+      console.log(templateSeo, override)
+
+      const titleTemplate = override?.titleTemplate || '%s - BML';
       const title = titleTemplate.replace(
         '%s',
-        seo?.title || data.heading || 'Badminton Maisons-Laffitte'
+        override?.title || templateSeo?.title || 'Badminton Maisons-Laffitte'
       );
       const description =
-        seo?.description ||
-        data.subheading ||
+        override?.description ||
+        templateSeo?.description ||
         'Retrouvez toutes les actus et info du club de badminton de Maisons-Laffitte';
-      const image = seo?.image || '/assets/bml-icon.png';
+      const image = override?.image || templateSeo?.image || '/assets/bml-icon.png';
 
       return (
         <PreviewStyleProvider>
           <Component {...props} data={data} />
-          <Popover>
+          <Popover placement="top-end">
             <PopoverTrigger>
               <IconButton
                 aria-label={'SEO'}

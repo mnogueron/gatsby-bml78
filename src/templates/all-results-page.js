@@ -10,11 +10,7 @@ const AllResultsPage = ({ data, pageContext }) => {
 
   return (
     <>
-      <SEO
-        title={fm.title}
-        description={fm.subheading}
-        {...pageContext.seo}
-      />
+      <SEO data={data} pageContext={pageContext} />
       <PageLayout>
         <ArticlesPageTemplate
           heading={fm.heading}

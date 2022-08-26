@@ -16,7 +16,7 @@ const ArticlePage = ({ data, pageContext }) => {
 
   return (
     <>
-      <SEO title={fm.title} description={project.excerpt} />
+      <SEO data={data} pageContext={pageContext} />
       <PageLayout>
         <ArticlePageTemplate
           location={fm.location}
@@ -27,7 +27,7 @@ const ArticlePage = ({ data, pageContext }) => {
         />
 
         {/* Links to previous and next project */}
-        <Container>
+        <Container as="nav">
           <div className="sm:flex sm:justify-between sm:items-center sm:gap-4 border-t py-4">
             {previous && previous.frontmatter.templateKey === 'article-page' ? (
               <Link to={previous.fields.slug} className="group">
@@ -80,11 +80,15 @@ export const articleQuery = graphql`
       frontmatter {
         title
         date
+        templateKey
         featuredimage {
           alt
           image {
             childImageSharp {
               gatsbyImageData(width: 640, placeholder: BLURRED)
+              fixed {
+                src
+              }
             }
           }
         }

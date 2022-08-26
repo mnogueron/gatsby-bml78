@@ -5,7 +5,7 @@ const siteUrl =
 module.exports = {
   siteMetadata: {
     title: "Badminton Maisons-Laffitte",
-    titleTemplate: "%s | BML",
+    titleTemplate: "%s - BML",
     description: "Retrouvez toutes les actus et info du club de badminton de Maisons-Laffitte",
     siteUrl,
     image: "/assets/bml-icon.png"

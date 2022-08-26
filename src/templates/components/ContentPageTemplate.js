@@ -12,7 +12,7 @@ function ContentPageTemplate({ heading, subheading, html, team }) {
       )}
       {html && <Content html={html} />}
       {team && (
-        <Container>
+        <Container as="article">
           <div className="max-w-3xl mx-auto">
             <SectionHeading>Our team</SectionHeading>
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">

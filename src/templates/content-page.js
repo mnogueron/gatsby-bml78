@@ -4,13 +4,13 @@ import SEO from '../components/SEO';
 import ContentPageTemplate from './components/ContentPageTemplate';
 import PageLayout from '../components/PageLayout';
 
-const ContentPage = ({ data }) => {
+const ContentPage = ({ data, pageContext }) => {
   const { markdownRemark: post } = data;
   const { frontmatter: fm } = post;
 
   return (
     <>
-      <SEO title={fm.title} description={fm.subheading} />
+      <SEO data={data} pageContext={pageContext} />
       <PageLayout>
         <ContentPageTemplate
           heading={fm.heading}
@@ -33,6 +33,7 @@ export const contentPageQuery = graphql`
         title
         heading
         subheading
+        templateKey
       }
     }
   }

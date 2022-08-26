@@ -11,7 +11,7 @@ seo:
   title: Interclub Badminton Maisons-Laffitte
   description: Retrouvez le programme des équipes d'interclub du Badminton
     Maisons-Laffitte (BML-78)
-  image: /assets/bmlic.png
+  image: ""
 ---
 Pour cette nouvelle saison 2022/2023 Le Badminton Maisons-Laffitte engagera plusieurs équipes d'interclub dans les championnats Nationaux, Régionaux ainsi que départementaux.
 

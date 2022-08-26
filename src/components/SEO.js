@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useLocation } from '@reach/router';
+import format from 'date-fns/format';
+import frLocale from 'date-fns/locale/fr';
 
 const query = graphql`
   query SEO {
@@ -17,9 +19,56 @@ const query = graphql`
   }
 `;
 
-const SEO = ({ title, description, image, article }) => {
+export const getSEOData = (data) => {
+  const { frontmatter: fm } = data.markdownRemark;
+  switch (fm.templateKey) {
+    case 'article-page':
+      return {
+        title: fm.title,
+        description: data.markdownRemark.excerpt,
+        image: fm.featuredimage?.image?.childImageSharp?.fixed?.src,
+        article: true,
+      };
+    case 'all-results-page':
+    case 'articles-page':
+    case 'contact-page':
+    case 'content-page':
+    case 'index-page':
+      return {
+        title: fm.title,
+        description: fm.subheading,
+      };
+    case 'result-page': {
+      const date = format(new Date(fm.date), 'PP', { locale: frLocale });
+      return {
+        title: fm.heading,
+        description: fm.subheading || `${fm.heading} - ${date}`,
+        article: true,
+      };
+    }
+    case 'results-page':
+      return {
+        title: fm.heading,
+        description: fm.subheading,
+      };
+    default:
+      return {};
+  }
+};
+
+const SEO = ({
+  data,
+  pageContext,
+}) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
+  const { seo: override } = pageContext;
+  const {
+    title,
+    description,
+    image,
+    article = false,
+  } = useMemo(() => getSEOData(data), []);
 
   const {
     defaultTitle,
@@ -30,9 +79,9 @@ const SEO = ({ title, description, image, article }) => {
   } = site.siteMetadata;
 
   const seo = {
-    title: titleTemplate.replace('%s', title || defaultTitle),
-    description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    title: override?.title || title,
+    description: override?.description || description || defaultDescription,
+    image: `${siteUrl}${override?.image || image || defaultImage}`,
     url: `${siteUrl}${pathname !== '/' ? pathname : ''}`,
   };
 

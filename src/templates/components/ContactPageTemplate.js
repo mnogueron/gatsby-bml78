@@ -22,7 +22,7 @@ function ContactPageTemplate({
         <ContactForm />
       </TextImageSplit>
 
-      {body && <Content html={body} pt={0} pb={{ base: 4, md: 10, lg: 20 }}/>}
+      {body && <Content html={body} pt={0} pb={{ base: 4, md: 10, lg: 20 }} as="article" />}
     </div>
   )
 }

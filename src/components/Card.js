@@ -14,7 +14,7 @@ function Card({ image, heading, date, subheading, url, ...rest }) {
     >
       <Image
         image={image?.image || {url: '/static/assets/shuttle.jpg' }}
-        alt={image?.alt}
+        alt={image?.alt || 'image de volant'}
         className="rounded-md overflow-hidden"
       />
       <div className="mt-4 flex items-baseline gap-x-2 justify-between">

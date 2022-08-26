@@ -4,6 +4,8 @@ title: Inscription
 heading: Rejoindre le BML
 subheading: ""
 team: []
+seo:
+  description: Retrouvez ici toutes les infos pour vous inscrire au BML.
 ---
 ### Comment s'inscrire au BML ?
 

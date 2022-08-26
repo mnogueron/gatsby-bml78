@@ -4,13 +4,13 @@ import SEO from '../components/SEO';
 import ArticlesPageTemplate from './components/ArticlesPageTemplate';
 import PageLayout from '../components/PageLayout';
 
-const ArticlesPage = ({ data }) => {
+const ArticlesPage = ({ data, pageContext }) => {
   const { frontmatter: fm } = data.markdownRemark;
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
     <>
-      <SEO title={fm.title} description={fm.subheading} />
+      <SEO data={data} pageContext={pageContext} />
       <PageLayout>
         <ArticlesPageTemplate
           heading={fm.heading}

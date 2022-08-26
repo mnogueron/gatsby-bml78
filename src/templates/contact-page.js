@@ -4,14 +4,13 @@ import SEO from '../components/SEO';
 import ContactPageTemplate from './components/ContactPageTemplate';
 import PageLayout from '../components/PageLayout';
 
-function ContactPage({ data }) {
+function ContactPage({ data, pageContext }) {
   const { markdownRemark: contact } = data;
-  const { title, subheading, heading, contactform, office } =
-    contact.frontmatter;
+  const { subheading, heading, contactform } = contact.frontmatter;
 
   return (
     <>
-      <SEO title={title} description={subheading} />
+      <SEO data={data} pageContext={pageContext} />
       <PageLayout>
         <ContactPageTemplate
           heading={heading}
@@ -34,6 +33,7 @@ export const contactPageQuery = graphql`
         title
         heading
         subheading
+        templateKey
         contactform {
           heading
           description

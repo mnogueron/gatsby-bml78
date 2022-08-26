@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import IndexPageTemplate from './components/IndexPageTemplate';
 import PageLayout from '../components/PageLayout';
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, pageContext }) => {
   const { frontmatter: fm } = data.markdownRemark;
 
   // latest posts and results
@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <SEO title={fm.title} description={fm.subheading} />
+      <SEO data={data} pageContext={pageContext} />
       <PageLayout>
         <IndexPageTemplate
           heading={fm.heading}

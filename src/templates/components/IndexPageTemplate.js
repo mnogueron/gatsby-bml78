@@ -91,11 +91,13 @@ const IndexPageTemplate = ({
             <Heading
               as="h1"
               size="4xl"
+              lineHeight="shorter"
               color={'gray.100'}
               maxW={{ base: '100%', sm: '70%' }}
-              mb={5}
+              mb={8}
+              whiteSpace="pre-wrap"
             >
-              {heading}
+              {'Badminton\nMaisons-Laffitte'}
             </Heading>
             <Text
               fontSize="2xl"

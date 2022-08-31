@@ -10,4 +10,6 @@ featuredimage:
 ---
 Le BML sera présent au **Forum des Associations de Maisons-Laffitte** qui se tiendra cette année le **samedi 3 septembre 2022** de 10h à 18h sur **l'Île de la Commune**.
 
-N'hésitez pas à venir nous rencontrer, vous renseigner ou taper du volant ! Nous vous attendons nombreux !
+N'hésitez pas à venir nous rencontrer au stand numéro 99, pour vous renseigner ou taper quelques volants ! Nous vous attendons nombreux !
+
+![Plan forum des associations](/assets/plan-forum.png "Plan forum des associations")

@@ -14,4 +14,6 @@ Cet événement s'adresse aux petits comme aux grands ! Quentin, notre entraîne
 
 Nous serons également disponibles, en plus du [forum des associations de Maisons-Laffitte](https://badml.com/articles/2022-07-20-forum-des-associations-3-septembre-2022/), pour répondre à toutes vos questions.
 
+[Retrouvez ici](https://badml.com/infos-pratiques/acces-horaires) la carte pour accéder au gymnase.
+
 À dimanche !

@@ -121,6 +121,15 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Frontmatter {
       office: Office
+      president: Member
+      secretary: Member
+      treasurer: Member
+      board: [Member]
+    }
+    
+    type Member {
+      name: String
+      title: String
     }
 
     type Office {

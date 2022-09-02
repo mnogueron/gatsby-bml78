@@ -6,6 +6,7 @@ import ArticlesPagePreview from './preview-templates/ArticlesPagePreview'
 import ArticlePagePreview from './preview-templates/ArticlePagePreview'
 import ContentPagePreview from './preview-templates/ContentPagePreview'
 import ContactPagePreview from './preview-templates/ContactPagePreview'
+import BoardChartPagePreview from './preview-templates/BoardChartPagePreview'
 import youtubeEditorComponent from './editor-components/youtube'
 import scoreboardEditorComponent from "./editor-components/scoreboard";
 import fileEditorComponent from "./editor-components/file";
@@ -25,14 +26,15 @@ const previewTemplates = {
   'sections': ContentPagePreview,
   'acces-horaires': ContentPagePreview,
   'calendrier': ContentPagePreview,
+  'bureau': BoardChartPagePreview,
   'result-sections': ArticlesPagePreview,
   'all-results-index': ArticlesPagePreview,
 }
 
 CMS.registerLocale('fr', fr);
 
-Object.entries(previewTemplates).forEach(([templateKey, TemplateComponent]) => {
-  CMS.registerPreviewTemplate(templateKey, withPreviewWrapper(TemplateComponent))
+Object.entries(previewTemplates).forEach(([pageTitle, TemplateComponent]) => {
+  CMS.registerPreviewTemplate(pageTitle, withPreviewWrapper(TemplateComponent))
 })
 
 CMS.registerEditorComponent(youtubeEditorComponent);

@@ -81,7 +81,7 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Image de fond, name: headerImage, widget: image }
-          - { label: Heading, name: heading, widget: string }
+          - { label: Heading, name: heading, widget: text }
           - { label: Subheading, name: subheading, widget: text }
           # - { label: "Body", name: "body", widget: "markdown" }
           # - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
@@ -228,6 +228,44 @@ collections:
         label: "Calendrier"
         name: "calendrier"
         fields: *CONTENT_PAGE
+      - file: "src/pages/infos-pratiques/bureau.md"
+        label: "Le Bureau"
+        name: "bureau"
+        fields:
+          - <<: *TEMPLATE_BASE
+            default: "board-chart-page"
+          - <<: *TITLE
+          - <<: *HEADING
+          - <<: *SUBHEADING
+          - <<: *BODY
+          - label: Président
+            name: president
+            widget: object
+            fields:
+              - { label: Nom, name: name, widget: string }
+              - { label: Photo, name: picture, widget: image, required: false }
+          - label: Trésorier
+            name: treasurer
+            widget: object
+            fields:
+              - { label: Nom, name: name, widget: string }
+              - { label: Photo, name: picture, widget: image, required: false }
+          - label: Secrétaire Général
+            name: secretary
+            widget: object
+            fields:
+              - { label: Nom, name: name, widget: string }
+              - { label: Photo, name: picture, widget: image, required: false }
+          - label: Membres
+            label_singular: Membre
+            name: board
+            widget: list
+            fields:
+              - { label: Nom, name: name, widget: string }
+              - { label: Titre, name: title, widget: string }
+              - { label: Photo, name: picture, widget: image, required: false }
+
+          - <<: *SEO
 
   - name: "articles"
     label: "Articles"

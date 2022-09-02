@@ -97,7 +97,7 @@ const IndexPageTemplate = ({
               mb={8}
               whiteSpace="pre-wrap"
             >
-              {'Badminton\nMaisons-Laffitte'}
+              {heading}
             </Heading>
             <Text
               fontSize="2xl"

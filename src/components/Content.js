@@ -1,6 +1,6 @@
 import React from 'react';
 import { renderAst } from '../config/rehype.config';
-import { Container } from '@chakra-ui/react';
+import Container from './Container';
 
 /**
  * Section for markdown content (prose)
@@ -8,13 +8,7 @@ import { Container } from '@chakra-ui/react';
  */
 function Content({ html, ...rest }) {
   return (
-    <Container
-      maxW="5xl"
-      px={{ base: 6, md: 10}}
-      pt={{ base: 4, md: 10, lg: 20 }}
-      pb={{ base: 2, md: 5, lg: 10 }}
-      {...rest}
-    >
+    <Container{...rest}>
       {renderAst(html)}
     </Container>
   );

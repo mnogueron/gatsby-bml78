@@ -61,7 +61,25 @@ const Navbar = ({ className }) => {
       {
         key: 'infospratiques',
         label: 'Infos Pratiques',
-        options: infoPratiquesCategories,
+        options: [
+          ...infoPratiquesCategories,
+          /*{
+            key: 'Category test',
+            label: 'Category test',
+            options: [
+              {
+                key: `test1`,
+                label: 'Test 1',
+                to: '/infos-pratiques/inscription',
+              },
+              {
+                key: `test2`,
+                label: 'Test 2',
+                to: '/infos-pratiques/bureau',
+              }
+            ],
+          },*/
+        ],
       },
       {
         key: 'resultats',

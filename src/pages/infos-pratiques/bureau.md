@@ -36,6 +36,12 @@ board:
     title: Responsable Web
   - name: Julia Galvé
     title: Reponsable Communication Digitale
+seo:
+  description: Les membres du Bureau composent l'équipe gestionnaire du club. Il
+    participent au maintient et au développement des intérêts du club et des
+    intérêts de ses adhérents. Si vous avez des questions ou des problèmes liées
+    à une section n'hésitez pas à contacter ou rencontrer les personnes
+    représentantes de la section en question.
 ---
 Les membres du **Bureau** composent l'équipe gestionnaire du club. Il participent au maintient et au développement des intérêts du club et des intérêts de ses adhérents.
 

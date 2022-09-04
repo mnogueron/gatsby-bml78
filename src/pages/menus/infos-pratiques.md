@@ -13,4 +13,6 @@ items:
     url: /infos-pratiques/avantages
   - title: Calendrier
     url: /infos-pratiques/calendrier
+  - url: /infos-pratiques/bureau
+    title: Les Membres du Bureau
 ---

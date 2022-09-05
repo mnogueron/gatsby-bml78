@@ -45,6 +45,4 @@ D﻿es membres du club seront présents lors des différentes séances pour rép
 
 **[competition.badml@gmail.com](mailto:competition.badml@gmail.com)**
 
-
-
 #### Nouveaux ou habitués, petits et grands... O﻿n a hâte de vous retrouver sur les courts pour cette nouvelle saison !

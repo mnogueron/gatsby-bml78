@@ -34,8 +34,8 @@ Les séances de jeu libre et les entraînements se font sur les gymnases de Sart
 
 ### Sartrouville - COSEC Evariste Galois (EG)
 
-* Mercredi 19h - 22h30 : Adultes Jeu libre (4 terrains)
-* Mercredi 19h - 21h : Adultes Cours Loisirs débutant (3 terrains)
+* Mercredi 19h30 - 22h30 : Adultes Jeu libre (4 terrains)
+* Mercredi 19h30 - 21h : Adultes Cours Loisirs débutant (3 terrains)
 * Mercredi 21h - 22h30 : Adultes Cours Loisirs confirmés (3 terrains)
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8428.797984111126!2d2.157637975196161!3d48.92737962769069!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f808666ee645af3!2sCOSEC%20Evariste%20Galois!5e0!3m2!1sfr!2sfr!4v1658341663874!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;margin-bottom:2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

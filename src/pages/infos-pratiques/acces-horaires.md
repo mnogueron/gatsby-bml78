@@ -23,8 +23,8 @@ Les séances de jeu libre et les entraînements se font sur les gymnases de Sart
 
 ### Maisons-Laffitte - Centre Sportif et Culturel (CSC)
 
-* Mardi 17h - 19h : Jeunes (2011 à 2018)
-* Mardi 19h - 20h30 : Adultes Jeu libre
+* Mardi 17h - 18h30 : Jeunes (2011 à 2018)
+* Mardi 18h30 - 20h30 : Adultes Jeu libre
 * Jeudi 17h - 19h : Jeunes (2011 à 2018)
 * Jeudi 19h - 20h30 : Jeunes (2005 à 2010)
 * Jeudi 20h30 - 23h : Adultes Jeu libre (4 terrains)

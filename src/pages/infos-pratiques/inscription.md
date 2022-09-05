@@ -9,6 +9,10 @@ seo:
 ---
 ### Comment s'inscrire au BML ?
 
+**Mode d'emploi et infos essentielles en un clin d'oeil sur [notre flyer de présentation](/assets/v7_flyer_bml-22-23.pdf).**
+
+![Flyer de présentation 2022-2023](/assets/flyer-apercu.png "Flyer de présentation 2022-2023")
+
 **\*Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre pré-inscription via le** [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)**.***
 
 ***Merci de noter que seuls les dossiers complets seront acceptés.***

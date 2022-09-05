@@ -37,7 +37,7 @@ D﻿es raquettes pourront vous être prêtées lors des premières séances mais
 
 ### D﻿'autres questions ?
 
-D﻿es membres du club seront présents lors des différentes séances pour répondre à vos questions ou prendre vos dossiers d'inscription. Vous pouvez également nous envoyer un petit mail aux adresses suivantes en fonction de la section concernée : 
+D﻿es membres du bureau seront présents lors des différentes séances pour répondre à vos questions ou prendre vos dossiers d'inscription. Vous pouvez également nous envoyer un petit mail aux adresses suivantes en fonction de la section concernée : 
 
 **[coach.badml@gmail.com](mailto:coach.badml@gmail.com)**
 

@@ -6,7 +6,7 @@ subheading: Où et quand jouer ?
 ---
 Les séances de jeu libre et les entraînements se font sur les gymnases de Sartrouville et de Maisons-Laffitte suivant les horaires suivants pour la saison 2022/2023 :
 
-![horaires](/assets/horaires_bml.jpeg)
+![horaires](/assets/creneaux_bml_2022_2023.png)
 
 ### Sartrouville - Gymnase Jules Verne
 

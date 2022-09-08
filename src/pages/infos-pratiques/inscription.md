@@ -21,7 +21,7 @@ seo:
 
 * lire la [feuille d'information Jeune](/assets/information_jeune.pdf)
 * remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
-* remplir le [formulaire de Licence Mineur](/assets/formulaire_licence_jeune_bml.pdf) (la page 1 suffit)
+* remplir le [formulaire de Licence Mineur](/assets/formulaire_licence_mineur_bml.pdf) (la page 1 suffit)
 
   * Club : **Badminton Maisons-Laffitte**
   * Ligue : **Île de France**

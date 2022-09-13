@@ -9,6 +9,10 @@ seo:
 ---
 ### Comment s'inscrire au BML ?
 
+**Mode d'emploi et infos essentielles en un clin d'oeil sur [notre flyer de présentation](/assets/v7_flyer_bml-22-23.pdf).**
+
+![Flyer de présentation 2022-2023](/assets/flyer-apercu.png "Flyer de présentation 2022-2023")
+
 **\*Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre pré-inscription via le** [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)**.***
 
 ***Merci de noter que seuls les dossiers complets seront acceptés.***
@@ -17,7 +21,7 @@ seo:
 
 * lire la [feuille d'information Jeune](/assets/information_jeune.pdf)
 * remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
-* remplir le [formulaire de Licence Mineur](/assets/ffbad_-_mineurs_formulaire_licence_saisonniere_2022-2023.pdf) (la page 1 suffit)
+* remplir le [formulaire de Licence Mineur](/assets/formulaire_licence_mineur_bml.pdf) (la page 1 suffit)
 
   * Club : **Badminton Maisons-Laffitte**
   * Ligue : **Île de France**
@@ -33,7 +37,7 @@ seo:
 ### Pour une inscription en Adultes - Jeu Libre ou Entraînement débutant/confirmé
 
 * remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
-* remplir le [formulaire de Licence](/assets/ffbad_-_adultes_formulaire_licence_saisonniere_2022-2023.pdf) (la page 1 suffit)
+* remplir le [formulaire de Licence](/assets/formulaire_licence_adultes_bml.pdf) (la page 1 suffit)
 
   * Club : **Badminton Maisons-Laffitte**
   * Ligue : **Île de France**
@@ -48,7 +52,7 @@ seo:
 
 * envoyer un email au Responsable de la section : [competition.badml@gmail.com](mailto:competition.badml@gmail.com)
 * remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
-* remplir le [formulaire de Licence](/assets/ffbad_-_adultes_formulaire_licence_saisonniere_2022-2023.pdf) (la page 1 suffit)
+* remplir le [formulaire de Licence](/assets/formulaire_licence_adultes_bml.pdf) (la page 1 suffit)
 
   * Club : **Badminton Maisons-Laffitte**
   * Ligue : **Île de France**

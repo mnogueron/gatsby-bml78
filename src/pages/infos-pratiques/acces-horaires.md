@@ -6,7 +6,7 @@ subheading: Où et quand jouer ?
 ---
 Les séances de jeu libre et les entraînements se font sur les gymnases de Sartrouville et de Maisons-Laffitte suivant les horaires suivants pour la saison 2022/2023 :
 
-![horaires](/assets/horaires_bml.jpeg)
+![horaires](/assets/creneaux_bml_2022_2023.png)
 
 ### Sartrouville - Gymnase Jules Verne
 
@@ -23,8 +23,8 @@ Les séances de jeu libre et les entraînements se font sur les gymnases de Sart
 
 ### Maisons-Laffitte - Centre Sportif et Culturel (CSC)
 
-* Mardi 17h - 19h : Jeunes (2011 à 2018)
-* Mardi 19h - 20h30 : Adultes Jeu libre
+* Mardi 17h - 18h30 : Jeunes (2011 à 2018)
+* Mardi 18h30 - 20h30 : Adultes Jeu libre
 * Jeudi 17h - 19h : Jeunes (2011 à 2018)
 * Jeudi 19h - 20h30 : Jeunes (2005 à 2010)
 * Jeudi 20h30 - 23h : Adultes Jeu libre (4 terrains)
@@ -34,8 +34,8 @@ Les séances de jeu libre et les entraînements se font sur les gymnases de Sart
 
 ### Sartrouville - COSEC Evariste Galois (EG)
 
-* Mercredi 19h - 22h30 : Adultes Jeu libre (4 terrains)
-* Mercredi 19h - 21h : Adultes Cours Loisirs débutant (3 terrains)
+* Mercredi 19h30 - 22h30 : Adultes Jeu libre (4 terrains)
+* Mercredi 19h30 - 21h : Adultes Cours Loisirs débutant (3 terrains)
 * Mercredi 21h - 22h30 : Adultes Cours Loisirs confirmés (3 terrains)
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8428.797984111126!2d2.157637975196161!3d48.92737962769069!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f808666ee645af3!2sCOSEC%20Evariste%20Galois!5e0!3m2!1sfr!2sfr!4v1658341663874!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;margin-bottom:2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

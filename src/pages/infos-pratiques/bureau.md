@@ -16,8 +16,10 @@ board:
     picture: /assets/matthieu_rome.jpeg
   - name: Quentin Beauvisage
     title: Responsable Section Jeunes
+    picture: /assets/quentin_beauvisage.jpg
   - name: Laetitia Morel
     title: Responsable Section Adultes Jeu Libre
+    picture: /assets/laetitia_morel.jpg
   - name: Christopher Conraux
     title: Animation Section Adultes Jeu Libre
   - name: Olivier Marechal

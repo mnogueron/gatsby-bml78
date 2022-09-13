@@ -3,7 +3,7 @@ templateKey: result-page
 title: interclub-equipe-1
 heading: Saison 21-22 - Équipe 1 - BML vs HB
 date: 2022-01-08T15:00:00.000Z
-category: equipe-1
+category: equipe-1-s21-22
 featuredimage:
   image: /assets/shuttle.jpg
 ---

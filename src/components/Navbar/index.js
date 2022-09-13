@@ -30,6 +30,10 @@ const Navbar = ({ className }) => {
                 items {
                     title
                     url
+                    items {
+                      title
+                      url
+                    }
                 }
             }
         }
@@ -46,11 +50,25 @@ const Navbar = ({ className }) => {
       })
     );
     const resultsCategories = resultsMenu.frontmatter.items.map(
-      (item) => ({
-        key: `${item.url} - ${item.title}`,
-        label: item.title,
-        to: item.url,
-      })
+      (item, index) => {
+        if (item.items) {
+          return {
+            key: `${item.title} - ${index}`,
+            label: item.title,
+            options: item.items.map(item => ({
+              key: `${item.url} - ${item.title}`,
+              label: item.title,
+              to: item.url,
+            }))
+          }
+        }
+
+        return ({
+          key: `${item.url} - ${item.title}`,
+          label: item.title,
+          to: item.url,
+        });
+      }
     );
     return [
       {

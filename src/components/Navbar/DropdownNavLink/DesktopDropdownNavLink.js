@@ -26,7 +26,7 @@ const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive }) => {
   };
 
   return (
-    <Menu isOpen={isOpen} {...(isRecursive ? { placement: 'end-start' } : {})}>
+    <Menu isOpen={isOpen} {...(isRecursive ? { placement: 'end-start', offset: [-10, 6] } : {})}>
       <MenuButton
         onClick={onToggle}
         onMouseEnter={handleOpen}

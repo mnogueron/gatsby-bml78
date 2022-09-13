@@ -370,7 +370,25 @@ collections:
               - label: Page
                 name: url
                 widget: relation
+                required: false
                 collection: "result-sections"
                 search_fields: [ "heading" ]
                 value_field: "/results/{{slug}}"
-                display_fields: [ "heading" ]
+                display_fields: [ "{{heading}} - {{subheading}}" ]
+              - label: Saisons
+                label_singular: Saison
+                name: items
+                required: false
+                widget: list
+                summary: "Saison : {{fields.title}} - Page associée : {{fields.url}}"
+                fields:
+                  - label: Titre
+                    name: title
+                    widget: string
+                  - label: Page
+                    name: url
+                    widget: relation
+                    collection: "result-sections"
+                    search_fields: [ "heading" ]
+                    value_field: "/results/{{slug}}"
+                    display_fields: [ "{{heading}} - {{subheading}}" ]

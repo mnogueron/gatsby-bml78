@@ -3,7 +3,7 @@ templateKey: result-page
 title: interclub-equipe-1
 heading: Saison 21-22 - Équipe 1 - LVA vs BML
 date: 2022-03-05T12:00:00.000Z
-category: equipe-1
+category: equipe-1-s21-22
 featuredimage:
   image: /assets/shuttle.jpg
 ---

@@ -14,10 +14,16 @@ import {
   Tr,
   Td,
   Th,
-  UnorderedList, Link, SimpleGrid,
+  UnorderedList,
+  Link,
+  SimpleGrid,
 } from '@chakra-ui/react';
 
-const Table = (props) => <TableContainer><TempoTable {...props} /></TableContainer>
+const Table = (props) => (
+  <TableContainer>
+    <TempoTable {...props} />
+  </TableContainer>
+);
 
 const H1 = (props) => <Heading as="h1" size="2xl" mt={10} mb={8} {...props} />;
 const H2 = (props) => <Heading as="h2" size="xl" mt={8} mb={7} {...props} />;
@@ -69,12 +75,28 @@ const Li = (props) => (
   />
 );
 const MediaFile = ({ file, title }) => {
-  return <Link href={file}>{title || file}</Link>
-}
+  return <Link href={file}>{title || file}</Link>;
+};
 
 const Grid = ({ columns, children }) => {
-  return <SimpleGrid columns={JSON.parse(columns)} spacing={10}>{children}</SimpleGrid>
-}
+  return (
+    <SimpleGrid columns={JSON.parse(columns)} spacing={10}>
+      {children}
+    </SimpleGrid>
+  );
+};
+
+const FigCaption = (props) => (
+  <Text
+    as="figcaption"
+    {...props}
+    textAlign="center"
+    fontWeight="semibold"
+    fontSize="md"
+    fontStyle="italic"
+    mt={2}
+  />
+);
 
 const withChildrenAsJSONProps = (Component) => {
   const PreparedComponent = ({ children }) => {
@@ -109,5 +131,6 @@ export const renderAst = new rehypeReact({
     a: Link,
     mediafile: withChildrenAsJSONProps(MediaFile),
     simplegrid: Grid,
+    figcaption: FigCaption,
   },
 }).Compiler;

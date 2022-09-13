@@ -41,6 +41,7 @@ const getSEOData = (data) => {
       return {
         title: data.heading,
         description: data.subheading || `${data.heading} - ${date}`,
+        image: data.featuredimage.image !== '/assets/shuttle.jpg' ? data.featuredimage.image : undefined,
         article: true,
       };
     }

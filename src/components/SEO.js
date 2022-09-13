@@ -41,9 +41,14 @@ export const getSEOData = (data) => {
       };
     case 'result-page': {
       const date = format(new Date(fm.date), 'PP', { locale: frLocale });
+      const featuredImageSrc =
+        fm.featuredimage?.image?.childImageSharp?.fixed?.src;
       return {
         title: fm.heading,
         description: fm.subheading || `${fm.heading} - ${date}`,
+        image: featuredImageSrc?.endsWith('/shuttle.jpg')
+          ? undefined
+          : featuredImageSrc,
         article: true,
       };
     }
@@ -57,10 +62,7 @@ export const getSEOData = (data) => {
   }
 };
 
-const SEO = ({
-  data,
-  pageContext,
-}) => {
+const SEO = ({ data, pageContext }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
   const { seo: override } = pageContext;

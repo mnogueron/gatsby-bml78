@@ -84,6 +84,9 @@ export const resultQuery = graphql`
           image {
             childImageSharp {
               gatsbyImageData(width: 640, placeholder: BLURRED)
+              fixed {
+                src
+              }
             }
           }
         }

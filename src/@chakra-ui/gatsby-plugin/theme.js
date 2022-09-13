@@ -29,6 +29,9 @@ const theme = {
       '.embedVideo-container': {
         maxWidth: 800,
         margin: 'auto',
+      },
+      '.gatsby-resp-image-wrapper': {
+        maxWidth: "800px !important",
       }
     }
   }

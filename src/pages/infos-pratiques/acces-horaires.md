@@ -6,15 +6,15 @@ subheading: Où et quand jouer ?
 ---
 Les séances de jeu libre et les entraînements se font sur les gymnases de Sartrouville et de Maisons-Laffitte suivant les horaires suivants pour la saison 2022/2023 :
 
-![horaires](/assets/creneaux_bml_2022_2023.png)
+![horaires](/assets/créneaux-2022-2023.jpg)
 
 ### Sartrouville - Gymnase Jules Verne
 
 * Lundi 19h - 20h30 : Jeunes Compétiteurs
-* Lundi 20h30 - 22h30 : Entrainements Adultes Compétiteurs
+* Lundi 20h30 - 22h30 : Entrainements Adultes Compétiteurs (D à N)
 * Mercredi 17h - 19h : Jeunes Compétiteurs (2011 à 2014)
 * Mercredi 19h - 20h30h : Jeunes Compétiteurs (2005 à 2010)
-* Mercredi 20h30 - 22h30 : Entrainements Adultes Compétiteurs (formule 2 entraînements)
+* Mercredi 20h30 - 22h30 : Entrainements Adultes Compétiteurs (formule 2 entraînements - D à N)
 * Samedi 14h - 15h30 : Jeunes (2005 à 2010)
 * Samedi 15h30 - 19h : Jeu libre tous adhérents
 * Dimanche 10h - 13h : Jeu libre tous adhérents
@@ -25,8 +25,8 @@ Les séances de jeu libre et les entraînements se font sur les gymnases de Sart
 
 * Mardi 17h - 18h30 : Jeunes (2011 à 2018)
 * Mardi 18h30 - 20h30 : Adultes Jeu libre
-* Jeudi 17h - 19h : Jeunes (2011 à 2018)
-* Jeudi 19h - 20h30 : Jeunes (2005 à 2010)
+* Jeudi 18h - 19h15 : Jeunes (2011 à 2018)
+* Jeudi 19h15 - 20h30 : Jeunes (2005 à 2010)
 * Jeudi 20h30 - 23h : Adultes Jeu libre (4 terrains)
 * Jeudi 20h30 - 23h : Entrainements Adultes Compétiteurs (formule 3 entraînements, 3 terrains)
 

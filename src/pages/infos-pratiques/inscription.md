@@ -7,6 +7,9 @@ team: []
 seo:
   description: Retrouvez ici toutes les infos pour vous inscrire au BML.
 ---
+### Informations importantes
+Due à un nombre élevé d'inscriptions pour la saison 2022 - 2023, vous devrez désormais envoyer un mail à l'adresse associée à la section où vous souhaitez vous inscrire pour avoir une validation des disponibilités et recevoir le formulaire d'inscription. 
+
 ### Comment s'inscrire au BML ?
 
 **Mode d'emploi et infos essentielles en un clin d'oeil sur [notre flyer de présentation](/assets/v7_flyer_bml-22-23.pdf).**
@@ -20,7 +23,7 @@ seo:
 ### Pour une inscription en Jeunes
 
 * lire la [feuille d'information Jeune](/assets/information_jeune.pdf)
-* remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
+* remplir le formulaire en ligne **(merci de contacter [coach.badml@gmail.com](mailto:coach.badml@gmail.com) pour recevoir le formulaire d'inscription)**
 * remplir le [formulaire de Licence Mineur](/assets/formulaire_licence_mineur_bml.pdf) (la page 1 suffit)
 
   * Club : **Badminton Maisons-Laffitte**
@@ -36,7 +39,7 @@ seo:
 
 ### Pour une inscription en Adultes - Jeu Libre ou Entraînement débutant/confirmé
 
-* remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
+* remplir le formulaire en ligne **(merci de contacter [loisirs.badml@gmail.com](mailto:loisirs.badml@gmail.com) pour recevoir le formulaire d'inscription)**
 * remplir le [formulaire de Licence](/assets/formulaire_licence_adultes_bml.pdf) (la page 1 suffit)
 
   * Club : **Badminton Maisons-Laffitte**
@@ -51,7 +54,7 @@ seo:
 ### Pour une inscription en Adultes - Compétition
 
 * envoyer un email au Responsable de la section : [competition.badml@gmail.com](mailto:competition.badml@gmail.com)
-* remplir le [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)
+* remplir le formulaire en ligne **(merci de contacter [competition.badml@gmail.com](mailto:competition.badml@gmail.com) pour recevoir le formulaire d'inscription)**
 * remplir le [formulaire de Licence](/assets/formulaire_licence_adultes_bml.pdf) (la page 1 suffit)
 
   * Club : **Badminton Maisons-Laffitte**

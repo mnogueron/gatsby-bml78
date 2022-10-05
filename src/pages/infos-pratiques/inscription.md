@@ -16,7 +16,7 @@ Due à un nombre élevé d'inscriptions pour la saison 2022 - 2023, vous devrez 
 
 ![Flyer de présentation 2022-2023](/assets/flyer-apercu.png "Flyer de présentation 2022-2023")
 
-**\*Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre pré-inscription via le** [formulaire en ligne](https://forms.gle/SbZ89eCENSZCgne7A)**.***
+**Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre pré-inscription via le formulaire en ligne.**
 
 ***Merci de noter que seuls les dossiers complets seront acceptés.***
 

@@ -7,6 +7,6 @@ heading: |-
   Badminton
   Maisons-Laffitte
 subheading: |-
-  Ouverture des inscriptions pour l'année 2022 - 2023
-  Début de la nouvelle saison le 5 septembre 2022
+  /!\ Pas de jeu libre à Jules Verne les 8 et 9 octobre 2022 /!\
+  en raison des interclubs à domicile
 ---

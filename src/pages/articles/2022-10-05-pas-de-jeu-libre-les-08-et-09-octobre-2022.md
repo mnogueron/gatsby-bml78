@@ -1,6 +1,7 @@
 ---
 templateKey: article-page
 title: Pas de jeu libre les 8 et 9 Octobre 2022
+heading: Pas de jeu libre les 8 et 9 Octobre 2022
 date: 2022-10-05T15:26:11.470Z
 featured: true
 featuredimage:

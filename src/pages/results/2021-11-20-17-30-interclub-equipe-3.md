@@ -3,7 +3,7 @@ templateKey: result-page
 title: interclub-equipe-3
 heading: Saison 21-22 - Équipe 3 - EBC vs BML
 date: 2021-11-20T16:30:00.000Z
-category: equipe-3
+category: equipe-3-s21-22
 featuredimage:
   image: /assets/shuttle.jpg
 ---

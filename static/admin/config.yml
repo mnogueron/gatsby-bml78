@@ -313,7 +313,7 @@ collections:
     filter: { field: "templateKey", value: "results-page" }
     create: true
     slug: "{{fields.title}}"
-    summary: "{{fields.heading}}"
+    summary: "{{fields.heading}} / {{fields.subheading}}"
     fields:
       - <<: *TEMPLATE_BASE
         default: "results-page"

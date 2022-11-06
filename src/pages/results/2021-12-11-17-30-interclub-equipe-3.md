@@ -3,7 +3,7 @@ templateKey: result-page
 title: interclub-equipe-3
 heading: Saison 21-22 - Équipe 3 - BML vs ASPS
 date: 2021-12-11T16:30:00.000Z
-category: equipe-3
+category: equipe-3-s21-22
 featuredimage:
   image: /assets/shuttle.jpg
 ---

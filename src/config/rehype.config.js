@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import rehypeReact from 'rehype-react';
 import Scoreboard from '../components/Scoreboard';
+import Gallery from '../components/Gallery';
 import {
   Heading,
   ListItem,
@@ -111,6 +112,7 @@ export const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
     scoreboard: withChildrenAsJSONProps(Scoreboard),
+    gallery: withChildrenAsJSONProps(Gallery),
     h1: H1,
     h2: H2,
     h3: H3,

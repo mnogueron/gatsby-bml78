@@ -9,6 +9,7 @@ import ContactPagePreview from './preview-templates/ContactPagePreview'
 import BoardChartPagePreview from './preview-templates/BoardChartPagePreview'
 import youtubeEditorComponent from './editor-components/youtube'
 import scoreboardEditorComponent from "./editor-components/scoreboard";
+import galleryEditorComponent from "./editor-components/gallery";
 import fileEditorComponent from "./editor-components/file";
 import gridEditorComponent from "./editor-components/grid";
 import withPreviewWrapper from "./withPreviewWrapper";
@@ -39,5 +40,6 @@ Object.entries(previewTemplates).forEach(([pageTitle, TemplateComponent]) => {
 
 CMS.registerEditorComponent(youtubeEditorComponent);
 CMS.registerEditorComponent(scoreboardEditorComponent);
+CMS.registerEditorComponent(galleryEditorComponent);
 /*CMS.registerEditorComponent(fileEditorComponent);*/
 /*CMS.registerEditorComponent(gridEditorComponent);*/

@@ -331,6 +331,31 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     summary: '[{{day}}-{{month}}-{{year}}] {{heading}}'
+    view_filters:
+      - label: "Saison 2022 - 2023"
+        field: season
+        pattern: '82fd730f-cdbe-4a83-99ec-0bfaeae3a4ab'
+      - label: "Saison 2021 - 2022"
+        field: season
+        pattern: '58f2223c-553b-4c29-aa15-dc248adabd4a'
+      - label: "Equipe 1"
+        field: category
+        pattern: 'equipe-1'
+      - label: "Equipe 2"
+        field: category
+        pattern: 'equipe-2'
+      - label: "Equipe 3"
+        field: category
+        pattern: 'equipe-3'
+      - label: "Equipe 4"
+        field: category
+        pattern: 'equipe-4'
+      - label: "Equipe 5"
+        field: category
+        pattern: 'equipe-5'
+      - label: "Equipe 6"
+        field: category
+        pattern: 'equipe-6'
     fields: *RESULT_PAGE
 
   - name: 'seasons'

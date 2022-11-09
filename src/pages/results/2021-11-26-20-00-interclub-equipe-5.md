@@ -4,6 +4,7 @@ title: interclub-equipe-5
 heading: Équipe 5 - CBC vs BML
 date: 2021-11-26T19:00:00.000Z
 category: equipe-5
+season: 58f2223c-553b-4c29-aa15-dc248adabd4a
 featuredimage:
   image: /assets/shuttle.jpg
 ---

@@ -4,6 +4,7 @@ title: interclub-equipe-4
 heading: Équipe 4 - USC vs BML
 date: 2021-12-10T19:00:00.000Z
 category: equipe-4
+season: 58f2223c-553b-4c29-aa15-dc248adabd4a
 featuredimage:
   image: /assets/shuttle.jpg
 ---

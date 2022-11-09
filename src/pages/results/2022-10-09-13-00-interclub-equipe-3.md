@@ -5,7 +5,6 @@ heading: Équipe 3 - LVC vs BML
 date: 2022-10-09T11:00:00.000Z
 category: equipe-3-s22-23
 season: 82fd730f-cdbe-4a83-99ec-0bfaeae3a4ab
-season: 82fd730f-cdbe-4a83-99ec-0bfaeae3a4ab
 featuredimage:
   image: /assets/shuttle.jpg
 ---

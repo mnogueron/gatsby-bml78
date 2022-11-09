@@ -1,10 +1,9 @@
 ---
 templateKey: result-page
 title: interclub-equipe-4
-heading: Équipe 4 - BML vs USC
+heading: Saison 21-22 - Équipe 4 - BML vs USC
 date: 2022-03-07T19:00:00.000Z
 category: equipe-4
-season: 58f2223c-553b-4c29-aa15-dc248adabd4a
 featuredimage:
   image: /assets/shuttle.jpg
 ---

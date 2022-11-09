@@ -1,10 +1,9 @@
 ---
 templateKey: result-page
 title: interclub-equipe-1
-heading: Équipe 1 - BML vs LUCBLM
+heading: Saison 21-22 - Équipe 1 - BML vs LUCBLM
 date: 2021-12-11T15:00:00.000Z
 category: equipe-1-s21-22
-season: 58f2223c-553b-4c29-aa15-dc248adabd4a
 featuredimage:
   image: /assets/shuttle.jpg
 ---

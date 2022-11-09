@@ -1,10 +1,9 @@
 ---
 templateKey: result-page
 title: interclub-equipe-2
-heading: Équipe 2 - ALEPB vs BML
+heading: Saison 21-22 - Équipe 2 - ALEPB vs BML
 date: 2021-12-12T12:00:00.000Z
 category: equipe-2-s21-22
-season: 58f2223c-553b-4c29-aa15-dc248adabd4a
 featuredimage:
   image: /assets/shuttle.jpg
 ---

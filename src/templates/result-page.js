@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { graphql, Link } from 'gatsby';
 import SEO from '../components/SEO';
 import { Container } from '../components/Sections';
@@ -13,23 +13,16 @@ import PageLayout from '../components/PageLayout';
 
 const ResultPage = ({ data, pageContext }) => {
   const { next, previous } = pageContext;
-  const {
-    markdownRemark: result,
-    seasons: { edges: seasons },
-  } = data;
+  const { markdownRemark: result } = data;
   const { frontmatter: fm } = result;
   const date = format(new Date(fm.date), 'PP', { locale: frLocale });
-
-  const season = useMemo(() => {
-    return seasons.find((s) => s.node.frontmatter.id === fm.season);
-  }, [fm.season]);
 
   return (
     <>
       <SEO data={data} pageContext={pageContext} />
       <PageLayout>
         <ContentPageTemplate
-          heading={`${season.node.frontmatter.short} - ${fm.heading}`}
+          heading={fm.heading}
           subheading={fm.subheading || date}
           html={result.htmlAst}
           team={fm.team}
@@ -86,7 +79,6 @@ export const resultQuery = graphql`
         subheading
         date
         templateKey
-        season
         featuredimage {
           alt
           image {
@@ -96,21 +88,6 @@ export const resultQuery = graphql`
                 src
               }
             }
-          }
-        }
-      }
-    }
-
-    seasons: allMarkdownRemark(
-      filter: { frontmatter: { key: { eq: "season" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            key
-            title
-            short
-            id
           }
         }
       }

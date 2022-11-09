@@ -67,15 +67,6 @@ result_page: &RESULT_PAGE
       value_field: 'title',
       display_fields: ['{{heading}} - {{subheading}}'],
     }
-  - {
-      label: Season,
-      name: season,
-      widget: relation,
-      collection: 'seasons',
-      search_fields: ['title'],
-      value_field: '{{id}}',
-      display_fields: ['{{title}}'],
-    }
   - <<: *BODY
   - {
       label: 'Featured Image',
@@ -333,11 +324,11 @@ collections:
     summary: '[{{day}}-{{month}}-{{year}}] {{heading}}'
     view_filters:
       - label: "Saison 2022 - 2023"
-        field: season
-        pattern: '82fd730f-cdbe-4a83-99ec-0bfaeae3a4ab'
+        field: heading
+        pattern: 'Saison 22-23'
       - label: "Saison 2021 - 2022"
-        field: season
-        pattern: '58f2223c-553b-4c29-aa15-dc248adabd4a'
+        field: heading
+        pattern: 'Saison 21-22'
       - label: "Equipe 1"
         field: category
         pattern: 'equipe-1'
@@ -357,20 +348,6 @@ collections:
         field: category
         pattern: 'equipe-6'
     fields: *RESULT_PAGE
-
-  - name: 'seasons'
-    label: 'Saisons'
-    label_singular: 'Saison'
-    folder: 'src/pages/seasons'
-    filter: { field: 'key', value: 'season' }
-    create: true
-    slug: '{{fields.title}}'
-    summary: '{{fields.title}}'
-    fields:
-      - { label: 'Key', name: 'key', widget: 'hidden', default: 'season' }
-      - { label: 'ID', name: 'id', widget: 'uuid' }
-      - <<: *TITLE
-      - { label: 'Short title', name: 'short', widget: 'string' }
 
   - name: 'result-sections'
     label: 'Catégories de résultat'

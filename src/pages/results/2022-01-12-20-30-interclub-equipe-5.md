@@ -1,10 +1,9 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-heading: Équipe 5 - ASMR vs BML
+heading: Saison 21-22 - Équipe 5 - ASMR vs BML
 date: 2022-01-12T19:30:00.000Z
 category: equipe-5
-season: 58f2223c-553b-4c29-aa15-dc248adabd4a
 featuredimage:
   image: /assets/shuttle.jpg
 ---

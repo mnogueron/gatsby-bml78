@@ -1,10 +1,9 @@
 ---
 templateKey: result-page
 title: interclub-equipe-1
-heading: Équipe 1 - MBSMB vs BML
+heading: Saison 22-23 - Équipe 1 - MBSMB vs BML
 date: 2022-09-10T14:00:00.000Z
 category: equipe-1-s22-23
-season: 82fd730f-cdbe-4a83-99ec-0bfaeae3a4ab
 featuredimage:
   image: /assets/img_8077_2.jpg
 ---

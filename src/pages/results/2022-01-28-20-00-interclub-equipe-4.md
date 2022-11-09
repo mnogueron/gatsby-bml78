@@ -1,7 +1,7 @@
 ---
 templateKey: result-page
 title: interclub-equipe-4
-heading: Saison 21-22 - Équipe 4 - LVE vs BML
+heading: Équipe 4 - LVE vs BML
 date: 2022-01-28T19:00:00.000Z
 category: equipe-4
 featuredimage:

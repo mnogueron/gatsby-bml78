@@ -8,30 +8,43 @@ local_backend: true
 media_folder: static/assets
 public_folder: /assets
 
-title: &TITLE { label: "Title", name: "title", widget: "string" }
-heading: &HEADING { label: Heading, name: heading, widget: string, required: false }
-subheading: &SUBHEADING { label: Subheading, name: subheading, widget: string, required: false }
-body: &BODY { label: "Body", name: "body", widget: "markdown" }
-template_base: &TEMPLATE_BASE {
-  label: "Template Key",
-  name: "templateKey",
-  widget: "hidden",
-}
+title: &TITLE { label: 'Title', name: 'title', widget: 'string' }
+heading:
+  &HEADING { label: Heading, name: heading, widget: string, required: false }
+subheading:
+  &SUBHEADING {
+    label: Subheading,
+    name: subheading,
+    widget: string,
+    required: false,
+  }
+body: &BODY { label: 'Body', name: 'body', widget: 'markdown' }
+template_base:
+  &TEMPLATE_BASE {
+    label: 'Template Key',
+    name: 'templateKey',
+    widget: 'hidden',
+  }
 
 seo: &SEO
-  label: "SEO"
-  name: "seo"
+  label: 'SEO'
+  name: 'seo'
   widget: object
   collapsed: true
   required: false
   fields:
-    - { label: "Titre", name: "title", widget: "string", required: false }
-    - { label: "Description", name: "description", widget: "string", required: false }
+    - { label: 'Titre', name: 'title', widget: 'string', required: false }
+    - {
+        label: 'Description',
+        name: 'description',
+        widget: 'string',
+        required: false,
+      }
     - { label: Image, name: image, widget: image, required: false }
 
 content_page: &CONTENT_PAGE
   - <<: *TEMPLATE_BASE
-    default: "content-page"
+    default: 'content-page'
   - <<: *TITLE
   - <<: *HEADING
   - <<: *SUBHEADING
@@ -40,44 +53,58 @@ content_page: &CONTENT_PAGE
 
 result_page: &RESULT_PAGE
   - <<: *TEMPLATE_BASE
-    default: "result-page"
+    default: 'result-page'
   - <<: *TITLE
   - <<: *HEADING
   - <<: *SUBHEADING
-  - { label: "Publish Date", name: "date", widget: "datetime" }
+  - { label: 'Publish Date', name: 'date', widget: 'datetime' }
   - {
-    label: Category,
-    name: category,
-    widget: relation,
-    collection: "result-sections",
-    search_fields: [ "heading" ],
-    value_field: "title",
-    display_fields: [ "heading" ],
-  }
+      label: Category,
+      name: category,
+      widget: relation,
+      collection: 'result-sections',
+      search_fields: ['heading'],
+      value_field: 'title',
+      display_fields: ['{{heading}} - {{subheading}}'],
+    }
+  - {
+      label: Season,
+      name: season,
+      widget: relation,
+      collection: 'seasons',
+      search_fields: ['title'],
+      value_field: '{{id}}',
+      display_fields: ['{{title}}'],
+    }
   - <<: *BODY
   - {
-    label: "Featured Image",
-    name: "featuredimage",
-    widget: object,
-    collapsed: true,
-    fields:
-      [
-        { label: Image, name: image, widget: image, default: "/assets/shuttle.jpg", },
-        { label: Alt, name: alt, widget: string, required: false },
-      ],
-  }
+      label: 'Featured Image',
+      name: 'featuredimage',
+      widget: object,
+      collapsed: true,
+      fields:
+        [
+          {
+            label: Image,
+            name: image,
+            widget: image,
+            default: '/assets/shuttle.jpg',
+          },
+          { label: Alt, name: alt, widget: string, required: false },
+        ],
+    }
   - <<: *SEO
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/index.md"
-        label: "Accueil"
-        name: "index"
+      - file: 'src/pages/index.md'
+        label: 'Accueil'
+        name: 'index'
         fields:
           - <<: *TEMPLATE_BASE
-            default: "index-page"
+            default: 'index-page'
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Image de fond, name: headerImage, widget: image }
@@ -119,21 +146,21 @@ collections:
           #       ],
           #   }
           - <<: *SEO
-      - file: "src/pages/articles/index.md"
-        label: "Actualités"
-        name: "articles-index"
+      - file: 'src/pages/articles/index.md'
+        label: 'Actualités'
+        name: 'articles-index'
         fields:
           - <<: *TEMPLATE_BASE
-            default: "articles-page"
-          - { label: "Title", name: "title", widget: "string" }
+            default: 'articles-page'
+          - { label: 'Title', name: 'title', widget: 'string' }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
-      - file: "src/pages/results/index.md"
-        label: "Tous les résulats"
-        name: "all-results-index"
+      - file: 'src/pages/results/index.md'
+        label: 'Tous les résulats'
+        name: 'all-results-index'
         fields:
           - <<: *TEMPLATE_BASE
-            default: "all-results-page"
+            default: 'all-results-page'
           - <<: *TITLE
           - <<: *HEADING
           - <<: *SUBHEADING
@@ -165,23 +192,23 @@ collections:
       #           ],
       #       }
 
-      - file: "src/pages/contact/index.md"
-        label: "Contact"
-        name: "contact"
+      - file: 'src/pages/contact/index.md'
+        label: 'Contact'
+        name: 'contact'
         fields:
           - <<: *TEMPLATE_BASE
-            default: "contact-page"
+            default: 'contact-page'
           - <<: *TITLE
           - <<: *HEADING
           - <<: *SUBHEADING
           - <<: *BODY
           - {
-              label: "Formulaire de contact",
+              label: 'Formulaire de contact',
               name: contactform,
               widget: object,
               fields:
                 [
-                  { label: "Titre", name: heading, widget: string },
+                  { label: 'Titre', name: heading, widget: string },
                   { label: Description, name: description, widget: string },
                   { label: Image, name: image, widget: image },
                 ],
@@ -201,39 +228,39 @@ collections:
           #  }
           - <<: *SEO
 
-  - name: "informations"
-    label: "Infos Pratiques"
+  - name: 'informations'
+    label: 'Infos Pratiques'
     files:
-      - file: "src/pages/infos-pratiques/inscription.md"
-        label: "Inscription"
-        name: "inscription"
+      - file: 'src/pages/infos-pratiques/inscription.md'
+        label: 'Inscription'
+        name: 'inscription'
         fields: *CONTENT_PAGE
-      - file: "src/pages/infos-pratiques/avantages.md"
-        label: "Avantages"
-        name: "avantages"
+      - file: 'src/pages/infos-pratiques/avantages.md'
+        label: 'Avantages'
+        name: 'avantages'
         fields: *CONTENT_PAGE
-      - file: "src/pages/infos-pratiques/entrainements.md"
-        label: "Entraînements"
-        name: "entrainements"
+      - file: 'src/pages/infos-pratiques/entrainements.md'
+        label: 'Entraînements'
+        name: 'entrainements'
         fields: *CONTENT_PAGE
-      - file: "src/pages/infos-pratiques/sections.md"
-        label: "Nos Sections"
-        name: "sections"
+      - file: 'src/pages/infos-pratiques/sections.md'
+        label: 'Nos Sections'
+        name: 'sections'
         fields: *CONTENT_PAGE
-      - file: "src/pages/infos-pratiques/acces-horaires.md"
-        label: "Accès / Horaires"
-        name: "acces-horaires"
+      - file: 'src/pages/infos-pratiques/acces-horaires.md'
+        label: 'Accès / Horaires'
+        name: 'acces-horaires'
         fields: *CONTENT_PAGE
-      - file: "src/pages/infos-pratiques/calendrier.md"
-        label: "Calendrier"
-        name: "calendrier"
+      - file: 'src/pages/infos-pratiques/calendrier.md'
+        label: 'Calendrier'
+        name: 'calendrier'
         fields: *CONTENT_PAGE
-      - file: "src/pages/infos-pratiques/bureau.md"
-        label: "Le Bureau"
-        name: "bureau"
+      - file: 'src/pages/infos-pratiques/bureau.md'
+        label: 'Le Bureau'
+        name: 'bureau'
         fields:
           - <<: *TEMPLATE_BASE
-            default: "board-chart-page"
+            default: 'board-chart-page'
           - <<: *TITLE
           - <<: *HEADING
           - <<: *SUBHEADING
@@ -267,25 +294,25 @@ collections:
 
           - <<: *SEO
 
-  - name: "articles"
-    label: "Articles"
-    folder: "src/pages/articles"
-    filter: {field: "templateKey", value: "article-page"}
+  - name: 'articles'
+    label: 'Articles'
+    folder: 'src/pages/articles'
+    filter: { field: 'templateKey', value: 'article-page' }
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '[{{day}}-{{month}}-{{year}}] {{title}}'
     fields:
       - <<: *TEMPLATE_BASE
-        default: "article-page"
+        default: 'article-page'
       - <<: *TITLE
       - <<: *HEADING
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured", name: "featured", widget: boolean }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured', name: 'featured', widget: boolean }
       # - {label: "Description", name: "description", widget: "text"}
       # - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {
-          label: "Featured Image",
-          name: "featuredimage",
+          label: 'Featured Image',
+          name: 'featuredimage',
           widget: object,
           fields:
             [
@@ -296,47 +323,61 @@ collections:
       - <<: *BODY
       - <<: *SEO
       # - {label: "Tags", name: "tags", widget: "list"}
-  - name: "results"
-    label: "Résultats"
-    label_singular: "Résultat"
-    folder: "src/pages/results"
-    filter: { field: "templateKey", value: "result-page" }
+  - name: 'results'
+    label: 'Résultats'
+    label_singular: 'Résultat'
+    folder: 'src/pages/results'
+    filter: { field: 'templateKey', value: 'result-page' }
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} {{year}}-{{month}}-{{day}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '[{{day}}-{{month}}-{{year}}] {{heading}}'
     fields: *RESULT_PAGE
 
-  - name: "result-sections"
-    label: "Catégories de résultat"
-    label_singular: "Catégorie de résultat"
-    folder: "src/pages/results"
-    filter: { field: "templateKey", value: "results-page" }
+  - name: 'seasons'
+    label: 'Saisons'
+    label_singular: 'Saison'
+    folder: 'src/pages/seasons'
+    filter: { field: 'key', value: 'season' }
     create: true
-    slug: "{{fields.title}}"
-    summary: "{{fields.heading}} / {{fields.subheading}}"
+    slug: '{{fields.title}}'
+    summary: '{{fields.title}}'
+    fields:
+      - { label: 'Key', name: 'key', widget: 'hidden', default: 'season' }
+      - { label: 'ID', name: 'id', widget: 'uuid' }
+      - <<: *TITLE
+      - { label: 'Short title', name: 'short', widget: 'string' }
+
+  - name: 'result-sections'
+    label: 'Catégories de résultat'
+    label_singular: 'Catégorie de résultat'
+    folder: 'src/pages/results'
+    filter: { field: 'templateKey', value: 'results-page' }
+    create: true
+    slug: '{{fields.title}}'
+    summary: '[{{fields.subheading}}] {{fields.heading}}'
     fields:
       - <<: *TEMPLATE_BASE
-        default: "results-page"
+        default: 'results-page'
       - <<: *TITLE
       - <<: *HEADING
       - <<: *SUBHEADING
       - <<: *SEO
-  - name: "menus"
-    label: "Menus"
+  - name: 'menus'
+    label: 'Menus'
     files:
-      - file: "src/pages/menus/infos-pratiques.md"
-        label: "Menu - Infos pratiques"
-        name: "infos-pratiques"
+      - file: 'src/pages/menus/infos-pratiques.md'
+        label: 'Menu - Infos pratiques'
+        name: 'infos-pratiques'
         fields:
-          - label: "Menu key"
-            name: "menuKey"
-            widget: "hidden"
-            default: "infos-pratiques"
+          - label: 'Menu key'
+            name: 'menuKey'
+            widget: 'hidden'
+            default: 'infos-pratiques'
           - label: Sections
             label_singular: Section
             name: items
             widget: list
-            summary: "Titre de la section : {{fields.title}} - Page associée : {{fields.url}}"
+            summary: 'Titre de la section : {{fields.title}} - Page associée : {{fields.url}}'
             fields:
               - label: Titre
                 name: title
@@ -344,25 +385,25 @@ collections:
               - label: Page
                 name: url
                 widget: relation
-                collection: "informations"
-                search_fields: [ "title" ]
-                value_field: "/infos-pratiques/{{slug}}"
-                display_fields: [ "title" ]
-      - file: "src/pages/menus/resultats.md"
-        label: "Menu - Résultats"
-        name: "resultats"
+                collection: 'informations'
+                search_fields: ['title']
+                value_field: '/infos-pratiques/{{slug}}'
+                display_fields: ['title']
+      - file: 'src/pages/menus/resultats.md'
+        label: 'Menu - Résultats'
+        name: 'resultats'
         fields:
           - {
-            label: "Menu Key",
-            name: "menuKey",
-            widget: "hidden",
-            default: "resultats",
-          }
+              label: 'Menu Key',
+              name: 'menuKey',
+              widget: 'hidden',
+              default: 'resultats',
+            }
           - label: Sections
             label_singular: Section
             name: items
             widget: list
-            summary: "Titre de la section : {{fields.title}} - Page associée : {{fields.url}}"
+            summary: 'Titre de la section : {{fields.title}} - Page associée : {{fields.url}}'
             fields:
               - label: Titre
                 name: title
@@ -371,16 +412,16 @@ collections:
                 name: url
                 widget: relation
                 required: false
-                collection: "result-sections"
-                search_fields: [ "heading" ]
-                value_field: "/results/{{slug}}"
-                display_fields: [ "{{heading}} - {{subheading}}" ]
+                collection: 'result-sections'
+                search_fields: ['heading']
+                value_field: '/results/{{slug}}'
+                display_fields: ['{{heading}} - {{subheading}}']
               - label: Saisons
                 label_singular: Saison
                 name: items
                 required: false
                 widget: list
-                summary: "Saison : {{fields.title}} - Page associée : {{fields.url}}"
+                summary: 'Saison : {{fields.title}} - Page associée : {{fields.url}}'
                 fields:
                   - label: Titre
                     name: title
@@ -388,7 +429,7 @@ collections:
                   - label: Page
                     name: url
                     widget: relation
-                    collection: "result-sections"
-                    search_fields: [ "heading" ]
-                    value_field: "/results/{{slug}}"
-                    display_fields: [ "{{heading}} - {{subheading}}" ]
+                    collection: 'result-sections'
+                    search_fields: ['heading']
+                    value_field: '/results/{{slug}}'
+                    display_fields: ['{{heading}} - {{subheading}}']

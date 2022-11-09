@@ -1,7 +1,7 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-heading: Saison 21-22 - Équipe 5 - PBC vs BML
+heading: Équipe 5 - PBC vs BML
 date: 2022-01-28T19:30:00.000Z
 category: equipe-5
 featuredimage:

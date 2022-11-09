@@ -43,8 +43,9 @@ export const getSEOData = (data) => {
       const date = format(new Date(fm.date), 'PP', { locale: frLocale });
       const featuredImageSrc =
         fm.featuredimage?.image?.childImageSharp?.fixed?.src;
+      const season = data.seasons.edges.find((s) => s.node.frontmatter.id === fm.season);
       return {
-        title: fm.heading,
+        title: `${season.node.frontmatter.short} - ${fm.heading}`,
         description: fm.subheading || `${fm.heading} - ${date}`,
         image: featuredImageSrc?.endsWith('/shuttle.jpg')
           ? undefined

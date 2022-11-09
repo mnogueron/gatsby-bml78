@@ -1,9 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-1
-heading: Saison 22-23 - Équipe 1 - BML vs ABS
+heading: Équipe 1 - BML vs ABS
 date: 2022-10-08T14:00:00.000Z
 category: equipe-1-s22-23
+season: 82fd730f-cdbe-4a83-99ec-0bfaeae3a4ab
 featuredimage:
   image: /assets/ic-n2-j2-ml-vs-salbris-7.jpg
 seo:

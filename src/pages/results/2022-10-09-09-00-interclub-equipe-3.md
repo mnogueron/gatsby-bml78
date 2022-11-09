@@ -1,9 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-3
-heading: Saison 22-23 - Équipe 3 - ESV vs BML
+heading: Équipe 3 - ESV vs BML
 date: 2022-10-09T07:00:00.000Z
 category: equipe-3-s22-23
+season: 82fd730f-cdbe-4a83-99ec-0bfaeae3a4ab
 featuredimage:
   image: /assets/shuttle.jpg
 ---

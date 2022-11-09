@@ -38,8 +38,9 @@ const getSEOData = (data) => {
       };
     case 'result-page': {
       const date = format(new Date(data.date), 'PP', { locale: frLocale });
+      //const season = data.seasons.find((s) => s.node.frontmatter.id === fm.season);
       return {
-        title: data.heading,
+        title: `Saison XX-XX - ${data.heading}`,
         description: data.subheading || `${data.heading} - ${date}`,
         image: data.featuredimage.image !== '/assets/shuttle.jpg' ? data.featuredimage.image : undefined,
         article: true,
@@ -62,7 +63,6 @@ const withPreviewWrapper = (Component) => {
 
     if (data) {
       const { seo: override } = data;
-
 
       const templateSeo = getSEOData(data)
       console.log(templateSeo, override)

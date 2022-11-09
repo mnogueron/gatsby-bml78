@@ -1,7 +1,7 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-heading: Saison 21-22 - Équipe 5 - CBS vs BML
+heading: Équipe 5 - CBS vs BML
 date: 2021-12-08T19:00:00.000Z
 category: equipe-5
 featuredimage:

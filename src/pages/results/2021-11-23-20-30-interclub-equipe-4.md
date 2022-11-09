@@ -1,7 +1,7 @@
 ---
 templateKey: result-page
 title: interclub-equipe-4
-heading: Saison 21-22 - Équipe 4 - ESS vs BML
+heading: Équipe 4 - ESS vs BML
 date: 2021-11-23T19:30:00.000Z
 category: equipe-4
 featuredimage:

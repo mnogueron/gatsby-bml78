@@ -7,6 +7,6 @@ heading: |-
   Badminton
   Maisons-Laffitte
 subheading: |-
-  /!\ Pas de jeu libre à Jules Verne les 8 et 9 octobre 2022 /!\
-  en raison des interclubs à domicile
+  /!\ Gymnase Jules Verne fermé les 26-27 novembre /!\
+  pas de jeu libre ni d'entraînement jeunes
 ---

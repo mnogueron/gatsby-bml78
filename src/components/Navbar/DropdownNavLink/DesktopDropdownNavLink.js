@@ -7,6 +7,7 @@ import {
   MenuList,
   useDisclosure,
   Icon,
+  Portal,
 } from '@chakra-ui/react';
 import { MdExpandMore, MdChevronRight } from 'react-icons/md';
 import NavLabel from '../NavLabel';
@@ -26,7 +27,10 @@ const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive }) => {
   };
 
   return (
-    <Menu isOpen={isOpen} {...(isRecursive ? { placement: 'end-start', offset: [-10, 6] } : {})}>
+    <Menu
+      isOpen={isOpen}
+      {...(isRecursive ? { placement: 'end-start', offset: [-10, 6] } : {})}
+    >
       <MenuButton
         onClick={onToggle}
         onMouseEnter={handleOpen}
@@ -46,25 +50,31 @@ const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive }) => {
           />
         )}
       </MenuButton>
-      <MenuList onMouseEnter={handleOpen} onMouseLeave={handleClose}>
-        {options.map(({ label, to, key, options }) => {
-          if (options) {
+      <Portal>
+        <MenuList
+          onMouseEnter={handleOpen}
+          onMouseLeave={handleClose}
+          maxW={'350px'}
+        >
+          {options.map(({ label, to, key, options }) => {
+            if (options) {
+              return (
+                <DesktopDropdownNavLink
+                  label={label}
+                  onClick={onClick}
+                  options={options}
+                  isRecursive={true}
+                />
+              );
+            }
             return (
-              <DesktopDropdownNavLink
-                label={label}
-                onClick={onClick}
-                options={options}
-                isRecursive={true}
-              />
+              <MenuItem key={key} as={Link} to={to} onClick={handleClose}>
+                {label}
+              </MenuItem>
             );
-          }
-          return (
-            <MenuItem key={key} as={Link} to={to} onClick={handleClose}>
-              {label}
-            </MenuItem>
-          );
-        })}
-      </MenuList>
+          })}
+        </MenuList>
+      </Portal>
     </Menu>
   );
 };

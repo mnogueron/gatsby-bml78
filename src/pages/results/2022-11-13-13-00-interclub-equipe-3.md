@@ -1,0 +1,14 @@
+---
+templateKey: result-page
+title: interclub-equipe-3
+heading: Saison 22-23 - Équipe 3 - BML vs ASRB
+date: 2022-11-13T12:00:00.000Z
+category: equipe-3-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+|               | BML   | ASRB |
+| ------------- | ----- | --- |
+| **Victoires** | 0 | **8**   |
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Gautier","firstname":"Marc","club":"BML","ranking":"R4"}],"teamB":[{"lastname":"Leloup","firstname":"Hugo","club":"ASRB","ranking":"N3"}],"score":{"set":[{"scoreA":16,"scoreB":21},{"scoreA":15,"scoreB":21}]},"type":"SH"},{"teamA":[{"lastname":"Gijon","firstname":"Franck","club":"BML","ranking":"R4"}],"teamB":[{"lastname":"Brogere","firstname":"Louis","club":"ASRB","ranking":"R6"}],"score":{"set":[{"scoreA":18,"scoreB":21},{"scoreA":21,"scoreB":16},{"scoreA":20,"scoreB":22}]},"type":"SH"},{"teamA":[{"lastname":"Santamaria","firstname":"Charlène","club":"BML","ranking":"D7"}],"teamB":[{"lastname":"Vilain","firstname":"Krystel","club":"ASRB","ranking":"R5"}],"score":{"set":[{"scoreA":8,"scoreB":21},{"scoreA":17,"scoreB":21}]},"type":"SD"},{"teamA":[{"lastname":"Kirhan","firstname":"Tallia","club":"BML","ranking":"D7"}],"teamB":[{"lastname":"Urbanek","firstname":"Silène","club":"ASRB","ranking":"R6"}],"score":{"set":[{"scoreA":9,"scoreB":21},{"scoreA":12,"scoreB":21}]},"type":"SD"},{"teamA":[{"lastname":"Gijon","firstname":"Franck","club":"BML","ranking":"R6"},{"lastname":"Laborie","firstname":"Bastian","club":"BML","ranking":"D9"}],"teamB":[{"lastname":"Berthout","firstname":"Alexis","club":"ASRB","ranking":"R6"},{"lastname":"Hosotte","firstname":"Julian","club":"ASRB","ranking":"R4"}],"score":{"set":[{"scoreA":14,"scoreB":21},{"scoreA":21,"scoreB":23}]},"type":"DH"},{"teamA":[{"lastname":"Kirhan","firstname":"Tallia","club":"BML","ranking":"D8"},{"lastname":"Santamaria","firstname":"Charlène","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Loyer","firstname":"Chloé","club":"ASRB","ranking":"R4"},{"lastname":"Vilain","firstname":"Krystel","club":"ASRB","ranking":"R5"}],"score":{"set":[{"scoreA":9,"scoreB":21},{"scoreA":13,"scoreB":21}]},"type":"DD"},{"teamA":[{"lastname":"Gautier","firstname":"Marc","club":"BML","ranking":"R6"},{"lastname":"Surmont","firstname":"Cécile","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Hosotte","firstname":"Julian","club":"ASRB","ranking":"N3"},{"lastname":"Urbanek","firstname":"Silène","club":"ASRB","ranking":"R5"}],"score":{"set":[{"scoreA":15,"scoreB":21},{"scoreA":18,"scoreB":21}]},"type":"MX"},{"teamA":[{"lastname":"Laborie","firstname":"Bastian","club":"BML","ranking":"D9"},{"lastname":"Morel","firstname":"Laëtitia","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Leloup","firstname":"Hugo","club":"ASRB","ranking":"R5"},{"lastname":"Loyer","firstname":"Chloé","club":"ASRB","ranking":"N3"}],"score":{"set":[{"scoreA":7,"scoreB":21},{"scoreA":15,"scoreB":21}]},"type":"MX"}]}</scoreboard>

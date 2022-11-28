@@ -1,0 +1,14 @@
+---
+templateKey: result-page
+title: interclub-equipe-4
+heading: Saison 22-23 - Équipe 4 - BML vs Ass.sport.du Mesnil Le Roi
+date: 2022-11-09T19:00:00.000Z
+category: equipe-4-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+|               | BML   | Ass.sport.du Mesnil Le Roi |
+| ------------- | ----- | --- |
+| **Victoires** | **5** | 2   |
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Rome","firstname":"Matthieu","club":"BML","ranking":"R5"}],"teamB":[{"lastname":"Hemelot","firstname":"Nathan","club":"Ass.sport.du Mesnil Le Roi","ranking":"R5"}],"score":{"set":[{"scoreA":21,"scoreB":14},{"scoreA":22,"scoreB":20}]},"type":"SH"},{"teamA":[{"lastname":"Held","firstname":"Kevin","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Rispail","firstname":"Antoine","club":"Ass.sport.du Mesnil Le Roi","ranking":"D8"}],"score":{"set":[{"scoreA":21,"scoreB":17},{"scoreA":21,"scoreB":13}]},"type":"SH"},{"teamA":[{"lastname":"Remeur","firstname":"michel","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Crincket","firstname":"Tom","club":"Ass.sport.du Mesnil Le Roi","ranking":"D9"}],"score":{"set":[{"scoreA":22,"scoreB":20},{"scoreA":21,"scoreB":14}]},"type":"SH"},{"teamA":[{"lastname":"Mongrolle","firstname":"Magalie","club":"BML","ranking":"D8"}],"teamB":[{"lastname":"Vignoud","firstname":"Elodie","club":"Ass.sport.du Mesnil Le Roi","ranking":"D8"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":14,"scoreB":21}]},"type":"SD"},{"teamA":[{"lastname":"Remeur","firstname":"michel","club":"BML","ranking":"R6"},{"lastname":"Rome","firstname":"Matthieu","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Hemelot","firstname":"Nathan","club":"Ass.sport.du Mesnil Le Roi","ranking":"D8"},{"lastname":"Rispail","firstname":"Antoine","club":"Ass.sport.du Mesnil Le Roi","ranking":"D7"}],"score":{"set":[{"scoreA":21,"scoreB":13},{"scoreA":21,"scoreB":11}]},"type":"DH"},{"teamA":[{"lastname":"Girard","firstname":"Elodie","club":"BML","ranking":"D8"},{"lastname":"Mongrolle","firstname":"Magalie","club":"BML","ranking":"D9"}],"teamB":[{"lastname":"Charbaut","firstname":"Karine","club":"Ass.sport.du Mesnil Le Roi","ranking":"D8"},{"lastname":"Vignoud","firstname":"Elodie","club":"Ass.sport.du Mesnil Le Roi","ranking":"D8"}],"score":{"set":[{"scoreA":16,"scoreB":21},{"scoreA":14,"scoreB":21}]},"type":"DD"},{"teamA":[{"lastname":"Held","firstname":"Kevin","club":"BML","ranking":"R6"},{"lastname":"Girard","firstname":"Elodie","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Crincket","firstname":"Tom","club":"Ass.sport.du Mesnil Le Roi","ranking":"D8"},{"lastname":"Charbaut","firstname":"Karine","club":"Ass.sport.du Mesnil Le Roi","ranking":"D8"}],"score":{"set":[{"scoreA":21,"scoreB":16},{"scoreA":21,"scoreB":16}]},"type":"MX"}]}</scoreboard>

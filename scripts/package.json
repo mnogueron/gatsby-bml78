@@ -1,0 +1,17 @@
+{
+  "name": "icbad-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "generate:url": "node extractURLs.js",
+    "generate:allICs": "node extractICs.js",
+    "start:watch": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

@@ -13,6 +13,8 @@ import galleryEditorComponent from "./editor-components/gallery";
 import fileEditorComponent from "./editor-components/file";
 import gridEditorComponent from "./editor-components/grid";
 import withPreviewWrapper from "./withPreviewWrapper";
+import {UuidControl, UuidPreview} from './widgets/TestWidget';
+
 
 const previewTemplates = {
   'index': IndexPagePreview,
@@ -43,3 +45,5 @@ CMS.registerEditorComponent(scoreboardEditorComponent);
 CMS.registerEditorComponent(galleryEditorComponent);
 /*CMS.registerEditorComponent(fileEditorComponent);*/
 /*CMS.registerEditorComponent(gridEditorComponent);*/
+
+CMS.registerWidget('testWidget', UuidControl, UuidPreview)

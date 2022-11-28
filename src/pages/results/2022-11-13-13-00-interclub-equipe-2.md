@@ -1,0 +1,14 @@
+---
+templateKey: result-page
+title: interclub-equipe-2
+heading: Saison 22-23 - Équipe 2 - AASF vs BML
+date: 2022-11-13T12:00:00.000Z
+category: equipe-2-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+|               | AASF   | BML |
+| ------------- | ----- | --- |
+| **Victoires** | 0 | **8**   |
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Sendra","firstname":"Anthony","club":"AASF","ranking":"R5"}],"teamB":[{"lastname":"Beurier","firstname":"Thomas","club":"BML","ranking":"N3"}],"score":{"set":[{"scoreA":12,"scoreB":21},{"scoreA":17,"scoreB":21}]},"type":"SH"},{"teamA":[{"lastname":"Coignard","firstname":"José","club":"AASF","ranking":"R5"}],"teamB":[{"lastname":"Venanci","firstname":"Thibault","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":15,"scoreB":21},{"scoreA":9,"scoreB":21}]},"type":"SH"},{"teamA":[{"lastname":"Rudolf","firstname":"Cindy","club":"AASF","ranking":"D7"}],"teamB":[{"lastname":"Ramirez Camacho","firstname":"Ana","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":7,"scoreB":21},{"scoreA":3,"scoreB":21}]},"type":"SD"},{"teamA":[{"lastname":"Chasseriau","firstname":"Clémence","club":"AASF","ranking":"D8"}],"teamB":[{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"R5"}],"score":{"set":[{"scoreA":13,"scoreB":21},{"scoreA":22,"scoreB":20},{"scoreA":12,"scoreB":21}]},"type":"SD"},{"teamA":[{"lastname":"Sendra","firstname":"Anthony","club":"AASF","ranking":"N3"},{"lastname":"Dang Thai","firstname":"Quoc","club":"AASF","ranking":"R5"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"},{"lastname":"Venanci","firstname":"Thibault","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":13,"scoreB":21},{"scoreA":17,"scoreB":21}]},"type":"DH"},{"teamA":[{"lastname":"Nguyen","firstname":"Marine","club":"AASF","ranking":"R6"},{"lastname":"Tsuburaya","firstname":"Naoko","club":"AASF","ranking":"R6"}],"teamB":[{"lastname":"Hadjal","firstname":"Marine","club":"BML","ranking":"N3"},{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":12,"scoreB":21}]},"type":"DD"},{"teamA":[{"lastname":"Dang Thai","firstname":"Quoc","club":"AASF","ranking":"D7"},{"lastname":"Nguyen","firstname":"Marine","club":"AASF","ranking":"N2"}],"teamB":[{"lastname":"Beurier","firstname":"Thomas","club":"BML","ranking":"R4"},{"lastname":"Ramirez Camacho","firstname":"Ana","club":"BML","ranking":"N1"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":5,"scoreB":21}]},"type":"MX"},{"teamA":[{"lastname":"Coignard","firstname":"José","club":"AASF","ranking":"R5"},{"lastname":"Tsuburaya","firstname":"Naoko","club":"AASF","ranking":"R5"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"R4"},{"lastname":"Hadjal","firstname":"Marine","club":"BML","ranking":"N3"}],"score":{"set":[{"scoreA":14,"scoreB":21},{"scoreA":9,"scoreB":21}]},"type":"MX"}]}</scoreboard>

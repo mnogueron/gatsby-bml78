@@ -1,0 +1,14 @@
+---
+templateKey: result-page
+title: interclub-equipe-1
+heading: Saison 22-23 - Équipe 1 - NBA vs BML
+date: 2022-11-12T15:00:00.000Z
+category: equipe-1-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+|               | NBA   | BML |
+| ------------- | ----- | --- |
+| **Victoires** | 1 | **7**   |
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Wasylyk","firstname":"Eric","club":"NBA","ranking":"N2"}],"teamB":[{"lastname":"Esteve Garcia","firstname":"Miguel","club":"BML","ranking":"N1"}],"score":{"set":[{"scoreA":20,"scoreB":22},{"scoreA":21,"scoreB":18},{"scoreA":18,"scoreB":21}]},"type":"SH"},{"teamA":[{"lastname":"Brier","firstname":"Nicolas","club":"NBA","ranking":"R4"}],"teamB":[{"lastname":"Houthoofd","firstname":"Senne","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":11,"scoreB":21}]},"type":"SH"},{"teamA":[{"lastname":"Meheust","firstname":"Lauren","club":"NBA","ranking":"N2"}],"teamB":[{"lastname":"Lesne","firstname":"Candice","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":21,"scoreB":9},{"scoreA":11,"scoreB":21},{"scoreA":21,"scoreB":19}]},"type":"SD"},{"teamA":[{"lastname":"Couvidat","firstname":"Justine","club":"NBA","ranking":"N3"}],"teamB":[{"lastname":"Lesne","firstname":"Cassandre","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":8,"scoreB":21}]},"type":"SD"},{"teamA":[{"lastname":"Brazeilles","firstname":"Rémi","club":"NBA","ranking":"N2"},{"lastname":"Wasylyk","firstname":"Eric","club":"NBA","ranking":"N2"}],"teamB":[{"lastname":"Beauvisage","firstname":"Quentin","club":"BML","ranking":"N1"},{"lastname":"Esteve Garcia","firstname":"Miguel","club":"BML","ranking":"N1"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":19,"scoreB":21}]},"type":"DH"},{"teamA":[{"lastname":"Couvidat","firstname":"Justine","club":"NBA","ranking":"N3"},{"lastname":"Le Guen","firstname":"Célia","club":"NBA","ranking":"N3"}],"teamB":[{"lastname":"Galve","firstname":"Julia","club":"BML","ranking":"N2"},{"lastname":"Lesne","firstname":"Cassandre","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":9,"scoreB":21},{"scoreA":9,"scoreB":21}]},"type":"DD"},{"teamA":[{"lastname":"Brazeilles","firstname":"Rémi","club":"NBA","ranking":"N3"},{"lastname":"Meheust","firstname":"Lauren","club":"NBA","ranking":"N2"}],"teamB":[{"lastname":"Beauvisage","firstname":"Quentin","club":"BML","ranking":"N1"},{"lastname":"Lesne","firstname":"Candice","club":"BML","ranking":"N1"}],"score":{"set":[{"scoreA":23,"scoreB":25},{"scoreA":15,"scoreB":21}]},"type":"MX"},{"teamA":[{"lastname":"Brier","firstname":"Nicolas","club":"NBA","ranking":"R5"},{"lastname":"Le Guen","firstname":"Célia","club":"NBA","ranking":"N3"}],"teamB":[{"lastname":"Houthoofd","firstname":"Senne","club":"BML","ranking":"N3"},{"lastname":"Galve","firstname":"Julia","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":7,"scoreB":21},{"scoreA":6,"scoreB":21}]},"type":"MX"}]}</scoreboard>

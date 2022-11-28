@@ -1,0 +1,14 @@
+---
+templateKey: result-page
+title: interclub-equipe-4
+heading: Saison 22-23 - Équipe 4 - Club Badminton Maurepas vs BML
+date: 2022-11-14T19:00:00.000Z
+category: equipe-4-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+|               | Club Badminton Maurepas   | BML |
+| ------------- | ----- | --- |
+| **Victoires** | **4** | 3   |
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Pepin","firstname":"Laurent","club":"Club Badminton Maurepas","ranking":"D7"}],"teamB":[{"lastname":"Rome","firstname":"Matthieu","club":"BML","ranking":"R5"}],"score":{"set":[{"scoreA":11,"scoreB":21},{"scoreA":19,"scoreB":21}]},"type":"SH"},{"teamA":[{"lastname":"Chan","firstname":"Narindeth","club":"Club Badminton Maurepas","ranking":"D7"}],"teamB":[{"lastname":"Held","firstname":"Kevin","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":20,"scoreB":22},{"scoreA":21,"scoreB":18},{"scoreA":17,"scoreB":21}]},"type":"SH"},{"teamA":[{"lastname":"Pedrera","firstname":"Rafaël","club":"Club Badminton Maurepas","ranking":"D9"}],"teamB":[{"lastname":"Remeur","firstname":"michel","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":12,"scoreB":21},{"scoreA":9,"scoreB":21}]},"type":"SH"},{"teamA":[{"lastname":"Godefroy","firstname":"Frédérique","club":"Club Badminton Maurepas","ranking":"D8"}],"teamB":[{"lastname":"Girard","firstname":"Elodie","club":"BML","ranking":"D9"}],"score":{"set":[{"scoreA":21,"scoreB":1},{"scoreA":21,"scoreB":9}]},"type":"SD"},{"teamA":[{"lastname":"Chan","firstname":"Narindeth","club":"Club Badminton Maurepas","ranking":"D8"},{"lastname":"Pedrera","firstname":"Rafaël","club":"Club Badminton Maurepas","ranking":"D7"}],"teamB":[{"lastname":"Remeur","firstname":"michel","club":"BML","ranking":"R6"},{"lastname":"Rome","firstname":"Matthieu","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":20,"scoreB":22},{"scoreA":21,"scoreB":17},{"scoreA":21,"scoreB":19}]},"type":"DH"},{"teamA":[{"lastname":"Berthault","firstname":"Camille","club":"Club Badminton Maurepas","ranking":"D8"},{"lastname":"Godefroy","firstname":"Frédérique","club":"Club Badminton Maurepas","ranking":"D7"}],"teamB":[{"lastname":"Girard","firstname":"Elodie","club":"BML","ranking":"D8"},{"lastname":"Mongrolle","firstname":"Magalie","club":"BML","ranking":"D9"}],"score":{"set":[{"scoreA":21,"scoreB":15},{"scoreA":21,"scoreB":11}]},"type":"DD"},{"teamA":[{"lastname":"Pepin","firstname":"Laurent","club":"Club Badminton Maurepas","ranking":"D7"},{"lastname":"Berthault","firstname":"Camille","club":"Club Badminton Maurepas","ranking":"D7"}],"teamB":[{"lastname":"Held","firstname":"Kevin","club":"BML","ranking":"R6"},{"lastname":"Mongrolle","firstname":"Magalie","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":13},{"scoreA":22,"scoreB":24},{"scoreA":21,"scoreB":10}]},"type":"MX"}]}</scoreboard>

@@ -3,7 +3,7 @@ templateKey: result-page
 title: interclub-equipe-4
 heading: Saison 21-22 - Équipe 4 - BML vs BCV
 date: 2022-03-28T18:00:00.000Z
-category: equipe-4
+category: equipe-4-s21-22
 featuredimage:
   image: /assets/shuttle.jpg
 ---

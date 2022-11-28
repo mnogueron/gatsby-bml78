@@ -24,6 +24,18 @@ items:
         url: /results/equipe-3-s21-22
   - url: /results/equipe-4
     title: Équipe 4 - Départemental
+    items:
+      - title: Saison 2022-2023
+        url: /results/equipe-4-s22-23
+      - title: Saison 2021-2022
+        url: /results/equipe-4-s21-22
   - url: /results/equipe-5
-    title: Équipe 5 - Départemental - Homme
+    title: Équipe 5 - Départemental
+    items:
+      - title: Saison 2022-2023 - Mixte
+        url: /results/equipe-5-s22-23
+      - title: Saison 2021-2022 - Homme
+        url: /results/equipe-5-s21-22
+  - url: /results/equipe-6-s22-23
+    title: Équipe 6 - Départemental Homme
 ---

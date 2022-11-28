@@ -3,7 +3,7 @@ templateKey: result-page
 title: interclub-equipe-4
 heading: Saison 21-22 - Équipe 4 - ASMC vs BML
 date: 2022-02-09T19:30:00.000Z
-category: equipe-4
+category: equipe-4-s21-22
 featuredimage:
   image: /assets/shuttle.jpg
 ---

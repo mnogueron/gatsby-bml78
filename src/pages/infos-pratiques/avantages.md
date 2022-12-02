@@ -29,7 +29,7 @@ N’hésitez pas à nous contacter afin que nous vous mettions en relation avec 
 
 ![E.Leclerc](/assets/leclerc.png "E.Leclerc")
 
-**L’hypermarché Leclerc** situé à Houilles rejoint lors de cette saison 2022-20233 le rang de nos partenaires précieux.\
+**L’hypermarché Leclerc** situé à Houilles rejoint lors de cette saison 2022-2023 le rang de nos partenaires précieux.\
 \
 Leclerc Houilles nous épaulera dans l’organisation de l’intégralité de nos évènements : Interclub Nationaux, Régionaux, Départementaux / Journée portes ouvertes / Nos deux tournois annuels.\
 \

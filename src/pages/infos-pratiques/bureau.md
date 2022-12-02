@@ -49,8 +49,8 @@ seo:
     à une section n'hésitez pas à contacter ou rencontrer les personnes
     représentantes de la section en question.
 ---
-Les membres du **Bureau** composent l'équipe gestionnaire du club. Il participent au maintient et au développement des intérêts du club et des intérêts de ses adhérents.
+Les membres du **Bureau** composent l'équipe gestionnaire du club. Il participent au maintien et au développement des intérêts du club et des intérêts de ses adhérents.
 
 **L'équipe est composée d'adhérents de profils divers** : compétiteurs, loisirs et parents de jeunes joueurs, à-même de représenter les intérêts de chacune des sections lors des réunions du bureau.
 
-Si vous avez des questions ou des problèmes liées à une section n'hésitez pas à contacter ou rencontrer les personnes représentantes de la section en question.
+Si vous avez des questions ou des problèmes liés à une section n'hésitez pas à contacter ou rencontrer les personnes représentantes de la section en question.

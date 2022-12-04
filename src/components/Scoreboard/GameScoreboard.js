@@ -58,7 +58,7 @@ const TeamScore = ({ score, scoreOpponent }) => {
   );
 };
 
-const PlayerLine = ({ player, isRight }) => {
+const PlayerLine = ({ player, isRight, hideClub }) => {
   const { firstname, lastname, ranking, club, status } = player;
   const name =
     firstname || lastname
@@ -98,7 +98,7 @@ const PlayerLine = ({ player, isRight }) => {
             {status}
           </Tag>
         )}
-        <ClubText club={club} ms={1} />
+        {!hideClub && <ClubText club={club} ms={1} />}
       </Stack>
     </Stack>
   );
@@ -110,6 +110,7 @@ const TeamLine = ({
   scoreOpponent,
   isRight,
   isWinning,
+  hideClub,
   ...rest
 }) => {
   const isMobile = useBreakpointValue({ base: true, md: false });
@@ -138,7 +139,12 @@ const TeamLine = ({
         borderRadius={8}
       >
         {team.map((p, i) => (
-          <PlayerLine key={`player-${i}`} player={p} isRight={isRight} />
+          <PlayerLine
+            key={`player-${i}`}
+            player={p}
+            isRight={isRight}
+            hideClub={hideClub}
+          />
         ))}
       </VStack>
       <TeamScore score={score} scoreOpponent={scoreOpponent} />
@@ -155,9 +161,9 @@ const GameType = ({ type, ...rest }) => {
       case '1/8ème':
       case 'Quarts':
       case 'Finale':
-        return {base: 1, md: 2};
+        return { base: 1, md: 2 };
       case 'Demi':
-        return {base: 0, md: 1};
+        return { base: 0, md: 1 };
       case 'SH':
       case 'SD':
       case 'DH':
@@ -261,6 +267,7 @@ const GameScoreboard = ({ match }) => {
         score={normalisedScore[0]}
         scoreOpponent={normalisedScore[1]}
         isWinning={winningTeam === 0}
+        hideClub={match.hideClub}
       />
       <Divider
         display={{ base: 'block', md: 'none' }}
@@ -275,6 +282,7 @@ const GameScoreboard = ({ match }) => {
         scoreOpponent={normalisedScore[0]}
         isRight={true}
         isWinning={winningTeam === 1}
+        hideClub={match.hideClub}
       />
       {match.type && (
         <GameType
@@ -321,7 +329,6 @@ const Scoreboard = ({ matches, hideHeader }) => {
           key={`match-${index}`}
           match={match}
           isLast={index >= matches.length - 1}
-          hideClub={hideClub}
           hideRanking={hideRanking}
           hidePoints={hidePoints}
         />

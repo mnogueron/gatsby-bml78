@@ -103,6 +103,12 @@ export default {
           widget: 'select',
           options: ['SH', 'SD', 'DH', 'DD', 'MX', 'Poule', '1/32ème', '1/16ème', '1/8ème', 'Quarts', 'Demi', 'Finale'],
           required: false,
+        },
+        {
+          name: 'hideClub',
+          label: 'Cacher nom du club',
+          widget: 'boolean',
+          required: false,
         }
       ],
     },

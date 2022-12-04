@@ -44,6 +44,7 @@ featuredimage:
 ---
 
 <teamscoreboard>${JSON.stringify({ teamScore })}</teamscoreboard>
+
 <scoreboard>${JSON.stringify({ matches })}</scoreboard>`;
   const filePath = `${folder}/${filename}`;
   if (dryRun) {
@@ -151,7 +152,7 @@ const extractICData = async (url, dryRun) => {
 
     const getPlayer = (playerNode, isHost) => {
       const name = playerNode.children[isHost ? 1 : 0].innerText;
-      const matches = name.match(/([A-Za-zÀ-ÖØ-öø-ÿ]*) ([A-Za-zÀ-ÖØ-öø-ÿ ]*)/);
+      const matches = name.match(/([A-Za-zÀ-ÖØ-öø-ÿ-']*) ([A-Za-zÀ-ÖØ-öø-ÿ-' ]*)/);
       return {
         lastname: capitalize(matches[2]),
         firstname: matches[1],
@@ -236,6 +237,7 @@ const extractICData = async (url, dryRun) => {
         teamB,
         score,
         type: getType(matchNode),
+        hideClub: true,
       };
     });
 

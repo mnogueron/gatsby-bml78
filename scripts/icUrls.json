@@ -17,8 +17,7 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200161/rencontre/79124",
-            "date": "10/12/2022",
-            "parsed": false
+            "date": "10/12/2022"
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200161/rencontre/79128",
@@ -160,8 +159,7 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214008",
-            "date": "07/12/2022",
-            "parsed": false
+            "date": "07/12/2022"
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214013",
@@ -219,7 +217,7 @@
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169769",
             "date": "28/11/2022",
-            "parsed": false
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169774",
@@ -269,18 +267,14 @@
             "parsed": true
         },
         {
-            "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170042",
-            "date": "17/11/2022",
-            "parsed": false
-        },
-        {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170046",
             "date": "23/11/2022",
             "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170049",
-            "date": "01/12/2022"
+            "date": "01/12/2022",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170053",

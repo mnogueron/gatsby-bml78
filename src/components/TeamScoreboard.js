@@ -79,7 +79,12 @@ const TeamResult = ({ team, isRight, opponentScore }) => {
 };
 
 const TeamScoreboard = ({ teamScore }) => {
-  const { teamA, teamB } = teamScore;
+  const { teamA, teamB } = teamScore || {};
+
+  if (!teamA || !teamB) {
+    return null;
+  }
+
   return (
     <Box paddingLeft={{ base: 2, md: 0 }} mb={{ base: 4, md: 6 }}>
       <VStack

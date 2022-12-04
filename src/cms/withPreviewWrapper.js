@@ -22,8 +22,8 @@ const getSEOData = (data) => {
     case 'article-page':
       return {
         title: data.title,
-        description: data.body.slice(0, 140) + '...',
-        image: data.featuredimage.image,
+        description: data.body?.slice(0, 140) + '...',
+        image: data.featuredimage?.image,
         article: true,
       };
     case 'all-results-page':

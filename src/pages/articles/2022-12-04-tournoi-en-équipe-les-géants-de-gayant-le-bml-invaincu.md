@@ -14,6 +14,8 @@ seo:
 ---
 Le BML était représenté ce week-end au tournoi par équipe des Géants de Gayant par 3 membres du club : Jean-Michel Remeur, Kevin Held et Juliette Lardet. Une équipe de 3 à laquelle s'ajoutait Juliette Caron, membre du club Bad' A Paname.
 
+### U﻿ne victoire incontestée
+
 Après 7 étapes constituées d'un double homme, un double dame et deux double mixte, étendu sur 2 jours intenses, l'équipe du BML feat BAP75 s'est hissé sur la première marche du podium en remportant 25 de leurs 28 matchs joués !
 
 ### 1ère étape

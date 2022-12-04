@@ -39,6 +39,7 @@ board:
     title: Responsable Label EcoBad
   - name: Matthieu Nogueron
     title: Responsable Web
+    picture: /assets/matthieu_nogueron.jpg
   - name: Julia Galvé
     title: Reponsable Communication Digitale
     picture: /assets/julia-galve.jpg

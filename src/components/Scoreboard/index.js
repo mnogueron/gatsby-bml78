@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import RankingBadge from './RankingBadge';
 import Score from './Score';
+import NewScoreboard from './GameScoreboard';
 
 const NameCell = ({ player }) => (
   <Flex alignItems={'center'} flex={1}>
@@ -235,4 +236,4 @@ const Scoreboard = ({ matches, hideHeader }) => {
   );
 };
 
-export default Scoreboard;
+export default NewScoreboard;

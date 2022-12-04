@@ -98,10 +98,10 @@ export default {
           fields: setFields,
         },
         {
-          name: 'matchType',
+          name: 'type',
           label: 'Type de match',
           widget: 'select',
-          options: ['SH', 'SD', 'DH', 'DD', 'MX'],
+          options: ['SH', 'SD', 'DH', 'DD', 'MX', 'Poule', '1/32ème', '1/16ème', '1/8ème', 'Quarts', 'Demi', 'Finale'],
           required: false,
         }
       ],

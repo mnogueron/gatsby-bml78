@@ -14,6 +14,7 @@ const customSizes = {
 const theme = {
   colors: {
     primary: 'rebeccapurple',
+    'blackAlpha.20': 'rgba(0, 0, 0, 0.02)',
   },
   sizes: {
     bml: customSizes,

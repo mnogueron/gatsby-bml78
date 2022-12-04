@@ -206,7 +206,7 @@ const IndexPageTemplate = ({
         />
       </Container>
 
-      <Container maxW="7xl" my={16} as="section">
+      <Container maxW="7xl" mt={16} pb={16} as="section">
         <div className="flex justify-between items-baseline">
           <Heading as="h2" size="xl">
             Les derniers résultats du club

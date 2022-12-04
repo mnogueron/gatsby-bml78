@@ -6,14 +6,25 @@ import frLocale from 'date-fns/locale/fr/index.js';
 const folder = '../src/pages/results';
 
 const formatResult = (results, isHost) => {
-  const result = results[isHost ? 0 : 1];
-  return result > results[isHost ? 1 : 0] ? `**${result}**` : result;
+  return results[isHost ? 0 : 1];
 };
 
 const writeMatches = (
   { hostClub, guestClub, date, matches, results },
   dryRun
 ) => {
+  const teamScore = {
+    teamA: {
+      shortName: hostClub.name,
+      longName: hostClub.longName,
+      result: formatResult(results, true),
+    },
+    teamB: {
+      shortName: guestClub.name,
+      longName: guestClub.longName,
+      result: formatResult(results, false),
+    },
+  };
   const teamNumber =
     hostClub.name === 'BML' ? hostClub.teamNumber : guestClub.teamNumber;
   const filename = `${dateFns.format(
@@ -31,13 +42,8 @@ category: equipe-${teamNumber}-s22-23
 featuredimage:
   image: /assets/shuttle.jpg
 ---
-|               | ${hostClub.name}   | ${guestClub.name} |
-| ------------- | ----- | --- |
-| **Victoires** | ${formatResult(results, true)} | ${formatResult(
-    results,
-    false
-  )}   |
 
+<teamscoreboard>${JSON.stringify({ teamScore })}</teamscoreboard>
 <scoreboard>${JSON.stringify({ matches })}</scoreboard>`;
   const filePath = `${folder}/${filename}`;
   if (dryRun) {
@@ -79,7 +85,8 @@ const extractICData = async (url, dryRun) => {
       if (!match) {
         const isBML = /maisons-laffitte/i.test(clubTitle);
         let teamNumber = '';
-        const competitionId = location.pathname.match(/competition\/(\d*)\//)[1];
+        const competitionId =
+          location.pathname.match(/competition\/(\d*)\//)[1];
         if (isBML) {
           switch (competitionId) {
             case '2201895':
@@ -98,7 +105,7 @@ const extractICData = async (url, dryRun) => {
           committee: '78',
           name: isBML ? 'BML' : clubTitle,
           teamNumber: teamNumber,
-        }
+        };
       }
 
       return {

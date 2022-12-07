@@ -7,6 +7,6 @@ heading: |-
   Badminton
   Maisons-Laffitte
 subheading: |-
-  /!\ Gymnase Jules Verne fermé les 26-27 novembre /!\
+  ⚠️ Gymnase Jules Verne fermé les 10-11 décembre ⚠️
   pas de jeu libre ni d'entraînement jeunes
 ---

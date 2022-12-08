@@ -7,6 +7,7 @@ heading: |-
   Badminton
   Maisons-Laffitte
 subheading: |-
-  ⚠️ Gymnase Jules Verne fermé les 10-11 décembre ⚠️
-  pas de jeu libre ni d'entraînement jeunes
+  Pas de jeu libre au gymnase Jules Verne les
+  ⚠️ 10-11 décembre ⚠️
+  Entraînement jeune maintenu le samedi
 ---

@@ -8,7 +8,7 @@ featuredimage:
   image: /assets/icn-j6.png
   alt: Interclubs nationaux BML vs Metz 28/01/2023
 ---
-P﻿our cette première rencontre à domicile de l'année, notre équipe 1 jusqu'à présent invaincue reçoit à domicile l'équipe de **Metz** pour son premier match retour !
+P﻿our cette première rencontre à domicile de l'année, notre équipe 1 jusqu'à présent invaincue reçoit à domicile l'équipe de **Metz** pour son premier match retour ! 💪
 
 L﻿e rendez-vous est donné au **Gymnase Jules Verne** (Sartrouville) ce **samedi 28 Janvier 2023** à partir de **16h**.
 

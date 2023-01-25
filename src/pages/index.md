@@ -7,7 +7,7 @@ heading: |-
   Badminton
   Maisons-Laffitte
 subheading: |-
-  Pas de jeu libre au gymnase Jules Verne les
-  ⚠️ 10-11 décembre ⚠️
-  Entraînement jeune maintenu le samedi
+  Interclubs nationaux à Jules Verne
+  ⚠️ le samedi 28 Janvier 2023 ⚠️
+  Pas de jeu libre
 ---

@@ -17,19 +17,23 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200161/rencontre/79124",
-            "date": "10/12/2022"
+            "date": "10/12/2022",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200161/rencontre/79128",
-            "date": "07/01/2023"
+            "date": "07/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200161/rencontre/79132",
-            "date": "28/01/2023"
+            "date": "28/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200161/rencontre/79135",
-            "date": "11/02/2023"
+            "date": "11/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200161/rencontre/79137",
@@ -67,19 +71,23 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138548",
-            "date": "08/01/2023"
+            "date": "08/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138542",
-            "date": "08/01/2023"
+            "date": "08/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138550",
-            "date": "12/02/2023"
+            "date": "12/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138544",
-            "date": "12/02/2023"
+            "date": "12/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138553",
@@ -113,19 +121,23 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138639",
-            "date": "08/01/2023"
+            "date": "08/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138635",
-            "date": "08/01/2023"
+            "date": "08/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138624",
-            "date": "12/02/2023"
+            "date": "12/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138638",
-            "date": "12/02/2023"
+            "date": "12/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200163/rencontre/138632",
@@ -155,35 +167,42 @@
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214005",
             "date": "02/12/2022",
-            "parsed": false
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214008",
-            "date": "07/12/2022"
+            "date": "07/12/2022",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214013",
-            "date": "16/12/2022"
+            "date": "16/12/2022",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214017",
-            "date": "13/01/2023"
+            "date": "13/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214020",
-            "date": "18/01/2023"
+            "date": "18/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214024",
-            "date": "25/01/2023"
+            "date": "25/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214030",
-            "date": "03/02/2023"
+            "date": "03/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214032",
-            "date": "08/02/2023"
+            "date": "08/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214035",
@@ -221,31 +240,38 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169774",
-            "date": "07/12/2022"
+            "date": "07/12/2022",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169780",
-            "date": "16/12/2022"
+            "date": "16/12/2022",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169781",
-            "date": "09/01/2023"
+            "date": "09/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169788",
-            "date": "20/01/2023"
+            "date": "20/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169791",
-            "date": "25/01/2023"
+            "date": "25/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169794",
-            "date": "02/02/2023"
+            "date": "02/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169799",
-            "date": "08/02/2023"
+            "date": "08/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201894/rencontre/169802",
@@ -278,27 +304,33 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170053",
-            "date": "07/12/2022"
+            "date": "07/12/2022",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170059",
-            "date": "16/12/2022"
+            "date": "16/12/2022",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170062",
-            "date": "13/01/2023"
+            "date": "13/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170067",
-            "date": "20/01/2023"
+            "date": "20/01/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170076",
-            "date": "03/02/2023"
+            "date": "03/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170077",
-            "date": "08/02/2023"
+            "date": "08/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201895/rencontre/170081",

@@ -38,6 +38,7 @@ export const indexPageQuery = graphql`
       html
       frontmatter {
         title
+        templateKey
         image {
           childImageSharp {
             gatsbyImageData(width: 1024, placeholder: BLURRED)

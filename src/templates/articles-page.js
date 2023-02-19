@@ -32,6 +32,7 @@ export const articlesPageQuery = graphql`
         title
         heading
         subheading
+        templateKey
       }
     }
     allMarkdownRemark(

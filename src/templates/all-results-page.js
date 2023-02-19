@@ -33,6 +33,7 @@ export const allResultsPageQuery = graphql`
         title
         heading
         subheading
+        templateKey
       }
     }
     allMarkdownRemark(

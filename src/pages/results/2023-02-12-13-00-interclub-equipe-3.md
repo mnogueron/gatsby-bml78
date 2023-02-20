@@ -5,7 +5,8 @@ heading: Saison 22-23 - Équipe 3 - BML vs ALB
 date: 2023-02-12T12:00:00.000Z
 category: equipe-3-s22-23
 featuredimage:
-  image: /assets/shuttle.jpg
+  image: /assets/equipe3-j4.jpg
+  alt: Equipe 3 - J4
 ---
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":2},"teamB":{"shortName":"ALB","longName":"Ass. Longjumelloise Badminton","result":6}}}</teamscoreboard>

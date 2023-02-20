@@ -5,7 +5,8 @@ heading: Saison 22-23 - Équipe 3 - BML vs LVC
 date: 2023-02-12T08:00:00.000Z
 category: equipe-3-s22-23
 featuredimage:
-  image: /assets/shuttle.jpg
+  image: /assets/equipe3-j4.jpg
+  alt: Equipe 3 - J4
 ---
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":0},"teamB":{"shortName":"LVC","longName":"Les Volants De Cergy","result":8}}}</teamscoreboard>

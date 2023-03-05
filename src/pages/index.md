@@ -10,9 +10,11 @@ subheading: |-
   Le badminton pour tous les niveaux, 
   tous les âges, toutes les envies à Maisons-Laffitte !
 banner:
-  text: |-
-    Interclubs nationaux à Jules Verne le samedi 28 Janvier 2023.
-    Pas de jeu libre. Venez nombreux encourager l'équipe 1 ! 🏸
-  level: warning
+  text: >-
+    Le jeudi 9 aura lieu un intraclub au CSC. Tous les joueurs débutants,
+    confirmés et compétiteurs y sont invités. 
+
+    N'oubliez pas de ramener de quoi grignoter et boire ! 🏸
+  level: info
   hide: false
 ---

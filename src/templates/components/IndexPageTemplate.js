@@ -12,6 +12,7 @@ import {
 import { MdChevronRight } from 'react-icons/md';
 import { CardSet } from '../../components/Sections';
 import Image from '../../components/Image';
+import Banner from '../../components/Banner';
 
 const SeeMoreButton = ({ to, ...rest }) => {
   return (
@@ -32,6 +33,7 @@ const IndexPageTemplate = ({
   subheading,
   headerImage,
   image,
+  banner,
   posts = [],
   results = [],
   about,
@@ -144,6 +146,14 @@ const IndexPageTemplate = ({
             }}
           />
         </Box>
+
+        {banner.text && !banner.hide && (
+          <Box position="absolute" top={{base: 4, lg: 8}} left={4} right={4}>
+            <Box maxW="4xl" margin="auto">
+              <Banner text={banner.text} level={banner.level} />
+            </Box>
+          </Box>
+        )}
       </Box>
 
       {/*<div className="relative bg-green-700 overflow-hidden">

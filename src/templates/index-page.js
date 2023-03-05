@@ -21,6 +21,7 @@ const IndexPage = ({ data, pageContext }) => {
           subheading={fm.subheading}
           image={fm.image}
           headerImage={fm.headerImage}
+          banner={fm.banner}
           posts={posts}
           results={results}
           about={fm.about}
@@ -51,6 +52,11 @@ export const indexPageQuery = graphql`
         }
         heading
         subheading
+        banner {
+          text
+          level
+          hide
+        }
       }
     }
     allPostsMarkdownRemark: allMarkdownRemark(

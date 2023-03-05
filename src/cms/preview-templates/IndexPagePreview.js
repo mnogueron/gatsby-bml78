@@ -8,6 +8,7 @@ const IndexPagePreview = ({ data, getAsset }) => {
       subheading={data.subheading}
       image={getAsset(data.image)}
       headerImage={getAsset(data.headerImage)}
+      banner={data.banner}
       posts={[]}
     />
   );

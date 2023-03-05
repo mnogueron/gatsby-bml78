@@ -101,6 +101,18 @@ collections:
           - { label: Image de fond, name: headerImage, widget: image }
           - { label: Heading, name: heading, widget: text }
           - { label: Subheading, name: subheading, widget: text }
+          - {
+              label: Bannière,
+              name: banner,
+              widget: object,
+              required: false,
+              fields:
+                [
+                  {label: Message, name: text, widget: text, required: false},
+                  {label: Importance, name: level, widget: select, options: [info, warning], required: false},
+                  {label: Cacher la bannière ?, name: hide, widget: boolean, require: false},
+                ]
+          }
           # - { label: "Body", name: "body", widget: "markdown" }
           # - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
           # - {label: Description, name: description, widget: string}

@@ -7,7 +7,12 @@ heading: |-
   Badminton
   Maisons-Laffitte
 subheading: |-
-  Interclubs nationaux à Jules Verne
-  ⚠️ le samedi 28 Janvier 2023 ⚠️
-  Pas de jeu libre
+  Le badminton pour tous les niveaux, 
+  tous les âges, toutes les envies à Maisons-Laffitte !
+banner:
+  text: |-
+    Interclubs nationaux à Jules Verne le samedi 28 Janvier 2023.
+    Pas de jeu libre. Venez nombreux encourager l'équipe 1 ! 🏸
+  level: warning
+  hide: false
 ---

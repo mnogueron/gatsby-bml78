@@ -8,7 +8,7 @@ const PageLayout = ({ children, ...boxProps }) => {
       marginTop={{
         base: 'bml.navbar.height.base',
         sm: 'bml.navbar.height.sm',
-        md: 'bml.navbar.height.md',
+        lg: 'bml.navbar.height.md',
       }}
       backgroundColor="blackAlpha.20"
       {...boxProps}

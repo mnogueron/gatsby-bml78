@@ -132,7 +132,7 @@ const Navbar = ({ className }) => {
 
   return (
     <nav className={`fixed top-0 w-full z-30 bg-white shadow-xl ${className}`}>
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto md:flex md:justify-between md:items-center">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between py-2">
           <Link className="flex items-center gap-1" to="/">
             <StaticImage
@@ -156,7 +156,7 @@ const Navbar = ({ className }) => {
           </Link>
 
           {/* Mobile menu button */}
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button
               type="button"
               className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
@@ -180,8 +180,8 @@ const Navbar = ({ className }) => {
         />
 
         {/* Mobile Menu open: "block", Menu closed: "hidden" */}
-        <div className={'items-center hidden md:flex'}>
-          <div className="flex flex-col w-full md:flex-row md:mx-6 md:my-2 items-center">
+        <div className={'items-center hidden lg:flex'}>
+          <div className="flex flex-col w-full lg:flex-row lg:mx-6 lg:my-2 items-center">
             {MENU.map((menu) => {
               if (menu.options) {
                 return (

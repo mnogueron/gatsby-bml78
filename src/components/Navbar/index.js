@@ -2,8 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Heading } from '@chakra-ui/react';
-import NavLink from './NavLink';
-import DropdownNavLink from './DropdownNavLink';
+import MobileMenu from './MobileMenu';
 
 const Navbar = ({ className }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -172,8 +171,10 @@ const Navbar = ({ className }) => {
           </div>
         </div>
 
+        <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(!menuOpen)} menu={MENU} />
+
         {/* Mobile Menu open: "block", Menu closed: "hidden" */}
-        <div
+        {/*<div
           className={
             'items-center ' + (menuOpen ? 'block' : 'hidden') + ' md:flex'
           }
@@ -202,7 +203,7 @@ const Navbar = ({ className }) => {
               );
             })}
           </div>
-        </div>
+        </div>*/}
       </div>
     </nav>
   );

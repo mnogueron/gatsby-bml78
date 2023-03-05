@@ -3,6 +3,8 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Heading } from '@chakra-ui/react';
 import MobileMenu from './MobileMenu';
+import DropdownNavLink from './DropdownNavLink';
+import NavLink from './NavLink';
 
 const Navbar = ({ className }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,19 +24,19 @@ const Navbar = ({ className }) => {
         }
 
         resultsMenu: markdownRemark(
-            frontmatter: { menuKey: { eq: "resultats" } }
+          frontmatter: { menuKey: { eq: "resultats" } }
         ) {
-            frontmatter {
-                menuKey
-                items {
-                    title
-                    url
-                    items {
-                      title
-                      url
-                    }
-                }
+          frontmatter {
+            menuKey
+            items {
+              title
+              url
+              items {
+                title
+                url
+              }
             }
+          }
         }
       }
     `
@@ -54,19 +56,19 @@ const Navbar = ({ className }) => {
           return {
             key: `${item.title} - ${index}`,
             label: item.title,
-            options: item.items.map(item => ({
+            options: item.items.map((item) => ({
               key: `${item.url} - ${item.title}`,
               label: item.title,
               to: item.url,
-            }))
-          }
+            })),
+          };
         }
 
-        return ({
+        return {
           key: `${item.url} - ${item.title}`,
           label: item.title,
           to: item.url,
-        });
+        };
       }
     );
     return [
@@ -171,14 +173,14 @@ const Navbar = ({ className }) => {
           </div>
         </div>
 
-        <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(!menuOpen)} menu={MENU} />
+        <MobileMenu
+          isOpen={menuOpen}
+          onClose={() => setMenuOpen(!menuOpen)}
+          menu={MENU}
+        />
 
         {/* Mobile Menu open: "block", Menu closed: "hidden" */}
-        {/*<div
-          className={
-            'items-center ' + (menuOpen ? 'block' : 'hidden') + ' md:flex'
-          }
-        >
+        <div className={'items-center hidden md:flex'}>
           <div className="flex flex-col w-full md:flex-row md:mx-6 md:my-2 items-center">
             {MENU.map((menu) => {
               if (menu.options) {
@@ -203,7 +205,7 @@ const Navbar = ({ className }) => {
               );
             })}
           </div>
-        </div>*/}
+        </div>
       </div>
     </nav>
   );

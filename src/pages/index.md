@@ -11,7 +11,7 @@ subheading: |-
   tous les âges, toutes les envies à Maisons-Laffitte !
 banner:
   text: >-
-    Le jeudi 9 aura lieu un intraclub au CSC. Tous les joueurs débutants,
+    Le jeudi 9 mars aura lieu un intraclub au CSC. Tous les joueurs débutants,
     confirmés et compétiteurs y sont invités. 
 
     N'oubliez pas de ramener de quoi grignoter et boire ! 🏸

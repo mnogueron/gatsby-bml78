@@ -37,7 +37,8 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200161/rencontre/79137",
-            "date": "25/02/2023"
+            "date": "25/02/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2200161/rencontre/79139",
@@ -206,7 +207,8 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214035",
-            "date": "06/03/2023"
+            "date": "06/03/2023",
+            "parsed": false
         },
         {
             "url": "https://icbad.ffbad.org/competition/2201888/rencontre/214040",

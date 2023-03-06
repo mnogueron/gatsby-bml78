@@ -83,6 +83,7 @@ export const articleQuery = graphql`
         templateKey
         featuredimage {
           alt
+          hidden
           image {
             childImageSharp {
               gatsbyImageData(width: 640, placeholder: BLURRED)

@@ -310,7 +310,6 @@ collections:
       - <<: *TITLE
       - <<: *HEADING
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Featured', name: 'featured', widget: boolean }
       # - {label: "Description", name: "description", widget: "text"}
       # - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {
@@ -321,6 +320,7 @@ collections:
             [
               { label: Image, name: image, widget: image },
               { label: Alt, name: alt, widget: string },
+              { label: Caché, name: hidden, widget: boolean, required: false },
             ],
         }
       - <<: *BODY

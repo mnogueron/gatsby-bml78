@@ -10,7 +10,7 @@ function Container({ children, ...rest }) {
     <ChakraContainer
       maxW="5xl"
       px={{ base: 6, md: 10}}
-      pt={{ base: 4, md: 10, lg: 20 }}
+      pt={{ base: 0, md: 5, lg: 10 }}
       pb={{ base: 2, md: 5, lg: 10 }}
       {...rest}
     >

@@ -7,6 +7,7 @@ featured: true
 featuredimage:
   image: /assets/photo-1626721105368-a69248e93b32.jpeg
   alt: Volant filet
+  hidden: true
 ---
 N﻿ous disposons des créneaux suivants pendant les vacances de Février :
 

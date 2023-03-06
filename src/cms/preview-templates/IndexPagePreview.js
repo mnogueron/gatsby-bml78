@@ -1,7 +1,10 @@
 import React from 'react';
 import IndexPageTemplate from '../../templates/components/IndexPageTemplate';
+import useProcessedHAST from "../useProcessedHAST";
 
 const IndexPagePreview = ({ data, getAsset }) => {
+  const clubSectionContent = useProcessedHAST(data.body);
+
   return (
     <IndexPageTemplate
       heading={data.heading}
@@ -9,6 +12,7 @@ const IndexPagePreview = ({ data, getAsset }) => {
       image={getAsset(data.image)}
       headerImage={getAsset(data.headerImage)}
       banner={data.banner}
+      clubSectionContent={clubSectionContent}
       posts={[]}
     />
   );

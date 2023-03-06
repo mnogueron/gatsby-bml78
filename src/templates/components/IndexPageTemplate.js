@@ -7,12 +7,16 @@ import {
   VStack,
   Heading,
   Text,
-  Icon, Flex,
+  Icon,
+  Flex,
 } from '@chakra-ui/react';
 import { MdChevronRight } from 'react-icons/md';
 import { CardSet } from '../../components/Sections';
 import Image from '../../components/Image';
 import Banner from '../../components/Banner';
+import Content from '../../components/Content';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { RiDoubleQuotesR, RiDoubleQuotesL } from 'react-icons/ri';
 
 const SeeMoreButton = ({ to, ...rest }) => {
   return (
@@ -34,6 +38,7 @@ const IndexPageTemplate = ({
   headerImage,
   image,
   banner,
+  clubSectionContent,
   posts = [],
   results = [],
   about,
@@ -41,11 +46,7 @@ const IndexPageTemplate = ({
   return (
     <>
       {/* Header */}
-      <Box
-        backgroundColor={'blue.700'}
-        position="relative"
-        as="header"
-      >
+      <Box backgroundColor={'blue.700'} position="relative" as="header">
         <Container
           maxW="7xl"
           py={16}
@@ -69,7 +70,8 @@ const IndexPageTemplate = ({
               alt=""
               sx={{
                 objectFit: 'cover',
-                filter: 'blur(var(--chakra-blur-sm)) grayscale(50%) brightness(0.5)',
+                filter:
+                  'blur(var(--chakra-blur-sm)) grayscale(50%) brightness(0.5)',
                 /*transform: 'scaleX(-1)',*/
                 height: { base: '100%', sm: '100%' },
                 width: { base: '100%', sm: '100%' },
@@ -148,7 +150,7 @@ const IndexPageTemplate = ({
         </Box>
 
         {banner.text && !banner.hide && (
-          <Box position="absolute" top={{base: 4, lg: 8}} left={4} right={4}>
+          <Box position="absolute" top={{ base: 4, lg: 8 }} left={4} right={4}>
             <Box maxW="4xl" margin="auto">
               <Banner text={banner.text} level={banner.level} />
             </Box>
@@ -193,7 +195,41 @@ const IndexPageTemplate = ({
       </div>*/}
 
       {/* Featured projects */}
-      <Container maxW="7xl" my={16} as="section">
+      <Container maxW="7xl" my={{ base: 8, md: 12, lg: 16 }} as="section">
+        <Heading as="h2" size="xl" mb={{base: 4, lg: 8}}>
+          Le club
+        </Heading>
+        <Box px={{ base: 6, md: 16 }} py={{base: 0, md: 2, lg: 4}}>
+          <Box maxW="4xl" margin="auto" position="relative">
+            <Icon
+              as={RiDoubleQuotesL}
+              boxSize={{ base: 8, md: 14, lg: 16 }}
+              position="absolute"
+              top={{ base: -1, md: -3, lg: -5 }}
+              left={{ base: -8, md: -14, lg: -16 }}
+              color="blackAlpha.600"
+            />
+            {clubSectionContent && (
+              <Content
+                html={clubSectionContent}
+                as="p"
+                p={'0 !important'}
+                textAlign="justify"
+              />
+            )}
+            <Icon
+              as={RiDoubleQuotesR}
+              boxSize={{ base: 8, md: 14, lg: 16 }}
+              position="absolute"
+              bottom={{ base: -1, md: -3, lg: -5 }}
+              right={{ base: -8, md: -14, lg: -16 }}
+              color="blackAlpha.600"
+            />
+          </Box>
+        </Box>
+      </Container>
+
+      <Container maxW="7xl" my={{ base: 8, md: 12, lg: 16 }} as="section">
         <div className="flex justify-between items-baseline">
           <Heading as="h2" size="xl">
             Les dernières actus du club
@@ -216,15 +252,17 @@ const IndexPageTemplate = ({
         />
       </Container>
 
-      <Container maxW="7xl" mt={16} pb={16} as="section">
+      <Container
+        maxW="7xl"
+        mt={{ base: 8, md: 12, lg: 16 }}
+        pb={16}
+        as="section"
+      >
         <div className="flex justify-between items-baseline">
           <Heading as="h2" size="xl">
             Les derniers résultats du club
           </Heading>
-          <SeeMoreButton
-            display={{ base: 'none', md: 'flex' }}
-            to="/results"
-          />
+          <SeeMoreButton display={{ base: 'none', md: 'flex' }} to="/results" />
         </div>
         <div className="mt-8">
           <CardSet posts={results} subheading={'Résultats'} />

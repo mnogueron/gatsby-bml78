@@ -22,6 +22,7 @@ const IndexPage = ({ data, pageContext }) => {
           image={fm.image}
           headerImage={fm.headerImage}
           banner={fm.banner}
+          clubSectionContent={data.markdownRemark.htmlAst}
           posts={posts}
           results={results}
           about={fm.about}
@@ -36,7 +37,7 @@ export default IndexPage;
 export const indexPageQuery = graphql`
   query IndexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
+      htmlAst
       frontmatter {
         title
         templateKey

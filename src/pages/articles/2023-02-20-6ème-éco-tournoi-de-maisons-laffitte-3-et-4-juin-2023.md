@@ -1,7 +1,10 @@
 ---
 templateKey: article-page
 title: 6ème Éco-Tournoi de Maisons-Laffitte - 3 et 4 juin 2023
-heading: 6ème Éco-Tournoi de Maisons-Laffitte - 3 et 4 juin 2023
+cardTitle: 6ème Éco - Tournoi de Maisons-Laffitte - 3 et 4 juin 2023
+heading: |-
+  6ème Éco-Tournoi de Maisons-Laffitte
+  3 et 4 juin 2023
 date: 2023-02-20T09:05:52.815Z
 featured: true
 featuredimage:
@@ -21,3 +24,6 @@ L﻿es inscriptions se font exclusivement sur [BadNet](https://v5.badnet.org/tou
 L﻿a date limite d'inscription est fixée au **4 mai 2023** alors n'attendez plus !
 
 N﻿ous vous attendons très nombreux !
+
+### Cordage et équipementier
+Notre sponsor BadAddict sera présent pour vous proposer sa gamme d’équipement et tiendra un stand de cordage sur la durée du tournoi.

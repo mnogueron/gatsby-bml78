@@ -7,6 +7,7 @@ featured: true
 featuredimage:
   image: /assets/image_6483441.jpg
   alt: Emilie et Clément jeunes poussent du BML
+  hidden: true
 ---
 S﻿ix de nos jeunes étaient présent au tournoi de doubles du circuit jeune 78 : Clément, Emilie, Amaury, Steevy, Charles-Frédérik et Marius.
 
@@ -30,4 +31,4 @@ Charles-Frédérik et Marius ne remportent pas de matches mais font de super mat
 
 ## Galerie
 
-<gallery>{"pictures":[{"image":"/assets/image_50420737.jpg"},{"image":"/assets/image_6483441.jpg"}]}</gallery>
+<gallery>{"pictures":[{"image":"/assets/image_6483441.jpg"},{"image":"/assets/image_50420737.jpg"}]}</gallery>

@@ -30,7 +30,7 @@ function Header({ heading, subheading }) {
 }
 
 // A different header for the project page
-export function ArticleHeader({ heading, date }) {
+export function ArticleHeader({ heading, subheading, date }) {
   return (
     <Box
       as="header"
@@ -40,27 +40,38 @@ export function ArticleHeader({ heading, date }) {
     >
       <Container
         display="flex"
-        maxW="7xl"
+        maxW={'7xl'}
         textAlign="center"
         alignItems="center"
         flexDirection={{ base: 'column-reverse', md: 'column' }}
+        px={8}
       >
-        <Text
-          fontSize={{ base: 'sm', sm: 'md', md: 'lg', lg: 'xl' }}
-          color={'gray.500'}
-          mt={4}
-        >
-          Publié le {format(new Date(date), 'PPP', { locale: frLocale })}
-        </Text>
-        <Heading
-          as="h1"
-          fontSize={{ base: '2xl', sm: '3xl', md: '3xl', lg: '4xl' }}
-          color={'black'}
-          mt={4}
-          maxW={'2xl'}
-        >
-          {heading}
-        </Heading>
+        {date && (
+          <Text
+            fontSize={{ base: 'sm', sm: 'md', md: 'lg', lg: 'xl' }}
+            color={'gray.500'}
+            mt={4}
+          >
+            Publié le {format(new Date(date), 'PPP', { locale: frLocale })}
+          </Text>
+        )}
+        <Box>
+          <Heading
+            as="h1"
+            fontSize={{ base: '2xl', sm: '3xl', md: '3xl', lg: '4xl' }}
+            color={'black'}
+            mt={4}
+            maxW={'2xl'}
+            whiteSpace="pre-wrap"
+          >
+            {heading}
+          </Heading>
+          {subheading && (
+            <Text fontSize={'xl'} color={'gray.700'} mt={6}>
+              {subheading}
+            </Text>
+          )}
+        </Box>
       </Container>
     </Box>
   );

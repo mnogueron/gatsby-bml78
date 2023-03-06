@@ -8,17 +8,19 @@ local_backend: true
 media_folder: static/assets
 public_folder: /assets
 
-title: &TITLE { label: 'Title', name: 'title', widget: 'string' }
+title: &TITLE { label: 'Nom du document', name: 'title', widget: 'string' }
+card_title: &CARD_TITLE { label: 'Titre de carte', name: 'cardTitle', widget: 'string', required: false }
+publish_date: &PUBLISH_DATE { label: 'Date de publication', name: 'date', widget: 'datetime' }
 heading:
-  &HEADING { label: Heading, name: heading, widget: string, required: false }
+  &HEADING { label: 'Titre principal', name: heading, widget: text, required: false }
 subheading:
   &SUBHEADING {
-    label: Subheading,
+    label: 'Sous-titre',
     name: subheading,
     widget: string,
     required: false,
   }
-body: &BODY { label: 'Body', name: 'body', widget: 'markdown' }
+body: &BODY { label: 'Contenu', name: 'body', widget: 'markdown' }
 template_base:
   &TEMPLATE_BASE {
     label: 'Template Key',
@@ -55,9 +57,11 @@ result_page: &RESULT_PAGE
   - <<: *TEMPLATE_BASE
     default: 'result-page'
   - <<: *TITLE
+    default: 'interclub-equipe-'
+  - <<: *CARD_TITLE
   - <<: *HEADING
   - <<: *SUBHEADING
-  - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+  - <<: *PUBLISH_DATE
   - {
       label: Category,
       name: category,
@@ -308,8 +312,9 @@ collections:
       - <<: *TEMPLATE_BASE
         default: 'article-page'
       - <<: *TITLE
+      - <<: *CARD_TITLE
       - <<: *HEADING
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - <<: *PUBLISH_DATE
       # - {label: "Description", name: "description", widget: "text"}
       # - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {
@@ -332,7 +337,7 @@ collections:
     folder: 'src/pages/results'
     filter: { field: 'templateKey', value: 'result-page' }
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     summary: '[{{day}}-{{month}}-{{year}}] {{heading}}'
     view_filters:
       - label: "Saison 2022 - 2023"

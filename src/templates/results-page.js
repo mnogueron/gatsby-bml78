@@ -53,6 +53,7 @@ export const resultsPageQuery = graphql`
           }
           frontmatter {
             title
+            cardTitle
             heading
             templateKey
             category

@@ -23,9 +23,9 @@ const ResultPage = ({ data, pageContext }) => {
       <PageLayout>
         <ContentPageTemplate
           heading={fm.heading}
-          subheading={fm.subheading || date}
-          html={result.htmlAst}
-          team={fm.team}
+          subheading={fm.subheading}
+          date={fm.date}
+          body={result.htmlAst}
         />
 
         {/* Links to previous and next result */}

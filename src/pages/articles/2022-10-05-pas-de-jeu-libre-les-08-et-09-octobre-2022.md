@@ -7,6 +7,7 @@ featured: true
 featuredimage:
   image: /assets/warning.png
   alt: Attention
+  hidden: true
 ---
 I﻿l n'y aura pas de séance de **jeu libre** au gymase Jules Verne les **8 et 9 Octobre 2022** pour cause d'interclubs à domicile. Le **cours jeunes** du samedi est **maintenu**.
 

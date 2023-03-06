@@ -7,6 +7,7 @@ featured: true
 featuredimage:
   image: /assets/dreux.jpeg
   alt: tournoi dreux
+  hidden: true
 ---
 Plusieurs membres du club étaient en déplacement ce week-end à Dreux à l'occasion du 13ème Tournoi National du BCRD.
 

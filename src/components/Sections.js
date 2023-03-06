@@ -67,7 +67,7 @@ export const CardSet = ({ className, posts, subheading }) => {
         return (
           <Card
             image={fm.featuredimage}
-            heading={fm.heading}
+            heading={fm.cardTitle || fm.heading}
             date={fm.date}
             subheading={subheading || fm.location}
             to={post.fields.slug}

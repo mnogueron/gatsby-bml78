@@ -7,6 +7,7 @@ featured: false
 featuredimage:
   image: /assets/bmlic.png
   alt: Interclub Badminton Maisons-Laffitte
+  hidden: true
 seo:
   title: Interclub Badminton Maisons-Laffitte
   description: Retrouvez le programme des équipes d'interclub du Badminton

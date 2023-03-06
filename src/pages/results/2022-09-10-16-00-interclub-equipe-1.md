@@ -7,7 +7,7 @@ category: equipe-1-s22-23
 featuredimage:
   image: /assets/img_8077_2.jpg
 ---
-## En route vers la Nationale 1 !
+### En route vers la Nationale 1 !
 
 Ce samedi marquait la reprise des interclubs en Nationale 2, et pour sa première rencontre de la saison, l'équipe 1 du club de Badminton Maisons-Laffitte a rencontré sa rivale du Metz Ban Saint Martin Badminton, hôte de la rencontre.
 

@@ -9,7 +9,7 @@ featuredimage:
 seo:
   image: /assets/ic-n2-j2-ml-vs-salbris-7.jpg
 ---
-## Deuxième journée d'interclub pour l'équipe 1
+### Deuxième journée d'interclub pour l'équipe 1
 
 L'équipe 1 s'impose à domicile face à Salbris sur le score de 6/2 et continue sur sa lancée vers la Nationale 1 💪🏼🔝
 

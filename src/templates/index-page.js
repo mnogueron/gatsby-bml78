@@ -73,6 +73,7 @@ export const indexPageQuery = graphql`
           }
           frontmatter {
             title
+            cardTitle
             heading
             templateKey
             date
@@ -106,6 +107,7 @@ export const indexPageQuery = graphql`
           }
           frontmatter {
             title
+            cardTitle
             heading
             templateKey
             date

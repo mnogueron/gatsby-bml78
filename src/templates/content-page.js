@@ -15,8 +15,7 @@ const ContentPage = ({ data, pageContext }) => {
         <ContentPageTemplate
           heading={fm.heading}
           subheading={fm.subheading}
-          html={post.htmlAst}
-          team={fm.team}
+          body={post.htmlAst}
         />
       </PageLayout>
     </>

@@ -7,6 +7,7 @@ featured: true
 featuredimage:
   image: /assets/back-to-bad.jpg
   alt: Back to bad
+  hidden: true
 ---
 P﻿our bien commencer cette nouvelle saison 2022-2023, v﻿ous avez été très nombreux ce week-end à venir nous rencontrer sur le stand du Badminton Maisons-Laffitte au Forum des Associations, ainsi que lors de notre Journée Portes Ouvertes pour découvrir ou redécouvrir le badminton !
 

@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-heading: Saison 22-23 - Équipe 5 - BML vs ESPBAD
+cardTitle: Saison 22-23 - Équipe 5 - BML vs ESPBAD
+heading: |-
+  Saison 22-23 - Équipe 5
+  BML vs ESPBAD
 date: 2022-11-23T19:00:00.000Z
 category: equipe-5-s22-23
 featuredimage:

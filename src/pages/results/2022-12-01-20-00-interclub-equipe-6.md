@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-6
-heading: Saison 22-23 - Équipe 6 - Volants de Velizy-villacoublay vs BML
+cardTitle: Saison 22-23 - Équipe 6 - Volants de Velizy-villacoublay vs BML
+heading: |-
+  Saison 22-23 - Équipe 6
+  Volants de Velizy-villacoublay vs BML
 date: 2022-12-01T19:00:00.000Z
 category: equipe-6-s22-23
 featuredimage:

@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-4
-heading: Saison 21-22 - Équipe 4 - BML vs CBS
+cardTitle: Saison 21-22 - Équipe 4 - BML vs CBS
+heading: |-
+  Saison 21-22 - Équipe 4
+  BML vs CBS
 date: 2021-12-13T19:00:00.000Z
 category: equipe-4-s21-22
 featuredimage:

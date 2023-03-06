@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-3
-heading: Saison 22-23 - Équipe 3 - BML vs LVC
+cardTitle: Saison 22-23 - Équipe 3 - BML vs LVC
+heading: |-
+  Saison 22-23 - Équipe 3
+  BML vs LVC
 date: 2023-02-12T08:00:00.000Z
 category: equipe-3-s22-23
 featuredimage:

@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-heading: Saison 21-22 - Équipe 5 - BML vs V3
+cardTitle: Saison 21-22 - Équipe 5 - BML vs V3
+heading: |-
+  Saison 21-22 - Équipe 5
+  BML vs V3
 date: 2022-03-28T18:00:00.000Z
 category: equipe-5-s21-22
 featuredimage:

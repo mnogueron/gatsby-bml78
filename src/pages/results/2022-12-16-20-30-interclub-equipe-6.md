@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-6
-heading: Saison 22-23 - Équipe 6 - Chatou Badminton Club vs BML
+cardTitle: Saison 22-23 - Équipe 6 - Chatou Badminton Club vs BML
+heading: |-
+  Saison 22-23 - Équipe 6
+  Chatou Badminton Club vs BML
 date: 2022-12-16T19:30:00.000Z
 category: equipe-6-s22-23
 featuredimage:

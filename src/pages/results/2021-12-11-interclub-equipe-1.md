@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-1
-heading: Saison 21-22 - Équipe 1 - BML vs LUCBLM
+cardTitle: Saison 21-22 - Équipe 1 - BML vs LUCBLM
+heading: |-
+  Saison 21-22 - Équipe 1
+  BML vs LUCBLM
 date: 2021-12-11T15:00:00.000Z
 category: equipe-1-s21-22
 featuredimage:

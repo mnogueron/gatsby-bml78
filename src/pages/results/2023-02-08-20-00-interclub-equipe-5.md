@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-heading: Saison 22-23 - Équipe 5 - BML vs USMC
+cardTitle: Saison 22-23 - Équipe 5 - BML vs USMC
+heading: |-
+  Saison 22-23 - Équipe 5
+  BML vs USMC
 date: 2023-02-08T19:00:00.000Z
 category: equipe-5-s22-23
 featuredimage:

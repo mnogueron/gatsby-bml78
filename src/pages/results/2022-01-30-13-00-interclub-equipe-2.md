@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-2
-heading: Saison 21-22 - Équipe 2 - BML vs CBAB
+cardTitle: Saison 21-22 - Équipe 2 - BML vs CBAB
+heading: |-
+  Saison 21-22 - Équipe 2
+  BML vs CBAB
 date: 2022-01-30T12:00:00.000Z
 category: equipe-2-s21-22
 featuredimage:

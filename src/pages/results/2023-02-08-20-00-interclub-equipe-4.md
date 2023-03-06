@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-4
-heading: Saison 22-23 - Équipe 4 - BML vs Badminton Le Chesnay-Rocquencourt et Louveciennes
+cardTitle: Saison 22-23 - Équipe 4 - BML vs Badminton Le Chesnay-Rocquencourt et Louveciennes
+heading: |-
+  Saison 22-23 - Équipe 4
+  BML vs Badminton Le Chesnay-Rocquencourt et Louveciennes
 date: 2023-02-08T19:00:00.000Z
 category: equipe-4-s22-23
 featuredimage:

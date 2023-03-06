@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-6
-heading: Saison 22-23 - Équipe 6 - BML vs Les Volants d'Elancourt
+cardTitle: Saison 22-23 - Équipe 6 - BML vs Les Volants d'Elancourt
+heading: |-
+  Saison 22-23 - Équipe 6
+  BML vs Les Volants d'Elancourt
 date: 2022-11-09T19:00:00.000Z
 category: equipe-6-s22-23
 featuredimage:

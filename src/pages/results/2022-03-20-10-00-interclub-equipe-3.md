@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-3
-heading: Saison 21-22 - Équipe 3 - ASPS vs BML
+cardTitle: Saison 21-22 - Équipe 3 - ASPS vs BML
+heading: |-
+  Saison 21-22 - Équipe 3
+  ASPS vs BML
 date: 2022-03-20T09:00:00.000Z
 category: equipe-3-s21-22
 featuredimage:

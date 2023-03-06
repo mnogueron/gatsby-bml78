@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-3
-heading: Saison 21-22 - Équipe 3 - USC vs BML
+cardTitle: Saison 21-22 - Équipe 3 - USC vs BML
+heading: |-
+  Saison 21-22 - Équipe 3
+  USC vs BML
 date: 2021-11-20T13:00:00.000Z
 category: equipe-3-s21-22
 featuredimage:

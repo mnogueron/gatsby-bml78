@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-6
-heading: Saison 22-23 - Équipe 6 - BML vs Poissy Badminton Club
+cardTitle: Saison 22-23 - Équipe 6 - BML vs Poissy Badminton Club
+heading: |-
+  Saison 22-23 - Équipe 6
+  BML vs Poissy Badminton Club
 date: 2022-12-07T19:00:00.000Z
 category: equipe-6-s22-23
 featuredimage:

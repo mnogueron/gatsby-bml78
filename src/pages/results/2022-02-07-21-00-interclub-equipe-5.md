@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-heading: Saison 21-22 - Équipe 5 - BACV vs BML
+cardTitle: Saison 21-22 - Équipe 5 - BACV vs BML
+heading: |-
+  Saison 21-22 - Équipe 5
+  BACV vs BML
 date: 2022-02-07T20:00:00.000Z
 category: equipe-5-s21-22
 featuredimage:

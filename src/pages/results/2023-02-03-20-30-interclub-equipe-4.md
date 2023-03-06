@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-4
-heading: Saison 22-23 - Équipe 4 - Collectif Bad en Seine vs BML
+cardTitle: Saison 22-23 - Équipe 4 - Collectif Bad en Seine vs BML
+heading: |-
+  Saison 22-23 - Équipe 4
+  Collectif Bad en Seine vs BML
 date: 2023-02-03T19:30:00.000Z
 category: equipe-4-s22-23
 featuredimage:

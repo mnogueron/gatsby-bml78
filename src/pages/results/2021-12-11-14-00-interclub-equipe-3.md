@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-3
-heading: Saison 21-22 - Équipe 3 - CSBB vs BML
+cardTitle: Saison 21-22 - Équipe 3 - CSBB vs BML
+heading: |-
+  Saison 21-22 - Équipe 3
+  CSBB vs BML
 date: 2021-12-11T13:00:00.000Z
 category: equipe-3-s21-22
 featuredimage:

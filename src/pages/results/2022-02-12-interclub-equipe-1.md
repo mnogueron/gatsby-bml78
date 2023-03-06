@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-1
-heading: Saison 21-22 - Équipe 1 - BML vs USL
+cardTitle: Saison 21-22 - Équipe 1 - BML vs USL
+heading: |-
+  Saison 21-22 - Équipe 1
+  BML vs USL
 date: 2022-02-12T15:00:00.000Z
 category: equipe-1-s21-22
 featuredimage:

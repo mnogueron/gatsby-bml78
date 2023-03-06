@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-2
-heading: Saison 22-23 - Équipe 2 - BML vs SMM
+cardTitle: Saison 22-23 - Équipe 2 - BML vs SMM
+heading: |-
+  Saison 22-23 - Équipe 2
+  BML vs SMM
 date: 2023-01-08T12:00:00.000Z
 category: equipe-2-s22-23
 featuredimage:

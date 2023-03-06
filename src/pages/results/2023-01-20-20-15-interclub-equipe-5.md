@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-heading: Saison 22-23 - Équipe 5 - ASV vs BML
+cardTitle: Saison 22-23 - Équipe 5 - ASV vs BML
+heading: |-
+  Saison 22-23 - Équipe 5
+  ASV vs BML
 date: 2023-01-20T19:15:00.000Z
 category: equipe-5-s22-23
 featuredimage:

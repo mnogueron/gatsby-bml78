@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-1
-heading: Saison 22-23 - Équipe 1 - BACB vs BML
+cardTitle: Saison 22-23 - Équipe 1 - BACB vs BML
+heading: |-
+  Saison 22-23 - Équipe 1
+  BACB vs BML
 date: 2023-01-07T15:00:00.000Z
 category: equipe-1-s22-23
 featuredimage:

@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-2
-heading: Saison 21-22 - Équipe 2 - BML vs CSME
+cardTitle: Saison 21-22 - Équipe 2 - BML vs CSME
+heading: |-
+  Saison 21-22 - Équipe 2
+  BML vs CSME
 date: 2021-12-12T08:00:00.000Z
 category: equipe-2-s21-22
 featuredimage:

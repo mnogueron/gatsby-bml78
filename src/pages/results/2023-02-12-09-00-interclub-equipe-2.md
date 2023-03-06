@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-2
-heading: Saison 22-23 - Équipe 2 - BML vs USFBAD
+cardTitle: Saison 22-23 - Équipe 2 - BML vs USFBAD
+heading: |-
+  Saison 22-23 - Équipe 2
+  BML vs USFBAD
 date: 2023-02-12T08:00:00.000Z
 category: equipe-2-s22-23
 featuredimage:

@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-1
-heading: Saison 22-23 - Équipe 1 - BML vs ACBB
+cardTitle: Saison 22-23 - Équipe 1 - BML vs ACBB
+heading: |-
+  Saison 22-23 - Équipe 1
+  BML vs ACBB
 date: 2022-12-10T15:00:00.000Z
 category: equipe-1-s22-23
 featuredimage:

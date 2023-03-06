@@ -1,7 +1,10 @@
 ---
 templateKey: result-page
 title: interclub-equipe-6
-heading: Saison 22-23 - Équipe 6 - BML vs Ass. Sport. Mun. Chambourcy
+cardTitle: Saison 22-23 - Équipe 6 - BML vs Ass. Sport. Mun. Chambourcy
+heading: |-
+  Saison 22-23 - Équipe 6
+  BML vs Ass. Sport. Mun. Chambourcy
 date: 2022-11-23T19:00:00.000Z
 category: equipe-6-s22-23
 featuredimage:

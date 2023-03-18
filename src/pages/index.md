@@ -16,7 +16,7 @@ banner:
 
     N'oubliez pas de ramener de quoi grignoter et boire ! 🏸
   level: info
-  hide: false
+  hide: true
 ---
 Le **BML** vous accueille à **Maisons-Laffitte** et **Sartrouville** (78) pour découvrir la
 pratique du **badminton**, approfondir ses connaissances ou bien se lancer dans la

@@ -16,6 +16,8 @@ import gridEditorComponent from "./editor-components/grid";
 import withPreviewWrapper from "./withPreviewWrapper";
 import {UuidControl, UuidPreview} from './widgets/TestWidget';
 
+import './cms-utils';
+
 
 const previewTemplates = {
   'index': IndexPagePreview,

@@ -9,12 +9,12 @@ const ContentPagePreview = ({ data }) => {
     <ContentPageTemplate
       heading={data.heading}
       subheading={data.subheading}
-      date={new Date(data.date).toLocaleDateString('en-GB', {
+      date={data.date ? new Date(data.date).toLocaleDateString('en-GB', {
         weekday: 'short',
         year: 'numeric',
         month: 'short',
         day: 'numeric',
-      })}
+      }) : undefined}
       body={body}
     />
   )

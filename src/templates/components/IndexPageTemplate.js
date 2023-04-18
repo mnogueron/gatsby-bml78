@@ -70,14 +70,22 @@ const IndexPageTemplate = ({
               alt=""
               sx={{
                 objectFit: 'cover',
-                filter:
-                  'blur(var(--chakra-blur-sm)) grayscale(50%) brightness(0.5)',
+                filter: 'blur(2px) grayscale(20%) brightness(0.6)',
                 /*transform: 'scaleX(-1)',*/
                 height: { base: '100%', sm: '100%' },
                 width: { base: '100%', sm: '100%' },
                 '& > div': {
                   height: { base: '100%', sm: '100%' },
                   width: { base: '100%', sm: '100%' },
+                },
+
+                '& [data-main-image]': {
+                  objectPosition: {
+                    base: '70%',
+                    sm: '65%',
+                    md: '40%',
+                    lg: '50%',
+                  },
                 },
               }}
             />
@@ -196,10 +204,10 @@ const IndexPageTemplate = ({
 
       {/* Featured projects */}
       <Container maxW="7xl" my={{ base: 8, md: 12, lg: 16 }} as="section">
-        <Heading as="h2" size="xl" mb={{base: 4, lg: 8}}>
+        <Heading as="h2" size="xl" mb={{ base: 4, lg: 8 }}>
           Le club
         </Heading>
-        <Box px={{ base: 6, md: 16 }} py={{base: 0, md: 2, lg: 4}}>
+        <Box px={{ base: 6, md: 16 }} py={{ base: 0, md: 2, lg: 4 }}>
           <Box maxW="4xl" margin="auto" position="relative">
             <Icon
               as={RiDoubleQuotesL}

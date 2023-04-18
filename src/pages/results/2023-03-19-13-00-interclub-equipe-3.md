@@ -1,0 +1,16 @@
+---
+templateKey: result-page
+title: interclub-equipe-3
+cardTitle: Saison 22-23 - Équipe 3 - BML vs USV 
+heading: |-
+  Saison 22-23 - Équipe 3
+  BML vs USV
+date: 2023-03-19T12:00:00.000Z
+category: equipe-3-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":2},"teamB":{"shortName":"USV","longName":"Union Sportive Villejuif","result":6}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Gautier","firstname":"Marc","club":"BML","ranking":"R4"}],"teamB":[{"lastname":"Poppe","firstname":"Francisco","club":"USV","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":12},{"scoreA":21,"scoreB":11}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Gijon","firstname":"Franck","club":"BML","ranking":"R5"}],"teamB":[{"lastname":"Bertrand","firstname":"Benoît","club":"USV","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":17},{"scoreA":21,"scoreB":9}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Surmont","firstname":"Cécile","club":"BML","ranking":"D9"}],"teamB":[{"lastname":"Declercq","firstname":"Delphine","club":"USV","ranking":"R5"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":9,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Morel","firstname":"Laëtitia","club":"BML","ranking":"D9"}],"teamB":[{"lastname":"Camara","firstname":"Ségolène","club":"USV","ranking":"D8"}],"score":{"set":[{"scoreA":12,"scoreB":21},{"scoreA":12,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Gijon","firstname":"Franck","club":"BML","ranking":"R6"},{"lastname":"Remeur","firstname":"Jean-michel","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Cerdan","firstname":"Laurent","club":"USV","ranking":"R5"},{"lastname":"Roy","firstname":"Pierrick","club":"USV","ranking":"R5"}],"score":{"set":[{"scoreA":21,"scoreB":18},{"scoreA":12,"scoreB":21},{"scoreA":15,"scoreB":21}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Kirhan","firstname":"Tallia","club":"BML","ranking":"D8"},{"lastname":"Santamaria","firstname":"Charlène","club":"BML","ranking":"D7"}],"teamB":[{"lastname":"Camara","firstname":"Ségolène","club":"USV","ranking":"D8"},{"lastname":"Declercq","firstname":"Delphine","club":"USV","ranking":"D8"}],"score":{"set":[{"scoreA":21,"scoreB":18},{"scoreA":13,"scoreB":21},{"scoreA":20,"scoreB":22}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"Gautier","firstname":"Marc","club":"BML","ranking":"R6"},{"lastname":"Kirhan","firstname":"Tallia","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Roy","firstname":"Pierrick","club":"USV","ranking":"R4"},{"lastname":"Pen","firstname":"Pauline","club":"USV","ranking":"R4"}],"score":{"set":[{"scoreA":19,"scoreB":21},{"scoreA":19,"scoreB":21}]},"type":"MX","hideClub":true},{"teamA":[{"lastname":"Remeur","firstname":"Jean-michel","club":"BML","ranking":"D7"},{"lastname":"Surmont","firstname":"Cécile","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Bertrand","firstname":"Benoît","club":"USV","ranking":"R6"},{"lastname":"Montel","firstname":"Elodie","club":"USV","ranking":"D7"}],"score":{"set":[{"scoreA":16,"scoreB":21},{"scoreA":13,"scoreB":21}]},"type":"MX","hideClub":true}]}</scoreboard>

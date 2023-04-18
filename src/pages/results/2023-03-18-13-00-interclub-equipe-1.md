@@ -1,0 +1,16 @@
+---
+templateKey: result-page
+title: interclub-equipe-1
+cardTitle: Saison 22-23 - Équipe 1 - ACBB vs BML 
+heading: |-
+  Saison 22-23 - Équipe 1
+  ACBB vs BML
+date: 2023-03-18T12:00:00.000Z
+category: equipe-1-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"ACBB","longName":"Athlétic Club Boulogne Billancourt","result":1},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":7}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Idlahoucine","firstname":"Anas","club":"ACBB","ranking":"N2"}],"teamB":[{"lastname":"Beauvisage","firstname":"Quentin","club":"BML","ranking":"N1"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":10,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Arian","firstname":"Yanis","club":"ACBB","ranking":"N2"}],"teamB":[{"lastname":"Esteve Garcia","firstname":"Miguel","club":"BML","ranking":"N1"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":19,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Duron","firstname":"Anaïs","club":"ACBB","ranking":"N3"}],"teamB":[{"lastname":"Lesne","firstname":"Cassandre","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":11,"scoreB":21},{"scoreA":8,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Marjak","firstname":"Lena","club":"ACBB","ranking":"R4"}],"teamB":[{"lastname":"Lesne","firstname":"Candice","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":19,"scoreB":21},{"scoreA":14,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Gaudin","firstname":"Basile","club":"ACBB","ranking":"N2"},{"lastname":"Samson","firstname":"Malo","club":"ACBB","ranking":"N2"}],"teamB":[{"lastname":"Laborie","firstname":"Auguste","club":"BML","ranking":"D9"},{"lastname":"Laborie","firstname":"Bastian","club":"BML","ranking":"D9"}],"score":{"set":[{"scoreA":21,"scoreB":9},{"scoreA":21,"scoreB":11}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Duron","firstname":"Anaïs","club":"ACBB","ranking":"D7"},{"lastname":"Duron","firstname":"Nadege","club":"ACBB","ranking":"R4"}],"teamB":[{"lastname":"Galve","firstname":"Julia","club":"BML","ranking":"N2"},{"lastname":"Lesne","firstname":"Cassandre","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":16,"scoreB":21},{"scoreA":19,"scoreB":21}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"Idlahoucine","firstname":"Anas","club":"ACBB","ranking":"N3"},{"lastname":"Duron","firstname":"Nadege","club":"ACBB","ranking":"R4"}],"teamB":[{"lastname":"Beauvisage","firstname":"Quentin","club":"BML","ranking":"N1"},{"lastname":"Galve","firstname":"Julia","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":19,"scoreB":21},{"scoreA":21,"scoreB":17},{"scoreA":12,"scoreB":21}]},"type":"MX","hideClub":true},{"teamA":[{"lastname":"Arian","firstname":"Yanis","club":"ACBB","ranking":"N3"},{"lastname":"Marjak","firstname":"Lena","club":"ACBB","ranking":"R5"}],"teamB":[{"lastname":"Esteve Garcia","firstname":"Miguel","club":"BML","ranking":"N2"},{"lastname":"Lesne","firstname":"Candice","club":"BML","ranking":"N1"}],"score":{"set":[{"scoreA":11,"scoreB":21},{"scoreA":13,"scoreB":21}]},"type":"MX","hideClub":true}]}</scoreboard>

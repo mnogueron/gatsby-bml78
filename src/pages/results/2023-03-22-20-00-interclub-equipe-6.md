@@ -1,0 +1,16 @@
+---
+templateKey: result-page
+title: interclub-equipe-6
+cardTitle: Saison 22-23 - Équipe 6 - BML vs Badminton Le Chesnay-Rocquencourt et Louveciennes 
+heading: |-
+  Saison 22-23 - Équipe 6
+  BML vs Badminton Le Chesnay-Rocquencourt et Louveciennes
+date: 2023-03-22T19:00:00.000Z
+category: equipe-6-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":5},"teamB":{"shortName":"Badminton Le Chesnay-Rocquencourt et Louveciennes","longName":"Badminton Le Chesnay-Rocquencourt et Louveciennes","result":1}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Doinel","firstname":"Stéphane","club":"BML","ranking":"D9"}],"teamB":[{"lastname":"Marcq","firstname":"François-xavier","club":"Badminton Le Chesnay-Rocquencourt et Louveciennes","ranking":"D9"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":21,"scoreB":13},{"scoreA":21,"scoreB":11}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Marechal","firstname":"Olivier","club":"BML","ranking":"D9"}],"teamB":[{"lastname":"Prinet","firstname":"Eric","club":"Badminton Le Chesnay-Rocquencourt et Louveciennes","ranking":"D9"}],"score":{"set":[{"scoreA":21,"scoreB":13},{"scoreA":21,"scoreB":8}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Hernandez","firstname":"Joan","club":"BML","ranking":"P10"}],"teamB":[{"lastname":"Gibon","firstname":"Milo","club":"Badminton Le Chesnay-Rocquencourt et Louveciennes","ranking":"D9"}],"score":{"set":[{"scoreA":21,"scoreB":17},{"scoreA":11,"scoreB":21},{"scoreA":21,"scoreB":16}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Dewundara","firstname":"Hasitha","club":"BML","ranking":"P11"}],"teamB":[{"lastname":"Gomes","firstname":"Tiago","club":"Badminton Le Chesnay-Rocquencourt et Louveciennes","ranking":"D9"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":11,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Doinel","firstname":"Stéphane","club":"BML","ranking":"D9"},{"lastname":"Marechal","firstname":"Olivier","club":"BML","ranking":"D9"}],"teamB":[{"lastname":"Demay","firstname":"Christophe","club":"Badminton Le Chesnay-Rocquencourt et Louveciennes","ranking":"D9"},{"lastname":"Marcq","firstname":"François-xavier","club":"Badminton Le Chesnay-Rocquencourt et Louveciennes","ranking":"D9"}],"score":{"set":[{"scoreA":21,"scoreB":14},{"scoreA":18,"scoreB":21},{"scoreA":21,"scoreB":19}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Dewundara","firstname":"Hasitha","club":"BML","ranking":"P10"},{"lastname":"Hernandez","firstname":"Joan","club":"BML","ranking":"P11"}],"teamB":[{"lastname":"Gibon","firstname":"Milo","club":"Badminton Le Chesnay-Rocquencourt et Louveciennes","ranking":"P10"},{"lastname":"Gomes","firstname":"Tiago","club":"Badminton Le Chesnay-Rocquencourt et Louveciennes","ranking":"D9"}],"score":{"set":[{"scoreA":16,"scoreB":21},{"scoreA":21,"scoreB":17},{"scoreA":21,"scoreB":18}]},"type":"DH","hideClub":true}]}</scoreboard>

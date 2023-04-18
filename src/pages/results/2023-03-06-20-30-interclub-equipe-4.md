@@ -1,0 +1,16 @@
+---
+templateKey: result-page
+title: interclub-equipe-4
+cardTitle: Saison 22-23 - Équipe 4 - Poissy Badminton Club vs BML 
+heading: |-
+  Saison 22-23 - Équipe 4
+  Poissy Badminton Club vs BML
+date: 2023-03-06T19:30:00.000Z
+category: equipe-4-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"Poissy Badminton Club","longName":"Poissy Badminton Club","result":4},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":3}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Legrand","firstname":"Romain","club":"Poissy Badminton Club","ranking":"R6"}],"teamB":[{"lastname":"Rome","firstname":"Matthieu","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":23},{"scoreA":21,"scoreB":19},{"scoreA":18,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Balanger","firstname":"Quentin","club":"Poissy Badminton Club","ranking":"D9"}],"teamB":[{"lastname":"Remeur","firstname":"Jean-michel","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":3,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Danjou","firstname":"Hugo","club":"Poissy Badminton Club","ranking":"D7"}],"teamB":[{"lastname":"Held","firstname":"Kevin","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":17},{"scoreA":21,"scoreB":15}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Bouisse","firstname":"Julia","club":"Poissy Badminton Club","ranking":"R6"}],"teamB":[{"lastname":"Mongrolle-mieusset","firstname":"Magalie","club":"BML","ranking":"D9"}],"score":{"set":[{"scoreA":21,"scoreB":6},{"scoreA":21,"scoreB":6}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Dauphin","firstname":"David","club":"Poissy Badminton Club","ranking":"R6"},{"lastname":"Marmont","firstname":"Julien","club":"Poissy Badminton Club","ranking":"D7"}],"teamB":[{"lastname":"Remeur","firstname":"Jean-michel","club":"BML","ranking":"R6"},{"lastname":"Rome","firstname":"Matthieu","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":18,"scoreB":21},{"scoreA":16,"scoreB":21}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Bouisse","firstname":"Julia","club":"Poissy Badminton Club","ranking":"R6"},{"lastname":"Ducros","firstname":"Marie","club":"Poissy Badminton Club","ranking":"R6"}],"teamB":[{"lastname":"Girard","firstname":"Elodie","club":"BML","ranking":"D9"},{"lastname":"Mongrolle-mieusset","firstname":"Magalie","club":"BML","ranking":"D9"}],"score":{"set":[{"scoreA":21,"scoreB":7},{"scoreA":21,"scoreB":4}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"Dauphin","firstname":"David","club":"Poissy Badminton Club","ranking":"R5"},{"lastname":"Ducros","firstname":"Marie","club":"Poissy Badminton Club","ranking":"R6"}],"teamB":[{"lastname":"Held","firstname":"Kevin","club":"BML","ranking":"R6"},{"lastname":"Girard","firstname":"Elodie","club":"BML","ranking":"D7"}],"score":{"set":[{"scoreA":21,"scoreB":12},{"scoreA":21,"scoreB":13}]},"type":"MX","hideClub":true}]}</scoreboard>

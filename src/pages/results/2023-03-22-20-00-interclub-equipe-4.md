@@ -1,0 +1,16 @@
+---
+templateKey: result-page
+title: interclub-equipe-4
+cardTitle: Saison 22-23 - Équipe 4 - BML vs Badminton Club Montigny Le Bretonneux 
+heading: |-
+  Saison 22-23 - Équipe 4
+  BML vs Badminton Club Montigny Le Bretonneux
+date: 2023-03-22T19:00:00.000Z
+category: equipe-4-s22-23
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":1},"teamB":{"shortName":"Badminton Club Montigny Le Bretonneux","longName":"Badminton Club Montigny Le Bretonneux","result":6}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Rome","firstname":"Matthieu","club":"BML","ranking":"R5"}],"teamB":[{"lastname":"Vanhoutte","firstname":"Nzambé","club":"Badminton Club Montigny Le Bretonneux","ranking":"R6"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":21,"scoreB":11},{"scoreA":19,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Remeur","firstname":"Jean-michel","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Lechantoux","firstname":"Gurvan","club":"Badminton Club Montigny Le Bretonneux","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":7},{"scoreA":21,"scoreB":11}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"De L'espinay","firstname":"Ghislain","club":"BML","ranking":"D9"}],"teamB":[{"lastname":"Geyer","firstname":"Guillaume","club":"Badminton Club Montigny Le Bretonneux","ranking":"D8"}],"score":{"set":[{"scoreA":8,"scoreB":21},{"scoreA":13,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Robinet","firstname":"Chloé","club":"BML","ranking":"P10"}],"teamB":[{"lastname":"Le Coq","firstname":"Marine","club":"Badminton Club Montigny Le Bretonneux","ranking":"D8"}],"score":{"set":[{"scoreA":9,"scoreB":21},{"scoreA":8,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Remeur","firstname":"Jean-michel","club":"BML","ranking":"R6"},{"lastname":"Rome","firstname":"Matthieu","club":"BML","ranking":"R6"}],"teamB":[{"lastname":"Geyer","firstname":"Guillaume","club":"Badminton Club Montigny Le Bretonneux","ranking":"D7"},{"lastname":"Vanhoutte","firstname":"Nzambé","club":"Badminton Club Montigny Le Bretonneux","ranking":"R5"}],"score":{"set":[{"scoreA":19,"scoreB":21},{"scoreA":13,"scoreB":21}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Girard","firstname":"Elodie","club":"BML","ranking":"D9"},{"lastname":"Mongrolle-mieusset","firstname":"Magalie","club":"BML","ranking":"D9"}],"teamB":[{"lastname":"Caron","firstname":"Dalila","club":"Badminton Club Montigny Le Bretonneux","ranking":"D8"},{"lastname":"Le Coq","firstname":"Marine","club":"Badminton Club Montigny Le Bretonneux","ranking":"D7"}],"score":{"set":[{"scoreA":16,"scoreB":21},{"scoreA":21,"scoreB":19},{"scoreA":15,"scoreB":21}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"De L'espinay","firstname":"Ghislain","club":"BML","ranking":"P10"},{"lastname":"Girard","firstname":"Elodie","club":"BML","ranking":"D7"}],"teamB":[{"lastname":"Lechantoux","firstname":"Gurvan","club":"Badminton Club Montigny Le Bretonneux","ranking":"R6"},{"lastname":"Caron","firstname":"Dalila","club":"Badminton Club Montigny Le Bretonneux","ranking":"D9"}],"score":{"set":[{"scoreA":21,"scoreB":12},{"scoreA":12,"scoreB":21},{"scoreA":12,"scoreB":21}]},"type":"MX","hideClub":true}]}</scoreboard>

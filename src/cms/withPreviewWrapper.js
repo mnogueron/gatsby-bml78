@@ -20,6 +20,7 @@ import frLocale from "date-fns/locale/fr";
 const getSEOData = (data) => {
   switch (data.templateKey) {
     case 'article-page':
+    case 'tournament-page':
       return {
         title: data.title,
         description: data.body?.slice(0, 140) + '...',

@@ -17,12 +17,12 @@ const ArticlePagePreview = ({ data, entry, getAsset }) => {
   return (
     <ArticlePageTemplate
       title={data.title}
-      date={new Date(data.date).toLocaleDateString('en-GB', {
+      date={data.date ? new Date(data.date).toLocaleDateString('en-GB', {
         weekday: 'short',
         year: 'numeric',
         month: 'short',
         day: 'numeric',
-      })}
+      }) : undefined}
       image={image}
       body={body}
     />

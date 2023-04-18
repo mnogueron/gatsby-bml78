@@ -23,6 +23,7 @@ const previewTemplates = {
   'index': IndexPagePreview,
   'articles-index': ArticlesPagePreview,
   'articles': ArticlePagePreview,
+  'tournaments': ArticlePagePreview,
   'contact': ContactPagePreview,
 
   'results': ContentPagePreview,

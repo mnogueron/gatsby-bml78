@@ -45,7 +45,6 @@ template_base:
     name: 'templateKey',
     widget: 'hidden',
   }
-
 seo: &SEO
   label: 'SEO'
   name: 'seo'
@@ -61,6 +60,20 @@ seo: &SEO
         required: false,
       }
     - { label: Image, name: image, widget: image, required: false }
+slug: &SLUG
+  label: 'Slug'
+  name: 'slug'
+  widget: string
+featured_image: &FEATURED_IMAGE
+  label: 'Image mise en avant'
+  name: 'featuredimage'
+  widget: object
+  fields:
+    [
+      { label: Image, name: image, widget: image },
+      { label: 'Text alternatif', name: alt, widget: string },
+      { label: Caché ?, name: hidden, widget: boolean, required: false },
+    ]
 
 content_page: &CONTENT_PAGE
   - <<: *TEMPLATE_BASE
@@ -68,6 +81,31 @@ content_page: &CONTENT_PAGE
   - <<: *TITLE
   - <<: *HEADING
   - <<: *SUBHEADING
+  - <<: *BODY
+  - <<: *SEO
+
+article_page: &ARTICLE_PAGE
+  - <<: *TEMPLATE_BASE
+    default: 'article-page'
+  - <<: *TITLE
+  - <<: *CARD_TITLE
+  - <<: *HEADING
+  - <<: *PUBLISH_DATE
+  # - {label: "Description", name: "description", widget: "text"}
+  # - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+  - <<: *FEATURED_IMAGE
+  - <<: *BODY
+  - <<: *SEO
+  # - {label: "Tags", name: "tags", widget: "list"}
+
+tournament_page: &TOURNAMENT_PAGE
+  - <<: *TEMPLATE_BASE
+    default: 'tournament-page'
+  - <<: *SLUG
+  - <<: *TITLE
+  - <<: *CARD_TITLE
+  - <<: *HEADING
+  - <<: *FEATURED_IMAGE
   - <<: *BODY
   - <<: *SEO
 
@@ -202,33 +240,6 @@ collections:
           - <<: *HEADING
           - <<: *SUBHEADING
           - <<: *SEO
-      # - file: "src/pages/about/index.md"
-      #   label: "À propos"
-      #   name: "about"
-      #   fields:
-      #     - {
-      #         label: "Template Key",
-      #         name: "templateKey",
-      #         widget: "hidden",
-      #         default: "about-page",
-      #       }
-      #     - { label: "Title", name: "title", widget: "string" }
-      #     - { label: Heading, name: heading, widget: string }
-      #     - { label: Subheading, name: subheading, widget: string }
-      #     - { label: "Body", name: "body", widget: "markdown" }
-      #     - {
-      #         label: Team,
-      #         label_singular: Member,
-      #         name: team,
-      #         widget: list,
-      #         fields:
-      #           [
-      #             { label: Name, name: name, widget: string },
-      #             { label: Title, name: title, widget: string },
-      #             { label: Image, name: image, widget: image },
-      #           ],
-      #       }
-
       - file: 'src/pages/contact/index.md'
         label: 'Contact'
         name: 'contact'
@@ -338,29 +349,8 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     summary: '[{{day}}-{{month}}-{{year}}] {{title}}'
-    fields:
-      - <<: *TEMPLATE_BASE
-        default: 'article-page'
-      - <<: *TITLE
-      - <<: *CARD_TITLE
-      - <<: *HEADING
-      - <<: *PUBLISH_DATE
-      # - {label: "Description", name: "description", widget: "text"}
-      # - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {
-          label: 'Image mise en avant',
-          name: 'featuredimage',
-          widget: object,
-          fields:
-            [
-              { label: Image, name: image, widget: image },
-              { label: 'Text alternatif', name: alt, widget: string },
-              { label: Caché ?, name: hidden, widget: boolean, required: false },
-            ],
-        }
-      - <<: *BODY
-      - <<: *SEO
-      # - {label: "Tags", name: "tags", widget: "list"}
+    fields: *ARTICLE_PAGE
+
   - name: 'results'
     label: 'Résultats'
     label_singular: 'Résultat'
@@ -396,6 +386,16 @@ collections:
         pattern: 'equipe-6'
     fields: *RESULT_PAGE
 
+  - name: 'tournaments'
+    label: 'Tournois'
+    label_singular: 'Tournoi'
+    folder: 'src/pages/tournois'
+    filter: { field: 'templateKey', value: 'tournament-page' }
+    create: true
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    fields: *TOURNAMENT_PAGE
+
   - name: 'result-sections'
     label: 'Catégories de résultat'
     label_singular: 'Catégorie de résultat'
@@ -411,6 +411,7 @@ collections:
       - <<: *HEADING
       - <<: *SUBHEADING
       - <<: *SEO
+
   - name: 'menus'
     label: 'Menus'
     files:
@@ -434,10 +435,24 @@ collections:
               - label: Page
                 name: url
                 widget: relation
+                required: false
                 collection: 'informations'
                 search_fields: ['title']
                 value_field: '/infos-pratiques/{{slug}}'
                 display_fields: ['title']
+              - label: Sous-sections
+                label_singular: Sous-section
+                name: items
+                required: false
+                widget: list
+                summary: 'Sous-section : {{fields.title}} - Page associée : {{fields.url}}'
+                fields:
+                  - label: Titre
+                    name: title
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - file: 'src/pages/menus/resultats.md'
         label: 'Menu - Résultats'
         name: 'resultats'

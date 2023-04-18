@@ -19,6 +19,10 @@ const Navbar = ({ className }) => {
             items {
               title
               url
+              items {
+                title
+                url
+              }
             }
           }
         }
@@ -43,34 +47,27 @@ const Navbar = ({ className }) => {
   );
 
   const MENU = useMemo(() => {
-    const infoPratiquesCategories = infosPratiquesMenu.frontmatter.items.map(
-      (item) => ({
+    const extractSubMenus = (item, index) => {
+      if (item.items) {
+        return {
+          key: `${item.title} - ${index}`,
+          label: item.title,
+          options: item.items.map((item) => ({
+            key: `${item.url} - ${item.title}`,
+            label: item.title,
+            to: item.url,
+          })),
+        };
+      }
+
+      return {
         key: `${item.url} - ${item.title}`,
         label: item.title,
         to: item.url,
-      })
-    );
-    const resultsCategories = resultsMenu.frontmatter.items.map(
-      (item, index) => {
-        if (item.items) {
-          return {
-            key: `${item.title} - ${index}`,
-            label: item.title,
-            options: item.items.map((item) => ({
-              key: `${item.url} - ${item.title}`,
-              label: item.title,
-              to: item.url,
-            })),
-          };
-        }
-
-        return {
-          key: `${item.url} - ${item.title}`,
-          label: item.title,
-          to: item.url,
-        };
-      }
-    );
+      };
+    }
+    const infoPratiquesCategories = infosPratiquesMenu.frontmatter.items.map(extractSubMenus);
+    const resultsCategories = resultsMenu.frontmatter.items.map(extractSubMenus);
     return [
       {
         key: 'accueil',

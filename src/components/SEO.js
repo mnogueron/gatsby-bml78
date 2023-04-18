@@ -23,6 +23,7 @@ export const getSEOData = (data) => {
   const { frontmatter: fm } = data.markdownRemark;
   switch (fm.templateKey) {
     case 'article-page':
+    case 'tournament-page':
       return {
         title: fm.title,
         description: data.markdownRemark.excerpt,

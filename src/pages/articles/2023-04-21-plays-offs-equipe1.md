@@ -7,7 +7,7 @@ heading: |-
   Direction les play-offs pour la montée en N1 !
 date: 2023-04-21T16:56:37.271Z
 featuredimage:
-  image: /assets/ic-n2-j2-ml-vs-salbris-7.jpg
+  image: /assets/ic-n2-j2-ml-vs-salbris-6.jpg
   hidden: true
   alt: Photo d'équipe 1
 ---

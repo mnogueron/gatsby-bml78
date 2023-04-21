@@ -4,10 +4,10 @@ import Image from '../../components/Image';
 import Content from '../../components/Content';
 import { ArticleHeader } from '../../components/Header';
 
-function ArticlePageTemplate({ title, date, image, body }) {
+function ArticlePageTemplate({ heading, date, image, body }) {
   return (
     <>
-      <ArticleHeader heading={title} date={date} />
+      <ArticleHeader heading={heading} date={date} />
       {!image.hidden && (
         <Flex px={4} mb={{ base: 0, md: 5, lg: 10 }} justifyContent="center">
           <Box

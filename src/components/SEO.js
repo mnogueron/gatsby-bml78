@@ -25,7 +25,7 @@ export const getSEOData = (data) => {
     case 'article-page':
     case 'tournament-page':
       return {
-        title: fm.title,
+        title: fm.heading,
         description: data.markdownRemark.excerpt,
         image: fm.featuredimage?.image?.childImageSharp?.fixed?.src,
         article: true,

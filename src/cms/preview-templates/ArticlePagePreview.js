@@ -16,7 +16,7 @@ const ArticlePagePreview = ({ data, entry, getAsset }) => {
 
   return (
     <ArticlePageTemplate
-      title={data.title}
+      heading={data.heading}
       date={data.date ? new Date(data.date).toLocaleDateString('en-GB', {
         weekday: 'short',
         year: 'numeric',

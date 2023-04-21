@@ -20,7 +20,7 @@ const ArticlePage = ({ data, pageContext }) => {
       <PageLayout>
         <ArticlePageTemplate
           location={fm.location}
-          title={fm.title}
+          heading={fm.heading}
           date={fm.date}
           image={fm.featuredimage}
           body={project.htmlAst}
@@ -79,6 +79,7 @@ export const articleQuery = graphql`
       excerpt
       frontmatter {
         title
+        heading
         date
         templateKey
         featuredimage {

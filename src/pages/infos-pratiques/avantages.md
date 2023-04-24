@@ -43,7 +43,7 @@ Depuis la saison 2020-2021, l’équipementier célèbre de badminton dans l’o
 
 Besoin d’un conseil avisé sur votre achat de matériel : Chaussures, Raquette, Textile -> Anh-Tai se fera un plaisir de vous aiguiller dans ces achats cruciaux dans la pratique du badminton !
 
-Vous pouvez retrouver sa [boutique en ligne](http://badaddict.fr) ; nos adhérents bénéficient d’une **réduction de 10% (hors promotion)** sur leurs achats !
+Vous pouvez retrouver sa [boutique en ligne](target_blank:http://badaddict.fr) ; nos adhérents bénéficient d’une **réduction de 10% (hors promotion)** sur leurs achats !
 
 ### Ville de Maisons-Laffitte
 

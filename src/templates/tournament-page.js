@@ -14,7 +14,7 @@ const TournamentPage = ({ data, pageContext }) => {
       <PageLayout>
         <ArticlePageTemplate
           location={fm.location}
-          title={fm.title}
+          heading={fm.heading}
           image={fm.featuredimage}
           body={project.htmlAst}
         />
@@ -32,6 +32,7 @@ export const tournamentQuery = graphql`
       excerpt
       frontmatter {
         title
+        heading
         templateKey
         featuredimage {
           alt

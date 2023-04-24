@@ -27,6 +27,22 @@ const Table = (props) => (
   </TableContainer>
 );
 
+const A = (props) => {
+  const isTargetBlank = props.href.startsWith('target_blank:');
+  return (
+    <Link
+      {...(isTargetBlank
+        ? {
+            ...props,
+            href: props.href.replace(/^target_blank:/, ''),
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          }
+        : props)}
+    />
+  );
+};
+
 const H1 = (props) => <Heading as="h1" size="2xl" mt={10} mb={8} {...props} />;
 const H2 = (props) => <Heading as="h2" size="xl" mt={8} mb={7} {...props} />;
 const H3 = (props) => <Heading as="h3" size="lg" mt={7} mb={6} {...props} />;
@@ -132,7 +148,7 @@ export const renderAst = new rehypeReact({
     th: Th,
     td: Td,
     tfoot: Tfoot,
-    a: Link,
+    a: A,
     mediafile: withChildrenAsJSONProps(MediaFile),
     simplegrid: Grid,
     figcaption: FigCaption,

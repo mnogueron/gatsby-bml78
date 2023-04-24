@@ -19,7 +19,7 @@ Les **doubles hommes et femmes** se dérouleront entièrement le **samedi**.\
 Les **doubles mixtes** se joueront entièrement le **dimanche**.\
 Les **doubles benjamins** se dérouleront le **dimanche**.
 
-L﻿es inscriptions se font exclusivement sur [BadNet](https://v5.badnet.org/tournoi/public?eventid=18369&fbclid=IwAR3ASEoQI5ekahiuldDfMOWcuuPNar8BKMdNtrSCtyqlwQi5TFPHGL1OYH4), où vous trouverez également plus d'informations sur le tournoi.
+L﻿es inscriptions se font exclusivement sur [BadNet](target_blank:https://v5.badnet.org/tournoi/public?eventid=18369&fbclid=IwAR3ASEoQI5ekahiuldDfMOWcuuPNar8BKMdNtrSCtyqlwQi5TFPHGL1OYH4), où vous trouverez également plus d'informations sur le tournoi.
 
 L﻿a date limite d'inscription est fixée au **4 mai 2023** alors n'attendez plus !
 

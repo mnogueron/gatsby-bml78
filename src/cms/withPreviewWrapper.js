@@ -66,7 +66,6 @@ const withPreviewWrapper = (Component) => {
 
 
       const templateSeo = getSEOData(data)
-      console.log(templateSeo, override)
 
       const titleTemplate = override?.titleTemplate || '%s - BML';
       const title = titleTemplate.replace(

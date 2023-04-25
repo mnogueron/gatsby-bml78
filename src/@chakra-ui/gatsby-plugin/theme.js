@@ -31,11 +31,8 @@ const theme = {
         maxWidth: 800,
         margin: 'auto',
       },
-      '.gatsby-resp-image-wrapper': {
-        maxWidth: "800px !important",
-      }
-    }
-  }
+    },
+  },
 };
 
 export default extendTheme(theme);

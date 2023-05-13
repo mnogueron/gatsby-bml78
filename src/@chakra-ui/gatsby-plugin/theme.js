@@ -11,6 +11,15 @@ const customSizes = {
   },
 };
 
+const semanticTokens = {
+  colors: {
+    'text.main': 'gray.800',
+    'text.secondary': 'gray.600',
+    'text.inverted.main': 'gray.100',
+    'text.inverted.secondary': 'gray.200',
+  }
+}
+
 const theme = {
   colors: {
     primary: 'rebeccapurple',
@@ -33,6 +42,7 @@ const theme = {
       },
     },
   },
+  semanticTokens,
 };
 
 export default extendTheme(theme);

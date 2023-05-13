@@ -126,22 +126,22 @@ const Footer = () => {
       background="linear-gradient(273.79deg, #C53030 -3.03%, #9B2C2C 100%)"
       borderTopRadius={10}
     >
-      <Box maxW={"7xl"} px={8} pt={8} pb={6} margin="auto">
+      <Box maxW={'7xl'} px={8} pt={8} pb={6} margin="auto">
         <Stack
           direction={{ base: 'column-reverse', md: 'row' }}
           justifyContent="space-between"
           alignItems={{ base: 'center', md: 'initial' }}
-          spacing={{ base: 8, md: 0}}
+          spacing={{ base: 8, md: 0 }}
           py={3}
         >
-          <VStack alignItems={{base: 'center', md: "flex-start"}} spacing={4}>
+          <VStack alignItems={{ base: 'center', md: 'flex-start' }} spacing={4}>
             <Logo />
             <VStack
               as="address"
               alignItems="flex-start"
               color="text.inverted.main"
               fontSize="sm"
-              ps={{base: 0, md: 4}}
+              ps={{ base: 0, md: 4 }}
             >
               <Box>
                 <Text>99 rue de la Muette</Text>
@@ -161,16 +161,31 @@ const Footer = () => {
           </VStack>
 
           <Box>
-            <Flex flexWrap={{ base: "wrap", lg: 'nowrap'}}>
+            <Flex flexWrap={{ base: 'wrap', lg: 'nowrap' }}>
               {footerSections.map((section, index) => (
                 <VStack
                   key={`${section.title}-${index}`}
-                  alignItems={{base: 'center', md: 'flex-start'}}
+                  alignItems={{ base: 'center', md: 'flex-start' }}
                   spacing={1}
                   flex={1}
-                  flexBasis={{ base: "40%", sm: '25%', md: '40%', lg: 'fit-content'}}
-                  ms={{base: index % 2 > 0 ? 4 : 0, sm: index % 3 > 0 ? 4 : 0, md: index % 2 > 0 ? 8 : 0, lg: index > 0 ? 8 : 0}}
-                  mt={{base: index / 2 >= 1 ? 4 : 0, sm: index / 3 >= 1 ? 4 : 0, md: index / 2 >= 1 ? 4 : 0, lg: 0}}
+                  flexBasis={{
+                    base: '40%',
+                    sm: '25%',
+                    md: '40%',
+                    lg: 'fit-content',
+                  }}
+                  ms={{
+                    base: index % 2 > 0 ? 4 : 0,
+                    sm: index % 3 > 0 ? 4 : 0,
+                    md: index % 2 > 0 ? 8 : 0,
+                    lg: index > 0 ? 8 : 0,
+                  }}
+                  mt={{
+                    base: index / 2 >= 1 ? 4 : 0,
+                    sm: index / 3 >= 1 ? 4 : 0,
+                    md: index / 2 >= 1 ? 4 : 0,
+                    lg: 0,
+                  }}
                 >
                   <Heading as="div" size="xs" color="text.inverted.secondary">
                     {section.title}
@@ -179,7 +194,7 @@ const Footer = () => {
                     <FooterLink
                       key={`${title}-${index}`}
                       to={to}
-                      textAlign={{base: 'center', md: 'left'}}
+                      textAlign={{ base: 'center', md: 'left' }}
                       {...rest}
                     >
                       {title}
@@ -193,7 +208,11 @@ const Footer = () => {
 
         <Divider borderColor={'gray.200'} my={6} />
 
-        <HStack justifyContent="space-between">
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          alignItems="center"
+          justifyContent="space-between"
+        >
           <HStack>
             <Link
               href="https://www.instagram.com/badminton_maisonslaffitte/"
@@ -223,7 +242,7 @@ const Footer = () => {
           >
             © BML 2022 - Tous Droits Réservés - All Rights Reserved
           </Text>
-        </HStack>
+        </Stack>
       </Box>
     </Box>
   );

@@ -202,7 +202,6 @@ const IndexPageTemplate = ({
         </div>
       </div>*/}
 
-      {/* Featured projects */}
       <Container maxW="7xl" my={{ base: 8, md: 12, lg: 16 }} as="section">
         <Heading as="h2" size="xl" mb={{ base: 4, lg: 8 }}>
           Le club
@@ -215,14 +214,19 @@ const IndexPageTemplate = ({
               position="absolute"
               top={{ base: -1, md: -3, lg: -5 }}
               left={{ base: -8, md: -14, lg: -16 }}
-              color="blackAlpha.600"
+              color="primary"
+              opacity={.8}
             />
             {clubSectionContent && (
               <Content
                 html={clubSectionContent}
-                as="p"
                 p={'0 !important'}
                 textAlign="justify"
+                sx={{
+                  '& strong': {
+                    color: 'primary'
+                  }
+                }}
               />
             )}
             <Icon
@@ -231,7 +235,8 @@ const IndexPageTemplate = ({
               position="absolute"
               bottom={{ base: -1, md: -3, lg: -5 }}
               right={{ base: -8, md: -14, lg: -16 }}
-              color="blackAlpha.600"
+              color="primary"
+              opacity={.8}
             />
           </Box>
         </Box>

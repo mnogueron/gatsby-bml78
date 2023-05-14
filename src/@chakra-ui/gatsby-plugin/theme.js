@@ -17,6 +17,7 @@ const semanticTokens = {
     'text.secondary': 'gray.600',
     'text.inverted.main': 'gray.100',
     'text.inverted.secondary': 'gray.200',
+    'primary': 'red.600',
   }
 }
 

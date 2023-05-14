@@ -17,8 +17,9 @@ import { FaInstagram, FaFacebookSquare, FaYoutube } from 'react-icons/fa';
 
 const FooterLink = ({ to, children, ...rest }) => (
   <Link
-    as={GatsbyLink}
-    to={to}
+    as={rest.isExternal ? 'a' : GatsbyLink}
+    to={rest.isExternal ? undefined : to}
+    href={rest.isExternal ? to : undefined}
     fontSize="sm"
     color="text.inverted.secondary"
     textDecoration="none"

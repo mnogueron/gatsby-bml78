@@ -18,6 +18,7 @@ const semanticTokens = {
     'text.inverted.main': 'gray.100',
     'text.inverted.secondary': 'gray.200',
     'primary': 'red.600',
+    'bg.main': '#FBFBFB'
   }
 }
 
@@ -38,6 +39,9 @@ const theme = {
       '.embedVideo-container': {
         maxWidth: 800,
         margin: 'auto',
+      },
+      'body': {
+        bg: 'bg.main',
       },
     },
   },

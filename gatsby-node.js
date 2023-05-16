@@ -90,6 +90,7 @@ exports.createPages = ({ graphql, actions }) => {
               id,
               title,
               seo,
+              templateKey,
               next,
               previous,
             },

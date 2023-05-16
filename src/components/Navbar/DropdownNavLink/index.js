@@ -3,7 +3,7 @@ import { useBreakpointValue } from '@chakra-ui/react';
 import MobileDropdownNavLink from './MobileDropdownNavLink';
 import DesktopDropdownNavLink from './DesktopDropdownNavLink';
 
-const DropdownNavLink = ({ label, options, onClick, isRecursive }) => {
+const DropdownNavLink = ({ label, options, onClick, isRecursive, isTransparent }) => {
   const collapsibleMenu = useBreakpointValue({ base: true, md: false });
 
   if (collapsibleMenu) {
@@ -23,6 +23,7 @@ const DropdownNavLink = ({ label, options, onClick, isRecursive }) => {
       options={options}
       onClick={onClick}
       isRecursive={isRecursive}
+      isTransparent={isTransparent}
     />
   );
 };

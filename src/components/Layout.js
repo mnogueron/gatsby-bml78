@@ -5,14 +5,15 @@ import Footer from './Footer';
 import useSiteMetadata from './SiteMetadata';
 import { useScroll } from '../hooks/useScroll';
 import BreakpointTag from './BreakpointTag';
+import {Box} from "@chakra-ui/react";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageContext }) => {
   // set global title and description on global layout, can be overwritten on a per-page basis with MyHelmet
   const { title, description } = useSiteMetadata();
   const { scrollY, scrollDirection } = useScroll();
 
   return (
-    <div className="bg-white">
+    <Box>
       <Helmet>
         <html lang="en" />
         <title>{title} | BML</title>
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
               ? ''
               : '-translate-y-full'
           }`}
+          isTransparentAtTop={pageContext.templateKey === 'index-page'}
         />
         {/* Navbar height will be h-12 sm:h-14 md:h-18 */}
         <main className="mb-auto">{children}</main>
@@ -33,7 +35,7 @@ const Layout = ({ children }) => {
 
       {/* small badge to display current break-point (only in dev mode) */}
       {process.env.NODE_ENV === 'development' && <BreakpointTag />}
-    </div>
+    </Box>
   );
 };
 

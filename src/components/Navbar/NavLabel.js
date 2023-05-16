@@ -2,14 +2,14 @@ import React from 'react';
 import { Flex, Text } from '@chakra-ui/react';
 
 // TODO drop isActive
-const NavLabel = ({ label, isActive, isHover, icon, ...rest }) => {
+const NavLabel = ({ label, isActive, isHover, icon, isTransparent, ...rest }) => {
   return (
     <Flex
       {...rest}
       justifyContent="center"
       alignItems="center"
       sx={{
-        color: 'text.main',
+        color: isTransparent ? 'text.inverted.main' : 'text.main',
         fontWeight: 'semibold',
         position: 'relative',
         mx: 2,

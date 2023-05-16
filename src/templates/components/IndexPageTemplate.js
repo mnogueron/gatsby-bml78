@@ -48,7 +48,7 @@ const IndexPageTemplate = ({
         <Container
           maxW="7xl"
           py={16}
-          minHeight={{ base: 'calc(100vh - 48px)', sm: '700px' }}
+          minHeight={{ base: 'calc(100vh - 48px)', sm: '768px' }}
           display="flex"
           alignItems="center"
         >

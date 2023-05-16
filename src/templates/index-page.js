@@ -15,7 +15,7 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <>
       <SEO data={data} pageContext={pageContext} />
-      <PageLayout>
+      <PageLayout marginTop={0}>
         <IndexPageTemplate
           heading={fm.heading}
           subheading={fm.subheading}

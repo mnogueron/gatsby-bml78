@@ -12,7 +12,7 @@ import {
 import { MdExpandMore, MdChevronRight } from 'react-icons/md';
 import NavLabel from '../NavLabel';
 
-const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive }) => {
+const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive, isTransparent }) => {
   const { isOpen, onClose, onOpen, onToggle } = useDisclosure();
   const onCloseTimeout = useRef(0);
 
@@ -47,7 +47,7 @@ const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive }) => {
           : {
               sx: {
                 '*': {
-                  color: isOpen ? 'primary' : 'text.main',
+                  color: isOpen ? 'primary' : isTransparent ? 'text.inverted.main' : 'text.main',
                 },
                 '&:hover *': {
                   color: 'primary',

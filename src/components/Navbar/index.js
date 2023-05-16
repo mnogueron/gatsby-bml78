@@ -5,10 +5,10 @@ import { Heading, Box } from '@chakra-ui/react';
 import MobileMenu from './MobileMenu';
 import DropdownNavLink from './DropdownNavLink';
 import NavLink from './NavLink';
-import {useScroll} from "../../hooks/useScroll";
+import { useScroll } from '../../hooks/useScroll';
 
-const Navbar = ({ className }) => {
-  const { scrollY, scrollDirection } = useScroll();
+const Navbar = ({ className, isTransparentAtTop }) => {
+  const { scrollY } = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
   const { infosPratiquesMenu, resultsMenu } = useStaticQuery(
     graphql`
@@ -67,9 +67,11 @@ const Navbar = ({ className }) => {
         label: item.title,
         to: item.url,
       };
-    }
-    const infoPratiquesCategories = infosPratiquesMenu.frontmatter.items.map(extractSubMenus);
-    const resultsCategories = resultsMenu.frontmatter.items.map(extractSubMenus);
+    };
+    const infoPratiquesCategories =
+      infosPratiquesMenu.frontmatter.items.map(extractSubMenus);
+    const resultsCategories =
+      resultsMenu.frontmatter.items.map(extractSubMenus);
     return [
       {
         key: 'accueil',
@@ -125,12 +127,19 @@ const Navbar = ({ className }) => {
     ];
   }, [infosPratiquesMenu, resultsMenu]);
 
+  const isTransparent = isTransparentAtTop && scrollY < 1;
+
   const handleMenuClose = () => {
     setMenuOpen(false);
   };
 
   return (
-    <Box as="nav" shadow={scrollY < 1 ? undefined : "xl"} bg="#FBFBFB" className={`fixed top-0 w-full z-30 ${className}`}>
+    <Box
+      as="nav"
+      shadow={scrollY < 1 ? undefined : 'xl'}
+      bg={isTransparent ? 'transparent' : 'bg.main'}
+      className={`fixed top-0 w-full z-30 ${className}`}
+    >
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between py-2">
           {/* TODO use Logo component instead */}
@@ -146,7 +155,10 @@ const Navbar = ({ className }) => {
               backgroundColor="transparent"
               placeholder="blurred"
             />
-            <Heading fontSize={{ base: 'md', sm: 'lg' }}>
+            <Heading
+              fontSize={{ base: 'md', sm: 'lg' }}
+              color={isTransparent ? 'text.inverted.main' : 'text.main'}
+            >
               Badminton Maisons-Laffitte
             </Heading>
             {/*<div className="text-xl font-bold tracking-wide lg:text-2xl">
@@ -157,9 +169,17 @@ const Navbar = ({ className }) => {
 
           {/* Mobile menu button */}
           <Box display={{ base: 'flex', lg: 'none' }}>
-            <button
+            <Box
+              as="button"
               type="button"
-              className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+              className="focus:outline-none"
+              _hover={{
+                color: isTransparent ? 'gray.200' : 'gray.600',
+              }}
+              _focus={{
+                color: isTransparent ? 'gray.200' : 'gray.600',
+              }}
+              color={isTransparent ? 'gray.100' : 'gray.500'}
               aria-label="toggle menu"
               onClick={() => setMenuOpen(!menuOpen)}
             >
@@ -169,7 +189,7 @@ const Navbar = ({ className }) => {
                   d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
                 ></path>
               </svg>
-            </button>
+            </Box>
           </Box>
         </div>
 
@@ -190,6 +210,7 @@ const Navbar = ({ className }) => {
                     label={menu.label}
                     options={menu.options}
                     onClick={handleMenuClose}
+                    isTransparent={isTransparent}
                   />
                 );
               }
@@ -201,6 +222,7 @@ const Navbar = ({ className }) => {
                   onClick={handleMenuClose}
                   label={menu.label}
                   partial={menu.partial}
+                  isTransparent={isTransparent}
                 />
               );
             })}

@@ -1,26 +1,26 @@
 import React from 'react';
 import { Flex, Text } from '@chakra-ui/react';
 
+// TODO drop isActive
 const NavLabel = ({ label, isActive, isHover, icon, ...rest }) => {
   return (
     <Flex
+      {...rest}
       justifyContent="center"
       alignItems="center"
       sx={{
-        borderBottomWidth: 4,
-        borderColor: isActive || isHover ? 'blue.500' : 'transparent',
-        color: isActive ? 'blue.500' : 'gray.600',
+        color: 'text.main',
         fontWeight: 'semibold',
         position: 'relative',
         mx: 2,
         p: 3,
         textAlign: 'center',
         '&:hover': {
-          borderColor: 'blue.500',
+          color: 'primary',
         },
       }}
     >
-      <Text {...rest} mr={icon && 2}>
+      <Text mr={icon && 2}>
         {label}
       </Text>
       {icon && (

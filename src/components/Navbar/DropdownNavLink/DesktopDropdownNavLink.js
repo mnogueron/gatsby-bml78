@@ -40,11 +40,20 @@ const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive }) => {
               sx: {
                 width: 'full',
                 '&:hover': {
-                  backgroundColor: 'gray.100',
+                  backgroundColor: 'red.100',
                 },
-              }
+              },
             }
-          : {})}
+          : {
+              sx: {
+                '*': {
+                  color: isOpen ? 'primary' : 'text.main',
+                },
+                '&:hover *': {
+                  color: 'primary',
+                },
+              },
+            })}
       >
         {isRecursive ? (
           <MenuItem justifyContent="space-between">

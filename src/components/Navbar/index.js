@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Heading } from '@chakra-ui/react';
+import { Heading, Box } from '@chakra-ui/react';
 import MobileMenu from './MobileMenu';
 import DropdownNavLink from './DropdownNavLink';
 import NavLink from './NavLink';
@@ -75,6 +75,12 @@ const Navbar = ({ className }) => {
         to: '/',
       },
       {
+        key: 'actus',
+        label: 'Actualités',
+        to: '/articles',
+        partial: true,
+      },
+      {
         key: 'infospratiques',
         label: 'Infos Pratiques',
         options: [
@@ -110,12 +116,6 @@ const Navbar = ({ className }) => {
         ],
       },
       {
-        key: 'actus',
-        label: 'Actualités',
-        to: '/articles',
-        partial: true,
-      },
-      {
         key: 'contact',
         label: 'Contact',
         to: '/contact',
@@ -131,6 +131,7 @@ const Navbar = ({ className }) => {
     <nav className={`fixed top-0 w-full z-30 bg-white shadow-xl ${className}`}>
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between py-2">
+          {/* TODO use Logo component instead */}
           <Link className="flex items-center gap-1" to="/">
             <StaticImage
               src="../../img/bml-icon.png"
@@ -153,7 +154,7 @@ const Navbar = ({ className }) => {
           </Link>
 
           {/* Mobile menu button */}
-          <div className="flex lg:hidden">
+          <Box display={{ base: 'flex', lg: 'none' }}>
             <button
               type="button"
               className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
@@ -167,7 +168,7 @@ const Navbar = ({ className }) => {
                 ></path>
               </svg>
             </button>
-          </div>
+          </Box>
         </div>
 
         <MobileMenu

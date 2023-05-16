@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
-import Link from './components/link';
+import components from './components';
 
 const customSizes = {
   navbar: {
@@ -32,9 +32,7 @@ const theme = {
   space: {
     bml: customSizes,
   },
-  components: {
-    Link,
-  },
+  components,
   styles: {
     global: {
       '.embedVideo-container': {

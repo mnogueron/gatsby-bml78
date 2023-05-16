@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 
+// TODO fix page background color not set on the body
 const PageLayout = ({ children, ...boxProps }) => {
   return (
     <Box

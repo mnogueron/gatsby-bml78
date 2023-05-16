@@ -6,7 +6,7 @@ const customSizes = {
     height: {
       base: '48px',
       sm: '56px',
-      md: '68px',
+      md: '64px',
     },
   },
 };

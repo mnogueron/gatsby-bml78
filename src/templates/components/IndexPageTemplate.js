@@ -4,7 +4,6 @@ import {
   Button,
   Container,
   Box,
-  VStack,
   Heading,
   Text,
   Icon,
@@ -15,7 +14,6 @@ import { CardSet } from '../../components/Sections';
 import Image from '../../components/Image';
 import Banner from '../../components/Banner';
 import Content from '../../components/Content';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import { RiDoubleQuotesR, RiDoubleQuotesL } from 'react-icons/ri';
 
 const SeeMoreButton = ({ to, ...rest }) => {

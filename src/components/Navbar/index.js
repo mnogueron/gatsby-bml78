@@ -5,8 +5,10 @@ import { Heading, Box } from '@chakra-ui/react';
 import MobileMenu from './MobileMenu';
 import DropdownNavLink from './DropdownNavLink';
 import NavLink from './NavLink';
+import {useScroll} from "../../hooks/useScroll";
 
 const Navbar = ({ className }) => {
+  const { scrollY, scrollDirection } = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
   const { infosPratiquesMenu, resultsMenu } = useStaticQuery(
     graphql`
@@ -128,7 +130,7 @@ const Navbar = ({ className }) => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-30 bg-white shadow-xl ${className}`}>
+    <Box as="nav" shadow={scrollY < 1 ? undefined : "xl"} bg="#FBFBFB" className={`fixed top-0 w-full z-30 ${className}`}>
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between py-2">
           {/* TODO use Logo component instead */}
@@ -205,7 +207,7 @@ const Navbar = ({ className }) => {
           </div>
         </div>
       </div>
-    </nav>
+    </Box>
   );
 };
 

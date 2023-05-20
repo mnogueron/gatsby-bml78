@@ -48,6 +48,7 @@ export const articlesPageQuery = graphql`
           }
           frontmatter {
             title
+            cardTitle
             heading
             templateKey
             date

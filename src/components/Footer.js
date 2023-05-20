@@ -217,6 +217,7 @@ const Footer = () => {
           <HStack>
             <Link
               href="https://www.instagram.com/badminton_maisonslaffitte/"
+              isExternal={true}
               color="white"
             >
               <Icon as={FaInstagram} boxSize={8} />
@@ -224,6 +225,7 @@ const Footer = () => {
 
             <Link
               href="https://www.facebook.com/Badminton-Maisons-Laffitte-174696235978505"
+              isExternal={true}
               color="white"
             >
               <Icon as={FaFacebookSquare} boxSize={8} />
@@ -231,6 +233,7 @@ const Footer = () => {
 
             <Link
               href="https://www.youtube.com/channel/UC9cBewd4vtXbI2ZwGLY9OlQ"
+              isExternal={true}
               color="white"
             >
               <Icon as={FaYoutube} boxSize={8} />

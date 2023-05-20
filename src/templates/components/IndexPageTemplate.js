@@ -10,7 +10,7 @@ import {
   Flex,
 } from '@chakra-ui/react';
 import { MdChevronRight } from 'react-icons/md';
-import { CardSet } from '../../components/Sections';
+import { CardGrid } from '../../components/Sections';
 import Image from '../../components/Image';
 import Banner from '../../components/Banner';
 import Content from '../../components/Content';
@@ -251,7 +251,7 @@ const IndexPageTemplate = ({
           />
         </div>
         <div className="mt-8">
-          <CardSet posts={posts} subheading={'Actualités'} />
+          <CardGrid posts={posts} subheading={'Actualités'} />
         </div>
         <SeeMoreButton
           display={{ base: 'flex', md: 'none' }}
@@ -276,7 +276,7 @@ const IndexPageTemplate = ({
           <SeeMoreButton display={{ base: 'none', md: 'flex' }} to="/results" />
         </div>
         <div className="mt-8">
-          <CardSet posts={results} subheading={'Résultats'} />
+          <CardGrid posts={results} subheading={'Résultats'} />
         </div>
         <SeeMoreButton
           display={{ base: 'flex', md: 'none' }}

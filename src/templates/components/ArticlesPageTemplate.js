@@ -1,16 +1,32 @@
-import React from "react"
-import Header from "../../components/Header"
-import { Container, CardSet } from "../../components/Sections"
+import React from 'react';
+import Header from '../../components/Header';
+import Container from '../../components/Container';
+import { CardGrid } from '../../components/Sections';
+import BigCard from '../../components/BigCard';
+import { VStack } from '@chakra-ui/react';
 
 function ArticlesPageTemplate({ heading, subheading, posts = [] }) {
+  const [latestPost, ...otherPosts] = posts;
   return (
-    <div>
+    <>
       <Header heading={heading} subheading={subheading} />
-      <Container className="-mt-20 sm:-mt-24 lg:-mt-32">
-        <CardSet posts={posts} />
+      <Container px={8} pt={8} pb={16} maxW="7xl">
+        <VStack spacing={12} alignItems="initial">
+          <BigCard
+            image={latestPost.node.frontmatter.featuredimage}
+            heading={
+              latestPost.node.frontmatter.cardTitle ||
+              latestPost.node.frontmatter.heading
+            }
+            subtitle={latestPost.node.frontmatter.cardSubtitle}
+            date={latestPost.node.frontmatter.date}
+            to={latestPost.node.fields.slug}
+          />
+          <CardGrid posts={otherPosts} />
+        </VStack>
       </Container>
-    </div>
-  )
+    </>
+  );
 }
 
-export default ArticlesPageTemplate
+export default ArticlesPageTemplate;

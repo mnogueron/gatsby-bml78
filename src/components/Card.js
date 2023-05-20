@@ -5,7 +5,7 @@ import * as dateFns from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
 import {Heading, Text, VStack} from '@chakra-ui/react';
 
-function Card({ image, heading, date, subtitle, subheading, url, ...rest }) {
+function Card({ image, heading, date, subtitle, url, ...rest }) {
   return (
     <Link
       to={url}
@@ -19,9 +19,6 @@ function Card({ image, heading, date, subtitle, subheading, url, ...rest }) {
       />
       <VStack spacing={2} alignItems="initial" mt={4}>
         <div className="flex items-baseline gap-x-2 justify-between">
-          {/*<span className="uppercase text-green-700 font-bold text-xs tracking-wide">
-            {subheading}
-          </span>*/}
           <Text color="text.secondary" fontSize="sm">
             {dateFns.format(new Date(date), 'PP', {
               addSuffix: true,
@@ -32,7 +29,7 @@ function Card({ image, heading, date, subtitle, subheading, url, ...rest }) {
         <Heading
           as="h3"
           color="text.main"
-          size="md"
+          size="sm"
           className="group-hover:underline"
         >
           {heading}

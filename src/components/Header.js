@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Text, Container } from '@chakra-ui/react';
+import {Box, Heading, Text, Container, VStack} from '@chakra-ui/react';
 import format from 'date-fns/format';
 import frLocale from 'date-fns/locale/fr';
 
@@ -8,23 +8,23 @@ function Header({ heading, subheading }) {
   return (
     <Box
       as="header"
-      backgroundColor="blue.700"
-      py={{ base: 12, sm: 16, md: 20, lg: 24 }}
+      pt={{ base: 12, sm: 16, md: 20, lg: 28 }}
+      pb={{ base: 8, sm: 12, md: 16, lg: 16 }}
     >
-      <Container maxW="7xl" textAlign="center">
+      <VStack maxW="7xl" textAlign="center" margin="auto" spacing={{ base: 3, md: 6}}>
         <Heading
           as="h1"
-          fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
-          color="white"
+          fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }}
+          color="text.main"
         >
           {heading}
         </Heading>
         {subheading && (
-          <Text fontSize={'xl'} color={'gray.100'} mt={6}>
+          <Heading as="h2" fontSize={'lg'} color={'text.secondary'}>
             {subheading}
-          </Text>
+          </Heading>
         )}
-      </Container>
+      </VStack>
     </Box>
   );
 }
@@ -59,7 +59,7 @@ export function ArticleHeader({ heading, subheading, date }) {
           <Heading
             as="h1"
             fontSize={{ base: '2xl', sm: '3xl', md: '3xl', lg: '4xl' }}
-            color={'black'}
+            color="text.main"
             mt={4}
             maxW={'2xl'}
             whiteSpace="pre-wrap"

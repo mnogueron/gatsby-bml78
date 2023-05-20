@@ -7,7 +7,6 @@ import {
   Select,
   Textarea,
 } from '@chakra-ui/react';
-import {Link} from "gatsby";
 
 const subjects = [
   {

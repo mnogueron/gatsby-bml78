@@ -66,12 +66,13 @@ export const CardSet = ({ className, posts, subheading }) => {
         const fm = post.frontmatter
         return (
           <Card
+            key={idx}
             image={fm.featuredimage}
             heading={fm.cardTitle || fm.heading}
+            subtitle={fm.cardSubtitle}
             date={fm.date}
             subheading={subheading || fm.location}
             to={post.fields.slug}
-            key={idx}
           />
         )
       })}

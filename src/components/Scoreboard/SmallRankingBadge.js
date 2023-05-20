@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 
 const SmallRankingBadge = ({ ranking }) => {
   const textColor = useMemo(() => {

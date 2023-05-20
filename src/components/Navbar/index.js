@@ -7,6 +7,8 @@ import DropdownNavLink from './DropdownNavLink';
 import NavLink from './NavLink';
 import { useScroll } from '../../hooks/useScroll';
 
+// TODO use dark / light mode instead of isTransparent
+// TODO review animation on scroll with isTransparent
 const Navbar = ({ className, isTransparentAtTop }) => {
   const { scrollY } = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);

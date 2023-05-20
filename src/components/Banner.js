@@ -20,7 +20,7 @@ const Banner = ({ text, level }) => {
     } else {
       onClose();
     }
-  }, []);
+  }, [onOpen, onClose]);
 
   if (!isOpen) {
     return null;

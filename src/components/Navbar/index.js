@@ -6,6 +6,7 @@ import MobileMenu from './MobileMenu';
 import DropdownNavLink from './DropdownNavLink';
 import NavLink from './NavLink';
 import { useScroll } from '../../hooks/useScroll';
+import Logo from "../Logo";
 
 // TODO use dark / light mode instead of isTransparent
 // TODO review animation on scroll with isTransparent
@@ -144,30 +145,7 @@ const Navbar = ({ className, isTransparentAtTop }) => {
     >
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between py-2">
-          {/* TODO use Logo component instead */}
-          <Link className="flex items-center gap-1" to="/">
-            <StaticImage
-              src="../../img/bml-icon.png"
-              alt="Badminton Maisons-Laffitte icon"
-              className="w-12 h-8 sm:w-14 sm:h-10"
-              layout="constrained"
-              width={114}
-              height={85}
-              loading="eager"
-              backgroundColor="transparent"
-              placeholder="blurred"
-            />
-            <Heading
-              fontSize={{ base: 'md', sm: 'lg' }}
-              color={isTransparent ? 'text.inverted.main' : 'text.main'}
-            >
-              Badminton Maisons-Laffitte
-            </Heading>
-            {/*<div className="text-xl font-bold tracking-wide lg:text-2xl">
-              <span className="text-gray-800 font-semibold">Badminton</span>
-              <span className="text-red-700"> Maisons-Laffitte</span>
-            </div>*/}
-          </Link>
+          <Logo color={isTransparent ? 'text.inverted.main' : 'text.main'} />
 
           {/* Mobile menu button */}
           <Box display={{ base: 'flex', lg: 'none' }}>

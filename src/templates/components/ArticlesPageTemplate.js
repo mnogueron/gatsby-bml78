@@ -11,7 +11,7 @@ function ArticlesPageTemplate({ heading, subheading, posts = [] }) {
     <>
       <Header heading={heading} subheading={subheading} />
       <Container px={8} pt={8} pb={16} maxW="7xl">
-        <VStack spacing={12} alignItems="initial">
+        <VStack spacing={{ base: 6, sm: 8, lg: 12 }} alignItems="initial">
           <BigCard
             image={latestPost.node.frontmatter.featuredimage}
             heading={

@@ -18,7 +18,7 @@ function BigCard({ image, heading, date, subtitle, url, ...rest }) {
       <Box
         as={Image}
         width="100%"
-        height={{ base: 400, md: 600 }}
+        height={{ base: 400, sm: 500, md: 500, lg: 600 }}
         borderRadius={20}
         image={image?.image || { url: '/static/assets/shuttle.jpg' }}
         alt={image?.alt || 'image de volant'}
@@ -43,7 +43,7 @@ function BigCard({ image, heading, date, subtitle, url, ...rest }) {
           <Heading
             as="h3"
             color="white"
-            fontSize={{ base: '2xl', sm: '3xl', md: '4xl', lg: '5xl' }}
+            fontSize={{ base: 'xl', sm: '3xl', md: '4xl', lg: '5xl' }}
           >
             {heading}
           </Heading>

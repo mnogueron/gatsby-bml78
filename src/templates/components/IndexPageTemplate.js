@@ -20,6 +20,8 @@ const SeeMoreButton = ({ to, ...rest }) => {
   return (
     <Button
       variant="ghost"
+      colorScheme="red"
+      color="text.main"
       as={Link}
       to={to}
       rightIcon={<Icon as={MdChevronRight} boxSize={8} />}
@@ -44,7 +46,7 @@ const IndexPageTemplate = ({
   return (
     <>
       {/* Header */}
-      <Box backgroundColor={'blue.700'} position="relative" as="header">
+      <Box backgroundColor={'blackAlpha.100'} position="relative" as="header">
         <Container
           maxW="7xl"
           py={16}
@@ -120,7 +122,7 @@ const IndexPageTemplate = ({
               {subheading}
             </Text>
             <Button
-              colorScheme="blue"
+              colorScheme="red"
               size="lg"
               as={Link}
               to="/infos-pratiques/inscription"

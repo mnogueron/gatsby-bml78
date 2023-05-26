@@ -5,7 +5,7 @@ const query = (graphql) =>
     `
       query {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: [DESC, DESC], fields: [frontmatter___category, frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "result-page" } } }
         ) {
           edges {
@@ -17,6 +17,7 @@ const query = (graphql) =>
               frontmatter {
                 title
                 templateKey
+                category
                 seo {
                   title
                   description
@@ -35,9 +36,11 @@ const query = (graphql) =>
                 slug
               }
               frontmatter {
+                cardTitle
                 title
                 heading
                 templateKey
+                category
               }
             }
             previous {
@@ -45,9 +48,11 @@ const query = (graphql) =>
                 slug
               }
               frontmatter {
+                cardTitle
                 title
                 heading
                 templateKey
+                category
               }
             }
           }
@@ -70,7 +75,7 @@ export const createICResults = async ({ graphql, actions }) => {
 
   edges.forEach(({ node, next, previous }) => {
     const { id, frontmatter, fields } = node;
-    const { title, templateKey, seo } = frontmatter;
+    const { title, templateKey, seo, category } = frontmatter;
 
     if (!templateKey) {
       return;
@@ -89,8 +94,8 @@ export const createICResults = async ({ graphql, actions }) => {
           image: seo?.image?.childImageSharp?.fixed?.src || undefined,
         },
         templateKey,
-        next,
-        previous,
+        next: next && next.frontmatter.category === category ? next : undefined,
+        previous: previous && previous.frontmatter.category === category ? previous : undefined,
       },
     });
   });

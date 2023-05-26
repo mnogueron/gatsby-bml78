@@ -30,26 +30,6 @@ const query = (graphql) =>
                 }
               }
             }
-            next {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                heading
-                templateKey
-              }
-            }
-            previous {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                heading
-                templateKey
-              }
-            }
           }
         }
       }
@@ -89,8 +69,6 @@ export const createBasePages = async ({ graphql, actions }) => {
           image: seo?.image?.childImageSharp?.fixed?.src || undefined,
         },
         templateKey,
-        next,
-        previous,
       },
     });
   });

@@ -39,7 +39,7 @@ const ArticlePage = ({ data, pageContext }) => {
                   {previous.frontmatter.location}
                 </p>*/}
                 <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
-                  {previous.frontmatter.title}
+                  {previous.frontmatter.cardTitle || previous.frontmatter.title}
                 </h3>
               </Link>
             ) : (
@@ -56,7 +56,7 @@ const ArticlePage = ({ data, pageContext }) => {
                     {next.frontmatter.location}
                   </p>*/}
                   <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
-                    {next.frontmatter.title}
+                    {next.frontmatter.cardTitle || next.frontmatter.title}
                   </h3>
                 </Link>
               </div>

@@ -38,7 +38,7 @@ const ResultPage = ({ data, pageContext }) => {
                   Suivant
                 </div>
                 <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
-                  {previous.frontmatter.heading}
+                  {previous.frontmatter.cardTitle || previous.frontmatter.heading}
                 </h3>
               </Link>
             ) : (
@@ -52,7 +52,7 @@ const ResultPage = ({ data, pageContext }) => {
                     <ArrowNarrowRightIcon className="w-5 h-5" />
                   </div>
                   <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
-                    {next.frontmatter.heading}
+                    {next.frontmatter.cardTitle || next.frontmatter.heading}
                   </h3>
                 </Link>
               </div>

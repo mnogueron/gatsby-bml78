@@ -35,6 +35,7 @@ const query = (graphql) =>
                 slug
               }
               frontmatter {
+                cardTitle
                 title
                 heading
                 templateKey
@@ -45,6 +46,7 @@ const query = (graphql) =>
                 slug
               }
               frontmatter {
+                cardTitle
                 title
                 heading
                 templateKey

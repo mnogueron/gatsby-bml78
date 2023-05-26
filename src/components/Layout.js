@@ -26,7 +26,7 @@ const Layout = ({ children, pageContext }) => {
               ? ''
               : '-translate-y-full'
           }`}
-          isTransparentAtTop={pageContext.templateKey === 'index-page'}
+          isTransparentAtTop={pageContext?.templateKey === 'index-page'}
         />
         {/* Navbar height will be h-12 sm:h-14 md:h-18 */}
         <main className="mb-auto">{children}</main>

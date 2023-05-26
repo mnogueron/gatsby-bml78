@@ -221,7 +221,7 @@ const Footer = () => {
             color="text.inverted.secondary"
             fontSize="sm"
           >
-            © BML 2022 - Tous Droits Réservés - All Rights Reserved
+            © BML 2023 - Tous Droits Réservés - All Rights Reserved
           </Text>
         </Stack>
       </Box>

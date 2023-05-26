@@ -63,7 +63,7 @@ export const indexPageQuery = graphql`
     allPostsMarkdownRemark: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "article-page" } } }
-      limit: 3
+      limit: 5
     ) {
       edges {
         node {

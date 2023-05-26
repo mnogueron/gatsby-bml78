@@ -8,6 +8,8 @@ import {
   Text,
   Icon,
   Flex,
+  SimpleGrid,
+  VStack,
 } from '@chakra-ui/react';
 import { MdChevronRight } from 'react-icons/md';
 import { CardGrid } from '../../components/Sections';
@@ -15,6 +17,7 @@ import Image from '../../components/Image';
 import Banner from '../../components/Banner';
 import Content from '../../components/Content';
 import { RiDoubleQuotesR, RiDoubleQuotesL } from 'react-icons/ri';
+import BigCard from '../../components/BigCard';
 
 const SeeMoreButton = ({ to, ...rest }) => {
   return (
@@ -43,6 +46,7 @@ const IndexPageTemplate = ({
   results = [],
   about,
 }) => {
+  const [firstPost, secondPost, ...otherPosts] = posts;
   return (
     <>
       {/* Header */}
@@ -215,7 +219,7 @@ const IndexPageTemplate = ({
               top={{ base: -1, md: -3, lg: -5 }}
               left={{ base: -8, md: -14, lg: -16 }}
               color="primary"
-              opacity={.8}
+              opacity={0.8}
             />
             {clubSectionContent && (
               <Content
@@ -224,8 +228,8 @@ const IndexPageTemplate = ({
                 textAlign="justify"
                 sx={{
                   '& strong': {
-                    color: 'primary'
-                  }
+                    color: 'primary',
+                  },
                 }}
               />
             )}
@@ -236,7 +240,7 @@ const IndexPageTemplate = ({
               bottom={{ base: -1, md: -3, lg: -5 }}
               right={{ base: -8, md: -14, lg: -16 }}
               color="primary"
-              opacity={.8}
+              opacity={0.8}
             />
           </Box>
         </Box>
@@ -253,7 +257,72 @@ const IndexPageTemplate = ({
           />
         </div>
         <div className="mt-8">
-          <CardGrid posts={posts} subheading={'Actualités'} />
+          <VStack
+            spacing={{ base: 6, sm: 8, lg: 10 }}
+            alignItems="initial"
+            display={{ base: 'none', lg: 'flex' }}
+          >
+            <SimpleGrid
+              columns={{ base: 1, sm: 2 }}
+              spacing={{ base: 6, sm: 6, lg: 8 }}
+            >
+              <BigCard
+                image={firstPost.node.frontmatter.featuredimage}
+                heading={
+                  firstPost.node.frontmatter.cardTitle ||
+                  firstPost.node.frontmatter.heading
+                }
+                subtitle={firstPost.node.frontmatter.cardSubtitle}
+                date={firstPost.node.frontmatter.date}
+                to={firstPost.node.fields.slug}
+                size="sm"
+              />
+              <BigCard
+                image={secondPost.node.frontmatter.featuredimage}
+                heading={
+                  secondPost.node.frontmatter.cardTitle ||
+                  secondPost.node.frontmatter.heading
+                }
+                subtitle={secondPost.node.frontmatter.cardSubtitle}
+                date={secondPost.node.frontmatter.date}
+                to={secondPost.node.fields.slug}
+                size="sm"
+              />
+            </SimpleGrid>
+            <CardGrid posts={otherPosts} subheading={'Actualités'} />
+          </VStack>
+          <VStack
+            spacing={{ base: 6, sm: 8, lg: 10 }}
+            alignItems="initial"
+            display={{ base: 'flex', lg: 'none' }}
+          >
+            <BigCard
+              image={firstPost.node.frontmatter.featuredimage}
+              heading={
+                firstPost.node.frontmatter.cardTitle ||
+                firstPost.node.frontmatter.heading
+              }
+              subtitle={firstPost.node.frontmatter.cardSubtitle}
+              date={firstPost.node.frontmatter.date}
+              to={firstPost.node.fields.slug}
+              size="md"
+            />
+            <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={{ base: 6 }}>
+              {posts.slice(1, posts.length).map((p, i) => (
+                <BigCard
+                  key={i}
+                  image={p.node.frontmatter.featuredimage}
+                  heading={
+                    p.node.frontmatter.cardTitle || p.node.frontmatter.heading
+                  }
+                  subtitle={p.node.frontmatter.cardSubtitle}
+                  date={p.node.frontmatter.date}
+                  to={p.node.fields.slug}
+                  size="sm"
+                />
+              ))}
+            </SimpleGrid>
+          </VStack>
         </div>
         <SeeMoreButton
           display={{ base: 'flex', md: 'none' }}

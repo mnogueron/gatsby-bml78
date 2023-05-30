@@ -207,6 +207,9 @@ const GameType = ({ type, youtubeLink, ...rest }) => {
           color: 'red.600',
           textDecoration: 'none',
         }}
+        _focus={{
+          boxShadow: 'none',
+        }}
       >
         <Center
           height={{ base: 12, md: 16 }}

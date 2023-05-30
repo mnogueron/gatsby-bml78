@@ -105,6 +105,13 @@ export default {
           required: false,
         },
         {
+          name: 'youtubeLink',
+          label: 'Lien youtube',
+          widget: 'string',
+          hint: 'Ne mettez que la partie après https://www.youtube.com',
+          required: false,
+        },
+        {
           name: 'hideClub',
           label: 'Cacher nom du club',
           widget: 'boolean',

@@ -5,7 +5,7 @@ import Footer from './Footer';
 import useSiteMetadata from './SiteMetadata';
 import { useScroll } from '../hooks/useScroll';
 import BreakpointTag from './BreakpointTag';
-import {Box} from "@chakra-ui/react";
+import { Box } from '@chakra-ui/react';
 
 const Layout = ({ children, pageContext }) => {
   // set global title and description on global layout, can be overwritten on a per-page basis with MyHelmet
@@ -18,6 +18,10 @@ const Layout = ({ children, pageContext }) => {
         <html lang="en" />
         <title>{title} | BML</title>
         <meta name="description" content={description} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
       </Helmet>
       <div className="flex flex-col h-screen justify-between">
         <Navbar

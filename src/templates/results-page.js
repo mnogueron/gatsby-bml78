@@ -3,6 +3,8 @@ import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import ArticlesPageTemplate from './components/ArticlesPageTemplate';
 import PageLayout from '../components/PageLayout';
+import ICTeamRanking from "../components/ICTeamRanking";
+import {Box} from "@chakra-ui/react";
 
 const ResultsPage = ({ data, pageContext }) => {
   const { frontmatter: fm } = data.markdownRemark;
@@ -12,6 +14,9 @@ const ResultsPage = ({ data, pageContext }) => {
     <>
       <SEO data={data} pageContext={pageContext} />
       <PageLayout>
+        <Box maxW={"7xl"} margin="auto">
+          <ICTeamRanking />
+        </Box>
         <ArticlesPageTemplate
           heading={fm.heading}
           subheading={fm.subheading}

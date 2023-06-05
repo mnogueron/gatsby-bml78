@@ -52,7 +52,7 @@ const H6 = (props) => <Heading as="h6" size="xs" mt={4} mb={2} {...props} />;
 
 const P = (props) => (
   <Text
-    my={6}
+    my={{base: 2, md: 6}}
     as={'div'}
     fontSize={{ base: 'md', md: 'lg' }}
     lineHeight="tall"
@@ -61,7 +61,7 @@ const P = (props) => (
 );
 const Ul = (props) => (
   <UnorderedList
-    mb={8}
+    mb={{ base: 4, md: 8}}
     paddingStart={{ base: 3, md: 8 }}
     sx={{
       '& li::marker': {

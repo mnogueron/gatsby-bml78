@@ -15,23 +15,23 @@ Créé en 1993, le club de badminton de Maisons-Laffitte propose des sections ad
 
 ### Section Jeunes
 
-La section **Jeunes** est destinée aux enfants, répartis en fonction de leur âge : de 5 ans à 10 ans, ils découvrent le badminton en douceur, à raison d'1 à 2 séances par semaine ; les enfants de 9 à 18 ans peuvent continuer à jouer pour le plaisir 1 à 2 fois par semaine, ou découvrir la compétition avec 1 à 4 entraînements* par semaine, et participer à des tournois.
+La section **Jeunes** est destinée aux enfants, répartis en fonction de leur âge : de 5 ans à 10 ans, ils découvrent le badminton en douceur, à raison d'1 à 2 séances par semaine ; les enfants de 9 à 18 ans peuvent continuer à jouer pour le plaisir 1 à 2 fois par semaine, ou découvrir la compétition avec 1 à 3 entraînements* par semaine, et participer à des tournois.
 
-| Catégorie    | Année de naissance - âge (2022-2023) | Public      | Formules entraînement(s)/semaine |
+| Catégorie    | Année de naissance - âge (2023-2024) | Public      | Formules entraînement(s)/semaine |
 | ------------ | ------------------------------------ | ----------- | -------------------------------- |
-| **Minibad**  | 2015 à 2018 - de 5 à 8 ans           | Loisir      | 1 ou 2                           |
-| **Poussin**  | 2013 et 2014 - 9 ou 10 ans           | Loisir      | 1 ou 2                           |
-|              |                                      | Compétiteur | 1, 2, 3 ou 4                     |
-| **Benjamin** | 2011 et 2012  - 11 ou 12 ans         | Loisir      | 1 ou 2                           |
-|              |                                      | Compétiteur | 1, 2, 3 ou 4                     |
-| **Minime**   | 2009 et 2010 - 13 ou 14 ans          | Loisir      | 1 ou 2                           |
-|              |                                      | Compétiteur | 1, 2, 3 ou 4                     |
-| **Cadet**    | 2007 et 2008 - 15 ou 16 ans          | Loisir      | 1 ou 2                           |
-|              |                                      | Compétiteur | 1, 2, 3 ou 4                     |
-| **Junior**   | 2005 et 2006 - 17 ou 18 ans          | Loisir      | 1 ou 2                           |
-|              |                                      | Compétiteur | 1, 2, 3 ou 4                     |
+| **Minibad**  | 2016 à 2017 - de 5 à 8 ans           | Loisir      | 1 ou 2                           |
+| **Poussin**  | 2014 et 2015 - 9 ou 10 ans           | Loisir      | 1 ou 2                           |
+|              |                                      | Compétiteur | 1, 2 ou 3                        |
+| **Benjamin** | 2012 et 2013  - 11 ou 12 ans         | Loisir      | 1 ou 2                           |
+|              |                                      | Compétiteur | 1, 2 ou 3                        |
+| **Minime**   | 2010 et 2011 - 13 ou 14 ans          | Loisir      | 1 ou 2                           |
+|              |                                      | Compétiteur | 1, 2 ou 3                        |
+| **Cadet**    | 2008 et 2009 - 15 ou 16 ans          | Loisir      | 1 ou 2                           |
+|              |                                      | Compétiteur | 1, 2 ou 3                        |
+| **Junior**   | 2006 et 2007 - 17 ou 18 ans          | Loisir      | 1 ou 2                           |
+|              |                                      | Compétiteur | 1, 2 ou 3                        |
 
-![Formules d'entraÏnement jeunes et créneaux](/assets/section-jeunes-formules.png "Formules d'entraÏnement jeunes et créneaux")
+![Formules d'entraÏnement jeunes et créneaux 2023-2024](/assets/creneaux-jeunes-2023-2024.png "Formules d'entraÏnement jeunes et créneaux 2023-2024")
 
 ### Adultes "Jeu libre"
 
@@ -41,7 +41,7 @@ Pour les joueuses et joueurs qui souhaiteraient débuter ou se perfectionner en 
 
 Enfin, de multiples événements sont organisés tout au long de la saison. N'hésitez pas à prendre contact avec nous si vous souhaitez faire une séance d'essai, gratuite et sans engagement !
 
-![Formules adultes loisirs et créneaux](/assets/section-loisirs-formules.png "Formules adultes loisirs et créneaux")
+![Formules adultes loisirs et créneaux 2023-2024](/assets/creneaux-loisirs-2023-2024.png "Formules adultes loisirs et créneaux 2023-2024")
 
 ### Adultes "Compétition"
 
@@ -49,4 +49,4 @@ La section **Adultes "compétition"** rassemble les joueurs classés qui désire
 
 Contacter le responsable de la section pour plus d'infos.
 
-![Formules adultes compétiteurs et créneaux](/assets/section-compet-formules.png "Formules adultes compétiteurs et créneaux")
+![Formules adultes compétiteurs et créneaux 2023-2024](/assets/creneaux-compet-2023-2024.png "Formules adultes compétiteurs et créneaux 2023-2024")

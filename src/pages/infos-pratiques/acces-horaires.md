@@ -4,18 +4,20 @@ title: Accès / Horaires
 heading: Gymnases / Horaires
 subheading: Où et quand jouer ?
 ---
-Les séances de jeu libre et les entraînements se font sur les gymnases de Sartrouville et de Maisons-Laffitte suivant les horaires suivants pour la saison 2022/2023 :
+Les séances de jeu libre et les entraînements se font sur les gymnases de Sartrouville et de Maisons-Laffitte suivant les horaires suivants pour la saison 2023-2024 :
 
-![horaires](/assets/créneaux-2022-2023.jpg)
+![Créneaux 2023-2024](/assets/creneaux-2023-2024.png "Créneaux 2023-2024")
 
 ### Sartrouville - Gymnase Jules Verne
 
-* Lundi 19h - 20h30 : Jeunes Compétiteurs
-* Lundi 20h30 - 22h30 : Entrainements Adultes Compétiteurs (D à N)
-* Mercredi 17h - 19h : Jeunes Compétiteurs (2011 à 2014)
-* Mercredi 19h - 20h30h : Jeunes Compétiteurs (2005 à 2010)
-* Mercredi 20h30 - 22h30 : Entrainements Adultes Compétiteurs (formule 2 entraînements - D à N)
-* Samedi 14h - 15h30 : Jeunes (2005 à 2010)
+* Lundi 19h - 20h45 semaine paire: Entrainement Adultes Compétiteurs (D7 à N)
+* Lundi 20h45 - 22h30 semaine paire : Entrainement Adultes Compétiteurs (P à D)
+* Lundi 19h - 20h45 semaine impaire: Entrainement Adultes Compétiteurs (P à D)
+* Lundi 20h45 - 22h30 semaine impaire : Entrainement Adultes Compétiteurs (D7 à N)
+* Mercredi 17h - 19h : Jeunes Compétiteurs (2012 à 2015)
+* Mercredi 19h - 20h30h : Jeunes Compétiteurs (2006 à 2011)
+* Mercredi 20h30 - 22h30 : Entrainement Adultes Compétiteurs (formule 2 entraînements - R à N)
+* Samedi 14h - 15h30 : Jeunes (2006 à 2011)
 * Samedi 15h30 - 19h : Jeu libre tous adhérents
 * Dimanche 10h - 13h : Jeu libre tous adhérents
 
@@ -23,12 +25,13 @@ Les séances de jeu libre et les entraînements se font sur les gymnases de Sart
 
 ### Maisons-Laffitte - Centre Sportif et Culturel (CSC)
 
-* Mardi 17h - 18h30 : Jeunes (2011 à 2018)
-* Mardi 18h30 - 20h30 : Adultes Jeu libre
-* Jeudi 18h - 19h15 : Jeunes (2011 à 2018)
-* Jeudi 19h15 - 20h30 : Jeunes (2005 à 2010)
+* Mardi 17h - 18h30 : Jeunes (2012 à 2019)
+* Mardi 18h30 - 20h30 : Adultes Jeu libre (5 terrains)
+* Mardi 18h30 - 20h30 : Individuel Jeunes (2 terrains)
+* Jeudi 18h - 19h15 : Jeunes (2012 à 2019)
+* Jeudi 19h15 - 20h30 : Jeunes (2006 à 2011)
 * Jeudi 20h30 - 23h : Adultes Jeu libre (4 terrains)
-* Jeudi 20h30 - 23h : Entrainements Adultes Compétiteurs (formule 3 entraînements, 3 terrains)
+* Jeudi 20h30 - 23h : Entrainements Adultes Compétiteurs (formule 3 entraînements, 3 terrains - R à N)
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8463.3859598707!2d2.142463744193864!3d48.95342727625679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e661910f6966b3%3A0xa5f2e3cd7d822091!2sCentre%20Sportif%20et%20Culturel%20de%20Maisons-Laffitte!5e0!3m2!1sen!2sus!4v1656368244040!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;margin-bottom:2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 

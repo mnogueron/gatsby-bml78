@@ -13,7 +13,7 @@ banner:
   text: Les premières informations concernant les inscriptions pour la saison
     2023-2024 sont désormais disponibles sur le site !
   level: info
-  hide: false
+  hide: true
 ---
 Le **BML** vous accueille à **Maisons-Laffitte** et **Sartrouville** (78) pour découvrir la
 pratique du **badminton**, approfondir ses connaissances ou bien se lancer dans la

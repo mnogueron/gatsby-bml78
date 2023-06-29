@@ -10,13 +10,10 @@ subheading: |-
   Le badminton pour tous les niveaux, 
   tous les âges, toutes les envies à Maisons-Laffitte !
 banner:
-  text: >-
-    Le jeudi 9 mars aura lieu un intraclub au CSC. Tous les joueurs débutants,
-    confirmés et compétiteurs y sont invités. 
-
-    N'oubliez pas de ramener de quoi grignoter et boire ! 🏸
+  text: Les premières informations concernant les inscriptions pour la saison
+    2023-2024 sont désormais disponibles sur le site !
   level: info
-  hide: true
+  hide: false
 ---
 Le **BML** vous accueille à **Maisons-Laffitte** et **Sartrouville** (78) pour découvrir la
 pratique du **badminton**, approfondir ses connaissances ou bien se lancer dans la

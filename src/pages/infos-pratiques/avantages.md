@@ -35,15 +35,17 @@ Leclerc Houilles nous épaulera dans l’organisation de l’intégralité de no
 \
 L’occasion pour nos réceptions de proposer des produits du talent de nos régions grâce au soutien de Leclerc.
 
-### Bad Addict
+### Play Sport France
 
-![Bad Addict](/assets/bad-addict.png "Bad Addict")
+![Play Sport France](https://playsportfrance.fr/cdn/shop/files/Play_SPORT_png_90x.png?v=1645619470 "Play Sport France")
 
-Depuis la saison 2020-2021, l’équipementier célèbre de badminton dans l’ouest parisien figure parmi nos partenaires !
+Depuis Août 2023, l’équipementier célèbre de badminton parisien figure parmi les partenaires du Badminton Maisons-Laffitte !
 
-Besoin d’un conseil avisé sur votre achat de matériel : Chaussures, Raquette, Textile -> Anh-Tai se fera un plaisir de vous aiguiller dans ces achats cruciaux dans la pratique du badminton !
+Besoin d’un conseil avisé sur votre achat de matériel : Chaussures, Raquette, Textile -> Stephan, Florent et Christian ainsi que leurs équipes se feront un plaisir de vous aiguiller avec passion et professionnalisme dans ces achats cruciaux pour la pratique du badminton !
 
-Vous pouvez retrouver sa [boutique en ligne](target_blank:http://badaddict.fr) ; nos adhérents bénéficient d’une **réduction de 10% (hors promotion)** sur leurs achats !
+Vous pouvez les contacter par téléphone au +33(0)1 53 82 18 34 / ainsi que par mail : [hello@playsportfrance.fr](mailto:hello@playsportfrance.fr)
+
+Vous pouvez également retrouver [la boutique PLAY SPORT en ligne](target_blank:https://playsportfrance.fr/) : les adhérents du BML bénéficient d’une **réduction de 20 à 30% (hors promotion)** sur leurs achats en ligne (le code est à demander au *[responsable compétition du BML](mailto:competition.badml@gmail.com)*) !
 
 ### Ville de Maisons-Laffitte
 

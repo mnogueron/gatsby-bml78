@@ -45,7 +45,7 @@ Besoin d’un conseil avisé sur votre achat de matériel : Chaussures, Raquett
 
 Vous pouvez les contacter par téléphone au +33(0)1 53 82 18 34 / ainsi que par mail : [hello@playsportfrance.fr](mailto:hello@playsportfrance.fr)
 
-Vous pouvez également retrouver [la boutique PLAY SPORT en ligne](target_blank:https://playsportfrance.fr/) : les adhérents du BML bénéficient d’une **réduction de 20% sur le PVC (hors promotion)** sur leurs achats en ligne (le code est à demander au *[responsable compétition du BML](mailto:competition.badml@gmail.com)*) !
+Vous pouvez également retrouver [la boutique PLAY SPORT en ligne](target_blank:https://playsportfrance.fr/) : les adhérents du BML bénéficient d’une **réduction de 20% sur le PVC (hors promotion)** lors de leurs achats en ligne (le code est à demander au *[responsable compétition du BML](mailto:competition.badml@gmail.com)*) !
 
 ### Ville de Maisons-Laffitte
 

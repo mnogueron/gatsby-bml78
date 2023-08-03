@@ -26,11 +26,6 @@ En attendant, vous trouverez en bas de cette page les tarifs pour la saison 2023
 #### Pour une inscription en Jeunes
 
 * lire la [feuille d'information Jeune](/assets/information_jeune.pdf)
-* remplir le [formulaire de Licence Mineur](/assets/formulaire_licence_mineur_bml.pdf) (la page 1 suffit)
-
-  * Club : **Badminton Maisons-Laffitte**
-  * Ligue : **Île de France**
-  * Département : **Yvelines (78)**
 * remplir le [questionnaire de Santé Mineur](/assets/ffbad_-_mineurs_questionnaire_sante.pdf)
 
   * Pour tous les jeunes adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2021-2022**. À remplir et à signer (la page 2 suffit)
@@ -41,11 +36,6 @@ En attendant, vous trouverez en bas de cette page les tarifs pour la saison 2023
 
 #### Pour une inscription en Adultes - Jeu Libre ou Entraînement débutant/confirmé
 
-* remplir le [formulaire de Licence](/assets/formulaire_licence_adultes_bml.pdf) (la page 1 suffit)
-
-  * Club : **Badminton Maisons-Laffitte**
-  * Ligue : **Île de France**
-  * Département : **Yvelines (78)**
 * fournir un [Certificat médical](/assets/2023_certificat_ffbad_medical.pdf) **OU** remplir le [questionnaire de Santé](/assets/ffbad_-_adultes_questionnaire_sante_1.pdf)
 
   * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2021-2022**. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
@@ -54,11 +44,6 @@ En attendant, vous trouverez en bas de cette page les tarifs pour la saison 2023
 #### Pour une inscription en Adultes - Compétition
 
 * envoyer un email au Responsable de la section : [competition.badml@gmail.com](mailto:competition.badml@gmail.com)
-* remplir le [formulaire de Licence](/assets/formulaire_licence_adultes_bml.pdf) (la page 1 suffit)
-
-  * Club : **Badminton Maisons-Laffitte**
-  * Ligue : **Île de France**
-  * Département : **Yvelines (78)**
 * fournir un [Certificat médical](/assets/2023_certificat_ffbad_medical.pdf) **OU** remplir le [questionnaire de Santé](/assets/ffbad_-_adultes_questionnaire_sante_1.pdf)
 
   * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2021-2022**. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**

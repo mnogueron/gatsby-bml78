@@ -11,7 +11,7 @@ seo:
 
 Pour cette nouvelle saison, l'inscription se fait entièrement en ligne via la **[plateforme d'inscription de la Fédération Française de Badminton](target_blank:https://adherer.myffbad.fr/bml78)**.
 
-En attendant, vous trouverez en bas de cette page les tarifs pour la saison 2023-2024, le détail des différentes sections pour choisir celle qui vous convient le plus sur la page [Nos sections](https://badml.com/infos-pratiques/sections) ainsi que les créneaux et gymnases sur la page [Accès & horaires.](https://badml.com/infos-pratiques/acces-horaires)
+Vous trouverez sur cette page les documents obligatoires à joindre à votre inscription, les tarifs pour la saison 2023-2024. Le détail des différentes sections pour choisir celle qui vous convient le plus est disponible sur la page [Nos sections](https://badml.com/infos-pratiques/sections) ainsi que les créneaux et gymnases sur la page [Accès & horaires.](https://badml.com/infos-pratiques/acces-horaires)
 
 ### Comment s'inscrire au BML ?
 
@@ -19,7 +19,7 @@ En attendant, vous trouverez en bas de cette page les tarifs pour la saison 2023
 
 ![Aperçu flyer de présentation 2023-2024](/assets/flyer-2023-2024-preview.png "Aperçu flyer de présentation 2023-2024")
 
-**Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre inscription via la plateforme en ligne.**
+**Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre inscription via [la plateforme en ligne](target_blank:https://adherer.myffbad.fr/bml78).**
 
 ***Merci de noter que seuls les dossiers complets seront acceptés.***
 

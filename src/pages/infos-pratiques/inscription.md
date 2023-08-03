@@ -17,7 +17,7 @@ En attendant, vous trouverez en bas de cette page les tarifs pour la saison 2023
 
 **Mode d'emploi et infos essentielles en un clin d'oeil sur notre flyer de présentation.**
 
-![Flyer de présentation 2023-2024](/assets/flyer-2023-2024-preview.png "Flyer de présentation 2023-2024")
+![Aperçu flyer de présentation 2023-2024aper](/assets/flyer-2023-2024-preview.png "Aperçu flyer de présentation 2023-2024")
 
 **Pour vous inscrire, vous trouverez ci-dessous la liste des documents à télécharger et à remplir pour chacune des sections. Vous pourrez ensuite nous les faire parvenir lors de votre inscription via la plateforme en ligne.**
 

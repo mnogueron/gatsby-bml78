@@ -12,7 +12,7 @@ import {
   Icon,
   HStack,
 } from '@chakra-ui/react';
-import { FaInstagram, FaFacebookSquare, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaFacebookSquare, FaYoutube, FaDiscord } from 'react-icons/fa';
 import BigLogo from './BigLogo';
 
 const FooterLink = ({ to, children, ...rest }) => (
@@ -214,6 +214,14 @@ const Footer = () => {
               color="white"
             >
               <Icon as={FaYoutube} boxSize={8} />
+            </Link>
+
+            <Link
+              href="https://discord.gg/CsJnzHJUj7"
+              isExternal={true}
+              color="white"
+            >
+              <Icon as={FaDiscord} boxSize={8} />
             </Link>
           </HStack>
           <Text

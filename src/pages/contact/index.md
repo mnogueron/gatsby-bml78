@@ -18,3 +18,5 @@ Différentes adresses sont disponibles en fonction du sujet de votre demande. Un
 * Section jeunes : **[coach.badml@gmail.com](mailto:coach.badml@gmail.com)**
 * Section adultes "Jeu libre" : **[loisirs.badml@gmail.com](mailto:loisirs.badml@gmail.com)**
 * Section adultes "Compétition" : **[competition.badml@gmail.com](mailto:competition.badml@gmail.com)**
+
+Retrouvez toutes les infos et les dernières communications du club sur notre serveur [Discord](target_blank:https://discord.gg/CsJnzHJUj7).

@@ -217,7 +217,7 @@ const Footer = () => {
             </Link>
 
             <Link
-              href="https://discord.gg/CsJnzHJUj7"
+              href="https://discord.gg/kVQygGKvH4"
               isExternal={true}
               color="white"
             >

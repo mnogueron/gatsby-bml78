@@ -19,7 +19,12 @@ Vous trouverez sur cette page les documents obligatoires à joindre à votre ins
 
 ![Aperçu flyer de présentation 2023-2024](/assets/flyer-2023-2024-preview.png "Aperçu flyer de présentation 2023-2024")
 
-**Pour vous inscrire, vous trouverez ci-dessous la liste des documents dont vous aurez besoin en fonction de la section que vous souhaitez rejoindre. Vous pourrez nous les faire parvenir directement via [la plateforme en ligne](target_blank:https://adherer.myffbad.fr/bml78).**
+Pour vous inscrire, vous trouverez ci-dessous la liste des documents dont vous aurez besoin en fonction de la section que vous souhaitez rejoindre. Vous pourrez nous les faire parvenir directement via [la plateforme en ligne](target_blank:https://adherer.myffbad.fr/bml78).
+
+**Pour un renouvellement de licence, le formulaire en ligne sera automatiquement pré-rempli si vous vous connectez via votre Espace Licencié MyFFBad. Pour cela, vous aurez besoin de votre numéro de licence qui vous a été envoyé par email par la FFBad après votre dernière inscription.** \
+**Si vous ne le retrouvez pas, vous pouvez l'obtenir [en recherchant un joueur sur le site MyFFBad](target_blank:https://www.myffbad.fr/recherche/joueur).**
+
+
 
 ***Merci de noter que seuls les dossiers complets seront acceptés.***
 

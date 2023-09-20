@@ -12,7 +12,7 @@ featuredimage:
 ---
 Notre partenaire **PlaySport** vous donne rendez-vous ce **jeudi 21 septembre au CSC** (Maisons-Laffitte). L'équipe PlaySport sera là pour vous aider et vous conseiller et vous pourrez profiter de cette occasion pour faire vos achats badminton à **prix préférentiels**.
 
-Le stand sera **ouvert à tous les adhérents** de **18h30 à 22h30** alors venez nombreux !
+Le stand sera **ouvert à tous les adhérents** de **18h30 à 22h00** alors venez nombreux !
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
 

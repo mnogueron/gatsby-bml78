@@ -34,14 +34,14 @@ const writeMatches = (
   const content = `---
 templateKey: result-page
 title: interclub-equipe-${teamNumber}
-cardTitle: Saison 22-23 - Équipe ${teamNumber} - ${hostClub.name} vs ${
+cardTitle: Saison 23-24 - Équipe ${teamNumber} - ${hostClub.name} vs ${
     guestClub.name
   } 
 heading: |-
-  Saison 22-23 - Équipe ${teamNumber}
+  Saison 23-24 - Équipe ${teamNumber}
   ${hostClub.name} vs ${guestClub.name}
 date: ${date}
-category: equipe-${teamNumber}-s22-23
+category: equipe-${teamNumber}-s23-24
 featuredimage:
   image: /assets/shuttle.jpg
 ---

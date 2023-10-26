@@ -275,12 +275,14 @@ const extractICUrls = async (teamIds) => {
 
   const promises = teamIds.map(async (teamId) => {
     const page = await browser.newPage();
+    page.on('console', (msg) => console.pageLog(msg.text()));
+    page.on('pageerror', (error) => console.pageError(error.message));
 
-    page.on('console', (message) =>
+    /*page.on('console', (message) =>
       console.log(
         `${message.type().substr(0, 3).toUpperCase()} ${message.text()}`
       )
-    );
+    );*/
 
     console.log('Checking team', teamId);
     await page.goto(`https://icbad.ffbad.org/equipe/${teamId}`);
@@ -288,17 +290,33 @@ const extractICUrls = async (teamIds) => {
     console.log('after timeout', teamId);
 
     const data = await page.evaluate(() => {
+      const CURRENT_YEAR = '2023'
+      const NEXT_YEAR = '2024'
+      const DATE_REGEX = /\n\t*Le (\d{2})\/(\d{2})\t*/i;
+
       const urls = [
         ...document
           .getElementsByTagName('tbody')[1]
-          .querySelectorAll('.uk-link-reset'),
+          .querySelectorAll('.row-link'),
       ].map((a) => a.href);
       console.log(urls);
       const dates = [
-        ...document.getElementsByTagName('tbody')[1].querySelectorAll('tr'),
-      ]
-        .splice(1)
-        .map((tr) => tr.children[1].innerHTML.replace(/\n|\t/g, ''));
+        ...document.getElementsByTagName('tbody')[1]
+          .querySelectorAll('.row-link'),
+      ].map(a => {
+        const unparsedDate = a.innerHTML;
+        let parsedDate = unparsedDate;
+        if (DATE_REGEX.test(unparsedDate)) {
+          const [_, day, month] = unparsedDate.match(DATE_REGEX);
+          if (Number(month) < 9) {
+            return `${day.padStart(2, '0')}/${month.padStart(2, '0')}/${NEXT_YEAR}`
+          }
+          return `${day.padStart(2, '0')}/${month.padStart(2, '0')}/${CURRENT_YEAR}`
+        }
+
+        console.log(unparsedDate);
+        return unparsedDate;
+      });
       console.log(dates);
       return urls.map((url, i) => {
         return { url, date: dates[i] };

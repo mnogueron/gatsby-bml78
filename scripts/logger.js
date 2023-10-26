@@ -12,6 +12,14 @@ const getPrefix = () => {
   return `[${hours}:${minutes}:${secondes}]`
 }
 
+console.pageLog = (...args) => {
+  log.apply(console, [chalk.cyan(getPrefix()), chalk.cyanBright('[PAGE]'), ...args]);
+}
+
+console.pageError = (...args) => {
+  error.apply(console, [chalk.bold.red(getPrefix()), chalk.cyanBright('[PAGE]'), ...args]);
+}
+
 console.log = (...args) => {
   log.apply(console, [chalk.cyan(getPrefix()), ...args]);
 }

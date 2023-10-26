@@ -1,0 +1,16 @@
+---
+templateKey: result-page
+title: interclub-equipe-2
+cardTitle: Saison 23-24 - Équipe 2 - ASPS vs BML 
+heading: |-
+  Saison 23-24 - Équipe 2
+  ASPS vs BML
+date: 2023-10-08T08:00:00.000Z
+category: equipe-2-s23-24
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"ASPS","longName":"Ass. Sport. Plessis-savigny","result":5},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":3}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Giraud","firstname":"Erwan","club":"ASPS","ranking":"N3"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"}],"score":{"set":[{"scoreA":12,"scoreB":21},{"scoreA":6,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Vuillemin","firstname":"Denis","club":"ASPS","ranking":"R4"}],"teamB":[{"lastname":"Simon","firstname":"Maxime","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":13},{"scoreA":21,"scoreB":9}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Lenoir","firstname":"Laurine","club":"ASPS","ranking":"R5"}],"teamB":[{"lastname":"Hadjal","firstname":"Marine","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":11,"scoreB":21},{"scoreA":4,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Courty","firstname":"Lea","club":"ASPS","ranking":"D7"}],"teamB":[{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":12,"scoreB":21},{"scoreA":11,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Phe","firstname":"Christophe","club":"ASPS","ranking":"R4"},{"lastname":"Vuillemin","firstname":"Denis","club":"ASPS","ranking":"R4"}],"teamB":[{"lastname":"Poudens","firstname":"William","club":"BML","ranking":"R4"},{"lastname":"Simon","firstname":"Maxime","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":21,"scoreB":15},{"scoreA":21,"scoreB":19}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Cuny","firstname":"Morgane","club":"ASPS","ranking":"R4"},{"lastname":"Lenoir","firstname":"Laurine","club":"ASPS","ranking":"R4"}],"teamB":[{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"N3"},{"lastname":"Slowakiewicz","firstname":"Karolina","club":"BML","ranking":"R5"}],"score":{"set":[{"scoreA":21,"scoreB":14},{"scoreA":8,"scoreB":21},{"scoreA":21,"scoreB":18}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"Edilson Daclinat","firstname":"Morgan","club":"ASPS","ranking":"N3"},{"lastname":"Cuny","firstname":"Morgane","club":"ASPS","ranking":"N3"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"},{"lastname":"Hadjal","firstname":"Marine","club":"BML","ranking":"N3"}],"score":{"set":[{"scoreA":18,"scoreB":21},{"scoreA":21,"scoreB":19},{"scoreA":21,"scoreB":15}]},"type":"MX","hideClub":true},{"teamA":[{"lastname":"Phe","firstname":"Christophe","club":"ASPS","ranking":"R5"},{"lastname":"Devove","firstname":"Sarah","club":"ASPS","ranking":"R6"}],"teamB":[{"lastname":"Poudens","firstname":"William","club":"BML","ranking":"R6"},{"lastname":"Slowakiewicz","firstname":"Karolina","club":"BML","ranking":"R5"}],"score":{"set":[{"scoreA":21,"scoreB":19},{"scoreA":21,"scoreB":13}]},"type":"MX","hideClub":true}]}</scoreboard>

@@ -1,0 +1,16 @@
+---
+templateKey: result-page
+title: interclub-equipe-2
+cardTitle: Saison 23-24 - Équipe 2 - BCN vs BML 
+heading: |-
+  Saison 23-24 - Équipe 2
+  BCN vs BML
+date: 2023-10-08T11:30:00.000Z
+category: equipe-2-s23-24
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"BCN","longName":"Badminton Club De Noisiel","result":3},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":5}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Andres","firstname":"Hervé","club":"BCN","ranking":"N3"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"}],"score":{"set":[{"scoreA":13,"scoreB":21},{"scoreA":18,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Onephandara","firstname":"Johnny","club":"BCN","ranking":"R6"}],"teamB":[{"lastname":"Gautier","firstname":"Marc","club":"BML","ranking":"N3"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":12,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Gaillot","firstname":"Marjory","club":"BCN","ranking":"R4"}],"teamB":[{"lastname":"Hadjal","firstname":"Marine","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":17,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Belliard","firstname":"Karen","club":"BCN","ranking":"R4"}],"teamB":[{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":21,"scoreB":11},{"scoreA":21,"scoreB":10}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Boungnaseng","firstname":"Kameron","club":"BCN","ranking":"D8"},{"lastname":"Onephandara","firstname":"Johnny","club":"BCN","ranking":"R6"}],"teamB":[{"lastname":"Poudens","firstname":"William","club":"BML","ranking":"R4"},{"lastname":"Simon","firstname":"Maxime","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":9,"scoreB":21},{"scoreA":11,"scoreB":21}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Keopaseuth","firstname":"Marina","club":"BCN","ranking":"R4"},{"lastname":"Messavant","firstname":"Mélissa","club":"BCN","ranking":"R4"}],"teamB":[{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"N3"},{"lastname":"Slowakiewicz","firstname":"Karolina","club":"BML","ranking":"R5"}],"score":{"set":[{"scoreA":21,"scoreB":18},{"scoreA":21,"scoreB":15}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"Duarte Pereira","firstname":"Thomas","club":"BCN","ranking":"R5"},{"lastname":"Keopaseuth","firstname":"Marina","club":"BCN","ranking":"R4"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"},{"lastname":"Hadjal","firstname":"Marine","club":"BML","ranking":"N3"}],"score":{"set":[{"scoreA":9,"scoreB":21},{"scoreA":21,"scoreB":16},{"scoreA":13,"scoreB":21}]},"type":"MX","hideClub":true},{"teamA":[{"lastname":"Andres","firstname":"Hervé","club":"BCN","ranking":"R6"},{"lastname":"Messavant","firstname":"Mélissa","club":"BCN","ranking":"R5"}],"teamB":[{"lastname":"Poudens","firstname":"William","club":"BML","ranking":"R6"},{"lastname":"Slowakiewicz","firstname":"Karolina","club":"BML","ranking":"R5"}],"score":{"set":[{"scoreA":21,"scoreB":12},{"scoreA":21,"scoreB":14}]},"type":"MX","hideClub":true}]}</scoreboard>

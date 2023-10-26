@@ -2,11 +2,13 @@
     "28203": [
         {
             "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348650",
-            "date": "09/09/2023"
+            "date": "09/09/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348652",
-            "date": "07/10/2023"
+            "date": "07/10/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348657",
@@ -44,11 +46,13 @@
     "30694": [
         {
             "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392402",
-            "date": "08/10/2023"
+            "date": "08/10/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392403",
-            "date": "08/10/2023"
+            "date": "08/10/2023",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392407",

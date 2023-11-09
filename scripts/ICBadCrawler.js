@@ -93,11 +93,8 @@ const extractICData = async (url, dryRun) => {
           location.pathname.match(/competition\/(\d*)\//)[1];
         if (isBML) {
           switch (competitionId) {
-            case '2201895':
-              teamNumber = '6';
-              break;
-            case '2201888':
-              teamNumber = '4';
+            case '2302516':
+              teamNumber = '7';
               break;
             default:
               throw new Error('No team linked to this competition ID');

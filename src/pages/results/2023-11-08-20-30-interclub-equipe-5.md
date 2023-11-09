@@ -1,15 +1,16 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-cardTitle: Saison 23-24 - Équipe 5 - ASMR vs BML 
+cardTitle: Saison 23-24 - Équipe 5 - ASMR vs BML
 heading: |-
   Saison 23-24 - Équipe 5
   ASMR vs BML
 date: 2023-11-08T19:30:00.000Z
 category: equipe-5-s23-24
 featuredimage:
-  image: /assets/shuttle.jpg
+  image: /assets/resultats_interclubs_d3-j1.png
 ---
+![](/assets/resultats_interclubs_d3-j1.png "BML5 - J1")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"ASMR","longName":"Ass.sport.du Mesnil Le Roi","result":1},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":6}}}</teamscoreboard>
 

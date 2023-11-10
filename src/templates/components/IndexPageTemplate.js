@@ -1,39 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import {
-  Button,
-  Container,
-  Box,
-  Heading,
-  Text,
-  Icon,
-  Flex,
-  SimpleGrid,
-  VStack,
-} from '@chakra-ui/react';
-import { MdChevronRight } from 'react-icons/md';
-import { CardGrid } from '../../components/Sections';
+import { Button, Container, Box, Heading, Text, Flex } from '@chakra-ui/react';
 import Image from '../../components/Image';
 import Banner from '../../components/Banner';
-import Content from '../../components/Content';
-import { RiDoubleQuotesR, RiDoubleQuotesL } from 'react-icons/ri';
-import BigCard from '../../components/BigCard';
-
-const SeeMoreButton = ({ to, ...rest }) => {
-  return (
-    <Button
-      variant="ghost"
-      colorScheme="red"
-      color="text.main"
-      as={Link}
-      to={to}
-      rightIcon={<Icon as={MdChevronRight} boxSize={8} />}
-      {...rest}
-    >
-      Voir plus
-    </Button>
-  );
-};
+import ClubQuoteSection from '../../containers/home/ClubQuoteSection';
+import LastNewsSection from '../../containers/home/LastNewsSection';
+import LastResultsSection from "../../containers/home/LastResultsSection";
 
 const IndexPageTemplate = ({
   heading,
@@ -44,9 +16,7 @@ const IndexPageTemplate = ({
   clubSectionContent,
   posts = [],
   results = [],
-  about,
 }) => {
-  const [firstPost, secondPost, ...otherPosts] = posts;
   return (
     <>
       {/* Header */}
@@ -170,205 +140,9 @@ const IndexPageTemplate = ({
         )}
       </Box>
 
-      {/*<div className="relative bg-green-700 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pt-24 pb-12 bg-green-700 sm:pt-28 sm:pb-14 md:pt-32 md:pb-16 lg:w-1/2 lg:pt-44 lg:pb-24 xl:pt-48 xl:pb-32">
-            <svg
-              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-green-700 transform translate-x-1/2"
-              fill="currentColor"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <polygon points="50,0 100,0 50,100 0,100" />
-            </svg>
-
-            <div className="relative z-20 mx-auto lg:max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="text-center max-w-md mx-auto lg:max-w-lg lg:mx-0 lg:text-left">
-                <h1 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-                  {heading}
-                </h1>
-                <p className="mt-2 text-green-100 sm:mt-4 lg:mt-6 lg:text-xl">
-                  {subheading}
-                </p>
-                <Button colorScheme='teal' size="lg" as={Link} to="/contact">Contact us</Button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <Image
-            className="h-full w-56 object-cover sm:h-72 md:h-92 lg:w-full lg:h-full"
-            image={image}
-            alt=""
-          />
-        </div>
-      </div>*/}
-
-      <Container maxW="7xl" my={{ base: 8, md: 12, lg: 16 }} as="section">
-        <Heading as="h2" size="xl" mb={{ base: 4, lg: 8 }}>
-          Le club
-        </Heading>
-        <Box px={{ base: 6, md: 16 }} py={{ base: 0, md: 2, lg: 4 }}>
-          <Box maxW="4xl" margin="auto" position="relative">
-            <Icon
-              as={RiDoubleQuotesL}
-              boxSize={{ base: 8, md: 14, lg: 16 }}
-              position="absolute"
-              top={{ base: -1, md: -3, lg: -5 }}
-              left={{ base: -8, md: -14, lg: -16 }}
-              color="primary"
-              opacity={0.8}
-            />
-            {clubSectionContent && (
-              <Content
-                html={clubSectionContent}
-                p={'0 !important'}
-                textAlign="justify"
-                sx={{
-                  '& strong': {
-                    color: 'primary',
-                  },
-                }}
-              />
-            )}
-            <Icon
-              as={RiDoubleQuotesR}
-              boxSize={{ base: 8, md: 14, lg: 16 }}
-              position="absolute"
-              bottom={{ base: -1, md: -3, lg: -5 }}
-              right={{ base: -8, md: -14, lg: -16 }}
-              color="primary"
-              opacity={0.8}
-            />
-          </Box>
-        </Box>
-      </Container>
-
-      <Container maxW="7xl" my={{ base: 8, md: 12, lg: 16 }} as="section">
-        <div className="flex justify-between items-baseline">
-          <Heading as="h2" size="xl">
-            Les dernières actus du club
-          </Heading>
-          <SeeMoreButton
-            display={{ base: 'none', md: 'flex' }}
-            to="/articles"
-          />
-        </div>
-        <div className="mt-8">
-          <VStack
-            spacing={{ base: 6, sm: 8, lg: 10 }}
-            alignItems="initial"
-            display={{ base: 'none', lg: 'flex' }}
-          >
-            <SimpleGrid
-              columns={{ base: 1, sm: 2 }}
-              spacing={{ base: 6, sm: 6, lg: 8 }}
-            >
-              <BigCard
-                image={firstPost.node.frontmatter.featuredimage}
-                heading={
-                  firstPost.node.frontmatter.cardTitle ||
-                  firstPost.node.frontmatter.heading
-                }
-                subtitle={firstPost.node.frontmatter.cardSubtitle}
-                date={firstPost.node.frontmatter.date}
-                to={firstPost.node.fields.slug}
-                size="sm"
-              />
-              <BigCard
-                image={secondPost.node.frontmatter.featuredimage}
-                heading={
-                  secondPost.node.frontmatter.cardTitle ||
-                  secondPost.node.frontmatter.heading
-                }
-                subtitle={secondPost.node.frontmatter.cardSubtitle}
-                date={secondPost.node.frontmatter.date}
-                to={secondPost.node.fields.slug}
-                size="sm"
-              />
-            </SimpleGrid>
-            <CardGrid posts={otherPosts} subheading={'Actualités'} />
-          </VStack>
-          <VStack
-            spacing={{ base: 6, sm: 8, lg: 10 }}
-            alignItems="initial"
-            display={{ base: 'flex', lg: 'none' }}
-          >
-            <BigCard
-              image={firstPost.node.frontmatter.featuredimage}
-              heading={
-                firstPost.node.frontmatter.cardTitle ||
-                firstPost.node.frontmatter.heading
-              }
-              subtitle={firstPost.node.frontmatter.cardSubtitle}
-              date={firstPost.node.frontmatter.date}
-              to={firstPost.node.fields.slug}
-              size="md"
-            />
-            <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={{ base: 6 }}>
-              {posts.slice(1, posts.length).map((p, i) => (
-                <BigCard
-                  key={i}
-                  image={p.node.frontmatter.featuredimage}
-                  heading={
-                    p.node.frontmatter.cardTitle || p.node.frontmatter.heading
-                  }
-                  subtitle={p.node.frontmatter.cardSubtitle}
-                  date={p.node.frontmatter.date}
-                  to={p.node.fields.slug}
-                  size="sm"
-                />
-              ))}
-            </SimpleGrid>
-          </VStack>
-        </div>
-        <SeeMoreButton
-          display={{ base: 'flex', md: 'none' }}
-          to="/articles"
-          variant="outline"
-          my={4}
-          mx="auto"
-          maxW="2xs"
-        />
-      </Container>
-
-      <Container
-        maxW="7xl"
-        mt={{ base: 8, md: 12, lg: 16 }}
-        pb={16}
-        as="section"
-      >
-        <div className="flex justify-between items-baseline">
-          <Heading as="h2" size="xl">
-            Les derniers résultats du club
-          </Heading>
-          <SeeMoreButton display={{ base: 'none', md: 'flex' }} to="/results" />
-        </div>
-        <div className="mt-8">
-          <CardGrid posts={results} subheading={'Résultats'} />
-        </div>
-        <SeeMoreButton
-          display={{ base: 'flex', md: 'none' }}
-          to="/results"
-          variant="outline"
-          my={4}
-          mx="auto"
-          maxW="2xs"
-        />
-      </Container>
-
-      {/* About section */}
-      {/*<TextImageSplit image={about.image}>
-        <SectionHeading>{about.heading}</SectionHeading>
-        <p className="mt-2 text-gray-600 dark:text-gray-300">
-          {about.description}
-        </p>
-        <SecondaryButton to={about.button.url} className="mt-6 lg:mt-10">
-          {about.button.label}
-        </SecondaryButton>
-      </TextImageSplit>*/}
+      <ClubQuoteSection content={clubSectionContent} />
+      <LastNewsSection posts={posts} />
+      <LastResultsSection results={results} />
     </>
   );
 };

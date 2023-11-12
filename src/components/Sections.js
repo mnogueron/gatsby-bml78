@@ -68,15 +68,14 @@ export const CardGrid = ({ posts }) => {
       columns={{ base: 1, sm: 2, lg: 3 }}
       spacing={{ base: 6, sm: 6, lg: 8 }}
     >
-      {posts.map(({ node: post }, idx) => {
-        const fm = post.frontmatter;
+      {posts.map((post, idx) => {
         return (
           <Card
             key={idx}
-            image={fm.featuredimage}
-            heading={fm.cardTitle || fm.heading}
-            subtitle={fm.cardSubtitle}
-            date={fm.date}
+            image={post.featuredimage}
+            heading={post.cardTitle || post.heading}
+            subtitle={post.cardSubtitle}
+            date={post.date}
             to={post.fields.slug}
           />
         );

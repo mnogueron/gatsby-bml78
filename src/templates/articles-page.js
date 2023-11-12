@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import ArticlesPageTemplate from './components/ArticlesPageTemplate';
 import PageLayout from '../components/PageLayout';
+import {preparePosts} from "../utils";
 
 const ArticlesPage = ({ data, pageContext }) => {
   const { frontmatter: fm } = data.markdownRemark;
   const { edges: posts } = data.allMarkdownRemark;
+  const preparedPosts = useMemo(() => preparePosts(posts), []);
 
   return (
     <>
@@ -15,7 +17,7 @@ const ArticlesPage = ({ data, pageContext }) => {
         <ArticlesPageTemplate
           heading={fm.heading}
           subheading={fm.subheading}
-          posts={posts}
+          posts={preparedPosts}
         />
       </PageLayout>
     </>

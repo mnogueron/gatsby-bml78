@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'gatsby';
 import { Button, Container, Box, Heading, Text, Flex } from '@chakra-ui/react';
 import Image from '../../components/Image';
 import Banner from '../../components/Banner';
 import ClubQuoteSection from '../../containers/home/ClubQuoteSection';
 import LastNewsSection from '../../containers/home/LastNewsSection';
-import LastResultsSection from "../../containers/home/LastResultsSection";
+import LastResultsSection from '../../containers/home/LastResultsSection';
+import {preparePosts} from "../../utils";
 
 const IndexPageTemplate = ({
   heading,
@@ -17,6 +18,9 @@ const IndexPageTemplate = ({
   posts = [],
   results = [],
 }) => {
+  const preparedPosts = useMemo(() => preparePosts(posts), []);
+  const preparedResults = useMemo(() => preparePosts(results), []);
+
   return (
     <>
       {/* Header */}
@@ -141,8 +145,8 @@ const IndexPageTemplate = ({
       </Box>
 
       <ClubQuoteSection content={clubSectionContent} />
-      <LastNewsSection posts={posts} />
-      <LastResultsSection results={results} />
+      <LastNewsSection posts={preparedPosts} />
+      <LastResultsSection results={preparedResults} />
     </>
   );
 };

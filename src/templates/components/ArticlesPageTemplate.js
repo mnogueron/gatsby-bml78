@@ -29,14 +29,14 @@ function ArticlesPageTemplate({ heading, subheading, posts = [] }) {
         {latestPost ? (
           <VStack spacing={{ base: 6, sm: 8, lg: 12 }} alignItems="initial">
             <BigCard
-              image={latestPost.node.frontmatter.featuredimage}
+              image={latestPost.featuredimage}
               heading={
-                latestPost.node.frontmatter.cardTitle ||
-                latestPost.node.frontmatter.heading
+                latestPost.cardTitle ||
+                latestPost.heading
               }
-              subtitle={latestPost.node.frontmatter.cardSubtitle}
-              date={latestPost.node.frontmatter.date}
-              to={latestPost.node.fields.slug}
+              subtitle={latestPost.cardSubtitle}
+              date={latestPost.date}
+              to={latestPost.fields.slug}
             />
             <CardGrid posts={otherPosts} />
           </VStack>

@@ -240,6 +240,25 @@ collections:
           - <<: *HEADING
           - <<: *SUBHEADING
           - <<: *SEO
+      - file: 'src/pages/results/videos.md'
+        label: 'Toutes les vidéos'
+        name: 'all-videos-index'
+        fields:
+          - <<: *TEMPLATE_BASE
+            default: 'all-videos-page'
+          - <<: *TITLE
+          - <<: *HEADING
+          - <<: *SUBHEADING
+          - {
+              label: 'Youtube Videos',
+              name: videos,
+              widget: list,
+              fields:
+                [
+                  { label: ID, name: id, widget: string },
+                ],
+          }
+          - <<: *SEO
       - file: 'src/pages/contact/index.md'
         label: 'Contact'
         name: 'contact'

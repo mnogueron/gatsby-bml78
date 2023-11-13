@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 
@@ -11,6 +11,13 @@ const IndexPage = ({ data, pageContext }) => {
   // latest posts and results
   const { edges: posts } = data.allPostsMarkdownRemark;
   const { edges: results } = data.allResultsMarkdownRemark;
+  const videos = useMemo(() => {
+    if (data.allVideosMarkdownRemark.edges.length === 0) {
+      return [];
+    }
+
+    return data.allVideosMarkdownRemark.edges[0].node.frontmatter.videos;
+  }, []);
 
   return (
     <>
@@ -25,6 +32,7 @@ const IndexPage = ({ data, pageContext }) => {
           clubSectionContent={data.markdownRemark.htmlAst}
           posts={posts}
           results={results}
+          videos={videos}
           about={fm.about}
         />
       </PageLayout>
@@ -57,6 +65,20 @@ export const indexPageQuery = graphql`
           text
           level
           hide
+        }
+      }
+    }
+    allVideosMarkdownRemark: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "all-videos-page" } } }
+      limit: 1
+    ) {
+      edges {
+        node {
+          frontmatter {
+            videos {
+              id
+            }
+          }
         }
       }
     }

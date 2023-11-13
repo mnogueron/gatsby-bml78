@@ -1,4 +1,4 @@
-import { Container, Heading } from '@chakra-ui/react';
+import {Box, Container, Heading} from '@chakra-ui/react';
 import SeeMoreButton from './SeeMoreButton';
 import React from 'react';
 
@@ -21,7 +21,7 @@ const HomeSection = ({ title, moreButtonRedirectTo, children, ...rest }) => {
           />
         )}
       </div>
-      <div className="mt-8">{children}</div>
+      <Box mt={{ base: 4, md: 6, lg: 8 }}>{children}</Box>
       {moreButtonRedirectTo && (
         <SeeMoreButton
           display={{ base: 'flex', md: 'none' }}

@@ -55,4 +55,6 @@ items:
         url: /results/equipe-6-s22-23
   - title: Équipe 7 - Départemental Homme
     url: /results/equipe-7-s23-24
+  - title: Toutes les vidéos
+    url: /results/videos
 ---

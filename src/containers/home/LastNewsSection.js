@@ -1,8 +1,8 @@
 import React from 'react';
 import { SimpleGrid, VStack } from '@chakra-ui/react';
 import { CardGrid } from '../../components/Sections';
-import BigCard from '../../components/BigCard';
 import HomeSection from './HomeSection';
+import PostBigCard from "../../components/PostBigCard";
 
 const LastNewsSection = ({ posts }) => {
   const [firstPost, secondPost, ...otherPosts] = posts;
@@ -21,49 +21,20 @@ const LastNewsSection = ({ posts }) => {
             columns={{ base: 1, sm: 2 }}
             spacing={{ base: 6, sm: 6, lg: 8 }}
           >
-            <BigCard
-              image={firstPost.featuredimage}
-              heading={firstPost.cardTitle || firstPost.heading}
-              subtitle={firstPost.cardSubtitle}
-              date={firstPost.date}
-              to={firstPost.fields.slug}
-              size="sm"
-            />
-            <BigCard
-              image={secondPost.featuredimage}
-              heading={secondPost.cardTitle || secondPost.heading}
-              subtitle={secondPost.cardSubtitle}
-              date={secondPost.date}
-              to={secondPost.fields.slug}
-              size="sm"
-            />
+            <PostBigCard post={firstPost} size="sm" />
+            <PostBigCard post={secondPost} size="sm" />
           </SimpleGrid>
-          <CardGrid posts={otherPosts} subheading={'Actualités'} />
+          <CardGrid posts={otherPosts} subheading='Actualités' />
         </VStack>
         <VStack
           spacing={{ base: 6, sm: 8, lg: 10 }}
           alignItems="initial"
           display={{ base: 'flex', lg: 'none' }}
         >
-          <BigCard
-            image={firstPost.featuredimage}
-            heading={firstPost.cardTitle || firstPost.heading}
-            subtitle={firstPost.cardSubtitle}
-            date={firstPost.date}
-            to={firstPost.fields.slug}
-            size="md"
-          />
+          <PostBigCard post={firstPost} size={{ base: 'sm', sm: 'md' }} />
           <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={{ base: 6 }}>
-            {posts.slice(1, posts.length).map((p, i) => (
-              <BigCard
-                key={i}
-                image={p.featuredimage}
-                heading={p.cardTitle || p.heading}
-                subtitle={p.cardSubtitle}
-                date={p.date}
-                to={p.fields.slug}
-                size="sm"
-              />
+            {[secondPost, ...otherPosts].map((p, i) => (
+              <PostBigCard key={i} post={p} size="sm" />
             ))}
           </SimpleGrid>
         </VStack>

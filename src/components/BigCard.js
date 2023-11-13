@@ -3,9 +3,10 @@ import { Link } from 'gatsby';
 import Image from '../components/Image';
 import * as dateFns from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
-import { Box, Flex, Heading, Text, VStack } from '@chakra-ui/react';
+import {Box, Flex, Heading, Text, useBreakpointValue, VStack} from '@chakra-ui/react';
 
-function BigCard({ image, heading, date, subtitle, size, url, ...rest }) {
+function BigCard({ image, heading, date, subtitle, size: responsiveSize, url, ...rest }) {
+  const size = useBreakpointValue(responsiveSize);
   return (
     <Box
       as={Link}
@@ -25,7 +26,7 @@ function BigCard({ image, heading, date, subtitle, size, url, ...rest }) {
             ? { base: 400, sm: 500, md: 500, lg: 600 }
             : size === 'md'
             ? { base: 300, sm: 300, md: 400, lg: 400 }
-            : { base: 300, sm: 300, md: 300, lg: 400 }
+            : { base: 250, sm: 250, md: 300, lg: 400 }
         }
         borderRadius={20}
         image={image?.image || { url: '/static/assets/shuttle.jpg' }}

@@ -5,7 +5,7 @@ import YoutubeVideo from './YoutubeVideo';
 
 const VideosSection = ({ videos }) => {
   return (
-    <HomeSection title="Youtubes lives" moreButtonRedirectTo="/results/videos">
+    <HomeSection title="Nos dernières vidéos" moreButtonRedirectTo="/results/videos">
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 6, sm: 6, lg: 8 }}

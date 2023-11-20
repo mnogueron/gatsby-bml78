@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 function Image({ image, alt, ...rest }) {
   if (image && image.url) {
-    // this is an image coming from Netlify CMS
+    // this is an image coming from Decap CMS
     return <img src={image.url} {...rest} alt={alt} />
   } else if (image && image.childImageSharp) {
     // this should be an image processed by gatsby-plugin-image

@@ -1,5 +1,5 @@
-import CMS from 'netlify-cms-app'
-import {fr} from 'netlify-cms-locales';
+import CMS from 'decap-cms-app'
+import {fr} from 'decap-cms-locales';
 
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import ArticlesPagePreview from './preview-templates/ArticlesPagePreview'
@@ -52,3 +52,5 @@ CMS.registerEditorComponent(galleryEditorComponent);
 /*CMS.registerEditorComponent(gridEditorComponent);*/
 
 CMS.registerWidget('testWidget', UuidControl, UuidPreview)
+
+CMS.init();

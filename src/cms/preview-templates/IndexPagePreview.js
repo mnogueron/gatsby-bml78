@@ -14,6 +14,8 @@ const IndexPagePreview = ({ data, getAsset }) => {
       banner={data.banner}
       clubSectionContent={clubSectionContent}
       posts={[]}
+      results={[]}
+      videos={[]}
     />
   );
 };

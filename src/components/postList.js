@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const PostList = ({ posts }) => {
   if (posts.length === 0) {
-    return <p>There are not posts yet. Create posts using the Netlify CMS.</p>
+    return <p>There are not posts yet. Create posts using the Decap CMS.</p>
   }
 
   return (

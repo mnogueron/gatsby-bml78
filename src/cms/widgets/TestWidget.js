@@ -1,5 +1,5 @@
 import React from 'react';
-import CMS from 'netlify-cms-app'
+import CMS from 'decap-cms-app'
 
 const ObjectControl = CMS.getWidget('object').control
 const ObjectPreview = CMS.getWidget('object').preview;

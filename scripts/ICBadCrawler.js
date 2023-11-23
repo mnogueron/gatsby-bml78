@@ -133,10 +133,10 @@ const extractICData = async (url, dryRun) => {
 
     const title = document
       .getElementsByTagName('h1')[0]
-      .textContent.split(' / ');
+      .getElementsByTagName('a');
     const results = parseResults();
-    const hostClub = parseClub(title[0]);
-    const guestClub = parseClub(title[1]);
+    const hostClub = parseClub(title[0].innerHTML);
+    const guestClub = parseClub(title[1].innerHTML);
 
     const matchNodes = [
       ...document

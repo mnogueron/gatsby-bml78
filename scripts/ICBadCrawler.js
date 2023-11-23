@@ -10,7 +10,7 @@ const formatResult = (results, isHost) => {
 };
 
 const writeMatches = (
-  { hostClub, guestClub, date, matches, results },
+  {hostClub, guestClub, date, matches, results},
   dryRun
 ) => {
   const teamScore = {
@@ -46,9 +46,9 @@ featuredimage:
   image: /assets/shuttle.jpg
 ---
 
-<teamscoreboard>${JSON.stringify({ teamScore })}</teamscoreboard>
+<teamscoreboard>${JSON.stringify({teamScore})}</teamscoreboard>
 
-<scoreboard>${JSON.stringify({ matches })}</scoreboard>`;
+<scoreboard>${JSON.stringify({matches})}</scoreboard>`;
   const filePath = `${folder}/${filename}`;
   if (dryRun) {
     return;
@@ -63,7 +63,7 @@ const extractICData = async (url, dryRun) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  page.on('console', (message) =>
+  page.on('console', message =>
     console.log(
       `${message.type().substr(0, 3).toUpperCase()} ${message.text()}`
     )
@@ -82,7 +82,7 @@ const extractICData = async (url, dryRun) => {
   if (!canParse) return false;
 
   const meeting = await page.evaluate(() => {
-    const parseClub = (clubTitle) => {
+    const parseClub = clubTitle => {
       const match = clubTitle.match(/(.*) \((\d*)-(.*)-(\d*)\)/);
 
       // Si c'est un IC homme mettre par défaut le numéro d'équipe
@@ -98,7 +98,6 @@ const extractICData = async (url, dryRun) => {
               break;
             default:
               throw new Error('No team linked to this competition ID');
-              break;
           }
         }
         return {
@@ -124,10 +123,10 @@ const extractICData = async (url, dryRun) => {
       ];
     };
 
-    const capitalize = (str) => {
+    const capitalize = str => {
       return str
         .split(' ')
-        .map((s) => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase())
+        .map(s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase())
         .join(' ');
     };
 
@@ -142,7 +141,7 @@ const extractICData = async (url, dryRun) => {
       ...document
         .getElementsByClassName('rencontre')[0]
         .querySelectorAll('.uk-text-center.uk-table-shrink.uk-text-nowrap'),
-    ].map((c) => c.parentNode);
+    ].map(c => c.parentNode);
     const date = document
       .querySelector('.uk-description-list > dt > .fa-calendar')
       .parentNode.nextElementSibling.innerText.match(/[^ ]* (.*)/)[1];
@@ -152,7 +151,9 @@ const extractICData = async (url, dryRun) => {
 
     const getPlayer = (playerNode, isHost) => {
       const name = playerNode.children[isHost ? 1 : 0].innerText;
-      const matches = name.match(/([A-Za-zÀ-ÖØ-öø-ÿ-']*) ([A-Za-zÀ-ÖØ-öø-ÿ-' ]*)/);
+      const matches = name.match(
+        /([A-Za-zÀ-ÖØ-öø-ÿ-']*) ([A-Za-zÀ-ÖØ-öø-ÿ-' ]*)/
+      );
       return {
         lastname: capitalize(matches[2]),
         firstname: matches[1],
@@ -161,8 +162,8 @@ const extractICData = async (url, dryRun) => {
       };
     };
 
-    const getScore = (scoreNode) => {
-      const results = [...scoreNode.querySelectorAll('tr')].map((node) => {
+    const getScore = scoreNode => {
+      const results = [...scoreNode.querySelectorAll('tr')].map(node => {
         if (node.children[0].innerText === 'Wo') {
           return 'WO';
         }
@@ -177,28 +178,28 @@ const extractICData = async (url, dryRun) => {
         };
       });
       return {
-        set: results.filter((r) => r !== 'WO' && r !== 'AB.'),
-        status: results.find((r) => r === 'WO' || r === 'AB.'),
+        set: results.filter(r => r !== 'WO' && r !== 'AB.'),
+        status: results.find(r => r === 'WO' || r === 'AB.'),
       };
     };
 
-    const getType = (matchNode) => {
+    const getType = matchNode => {
       const type = matchNode
         .querySelector('th')
         .innerText.match(/([A-Z]*)\d*/)[1];
       return type === 'DX' ? 'MX' : type;
     };
 
-    const matches = matchNodes.map((matchNode) => {
+    const matches = matchNodes.map(matchNode => {
       const hostTeamNode = matchNode.children[1];
       const guestTeamNode = matchNode.children[3];
       const winner = matchNode.querySelector('.winner-left-gradient') ? 0 : 1;
       const score = getScore(matchNode.children[2]);
 
-      let teamA = [...hostTeamNode.querySelectorAll('tr')].map((p) =>
+      let teamA = [...hostTeamNode.querySelectorAll('tr')].map(p =>
         getPlayer(p, true)
       );
-      let teamB = [...guestTeamNode.querySelectorAll('tr')].map((p) =>
+      let teamB = [...guestTeamNode.querySelectorAll('tr')].map(p =>
         getPlayer(p, false)
       );
 
@@ -226,9 +227,9 @@ const extractICData = async (url, dryRun) => {
         }
       } else if (score.status === 'AB.') {
         if (winner === 0) {
-          teamB = teamB.map((p) => ({ ...p, status: 'AB.' }));
+          teamB = teamB.map(p => ({...p, status: 'AB.'}));
         } else {
-          teamA = teamA.map((p) => ({ ...p, status: 'AB.' }));
+          teamA = teamA.map(p => ({...p, status: 'AB.'}));
         }
       }
 
@@ -266,14 +267,14 @@ const extractICData = async (url, dryRun) => {
   return true;
 };
 
-const extractICUrls = async (teamIds) => {
+const extractICUrls = async teamIds => {
   const browser = await puppeteer.launch();
   const results = {};
 
-  const promises = teamIds.map(async (teamId) => {
+  const promises = teamIds.map(async teamId => {
     const page = await browser.newPage();
-    page.on('console', (msg) => console.pageLog(msg.text()));
-    page.on('pageerror', (error) => console.pageError(error.message));
+    page.on('console', msg => console.pageLog(msg.text()));
+    page.on('pageerror', error => console.pageError(error.message));
 
     /*page.on('console', (message) =>
       console.log(
@@ -287,28 +288,35 @@ const extractICUrls = async (teamIds) => {
     console.log('after timeout', teamId);
 
     const data = await page.evaluate(() => {
-      const CURRENT_YEAR = '2023'
-      const NEXT_YEAR = '2024'
+      const CURRENT_YEAR = '2023';
+      const NEXT_YEAR = '2024';
       const DATE_REGEX = /\n\t*Le (\d{2})\/(\d{2})\t*/i;
 
       const urls = [
         ...document
           .getElementsByTagName('tbody')[1]
           .querySelectorAll('.row-link'),
-      ].map((a) => a.href);
+      ].map(a => a.href);
       console.log(urls);
       const dates = [
-        ...document.getElementsByTagName('tbody')[1]
+        ...document
+          .getElementsByTagName('tbody')[1]
           .querySelectorAll('.row-link'),
       ].map(a => {
         const unparsedDate = a.innerHTML;
-        let parsedDate = unparsedDate;
         if (DATE_REGEX.test(unparsedDate)) {
+          // eslint-disable-next-line no-unused-vars
           const [_, day, month] = unparsedDate.match(DATE_REGEX);
           if (Number(month) < 9) {
-            return `${day.padStart(2, '0')}/${month.padStart(2, '0')}/${NEXT_YEAR}`
+            return `${day.padStart(2, '0')}/${month.padStart(
+              2,
+              '0'
+            )}/${NEXT_YEAR}`;
           }
-          return `${day.padStart(2, '0')}/${month.padStart(2, '0')}/${CURRENT_YEAR}`
+          return `${day.padStart(2, '0')}/${month.padStart(
+            2,
+            '0'
+          )}/${CURRENT_YEAR}`;
         }
 
         console.log(unparsedDate);
@@ -316,11 +324,11 @@ const extractICUrls = async (teamIds) => {
       });
       console.log(dates);
       return urls.map((url, i) => {
-        return { url, date: dates[i] };
+        return {url, date: dates[i]};
       });
     });
 
-    results[teamId] = data.map(({ url, date }) => ({
+    results[teamId] = data.map(({url, date}) => ({
       url,
       date,
     }));

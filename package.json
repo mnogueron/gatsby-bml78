@@ -12,7 +12,13 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "lint": "concurrently npm:lint:*",
+    "lint:js": "eslint .",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^2.0.4",
@@ -61,12 +67,15 @@
   "devDependencies": {
     "autoprefixer": "^10.3.4",
     "chalk": "^5.0.0",
+    "concurrently": "^8.2.2",
     "decap-server": "^3.0.1",
     "eslint": "^8.54.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "gatsby-plugin-postcss": "^5.18.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
     "node-cron": "^3.0.0",
     "postcss": "^8.3.6",
     "prettier": "^3.1.0",

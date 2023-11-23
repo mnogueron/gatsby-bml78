@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -19,7 +19,7 @@ module.exports = {
         '2/5': '40%',
         '3/5': '60%',
         '4/5': '80%',
-      }
+      },
     },
   },
   variants: {
@@ -27,8 +27,5 @@ module.exports = {
       translate: ['active', 'group-hover'],
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-  ],
-}
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+};

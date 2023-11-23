@@ -12,7 +12,6 @@ import scoreboardEditorComponent from './editor-components/scoreboard';
 import teamScoreboardEditorComponent from './editor-components/teamScoreboard';
 import galleryEditorComponent from './editor-components/gallery';
 import withPreviewWrapper from './withPreviewWrapper';
-import {UuidControl, UuidPreview} from './widgets/TestWidget';
 
 import './cms-utils';
 
@@ -47,7 +46,5 @@ CMS.registerEditorComponent(teamScoreboardEditorComponent);
 CMS.registerEditorComponent(galleryEditorComponent);
 /*CMS.registerEditorComponent(fileEditorComponent);*/
 /*CMS.registerEditorComponent(gridEditorComponent);*/
-
-CMS.registerWidget('testWidget', UuidControl, UuidPreview);
 
 CMS.init();

@@ -1,8 +1,8 @@
-import React from "react"
-import { navigate } from "gatsby"
-import Layout from "../components/Layout"
-import { SectionHeading } from "../components/Sections"
-import { Container } from "../components/Sections"
+import React from 'react';
+import {navigate} from 'gatsby';
+import Layout from '../components/Layout';
+import {SectionHeading} from '../components/Sections';
+import {Container} from '../components/Sections';
 
 function PageNotFound() {
   return (
@@ -20,7 +20,7 @@ function PageNotFound() {
         </button>
       </Container>
     </Layout>
-  )
+  );
 }
 
-export default PageNotFound
+export default PageNotFound;

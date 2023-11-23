@@ -1,11 +1,11 @@
-import React, { useMemo } from 'react';
+import React, {useMemo} from 'react';
 import ImageGallery from 'react-image-gallery';
-import {Box} from "@chakra-ui/react";
+import {Box} from '@chakra-ui/react';
 
-const Gallery = ({ pictures }) => {
+const Gallery = ({pictures}) => {
   const images = useMemo(() => {
     return (
-      pictures?.map((picture) => ({
+      pictures?.map(picture => ({
         original: picture.image,
         thumbnail: picture.image,
       })) || []

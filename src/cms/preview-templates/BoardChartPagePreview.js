@@ -1,29 +1,29 @@
 import React from 'react';
 import BoardChartPageTemplate from '../../templates/components/BoardChartPageTemplate';
-import useProcessedHAST from "../useProcessedHAST";
+import useProcessedHAST from '../useProcessedHAST';
 
-const ContentPagePreview = ({ data, getAsset }) => {
+const ContentPagePreview = ({data, getAsset}) => {
   const html = useProcessedHAST(data.body);
 
   const president = {
     ...data.president,
     picture: data.president.picture && getAsset(data.president.picture),
-  }
+  };
 
   const treasurer = {
     ...data.treasurer,
     picture: data.treasurer.picture && getAsset(data.treasurer.picture),
-  }
+  };
 
   const secretary = {
     ...data.secretary,
     picture: data.secretary.picture && getAsset(data.secretary.picture),
-  }
+  };
 
   const board = data.board.map(member => ({
     ...member,
     picture: member.picture && getAsset(member.picture),
-  }))
+  }));
 
   return (
     <BoardChartPageTemplate
@@ -35,7 +35,7 @@ const ContentPagePreview = ({ data, getAsset }) => {
       secretary={secretary}
       team={board}
     />
-  )
+  );
 };
 
 export default ContentPagePreview;

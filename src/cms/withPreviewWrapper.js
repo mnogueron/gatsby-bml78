@@ -12,12 +12,12 @@ import {
   PopoverTrigger,
   Text,
 } from '@chakra-ui/react';
-import { MdBugReport } from 'react-icons/md';
+import {MdBugReport} from 'react-icons/md';
 import Image from '../components/Image';
-import format from "date-fns/format";
-import frLocale from "date-fns/locale/fr";
+import format from 'date-fns/format';
+import frLocale from 'date-fns/locale/fr';
 
-const getSEOData = (data) => {
+const getSEOData = data => {
   switch (data.templateKey) {
     case 'article-page':
     case 'tournament-page':
@@ -38,11 +38,14 @@ const getSEOData = (data) => {
         description: data.subheading,
       };
     case 'result-page': {
-      const date = format(new Date(data.date), 'PP', { locale: frLocale });
+      const date = format(new Date(data.date), 'PP', {locale: frLocale});
       return {
         title: data.heading,
         description: data.subheading || `${data.heading} - ${date}`,
-        image: data.featuredimage.image !== '/assets/shuttle.jpg' ? data.featuredimage.image : undefined,
+        image:
+          data.featuredimage.image !== '/assets/shuttle.jpg'
+            ? data.featuredimage.image
+            : undefined,
         article: true,
       };
     }
@@ -54,18 +57,17 @@ const getSEOData = (data) => {
     default:
       return {};
   }
-}
+};
 
-const withPreviewWrapper = (Component) => {
-  const WrapperComponent = (props) => {
+const withPreviewWrapper = Component => {
+  const WrapperComponent = props => {
     const data = props.entry.getIn(['data']).toJS();
     //const pageContext = props.entry.getIn(['pageContext']).toJS();
 
     if (data) {
-      const { seo: override } = data;
+      const {seo: override} = data;
 
-
-      const templateSeo = getSEOData(data)
+      const templateSeo = getSEOData(data);
 
       const titleTemplate = override?.titleTemplate || '%s - BML';
       const title = titleTemplate.replace(
@@ -76,7 +78,8 @@ const withPreviewWrapper = (Component) => {
         override?.description ||
         templateSeo?.description ||
         'Retrouvez toutes les actus et info du club de badminton de Maisons-Laffitte';
-      const image = override?.image || templateSeo?.image || '/assets/bml-icon.png';
+      const image =
+        override?.image || templateSeo?.image || '/assets/bml-icon.png';
 
       return (
         <PreviewStyleProvider>
@@ -106,7 +109,7 @@ const withPreviewWrapper = (Component) => {
                   <Box
                     as={Image}
                     /*image={{url: 'https://static.actu.fr/uploads/2018/06/25435-180625142930290-0-960x640.jpg'}}*/
-                    image={{ url: image }}
+                    image={{url: image}}
                     objectFit="cover"
                     width="100%"
                     height={200}

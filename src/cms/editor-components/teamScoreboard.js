@@ -1,24 +1,24 @@
 const teamWidget = {
-    widget: 'object',
-    fields: [
-      {
-        name: 'shortName',
-        label: 'Sigle',
-        widget: 'string',
-        optional: true,
-      },
-      {
-        name: 'longName',
-        label: 'Nom',
-        widget: 'string',
-      },
-      {
-        name: 'result',
-        label: 'Résultat',
-        widget: 'number',
-      },
-    ]
-  };
+  widget: 'object',
+  fields: [
+    {
+      name: 'shortName',
+      label: 'Sigle',
+      widget: 'string',
+      optional: true,
+    },
+    {
+      name: 'longName',
+      label: 'Nom',
+      widget: 'string',
+    },
+    {
+      name: 'result',
+      label: 'Résultat',
+      widget: 'number',
+    },
+  ],
+};
 
 export default {
   id: 'teamScoreboard',
@@ -39,8 +39,8 @@ export default {
           name: 'teamB',
           label: 'Equipe B',
         },
-      ]
-    }
+      ],
+    },
   ],
   pattern: /^<teamscoreboard>(.*?)<\/teamscoreboard>$/,
   fromBlock: function (match) {

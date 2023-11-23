@@ -1,16 +1,16 @@
-import { Box, Button, Container, Flex, Heading, Text } from '@chakra-ui/react';
-import Image from '../../components/Image';
-import { Link } from 'gatsby';
-import Banner from '../../components/Banner';
 import React from 'react';
+import {Box, Button, Container, Flex, Heading, Text} from '@chakra-ui/react';
+import Image from '../../components/Image';
+import {Link} from 'gatsby';
+import Banner from '../../components/Banner';
 
-const Header = ({ headerImage, heading, subheading, image, banner }) => {
+const Header = ({headerImage, heading, subheading, image, banner}) => {
   return (
     <Box backgroundColor={'blackAlpha.100'} position="relative" as="header">
       <Container
         maxW="7xl"
         py={16}
-        minHeight={{ base: 'calc(100vh - 48px)', sm: '768px' }}
+        minHeight={{base: 'calc(100vh - 48px)', sm: '768px'}}
         display="flex"
         alignItems="center"
       >
@@ -32,11 +32,11 @@ const Header = ({ headerImage, heading, subheading, image, banner }) => {
               objectFit: 'cover',
               filter: 'blur(2px) grayscale(20%) brightness(0.6)',
               /*transform: 'scaleX(-1)',*/
-              height: { base: '100%', sm: '100%' },
-              width: { base: '100%', sm: '100%' },
+              height: {base: '100%', sm: '100%'},
+              width: {base: '100%', sm: '100%'},
               '& > div': {
-                height: { base: '100%', sm: '100%' },
-                width: { base: '100%', sm: '100%' },
+                height: {base: '100%', sm: '100%'},
+                width: {base: '100%', sm: '100%'},
               },
 
               '& [data-main-image]': {
@@ -55,8 +55,8 @@ const Header = ({ headerImage, heading, subheading, image, banner }) => {
           h="100%"
           flexDirection="column"
           justifyContent="center"
-          alignItems={{ base: 'center', sm: 'center' }}
-          textAlign={{ base: 'center', sm: 'center' }}
+          alignItems={{base: 'center', sm: 'center'}}
+          textAlign={{base: 'center', sm: 'center'}}
           flex={1}
           zIndex={0}
         >
@@ -65,7 +65,7 @@ const Header = ({ headerImage, heading, subheading, image, banner }) => {
             size="4xl"
             lineHeight="shorter"
             color={'gray.100'}
-            maxW={{ base: '100%', sm: '70%' }}
+            maxW={{base: '100%', sm: '70%'}}
             mb={8}
             whiteSpace="pre-wrap"
           >
@@ -75,7 +75,7 @@ const Header = ({ headerImage, heading, subheading, image, banner }) => {
             fontSize="2xl"
             as="h2"
             color={'gray.200'}
-            maxW={{ base: '100%', sm: '70%' }}
+            maxW={{base: '100%', sm: '70%'}}
             mb={10}
             whiteSpace="pre-wrap"
           >
@@ -93,9 +93,9 @@ const Header = ({ headerImage, heading, subheading, image, banner }) => {
       </Container>
 
       <Box
-        display={{ base: 'none', md: 'block' }}
-        maxHeight={{ base: '80%', sm: '80%' }}
-        width={{ base: '10%', sm: '20%' }}
+        display={{base: 'none', md: 'block'}}
+        maxHeight={{base: '80%', sm: '80%'}}
+        width={{base: '10%', sm: '20%'}}
         position={'absolute'}
         bottom={0}
         left={0}
@@ -111,14 +111,14 @@ const Header = ({ headerImage, heading, subheading, image, banner }) => {
             height: '40vw',
             maxHeight: '500px',
             '& > div': {
-              height: { base: '100%', sm: '100%' },
+              height: {base: '100%', sm: '100%'},
             },
           }}
         />
       </Box>
 
       {banner.text && !banner.hide && (
-        <Box position="absolute" top={{ base: 4, lg: 8 }} left={4} right={4}>
+        <Box position="absolute" top={{base: 4, lg: 8}} left={4} right={4}>
           <Box maxW="4xl" margin="auto">
             <Banner text={banner.text} level={banner.level} />
           </Box>

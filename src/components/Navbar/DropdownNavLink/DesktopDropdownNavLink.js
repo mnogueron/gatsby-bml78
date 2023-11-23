@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { Link } from 'gatsby';
+import React, {useRef} from 'react';
+import {Link} from 'gatsby';
 import {
   Menu,
   MenuButton,
@@ -9,11 +9,17 @@ import {
   Icon,
   Portal,
 } from '@chakra-ui/react';
-import { MdExpandMore, MdChevronRight } from 'react-icons/md';
+import {MdExpandMore, MdChevronRight} from 'react-icons/md';
 import NavLabel from '../NavLabel';
 
-const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive, isTransparent }) => {
-  const { isOpen, onClose, onOpen, onToggle } = useDisclosure();
+const DesktopDropdownNavLink = ({
+  label,
+  options,
+  onClick,
+  isRecursive,
+  isTransparent,
+}) => {
+  const {isOpen, onClose, onOpen, onToggle} = useDisclosure();
   const onCloseTimeout = useRef(0);
 
   const handleClose = () => {
@@ -29,7 +35,7 @@ const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive, isTransp
   return (
     <Menu
       isOpen={isOpen}
-      {...(isRecursive ? { placement: 'end-start', offset: [-10, 6] } : {})}
+      {...(isRecursive ? {placement: 'end-start', offset: [-10, 6]} : {})}
     >
       <MenuButton
         onClick={onToggle}
@@ -47,7 +53,11 @@ const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive, isTransp
           : {
               sx: {
                 '*': {
-                  color: isOpen ? 'primary' : isTransparent ? 'text.inverted.main' : 'text.main',
+                  color: isOpen
+                    ? 'primary'
+                    : isTransparent
+                      ? 'text.inverted.main'
+                      : 'text.main',
                 },
                 '&:hover *': {
                   color: 'primary',
@@ -74,10 +84,11 @@ const DesktopDropdownNavLink = ({ label, options, onClick, isRecursive, isTransp
           onMouseLeave={handleClose}
           maxW={'350px'}
         >
-          {options.map(({ label, to, key, options }) => {
+          {options.map(({label, to, key, options}) => {
             if (options) {
               return (
                 <DesktopDropdownNavLink
+                  key={key}
                   label={label}
                   onClick={onClick}
                   options={options}

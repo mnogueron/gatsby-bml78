@@ -1,21 +1,18 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import {graphql, Link} from 'gatsby';
 import SEO from '../components/SEO';
-import { Container } from '../components/Sections';
+import {Container} from '../components/Sections';
 import {
   ArrowNarrowLeftIcon,
   ArrowNarrowRightIcon,
 } from '@heroicons/react/solid';
 import ContentPageTemplate from './components/ContentPageTemplate';
-import format from 'date-fns/format';
-import frLocale from 'date-fns/locale/fr';
 import PageLayout from '../components/PageLayout';
 
-const ResultPage = ({ data, pageContext }) => {
-  const { next, previous } = pageContext;
-  const { markdownRemark: result } = data;
-  const { frontmatter: fm } = result;
-  const date = format(new Date(fm.date), 'PP', { locale: frLocale });
+const ResultPage = ({data, pageContext}) => {
+  const {next, previous} = pageContext;
+  const {markdownRemark: result} = data;
+  const {frontmatter: fm} = result;
 
   return (
     <>
@@ -38,7 +35,8 @@ const ResultPage = ({ data, pageContext }) => {
                   Suivant
                 </div>
                 <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
-                  {previous.frontmatter.cardTitle || previous.frontmatter.heading}
+                  {previous.frontmatter.cardTitle ||
+                    previous.frontmatter.heading}
                 </h3>
               </Link>
             ) : (
@@ -70,7 +68,7 @@ export default ResultPage;
 
 export const resultQuery = graphql`
   query ResultPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       htmlAst
       excerpt
       frontmatter {

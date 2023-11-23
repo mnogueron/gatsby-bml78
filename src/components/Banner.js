@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import {
   Alert,
   AlertIcon,
@@ -7,8 +7,8 @@ import {
   CloseButton,
 } from '@chakra-ui/react';
 
-const Banner = ({ text, level }) => {
-  const { isOpen, onClose, onOpen } = useDisclosure({ defaultIsOpen: true });
+const Banner = ({text, level}) => {
+  const {isOpen, onClose, onOpen} = useDisclosure({defaultIsOpen: true});
 
   useEffect(() => {
     const latestBannerHide = localStorage.getItem('hide-banner');
@@ -39,7 +39,7 @@ const Banner = ({ text, level }) => {
       py={{base: 2, md: 4}}
     >
       <AlertIcon me={{base: 3, md: 4}} />
-      <AlertDescription flex={1} whiteSpace="pre-wrap" fontWeight={"medium"}>
+      <AlertDescription flex={1} whiteSpace="pre-wrap" fontWeight={'medium'}>
         {text}
       </AlertDescription>
       <CloseButton

@@ -1,11 +1,11 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 import PageLayout from '../components/PageLayout';
-import VideosPageTemplate from "./components/VideosPageTemplate";
+import VideosPageTemplate from './components/VideosPageTemplate';
 
-const AllVideosPage = ({ data, pageContext }) => {
-  const { frontmatter: fm } = data.markdownRemark;
+const AllVideosPage = ({data, pageContext}) => {
+  const {frontmatter: fm} = data.markdownRemark;
 
   return (
     <>
@@ -26,7 +26,7 @@ export default AllVideosPage;
 
 export const allVideosPageQuery = graphql`
   query AllVideosPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       html
       frontmatter {
         title

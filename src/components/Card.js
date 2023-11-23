@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 import Image from '../components/Image';
 import * as dateFns from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
 import {Heading, Text, VStack} from '@chakra-ui/react';
 
-function Card({ image, heading, date, subtitle, url, ...rest }) {
+function Card({image, heading, date, subtitle, url, ...rest}) {
   return (
     <Link
       to={url}
@@ -13,7 +13,7 @@ function Card({ image, heading, date, subtitle, url, ...rest }) {
       {...rest}
     >
       <Image
-        image={image?.image || { url: '/static/assets/shuttle.jpg' }}
+        image={image?.image || {url: '/static/assets/shuttle.jpg'}}
         alt={image?.alt || 'image de volant'}
         className="rounded-md overflow-hidden"
       />
@@ -34,7 +34,11 @@ function Card({ image, heading, date, subtitle, url, ...rest }) {
         >
           {heading}
         </Heading>
-        {subtitle && <Text as="h4" fontSize="md" color="text.secondary">{subtitle}</Text>}
+        {subtitle && (
+          <Text as="h4" fontSize="md" color="text.secondary">
+            {subtitle}
+          </Text>
+        )}
       </VStack>
     </Link>
   );

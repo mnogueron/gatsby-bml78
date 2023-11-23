@@ -11,9 +11,9 @@ import {
   useBreakpointValue,
   GridItem,
 } from '@chakra-ui/react';
-import { getSrc } from 'gatsby-plugin-image';
+import {getSrc} from 'gatsby-plugin-image';
 
-const Member = ({ name, picture, title }) => {
+const Member = ({name, picture, title}) => {
   const size = useBreakpointValue({base: 'xl', sm: '2xl'});
   return (
     <VStack>
@@ -42,21 +42,33 @@ function ContentPageTemplate({
       {(heading || subheading) && (
         <Header heading={heading} subheading={subheading} />
       )}
-      {html && <Content html={html} pb={0} pt={{ base: 2, md: 4, lg: 6 }} />}
-      <Container as="article" pt={{ base: 2, md: 4, lg: 6 }} pb={{ base: 6, md: 10, lg: 20 }}>
-        <VStack spacing={{ base: 4, sm: 6, md: 10}}>
+      {html && <Content html={html} pb={0} pt={{base: 2, md: 4, lg: 6}} />}
+      <Container
+        as="article"
+        pt={{base: 2, md: 4, lg: 6}}
+        pb={{base: 6, md: 10, lg: 20}}
+      >
+        <VStack spacing={{base: 4, sm: 6, md: 10}}>
           <Member title="Président" {...president} />
-          <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: 4, sm: 6, md: 10}} width="100%">
-            <GridItem colStart={{ base: 1, md: 2 }}>
+          <SimpleGrid
+            columns={{base: 2, md: 4}}
+            spacing={{base: 4, sm: 6, md: 10}}
+            width="100%"
+          >
+            <GridItem colStart={{base: 1, md: 2}}>
               <Member title="Trésorier" {...treasurer} />
             </GridItem>
-            <GridItem colStart={{ base: 2, md: 3 }}>
+            <GridItem colStart={{base: 2, md: 3}}>
               <Member title="Secrétaire Général" {...secretary} />
             </GridItem>
           </SimpleGrid>
 
-          <SimpleGrid columns={{ base: 2, md: 3 }} spacing={{ base: 4, sm: 6, md: 10}} width="100%">
-            {team.map((member) => (
+          <SimpleGrid
+            columns={{base: 2, md: 3}}
+            spacing={{base: 4, sm: 6, md: 10}}
+            width="100%"
+          >
+            {team.map(member => (
               <Member key={member.name} {...member} />
             ))}
           </SimpleGrid>

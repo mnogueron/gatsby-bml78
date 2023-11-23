@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import {Helmet} from 'react-helmet';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import useSiteMetadata from './SiteMetadata';
-import { useScroll } from '../hooks/useScroll';
+import {useScroll} from '../hooks/useScroll';
 import BreakpointTag from './BreakpointTag';
-import { Box } from '@chakra-ui/react';
+import {Box} from '@chakra-ui/react';
 
-const Layout = ({ children, pageContext }) => {
+const Layout = ({children, pageContext}) => {
   // set global title and description on global layout, can be overwritten on a per-page basis with MyHelmet
-  const { title, description } = useSiteMetadata();
-  const { scrollY, scrollDirection } = useScroll();
+  const {title, description} = useSiteMetadata();
+  const {scrollY, scrollDirection} = useScroll();
 
   return (
     <Box>

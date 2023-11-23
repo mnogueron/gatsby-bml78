@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Container from '../../components/Container';
-import { CardGrid } from '../../components/Sections';
-import { Center, Heading, SimpleGrid, VStack } from '@chakra-ui/react';
+import {CardGrid} from '../../components/Sections';
+import {Center, Heading, SimpleGrid, VStack} from '@chakra-ui/react';
 import PostBigCard from '../../components/PostBigCard';
 
 const EmptyPlaceholder = () => {
   return (
-    <Center pt={{ base: 8, sm: 12 }} pb={20}>
+    <Center pt={{base: 8, sm: 12}} pb={20}>
       <VStack spacing={8}>
         <Heading as="h3" size="xl" textAlign="center">
-          C'est le début de la saison ! 🏸
+          {"C'est le début de la saison ! 🏸"}
         </Heading>
         <Heading as="h3" size="md" textAlign="center">
           Bientôt de nouveaux résultats...
@@ -20,7 +20,7 @@ const EmptyPlaceholder = () => {
   );
 };
 
-function ArticlesPageTemplate({ heading, subheading, posts = [] }) {
+function ArticlesPageTemplate({heading, subheading, posts = []}) {
   const [firstPost, secondPost, ...otherPosts] = posts;
   return (
     <>
@@ -29,13 +29,13 @@ function ArticlesPageTemplate({ heading, subheading, posts = [] }) {
         {firstPost ? (
           <>
             <VStack
-              spacing={{ base: 6, sm: 8, lg: 12 }}
+              spacing={{base: 6, sm: 8, lg: 12}}
               alignItems="initial"
-              display={{ base: 'none', lg: 'flex' }}
+              display={{base: 'none', lg: 'flex'}}
             >
               <SimpleGrid
-                columns={secondPost ? { base: 1, sm: 2 } : 1}
-                spacing={{ base: 6, sm: 6, lg: 8 }}
+                columns={secondPost ? {base: 1, sm: 2} : 1}
+                spacing={{base: 6, sm: 6, lg: 8}}
               >
                 <PostBigCard post={firstPost} />
                 {secondPost && <PostBigCard post={secondPost} />}
@@ -43,12 +43,12 @@ function ArticlesPageTemplate({ heading, subheading, posts = [] }) {
               <CardGrid posts={otherPosts} />
             </VStack>
             <VStack
-              spacing={{ base: 6, sm: 8, lg: 12 }}
+              spacing={{base: 6, sm: 8, lg: 12}}
               alignItems="initial"
-              display={{ base: 'flex', lg: 'none' }}
+              display={{base: 'flex', lg: 'none'}}
             >
-              <PostBigCard post={firstPost} size={{ base: 'sm', sm: 'md' }} />
-              <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={{ base: 6 }}>
+              <PostBigCard post={firstPost} size={{base: 'sm', sm: 'md'}} />
+              <SimpleGrid columns={{base: 1, sm: 2}} spacing={{base: 6}}>
                 {[secondPost, ...otherPosts].filter(Boolean).map((p, i) => (
                   <PostBigCard key={i} post={p} size="sm" />
                 ))}

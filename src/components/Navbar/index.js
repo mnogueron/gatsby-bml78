@@ -1,55 +1,50 @@
-import React, { useMemo, useState } from 'react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import { Heading, Box } from '@chakra-ui/react';
+import React, {useMemo, useState} from 'react';
+import {graphql, useStaticQuery} from 'gatsby';
+import {Box} from '@chakra-ui/react';
 import MobileMenu from './MobileMenu';
 import DropdownNavLink from './DropdownNavLink';
 import NavLink from './NavLink';
-import { useScroll } from '../../hooks/useScroll';
-import Logo from "../Logo";
+import {useScroll} from '../../hooks/useScroll';
+import Logo from '../Logo';
 
 // TODO use dark / light mode instead of isTransparent
 // TODO review animation on scroll with isTransparent
-const Navbar = ({ className, isTransparentAtTop }) => {
-  const { scrollY } = useScroll();
+const Navbar = ({className, isTransparentAtTop}) => {
+  const {scrollY} = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
-  const { infosPratiquesMenu, resultsMenu } = useStaticQuery(
-    graphql`
-      query NAVBAR {
-        infosPratiquesMenu: markdownRemark(
-          frontmatter: { menuKey: { eq: "infos-pratiques" } }
-        ) {
-          frontmatter {
-            menuKey
+  const {infosPratiquesMenu, resultsMenu} = useStaticQuery(graphql`
+    query NAVBAR {
+      infosPratiquesMenu: markdownRemark(
+        frontmatter: {menuKey: {eq: "infos-pratiques"}}
+      ) {
+        frontmatter {
+          menuKey
+          items {
+            title
+            url
             items {
               title
               url
-              items {
-                title
-                url
-              }
-            }
-          }
-        }
-
-        resultsMenu: markdownRemark(
-          frontmatter: { menuKey: { eq: "resultats" } }
-        ) {
-          frontmatter {
-            menuKey
-            items {
-              title
-              url
-              items {
-                title
-                url
-              }
             }
           }
         }
       }
-    `
-  );
+
+      resultsMenu: markdownRemark(frontmatter: {menuKey: {eq: "resultats"}}) {
+        frontmatter {
+          menuKey
+          items {
+            title
+            url
+            items {
+              title
+              url
+            }
+          }
+        }
+      }
+    }
+  `);
 
   const MENU = useMemo(() => {
     const extractSubMenus = (item, index) => {
@@ -57,7 +52,7 @@ const Navbar = ({ className, isTransparentAtTop }) => {
         return {
           key: `${item.title} - ${index}`,
           label: item.title,
-          options: item.items.map((item) => ({
+          options: item.items.map(item => ({
             key: `${item.url} - ${item.title}`,
             label: item.title,
             to: item.url,
@@ -148,7 +143,7 @@ const Navbar = ({ className, isTransparentAtTop }) => {
           <Logo color={isTransparent ? 'text.inverted.main' : 'text.main'} />
 
           {/* Mobile menu button */}
-          <Box display={{ base: 'flex', lg: 'none' }}>
+          <Box display={{base: 'flex', lg: 'none'}}>
             <Box
               as="button"
               type="button"
@@ -182,7 +177,7 @@ const Navbar = ({ className, isTransparentAtTop }) => {
         {/* Mobile Menu open: "block", Menu closed: "hidden" */}
         <div className={'items-center hidden lg:flex'}>
           <div className="flex flex-col w-full lg:flex-row lg:mx-6 lg:my-2 items-center">
-            {MENU.map((menu) => {
+            {MENU.map(menu => {
               if (menu.options) {
                 return (
                   <DropdownNavLink

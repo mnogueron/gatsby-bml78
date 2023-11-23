@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Badge, Box, useBreakpointValue } from '@chakra-ui/react';
+import React from 'react';
+import {Badge, Box, useBreakpointValue} from '@chakra-ui/react';
 
 const BreakpointTag = () => {
   const breakpoint = useBreakpointValue([

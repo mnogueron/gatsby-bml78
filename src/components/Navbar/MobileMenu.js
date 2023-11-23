@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, {useCallback, useState} from 'react';
 import {
   Accordion,
   AccordionItem,
@@ -15,17 +15,16 @@ import {
   AccordionButton,
   AccordionIcon,
 } from '@chakra-ui/react';
-import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
+import {StaticImage} from 'gatsby-plugin-image';
+import {Link} from 'gatsby';
 
-const SubMenu = ({ label, options, onClose }) => {
+const SubMenu = ({label, options, onClose}) => {
   const [index, setIndex] = useState([]);
   return (
-    <AccordionItem
-    >
+    <AccordionItem>
       <h3 onClick={() => setIndex([])}>
         <AccordionButton color="gray.600" _focus="none">
-          <Box as="span" flex="1" textAlign="left" py={2} >
+          <Box as="span" flex="1" textAlign="left" py={2}>
             {label}
           </Box>
           <AccordionIcon />
@@ -36,9 +35,9 @@ const SubMenu = ({ label, options, onClose }) => {
           index={index}
           allowMultiple
           allowToggle
-          onChange={(expandedIndex) => setIndex(expandedIndex)}
+          onChange={expandedIndex => setIndex(expandedIndex)}
         >
-          {options.map((m) => (
+          {options.map(m => (
             <MenuItem key={m.key} item={m} onClose={onClose} />
           ))}
         </Accordion>
@@ -47,11 +46,11 @@ const SubMenu = ({ label, options, onClose }) => {
   );
 };
 
-const MenuItem = ({ item, onClose }) => {
+const MenuItem = ({item, onClose}) => {
   const [isActive, setIsActive] = useState(false);
 
   const getProps = useCallback(
-    ({ isCurrent, isPartiallyCurrent }) => {
+    ({isCurrent, isPartiallyCurrent}) => {
       const active = item.partial ? isPartiallyCurrent : isCurrent;
       setIsActive(active);
     },
@@ -66,7 +65,7 @@ const MenuItem = ({ item, onClose }) => {
 
   return (
     <Box
-      _hover={{ bg: 'blackAlpha.50', color: 'blue.500' }}
+      _hover={{bg: 'blackAlpha.50', color: 'blue.500'}}
       color={isActive ? 'blue.500' : 'gray.800'}
       fontWeight={isActive ? 'semibold' : 'medium'}
       borderTopWidth="1px"
@@ -87,7 +86,7 @@ const MenuItem = ({ item, onClose }) => {
   );
 };
 
-const MobileMenu = ({ onClose, isOpen, menu }) => {
+const MobileMenu = ({onClose, isOpen, menu}) => {
   return (
     <Drawer onClose={onClose} isOpen={isOpen} size={'full'}>
       <DrawerOverlay />
@@ -105,14 +104,14 @@ const MobileMenu = ({ onClose, isOpen, menu }) => {
             backgroundColor="transparent"
             placeholder="blurred"
           />
-          <Heading fontSize={{ base: 'md', sm: 'lg' }}>
+          <Heading fontSize={{base: 'md', sm: 'lg'}}>
             Badminton Maisons-Laffitte
           </Heading>
         </DrawerHeader>
 
         <DrawerBody>
           <Accordion allowMultiple allowToggle>
-            {menu.map((m) => (
+            {menu.map(m => (
               <MenuItem key={m.key} item={m} onClose={onClose} />
             ))}
           </Accordion>

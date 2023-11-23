@@ -56,7 +56,7 @@ export default {
   toBlock: function (obj) {
     return (
       `<simplegrid columns='${JSON.stringify(obj.nb_columns)}'>` +
-      obj.columns.map((c) => `<div>${c.body}</div>`).join('') +
+      obj.columns.map(c => `<div>${c.body}</div>`).join('') +
       '</simplegrid>'
     );
   },

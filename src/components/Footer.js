@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
+import {Link as GatsbyLink} from 'gatsby';
 import {
   Flex,
   Box,
@@ -12,10 +12,15 @@ import {
   Icon,
   HStack,
 } from '@chakra-ui/react';
-import { FaInstagram, FaFacebookSquare, FaYoutube, FaDiscord } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaFacebookSquare,
+  FaYoutube,
+  FaDiscord,
+} from 'react-icons/fa';
 import BigLogo from './BigLogo';
 
-const FooterLink = ({ to, children, ...rest }) => (
+const FooterLink = ({to, children, ...rest}) => (
   <Link
     as={rest.isExternal ? 'a' : GatsbyLink}
     to={rest.isExternal ? undefined : to}
@@ -106,20 +111,20 @@ const Footer = () => {
     >
       <Box maxW={'7xl'} px={8} pt={8} pb={6} margin="auto">
         <Stack
-          direction={{ base: 'column-reverse', md: 'row' }}
+          direction={{base: 'column-reverse', md: 'row'}}
           justifyContent="space-between"
-          alignItems={{ base: 'center', md: 'initial' }}
-          spacing={{ base: 8, md: 0 }}
+          alignItems={{base: 'center', md: 'initial'}}
+          spacing={{base: 8, md: 0}}
           py={3}
         >
-          <VStack alignItems={{ base: 'center', md: 'flex-start' }} spacing={4}>
+          <VStack alignItems={{base: 'center', md: 'flex-start'}} spacing={4}>
             <BigLogo />
             <VStack
               as="address"
               alignItems="flex-start"
               color="text.inverted.main"
               fontSize="sm"
-              ps={{ base: 0, md: 4 }}
+              ps={{base: 0, md: 4}}
             >
               <Box>
                 <Text>99 rue de la Muette</Text>
@@ -139,11 +144,11 @@ const Footer = () => {
           </VStack>
 
           <Box>
-            <Flex flexWrap={{ base: 'wrap', lg: 'nowrap' }}>
+            <Flex flexWrap={{base: 'wrap', lg: 'nowrap'}}>
               {footerSections.map((section, index) => (
                 <VStack
                   key={`${section.title}-${index}`}
-                  alignItems={{ base: 'center', md: 'flex-start' }}
+                  alignItems={{base: 'center', md: 'flex-start'}}
                   spacing={1}
                   flex={1}
                   flexBasis={{
@@ -168,11 +173,11 @@ const Footer = () => {
                   <Heading as="div" size="xs" color="text.inverted.secondary">
                     {section.title}
                   </Heading>
-                  {section.links.map(({ title, to, ...rest }, index) => (
+                  {section.links.map(({title, to, ...rest}, index) => (
                     <FooterLink
                       key={`${title}-${index}`}
                       to={to}
-                      textAlign={{ base: 'center', md: 'left' }}
+                      textAlign={{base: 'center', md: 'left'}}
                       {...rest}
                     >
                       {title}
@@ -187,7 +192,7 @@ const Footer = () => {
         <Divider borderColor={'gray.200'} my={6} />
 
         <Stack
-          direction={{ base: 'column', md: 'row' }}
+          direction={{base: 'column', md: 'row'}}
           alignItems="center"
           justifyContent="space-between"
         >

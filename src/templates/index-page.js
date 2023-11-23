@@ -1,23 +1,23 @@
-import React, { useMemo } from 'react';
-import { graphql } from 'gatsby';
+import React, {useMemo} from 'react';
+import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 
 import IndexPageTemplate from './components/IndexPageTemplate';
 import PageLayout from '../components/PageLayout';
 
-const IndexPage = ({ data, pageContext }) => {
-  const { frontmatter: fm } = data.markdownRemark;
+const IndexPage = ({data, pageContext}) => {
+  const {frontmatter: fm} = data.markdownRemark;
 
   // latest posts and results
-  const { edges: posts } = data.allPostsMarkdownRemark;
-  const { edges: results } = data.allResultsMarkdownRemark;
+  const {edges: posts} = data.allPostsMarkdownRemark;
+  const {edges: results} = data.allResultsMarkdownRemark;
   const videos = useMemo(() => {
     if (data.allVideosMarkdownRemark.edges.length === 0) {
       return [];
     }
 
     return data.allVideosMarkdownRemark.edges[0].node.frontmatter.videos;
-  }, []);
+  }, [data.allVideosMarkdownRemark.edges]);
 
   return (
     <>
@@ -44,7 +44,7 @@ export default IndexPage;
 
 export const indexPageQuery = graphql`
   query IndexPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       htmlAst
       frontmatter {
         title
@@ -69,7 +69,7 @@ export const indexPageQuery = graphql`
       }
     }
     allVideosMarkdownRemark: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "all-videos-page" } } }
+      filter: {frontmatter: {templateKey: {eq: "all-videos-page"}}}
       limit: 1
     ) {
       edges {
@@ -83,8 +83,8 @@ export const indexPageQuery = graphql`
       }
     }
     allPostsMarkdownRemark: allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "article-page" } } }
+      sort: {order: DESC, fields: [frontmatter___date]}
+      filter: {frontmatter: {templateKey: {eq: "article-page"}}}
       limit: 5
     ) {
       edges {
@@ -117,8 +117,8 @@ export const indexPageQuery = graphql`
       }
     }
     allResultsMarkdownRemark: allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "result-page" } } }
+      sort: {order: DESC, fields: [frontmatter___date]}
+      filter: {frontmatter: {templateKey: {eq: "result-page"}}}
       limit: 3
     ) {
       edges {

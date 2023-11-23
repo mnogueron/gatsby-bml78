@@ -1,8 +1,8 @@
 import React from 'react';
 import IndexPageTemplate from '../../templates/components/IndexPageTemplate';
-import useProcessedHAST from "../useProcessedHAST";
+import useProcessedHAST from '../useProcessedHAST';
 
-const IndexPagePreview = ({ data, getAsset }) => {
+const IndexPagePreview = ({data, getAsset}) => {
   const clubSectionContent = useProcessedHAST(data.body);
 
   return (

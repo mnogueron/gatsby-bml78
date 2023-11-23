@@ -34,7 +34,7 @@
     "decap-cms-app": "^3.0.12",
     "decap-cms-locales": "^3.1.2",
     "framer-motion": "^6.3.11",
-    "gatsby": "^4.18.2",
+    "gatsby": "^4.24.0",
     "gatsby-plugin-image": "^2.18.1",
     "gatsby-plugin-layout": "^3.18.0",
     "gatsby-plugin-manifest": "^4.18.1",

@@ -83,7 +83,7 @@ export const indexPageQuery = graphql`
       }
     }
     allPostsMarkdownRemark: allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date]}
+      sort: {frontmatter: {date: DESC}}
       filter: {frontmatter: {templateKey: {eq: "article-page"}}}
       limit: 5
     ) {
@@ -117,7 +117,7 @@ export const indexPageQuery = graphql`
       }
     }
     allResultsMarkdownRemark: allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date]}
+      sort: {frontmatter: {date: DESC}}
       filter: {frontmatter: {templateKey: {eq: "result-page"}}}
       limit: 3
     ) {

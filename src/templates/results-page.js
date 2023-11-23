@@ -38,7 +38,7 @@ export const resultsPageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date]}
+      sort: {frontmatter: {date: DESC}}
       filter: {
         frontmatter: {templateKey: {eq: "result-page"}, category: {eq: $title}}
       }

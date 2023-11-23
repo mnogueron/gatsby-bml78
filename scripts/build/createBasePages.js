@@ -1,30 +1,30 @@
-import { getComponent } from './utils.js';
+import {getComponent} from './utils.js';
 
-const query = (graphql) =>
-  graphql(
-    `
-      query {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { nin: ["article-page", "result-page"] } } }
-        ) {
-          edges {
-            node {
-              id
-              fields {
-                slug
-              }
-              frontmatter {
+const query = graphql =>
+  graphql(`
+    {
+      allMarkdownRemark(
+        sort: {frontmatter: {date: DESC}}
+        filter: {
+          frontmatter: {templateKey: {nin: ["article-page", "result-page"]}}
+        }
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              templateKey
+              seo {
                 title
-                templateKey
-                seo {
-                  title
-                  description
-                  image {
-                    childImageSharp {
-                      fixed {
-                        src
-                      }
+                description
+                image {
+                  childImageSharp {
+                    fixed {
+                      src
                     }
                   }
                 }
@@ -33,24 +33,24 @@ const query = (graphql) =>
           }
         }
       }
-    `
-  );
+    }
+  `);
 
-export const createBasePages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+export const createBasePages = async ({graphql, actions}) => {
+  const {createPage} = actions;
 
   const result = await query(graphql);
 
   if (result.errors) {
-    result.errors.forEach((e) => console.error(e.toString()));
+    result.errors.forEach(e => console.error(e.toString()));
     return Promise.reject(result.errors);
   }
 
-  const { edges } = result.data.allMarkdownRemark;
+  const {edges} = result.data.allMarkdownRemark;
 
-  edges.forEach(({ node, next, previous }) => {
-    const { id, frontmatter, fields } = node;
-    const { title, templateKey, seo } = frontmatter;
+  edges.forEach(({node}) => {
+    const {id, frontmatter, fields} = node;
+    const {title, templateKey, seo} = frontmatter;
 
     if (!templateKey) {
       return;

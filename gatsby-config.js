@@ -1,15 +1,16 @@
 const siteUrl = process.env.URL || `https://badml.com/`;
 
-const excerptExcludedRegexes = [
+/*const excerptExcludedRegexes = [
   /^(#)+/,
   /^<gallery>(.*?)<\/gallery>$/,
   /^<scoreboard>(.*?)<\/scoreboard>$/,
   /^<teamscoreboard>(.*?)<\/teamscoreboard>$/,
   /^`youtube:\s(.*)`$/,
-];
+];*/
 
 // TODO change title and description
 module.exports = {
+  trailingSlash: `ignore`,
   siteMetadata: {
     title: 'Badminton Maisons-Laffitte',
     titleTemplate: '%s - BML',
@@ -81,7 +82,7 @@ module.exports = {
               urlOverrides: [
                 {
                   id: 'youtube',
-                  embedURL: (videoId) =>
+                  embedURL: videoId =>
                     `https://www.youtube-nocookie.com/embed/${videoId}`,
                 },
               ], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
@@ -135,7 +136,6 @@ module.exports = {
         icon: `src/img/bml-icon.png`,
       },
     },
-    'gatsby-transformer-remark-frontmatter',
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
@@ -160,7 +160,7 @@ module.exports = {
       options: {
         host: siteUrl,
         sitemap: `${siteUrl}/sitemap.xml`,
-        policy: [{ userAgent: '*', allow: '/' }],
+        policy: [{userAgent: '*', allow: '/'}],
       },
     },
     'gatsby-plugin-react-helmet',

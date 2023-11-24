@@ -15,6 +15,8 @@ import withPreviewWrapper from './withPreviewWrapper';
 
 import './cms-utils';
 
+console.log(CMS);
+
 const previewTemplates = {
   index: IndexPagePreview,
   'articles-index': ArticlesPagePreview,

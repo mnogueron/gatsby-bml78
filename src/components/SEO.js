@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
-import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
-import { useLocation } from '@reach/router';
+import React, {useMemo} from 'react';
+import {Helmet} from 'react-helmet';
+import {useStaticQuery, graphql} from 'gatsby';
+import {useLocation} from '@reach/router';
 import format from 'date-fns/format';
 import frLocale from 'date-fns/locale/fr';
 
@@ -19,8 +19,8 @@ const query = graphql`
   }
 `;
 
-export const getSEOData = (data) => {
-  const { frontmatter: fm } = data.markdownRemark;
+export const getSEOData = data => {
+  const {frontmatter: fm} = data.markdownRemark;
   switch (fm.templateKey) {
     case 'article-page':
     case 'tournament-page':
@@ -41,7 +41,7 @@ export const getSEOData = (data) => {
         description: fm.subheading,
       };
     case 'result-page': {
-      const date = format(new Date(fm.date), 'PP', { locale: frLocale });
+      const date = format(new Date(fm.date), 'PP', {locale: frLocale});
       const featuredImageSrc =
         fm.featuredimage?.image?.childImageSharp?.fixed?.src;
       return {
@@ -63,24 +63,19 @@ export const getSEOData = (data) => {
   }
 };
 
-const SEO = ({ data, pageContext }) => {
-  const { pathname } = useLocation();
-  const { site } = useStaticQuery(query);
-  const { seo: override } = pageContext;
+const SEO = ({data, pageContext}) => {
+  const {pathname} = useLocation();
+  const {site} = useStaticQuery(query);
+  const {seo: override} = pageContext;
   const {
     title,
     description,
     image,
     article = false,
-  } = useMemo(() => getSEOData(data), []);
+  } = useMemo(() => getSEOData(data), [data]);
 
-  const {
-    defaultTitle,
-    titleTemplate,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = site.siteMetadata;
+  const {titleTemplate, defaultDescription, siteUrl, defaultImage} =
+    site.siteMetadata;
 
   const seo = {
     title: override?.title || title,
@@ -94,32 +89,32 @@ const SEO = ({ data, pageContext }) => {
       title={seo.title}
       titleTemplate={titleTemplate}
       meta={[
-        seo.description && { name: 'description', content: seo.description },
-        { name: 'image', content: seo.image },
-        seo.title && { name: 'twitter:title', content: seo.title },
+        seo.description && {name: 'description', content: seo.description},
+        {name: 'image', content: seo.image},
+        seo.title && {name: 'twitter:title', content: seo.title},
         seo.description && {
           name: 'twitter:description',
           content: seo.description,
         },
-        seo.image && { name: 'twitter:image', content: seo.image },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        seo.url && { property: 'og:url', content: seo.url },
-        { property: 'og:type', content: article ? 'article' : 'website' },
-        seo.title && { property: 'og:title', content: seo.title },
+        seo.image && {name: 'twitter:image', content: seo.image},
+        {name: 'twitter:card', content: 'summary_large_image'},
+        seo.url && {property: 'og:url', content: seo.url},
+        {property: 'og:type', content: article ? 'article' : 'website'},
+        seo.title && {property: 'og:title', content: seo.title},
         seo.description && {
           property: 'og:description',
           content: seo.description,
         },
-        seo.image && { property: 'og:image', content: seo.image },
-        seo.url && { itemProp: 'url', content: seo.url },
-        seo.title && { itemProp: 'name', content: seo.title },
+        seo.image && {property: 'og:image', content: seo.image},
+        seo.url && {itemProp: 'url', content: seo.url},
+        seo.title && {itemProp: 'name', content: seo.title},
         seo.description && {
           itemProp: 'description',
           content: seo.description,
         },
-        seo.image && { itemProp: 'thumbnailUrl', content: seo.image },
-        seo.image && { itemProp: 'image', content: seo.image },
-        seo.image && { itemProp: 'imageUrl', content: seo.image },
+        seo.image && {itemProp: 'thumbnailUrl', content: seo.image},
+        seo.image && {itemProp: 'image', content: seo.image},
+        seo.image && {itemProp: 'imageUrl', content: seo.image},
       ].filter(Boolean)}
     />
   );

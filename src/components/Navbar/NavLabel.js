@@ -1,8 +1,6 @@
 import React from 'react';
-import { Flex, Text } from '@chakra-ui/react';
-
-// TODO drop isActive
-const NavLabel = ({ label, isActive, isHover, icon, isTransparent, ...rest }) => {
+import {Flex, Text} from '@chakra-ui/react';
+const NavLabel = ({label, icon, isTransparent, ...rest}) => {
   return (
     <Flex
       {...rest}
@@ -20,9 +18,7 @@ const NavLabel = ({ label, isActive, isHover, icon, isTransparent, ...rest }) =>
         },
       }}
     >
-      <Text mr={icon && 2}>
-        {label}
-      </Text>
+      <Text mr={icon && 2}>{label}</Text>
       {icon && (
         <Flex
           sx={{

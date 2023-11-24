@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from './Card';
 import Image from './Image';
-import { Box, SimpleGrid } from '@chakra-ui/react';
+import {Box, SimpleGrid} from '@chakra-ui/react';
 
 /**
  * Basic container to add max-w-7xl, some p-x and p-y
  */
-export const Container = ({ className, children, ...rest }) => {
+export const Container = ({className, children, ...rest}) => {
   return (
     <Box
       className={`max-w-7xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-16 ${className}`}
@@ -20,7 +20,7 @@ export const Container = ({ className, children, ...rest }) => {
 /**
  * Basic style for page section heading
  */
-export const SectionHeading = ({ children }) => {
+export const SectionHeading = ({children}) => {
   return (
     <h2 className="text-2xl font-medium text-gray-800 sm:text-3xl lg:text-4xl">
       {children}
@@ -62,11 +62,11 @@ export const TextImageSplit = ({
   );
 };
 
-export const CardGrid = ({ posts }) => {
+export const CardGrid = ({posts}) => {
   return (
     <SimpleGrid
-      columns={{ base: 1, sm: 2, lg: 3 }}
-      spacing={{ base: 6, sm: 6, lg: 8 }}
+      columns={{base: 1, sm: 2, lg: 3}}
+      spacing={{base: 6, sm: 6, lg: 8}}
     >
       {posts.map((post, idx) => {
         return (

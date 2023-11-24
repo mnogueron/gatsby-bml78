@@ -1,21 +1,21 @@
-import React, {useMemo, useState} from "react";
-import createCache from "@emotion/cache";
-import {CacheProvider} from "@emotion/react";
-import {ChakraProvider} from "@chakra-ui/react";
+import React, {useMemo, useState} from 'react';
+import createCache from '@emotion/cache';
+import {CacheProvider} from '@emotion/react';
+import {ChakraProvider} from '@chakra-ui/react';
 
-const FrameProvider = (props) => {
+const FrameProvider = props => {
   const [container, setContainer] = useState(document.head);
   const cacheValue = useMemo(() => {
     if (!container) {
       return null;
     }
 
-    return createCache({ key: 'css', container });
+    return createCache({key: 'css', container});
   }, [container]);
 
   return (
     <div
-      ref={(node) => {
+      ref={node => {
         if (node) {
           setContainer(node.ownerDocument.head);
         }
@@ -30,14 +30,12 @@ const FrameProvider = (props) => {
   );
 };
 
-const PreviewStyleProvider = (props) => {
+const PreviewStyleProvider = props => {
   return (
     <FrameProvider>
-      <ChakraProvider>
-        {props.children}
-      </ChakraProvider>
+      <ChakraProvider>{props.children}</ChakraProvider>
     </FrameProvider>
-  )
-}
+  );
+};
 
 export default PreviewStyleProvider;

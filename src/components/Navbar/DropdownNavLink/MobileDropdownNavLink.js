@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
-import { useDisclosure, Collapse, Icon } from '@chakra-ui/react';
-import { MdExpandMore, MdExpandLess } from 'react-icons/md';
+import React, {useRef} from 'react';
+import {useDisclosure, Collapse, Icon} from '@chakra-ui/react';
+import {MdExpandMore, MdExpandLess} from 'react-icons/md';
 import NavLabel from '../NavLabel';
 import NavLink from '../NavLink';
 
-const MobileDropdownNavLink = ({ label, options, onClick, isRecursive }) => {
-  const { isOpen, onClose, onToggle } = useDisclosure();
+const MobileDropdownNavLink = ({label, options, onClick, isRecursive}) => {
+  const {isOpen, onClose, onToggle} = useDisclosure();
   const onCloseTimeout = useRef(0);
 
   const handleClose = () => {
@@ -26,13 +26,14 @@ const MobileDropdownNavLink = ({ label, options, onClick, isRecursive }) => {
           )
         }
         cursor="pointer"
-        {...isRecursive ? { fontStyle: 'italic', fontSize: 'sm' } : {}}
+        {...(isRecursive ? {fontStyle: 'italic', fontSize: 'sm'} : {})}
       />
       <Collapse in={isOpen} animateOpacity>
-        {options.map(({ label, to, key, options }) => {
+        {options.map(({label, to, key, options}) => {
           if (options) {
             return (
               <MobileDropdownNavLink
+                key={key}
                 label={label}
                 onClick={handleClose}
                 options={options}

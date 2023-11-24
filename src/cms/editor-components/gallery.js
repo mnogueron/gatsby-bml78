@@ -15,7 +15,7 @@ export default {
           required: true,
         },
       ],
-    }
+    },
   ],
   pattern: /^<gallery>(.*?)<\/gallery>$/,
   fromBlock: function (match) {

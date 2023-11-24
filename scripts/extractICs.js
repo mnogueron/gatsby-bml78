@@ -1,8 +1,9 @@
 import ICBadCrawler from './ICBadCrawler.js';
-import data from './icUrls.json' assert { type: 'json' };
 import * as dateFns from 'date-fns';
 import './logger.js';
 import fs from 'fs';
+
+const data = JSON.parse(fs.readFileSync('./icUrls.json'));
 
 const run = async () => {
   const output = data;

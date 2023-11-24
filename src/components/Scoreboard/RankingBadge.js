@@ -1,7 +1,7 @@
-import React, {useMemo} from "react";
-import {Flex, Text} from "@chakra-ui/react";
+import React, {useMemo} from 'react';
+import {Flex, Text} from '@chakra-ui/react';
 
-const RankingBadge = ({ ranking }) => {
+const RankingBadge = ({ranking}) => {
   const textColor = useMemo(() => {
     switch (ranking) {
       case 'NC':
@@ -62,7 +62,12 @@ const RankingBadge = ({ ranking }) => {
       borderRadius={4}
       flexShrink={0}
     >
-      <Text color={textColor} fontWeight="semibold" fontSize="md" letterSpacing="tight">
+      <Text
+        color={textColor}
+        fontWeight="semibold"
+        fontSize="md"
+        letterSpacing="tight"
+      >
         {ranking}
       </Text>
     </Flex>

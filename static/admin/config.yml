@@ -280,19 +280,6 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
-          #- {
-          #    label: Office,
-          #    name: office,
-          #    widget: object,
-          #    fields:
-          #      [
-          #        { label: Tagline, name: tagline, widget: string },
-          #        { label: Location, name: location, widget: string },
-          #        { label: Address, name: address, widget: markdown },
-          #        { label: Phone, name: phone, widget: markdown },
-          #        { label: Image, name: image, widget: image },
-          #      ],
-          #  }
           - <<: *SEO
 
   - name: 'informations'

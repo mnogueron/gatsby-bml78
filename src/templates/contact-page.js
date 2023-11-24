@@ -1,12 +1,12 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 import ContactPageTemplate from './components/ContactPageTemplate';
 import PageLayout from '../components/PageLayout';
 
-function ContactPage({ data, pageContext }) {
-  const { markdownRemark: contact } = data;
-  const { subheading, heading, contactform } = contact.frontmatter;
+function ContactPage({data, pageContext}) {
+  const {markdownRemark: contact} = data;
+  const {subheading, heading, contactform} = contact.frontmatter;
 
   return (
     <>
@@ -27,7 +27,7 @@ export default ContactPage;
 
 export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       htmlAst
       frontmatter {
         title

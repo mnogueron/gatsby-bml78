@@ -1,12 +1,12 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 import PageLayout from '../components/PageLayout';
-import BoardChartPageTemplate from "./components/BoardChartPageTemplate";
+import BoardChartPageTemplate from './components/BoardChartPageTemplate';
 
-const BoardChartPage = ({ data, pageContext }) => {
-  const { markdownRemark: post } = data;
-  const { frontmatter: fm } = post;
+const BoardChartPage = ({data, pageContext}) => {
+  const {markdownRemark: post} = data;
+  const {frontmatter: fm} = post;
 
   return (
     <>
@@ -30,7 +30,7 @@ export default BoardChartPage;
 
 export const boardChartPageQuery = graphql`
   query BoardChartPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       htmlAst
       frontmatter {
         title
@@ -38,37 +38,37 @@ export const boardChartPageQuery = graphql`
         subheading
         templateKey
         president {
-            name
-            picture {
-                childImageSharp {
-                    gatsbyImageData(width: 640, placeholder: BLURRED)
-                }
+          name
+          picture {
+            childImageSharp {
+              gatsbyImageData(width: 640, placeholder: BLURRED)
             }
+          }
         }
         treasurer {
-            name
-            picture {
-                childImageSharp {
-                    gatsbyImageData(width: 640, placeholder: BLURRED)
-                }
+          name
+          picture {
+            childImageSharp {
+              gatsbyImageData(width: 640, placeholder: BLURRED)
             }
+          }
         }
         secretary {
-            name
-            picture {
-                childImageSharp {
-                    gatsbyImageData(width: 640, placeholder: BLURRED)
-                }
+          name
+          picture {
+            childImageSharp {
+              gatsbyImageData(width: 640, placeholder: BLURRED)
             }
+          }
         }
         board {
-            name
-            title
-            picture {
-                childImageSharp {
-                    gatsbyImageData(width: 640, placeholder: BLURRED)
-                }
+          name
+          title
+          picture {
+            childImageSharp {
+              gatsbyImageData(width: 640, placeholder: BLURRED)
             }
+          }
         }
       }
     }

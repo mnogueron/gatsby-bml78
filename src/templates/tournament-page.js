@@ -1,12 +1,12 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 import ArticlePageTemplate from './components/ArticlePageTemplate';
 import PageLayout from '../components/PageLayout';
 
-const TournamentPage = ({ data, pageContext }) => {
-  const { markdownRemark: project } = data;
-  const { frontmatter: fm } = project;
+const TournamentPage = ({data, pageContext}) => {
+  const {markdownRemark: project} = data;
+  const {frontmatter: fm} = project;
 
   return (
     <>
@@ -27,7 +27,7 @@ export default TournamentPage;
 
 export const tournamentQuery = graphql`
   query TournamentPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       htmlAst
       excerpt
       frontmatter {

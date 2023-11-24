@@ -1,14 +1,14 @@
 import React, {useMemo} from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 import ArticlesPageTemplate from './components/ArticlesPageTemplate';
 import PageLayout from '../components/PageLayout';
-import {preparePosts} from "../utils";
+import {preparePosts} from '../utils';
 
-const AllResultsPage = ({ data, pageContext }) => {
-  const { frontmatter: fm } = data.markdownRemark;
-  const { edges: posts } = data.allMarkdownRemark;
-  const preparedPosts = useMemo(() => preparePosts(posts), []);
+const AllResultsPage = ({data, pageContext}) => {
+  const {frontmatter: fm} = data.markdownRemark;
+  const {edges: posts} = data.allMarkdownRemark;
+  const preparedPosts = useMemo(() => preparePosts(posts), [posts]);
 
   return (
     <>
@@ -29,7 +29,7 @@ export default AllResultsPage;
 
 export const allResultsPageQuery = graphql`
   query AllResultsPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       html
       frontmatter {
         title
@@ -39,8 +39,8 @@ export const allResultsPageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "result-page" } } }
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {templateKey: {eq: "result-page"}}}
     ) {
       edges {
         node {
@@ -63,7 +63,7 @@ export const allResultsPageQuery = graphql`
                     width: 640
                     placeholder: BLURRED
                     aspectRatio: 1.5
-                    transformOptions: { fit: COVER, cropFocus: CENTER }
+                    transformOptions: {fit: COVER, cropFocus: CENTER}
                   )
                 }
               }

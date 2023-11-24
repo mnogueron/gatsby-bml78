@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, {useMemo} from 'react';
 import {
   Flex,
   Text,
@@ -15,40 +15,40 @@ import {
 import SmallRankingBadge from './SmallRankingBadge';
 import Point from './Score/Point';
 import RankingBadge from './RankingBadge';
-import { FaYoutube } from 'react-icons/fa';
+import {FaYoutube} from 'react-icons/fa';
 
 const WO_STATUS = 'WO';
 const AB_STATUS = 'AB.';
 
 const hasPlayerDataContent = (matches, key) => {
   return matches?.some(
-    (m) =>
-      m.teamA?.some((p) => Boolean(p[key]) || p[key] === 0) ||
-      m.teamB?.some((p) => Boolean(p[key]) || p[key] === 0) ||
+    m =>
+      m.teamA?.some(p => Boolean(p[key]) || p[key] === 0) ||
+      m.teamB?.some(p => Boolean(p[key]) || p[key] === 0) ||
       false
   );
 };
 
-const ClubText = ({ club, ...rest }) => {
+const ClubText = ({club, ...rest}) => {
   return (
     <Text
-      display={{ base: 'none', md: 'inline' }}
+      display={{base: 'none', md: 'inline'}}
       as="span"
-      fontSize={{ base: 'xs', md: 'sm' }}
+      fontSize={{base: 'xs', md: 'sm'}}
       color="gray.500"
       {...rest}
     >{`(${club})`}</Text>
   );
 };
 
-const TeamScore = ({ score, scoreOpponent }) => {
-  const isMobile = useBreakpointValue({ base: true, md: false });
+const TeamScore = ({score, scoreOpponent}) => {
+  const isMobile = useBreakpointValue({base: true, md: false});
   return (
     <Stack
-      direction={{ base: 'row', md: 'column' }}
+      direction={{base: 'row', md: 'column'}}
       alignItems="center"
       justifyContent="center"
-      spacing={{ base: 1, md: 2 }}
+      spacing={{base: 1, md: 2}}
     >
       <Point score={score[0]} oppositeScore={scoreOpponent[0]} />
       <Point score={score[1]} oppositeScore={scoreOpponent[1]} />
@@ -61,13 +61,13 @@ const TeamScore = ({ score, scoreOpponent }) => {
   );
 };
 
-const PlayerLine = ({ player, isRight, hideClub }) => {
-  const { firstname, lastname, ranking, club, status } = player;
+const PlayerLine = ({player, isRight, hideClub}) => {
+  const {firstname, lastname, ranking, club, status} = player;
   const name =
     firstname || lastname
       ? `${lastname.toUpperCase()} ${firstname}`
       : undefined;
-  const isMobile = useBreakpointValue({ base: true, md: false });
+  const isMobile = useBreakpointValue({base: true, md: false});
   return (
     <Stack
       gap={1}
@@ -84,7 +84,7 @@ const PlayerLine = ({ player, isRight, hideClub }) => {
       )}
       <Stack
         spacing={1}
-        fontSize={{ base: 'sm', md: 'md' }}
+        fontSize={{base: 'sm', md: 'md'}}
         direction={{
           base: 'row',
           md: !isMobile && isRight ? 'row-reverse' : 'row',
@@ -94,10 +94,7 @@ const PlayerLine = ({ player, isRight, hideClub }) => {
       >
         <Text as="span">{name}</Text>
         {(status === 'AB.' || status === 'WO') && (
-          <Tag
-            fontSize={{ base: 'xs', sm: 'sm' }}
-            size={isMobile ? 'sm' : 'md'}
-          >
+          <Tag fontSize={{base: 'xs', sm: 'sm'}} size={isMobile ? 'sm' : 'md'}>
             {status}
           </Tag>
         )}
@@ -116,10 +113,10 @@ const TeamLine = ({
   hideClub,
   ...rest
 }) => {
-  const isMobile = useBreakpointValue({ base: true, md: false });
+  const isMobile = useBreakpointValue({base: true, md: false});
   return (
     <Flex
-      flexDirection={{ base: 'row', md: isRight ? 'row-reverse' : 'row' }}
+      flexDirection={{base: 'row', md: isRight ? 'row-reverse' : 'row'}}
       justifyContent="space-between"
       flex={1}
       {...rest}
@@ -128,9 +125,9 @@ const TeamLine = ({
         justifyContent="center"
         alignItems="initial"
         p={2}
-        pl={{ base: 0, md: 2 }}
-        ml={{ base: 0, md: isRight ? 2 : 0 }}
-        mr={{ base: 2, md: isRight ? 0 : 2 }}
+        pl={{base: 0, md: 2}}
+        ml={{base: 0, md: isRight ? 2 : 0}}
+        mr={{base: 2, md: isRight ? 0 : 2}}
         bg={
           isWinning
             ? `linear-gradient(${
@@ -155,7 +152,7 @@ const TeamLine = ({
   );
 };
 
-const GameType = ({ type, youtubeLink, ...rest }) => {
+const GameType = ({type, youtubeLink, ...rest}) => {
   const padding = useMemo(() => {
     switch (type) {
       case 'Poule':
@@ -164,9 +161,9 @@ const GameType = ({ type, youtubeLink, ...rest }) => {
       case '1/8ème':
       case 'Quarts':
       case 'Finale':
-        return { base: 1, md: 2 };
+        return {base: 1, md: 2};
       case 'Demi':
-        return { base: 0, md: 1 };
+        return {base: 0, md: 1};
       case 'SH':
       case 'SD':
       case 'DH':
@@ -185,14 +182,14 @@ const GameType = ({ type, youtubeLink, ...rest }) => {
       case 'Quarts':
       case 'Demi':
       case 'Finale':
-        return { base: 'md', md: 'xl' };
+        return {base: 'md', md: 'xl'};
       case 'SH':
       case 'SD':
       case 'DH':
       case 'DD':
       case 'MX':
       default:
-        return { base: 'md', md: 'xl' };
+        return {base: 'md', md: 'xl'};
     }
   }, [type]);
 
@@ -212,8 +209,8 @@ const GameType = ({ type, youtubeLink, ...rest }) => {
         }}
       >
         <Center
-          height={{ base: 12, md: 16 }}
-          width={{ base: 12, md: 16 }}
+          height={{base: 12, md: 16}}
+          width={{base: 12, md: 16}}
           padding={padding}
           bg="white"
           borderRadius={8}
@@ -236,7 +233,7 @@ const GameType = ({ type, youtubeLink, ...rest }) => {
               height={6}
               width={8}
               color="red.600"
-              _groupHover={{ color: 'red.500' }}
+              _groupHover={{color: 'red.500'}}
             />
           </VStack>
         </Center>
@@ -246,8 +243,8 @@ const GameType = ({ type, youtubeLink, ...rest }) => {
 
   return (
     <Center
-      height={{ base: 12, md: 16 }}
-      width={{ base: 12, md: 16 }}
+      height={{base: 12, md: 16}}
+      width={{base: 12, md: 16}}
       padding={padding}
       bg="white"
       borderRadius={8}
@@ -266,8 +263,8 @@ const GameType = ({ type, youtubeLink, ...rest }) => {
   );
 };
 
-const GameScoreboard = ({ match }) => {
-  const { teamA = [], teamB = [], score = [] } = match;
+const GameScoreboard = ({match}) => {
+  const {teamA = [], teamB = [], score = []} = match;
   const normalisedScore = useMemo(
     () => [
       [score.set[0]?.scoreA, score.set[1]?.scoreA, score.set[2]?.scoreA],
@@ -277,37 +274,38 @@ const GameScoreboard = ({ match }) => {
   );
 
   const winningTeam = useMemo(() => {
-    if (teamA.some((p) => p.status === WO_STATUS || p.status === AB_STATUS)) {
+    if (teamA.some(p => p.status === WO_STATUS || p.status === AB_STATUS)) {
       return 1;
     }
-    if (teamB.some((p) => p.status === WO_STATUS || p.status === AB_STATUS)) {
+    if (teamB.some(p => p.status === WO_STATUS || p.status === AB_STATUS)) {
       return 0;
     }
 
-    const { winningSetsA, winningSetsB } = score.set.reduce(
+    const {winningSetsA, winningSetsB} = score.set.reduce(
       (agg, s) => {
         if (s.scoreA > s.scoreB) {
-          return { ...agg, winningSetsA: agg.winningSetsA + 1 };
+          return {...agg, winningSetsA: agg.winningSetsA + 1};
         } else if (s.scoreB > s.scoreA) {
-          return { ...agg, winningSetsB: agg.winningSetsB + 1 };
+          return {...agg, winningSetsB: agg.winningSetsB + 1};
         }
         return agg;
       },
-      { winningSetsA: 0, winningSetsB: 0 }
+      {winningSetsA: 0, winningSetsB: 0}
     );
 
     return winningSetsA === winningSetsB
       ? -1
       : winningSetsA > winningSetsB
-      ? 0
-      : 1;
-  }, [normalisedScore]);
+        ? 0
+        : 1;
+  }, [score.set, teamA, teamB]);
+
   return (
     <Flex
-      flexDirection={{ base: 'column', md: 'row' }}
+      flexDirection={{base: 'column', md: 'row'}}
       padding={4}
-      paddingStart={match.type ? { base: 6, md: 12 } : { base: 4, md: 4 }}
-      paddingEnd={{ base: 4, md: 4 }}
+      paddingStart={match.type ? {base: 6, md: 12} : {base: 4, md: 4}}
+      paddingEnd={{base: 4, md: 4}}
       backgroundColor="white"
       alignItems="initial"
       borderRadius={8}
@@ -322,13 +320,13 @@ const GameScoreboard = ({ match }) => {
         hideClub={match.hideClub}
       />
       <Divider
-        display={{ base: 'block', md: 'none' }}
+        display={{base: 'block', md: 'none'}}
         my={teamA.length === 2 || teamB.length === 2 ? 3 : 2}
         width="80%"
         mx="auto"
       />
       <TeamLine
-        ml={{ base: 0, md: 2 }}
+        ml={{base: 0, md: 2}}
         team={teamB}
         score={normalisedScore[1]}
         scoreOpponent={normalisedScore[0]}
@@ -341,7 +339,7 @@ const GameScoreboard = ({ match }) => {
           type={match.type}
           youtubeLink={match.youtubeLink}
           position="absolute"
-          left={{ base: -6, md: -10 }}
+          left={{base: -6, md: -10}}
           top="50%"
           transform="translateY(-50%)"
           marginTop={'0 !important'}
@@ -351,12 +349,7 @@ const GameScoreboard = ({ match }) => {
   );
 };
 
-const Scoreboard = ({ matches, hideHeader }) => {
-  const hideClub = useMemo(
-    () => !hasPlayerDataContent(matches, 'club'),
-    [matches]
-  );
-
+const Scoreboard = ({matches}) => {
   const hideRanking = useMemo(
     () => !hasPlayerDataContent(matches, 'ranking'),
     [matches]
@@ -374,8 +367,8 @@ const Scoreboard = ({ matches, hideHeader }) => {
   return (
     <VStack
       alignItems="initial"
-      spacing={{ base: 2, md: 4 }}
-      paddingLeft={{ base: 2, md: 0 }}
+      spacing={{base: 2, md: 4}}
+      paddingLeft={{base: 2, md: 0}}
     >
       {matches.map((match, index) => (
         <GameScoreboard

@@ -38,7 +38,8 @@ const players = {
   min: 1,
   widget: 'list',
   fields: playerFields,
-  summary: '{{fields.lastname}} {{fields.firstname}} - {{fields.club}} - {{fields.ranking}}',
+  summary:
+    '{{fields.lastname}} {{fields.firstname}} - {{fields.club}} - {{fields.ranking}}',
 };
 
 const setFields = [
@@ -101,7 +102,20 @@ export default {
           name: 'type',
           label: 'Type de match',
           widget: 'select',
-          options: ['SH', 'SD', 'DH', 'DD', 'MX', 'Poule', '1/32ème', '1/16ème', '1/8ème', 'Quarts', 'Demi', 'Finale'],
+          options: [
+            'SH',
+            'SD',
+            'DH',
+            'DD',
+            'MX',
+            'Poule',
+            '1/32ème',
+            '1/16ème',
+            '1/8ème',
+            'Quarts',
+            'Demi',
+            'Finale',
+          ],
           required: false,
         },
         {
@@ -116,7 +130,7 @@ export default {
           label: 'Cacher nom du club',
           widget: 'boolean',
           required: false,
-        }
+        },
       ],
     },
   ],

@@ -1,7 +1,7 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import {graphql, Link} from 'gatsby';
 import SEO from '../components/SEO';
-import { Container } from '../components/Sections';
+import {Container} from '../components/Sections';
 import {
   ArrowNarrowLeftIcon,
   ArrowNarrowRightIcon,
@@ -9,10 +9,10 @@ import {
 import ArticlePageTemplate from './components/ArticlePageTemplate';
 import PageLayout from '../components/PageLayout';
 
-const ArticlePage = ({ data, pageContext }) => {
-  const { next, previous } = pageContext;
-  const { markdownRemark: project } = data;
-  const { frontmatter: fm } = project;
+const ArticlePage = ({data, pageContext}) => {
+  const {next, previous} = pageContext;
+  const {markdownRemark: project} = data;
+  const {frontmatter: fm} = project;
 
   return (
     <>
@@ -74,7 +74,7 @@ export default ArticlePage;
 
 export const articleQuery = graphql`
   query ArticlePage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       htmlAst
       excerpt
       frontmatter {

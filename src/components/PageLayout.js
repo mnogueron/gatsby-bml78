@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import {Box} from '@chakra-ui/react';
 
-const PageLayout = ({ children, ...boxProps }) => {
+const PageLayout = ({children, ...boxProps}) => {
   return (
     <Box
       height="100%"

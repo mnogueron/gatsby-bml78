@@ -1,11 +1,26 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 import Image from '../components/Image';
 import * as dateFns from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
-import {Box, Flex, Heading, Text, useBreakpointValue, VStack} from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  useBreakpointValue,
+  VStack,
+} from '@chakra-ui/react';
 
-function BigCard({ image, heading, date, subtitle, size: responsiveSize, url, ...rest }) {
+function BigCard({
+  image,
+  heading,
+  date,
+  subtitle,
+  size: responsiveSize,
+  url,
+  ...rest
+}) {
   const size = useBreakpointValue(responsiveSize);
   return (
     <Box
@@ -23,13 +38,13 @@ function BigCard({ image, heading, date, subtitle, size: responsiveSize, url, ..
         width="100%"
         height={
           size === 'lg'
-            ? { base: 400, sm: 500, md: 500, lg: 600 }
+            ? {base: 400, sm: 500, md: 500, lg: 600}
             : size === 'md'
-            ? { base: 300, sm: 300, md: 400, lg: 400 }
-            : { base: 250, sm: 250, md: 300, lg: 400 }
+              ? {base: 300, sm: 300, md: 400, lg: 400}
+              : {base: 250, sm: 250, md: 300, lg: 400}
         }
         borderRadius={20}
-        image={image?.image || { url: '/static/assets/shuttle.jpg' }}
+        image={image?.image || {url: '/static/assets/shuttle.jpg'}}
         alt={image?.alt || 'image de volant'}
       />
       <Flex
@@ -38,7 +53,7 @@ function BigCard({ image, heading, date, subtitle, size: responsiveSize, url, ..
         left={0}
         right={0}
         top={0}
-        p={size === 'lg' ? { base: 6, md: 12 } : { base: 6, md: 8 }}
+        p={size === 'lg' ? {base: 6, md: 12} : {base: 6, md: 8}}
         alignItems="flex-end"
       >
         <VStack
@@ -49,12 +64,10 @@ function BigCard({ image, heading, date, subtitle, size: responsiveSize, url, ..
         >
           <Box
             position="absolute"
-            top={size === 'lg' ? { base: -6, md: -12 } : { base: -6, md: -8 }}
-            bottom={
-              size === 'lg' ? { base: -6, md: -12 } : { base: -6, md: -8 }
-            }
-            right={size === 'lg' ? { base: -6, md: -12 } : { base: -6, md: -8 }}
-            left={size === 'lg' ? { base: -6, md: -12 } : { base: -6, md: -8 }}
+            top={size === 'lg' ? {base: -6, md: -12} : {base: -6, md: -8}}
+            bottom={size === 'lg' ? {base: -6, md: -12} : {base: -6, md: -8}}
+            right={size === 'lg' ? {base: -6, md: -12} : {base: -6, md: -8}}
+            left={size === 'lg' ? {base: -6, md: -12} : {base: -6, md: -8}}
             borderBottomLeftRadius={20}
             borderBottomRightRadius={20}
             bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 25.2%, #000000 81.21%)"
@@ -71,7 +84,7 @@ function BigCard({ image, heading, date, subtitle, size: responsiveSize, url, ..
             color="white"
             fontSize={
               size === 'lg'
-                ? { base: 'xl', sm: '3xl', md: '4xl', lg: '5xl' }
+                ? {base: 'xl', sm: '3xl', md: '4xl', lg: '5xl'}
                 : {
                     base: 'md',
                     sm: 'lg',

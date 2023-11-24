@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   Button,
   FormControl,
@@ -51,23 +51,32 @@ const ContactForm = () => {
   const [extendedSubject, setExtendedSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubjectChange = (e) => {
+  const handleSubjectChange = e => {
     setSubject(subjects.find(s => s.key === e.target.value));
   };
 
-  const handleExtendedSubjectChange = (e) => {
+  const handleExtendedSubjectChange = e => {
     setExtendedSubject(e.target.value);
   };
 
-  const handleMessageChange = (e) => {
+  const handleMessageChange = e => {
     setMessage(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
-    const subjectText = subject.key === 'autre' ? extendedSubject : `${subject.emailSubject} ${extendedSubject}`;
-    window.open(`mailto:${subject.email}?subject=${subjectText}&body=${message.replaceAll('\n', '%0D%0A')}`, 'mail')
-  }
+    const subjectText =
+      subject.key === 'autre'
+        ? extendedSubject
+        : `${subject.emailSubject} ${extendedSubject}`;
+    window.open(
+      `mailto:${subject.email}?subject=${subjectText}&body=${message.replaceAll(
+        '\n',
+        '%0D%0A'
+      )}`,
+      'mail'
+    );
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -82,7 +91,7 @@ const ContactForm = () => {
                 value={subject?.key || ''}
                 onChange={handleSubjectChange}
               >
-                {subjects.map((subject) => (
+                {subjects.map(subject => (
                   <option key={subject.key} value={subject.key}>
                     {subject.label}
                   </option>
@@ -121,7 +130,6 @@ const ContactForm = () => {
       </div>
 
       <div className="mt-2 py-3 text-right">
-
         <Button
           colorScheme="blue"
           type="submit"

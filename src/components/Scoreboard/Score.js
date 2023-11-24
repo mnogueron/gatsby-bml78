@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Divider, HStack, Text } from '@chakra-ui/react';
+import {Box, Divider, HStack, Text} from '@chakra-ui/react';
 
-const Score = ({ score, oppositeScore }) => {
+const Score = ({score, oppositeScore}) => {
   return (
     <HStack height={'100%'}>
       <Box flex={1} textAlign={'center'}>

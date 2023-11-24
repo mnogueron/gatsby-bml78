@@ -1,7 +1,7 @@
-import { AspectRatio, Box } from '@chakra-ui/react';
+import {AspectRatio, Box} from '@chakra-ui/react';
 import React from 'react';
 
-const YoutubeVideo = ({ id }) => {
+const YoutubeVideo = ({id}) => {
   return (
     <AspectRatio ratio={16 / 9}>
       <Box

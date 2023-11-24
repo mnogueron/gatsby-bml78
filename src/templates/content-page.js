@@ -1,12 +1,12 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 import ContentPageTemplate from './components/ContentPageTemplate';
 import PageLayout from '../components/PageLayout';
 
-const ContentPage = ({ data, pageContext }) => {
-  const { markdownRemark: post } = data;
-  const { frontmatter: fm } = post;
+const ContentPage = ({data, pageContext}) => {
+  const {markdownRemark: post} = data;
+  const {frontmatter: fm} = post;
 
   return (
     <>
@@ -26,7 +26,7 @@ export default ContentPage;
 
 export const contentPageQuery = graphql`
   query ContentPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       htmlAst
       frontmatter {
         title

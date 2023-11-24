@@ -1,10 +1,16 @@
 import React from 'react';
-import { useBreakpointValue } from '@chakra-ui/react';
+import {useBreakpointValue} from '@chakra-ui/react';
 import MobileDropdownNavLink from './MobileDropdownNavLink';
 import DesktopDropdownNavLink from './DesktopDropdownNavLink';
 
-const DropdownNavLink = ({ label, options, onClick, isRecursive, isTransparent }) => {
-  const collapsibleMenu = useBreakpointValue({ base: true, md: false });
+const DropdownNavLink = ({
+  label,
+  options,
+  onClick,
+  isRecursive,
+  isTransparent,
+}) => {
+  const collapsibleMenu = useBreakpointValue({base: true, md: false});
 
   if (collapsibleMenu) {
     return (

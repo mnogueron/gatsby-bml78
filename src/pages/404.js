@@ -1,25 +1,35 @@
 import React from 'react';
-import {navigate} from 'gatsby';
-import Layout from '../components/Layout';
-import {SectionHeading} from '../components/Sections';
+import {Link} from 'gatsby';
+import {GiShuttlecock} from 'react-icons/gi';
+import {Button, Heading, Icon, Text} from '@chakra-ui/react';
 import {Container} from '../components/Sections';
+import PageLayout from '../components/PageLayout';
 
 function PageNotFound() {
   return (
-    <Layout title="Page not found">
+    <PageLayout>
       <Container className="text-center">
-        <SectionHeading>Page not found</SectionHeading>
-        <p className="mt-4">
-          Oops! The page you are looking for has been removed or relocated.
-        </p>
-        <button
-          className="mt-6 inline-flex items-center justify-center px-4 py-2 border border-transparent text-xs font-medium transition-colors duration-100 text-green-600 bg-white rounded-md shadow lg:text-sm group hover:bg-green-50"
-          onClick={() => navigate(-1)}
+        <Icon as={GiShuttlecock} boxSize={48} />
+        <Heading
+          as="h2"
+          fontSize={{base: '3xl', md: '4xl', lg: '5xl'}}
+          color="text.main"
+          mt={4}
         >
-          Go Back
-        </button>
+          {"Quelqu'un s'est perdu..."}
+        </Heading>
+        <Text mt={{base: 4, sm: 8}} fontSize="lg">
+          Il semblerait que votre volant se soit perdu en chemin.
+        </Text>
+        <Text fontSize="lg" mt={2}>
+          Vous le retrouverez peut-être en retournant sur vos pas.
+        </Text>
+
+        <Button colorScheme="red" mt={8} as={Link} to="/">
+          Retrouver mon volant
+        </Button>
       </Container>
-    </Layout>
+    </PageLayout>
   );
 }
 

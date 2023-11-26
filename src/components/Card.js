@@ -3,13 +3,20 @@ import {Link} from 'gatsby';
 import Image from '../components/Image';
 import * as dateFns from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
-import {Heading, Text, VStack} from '@chakra-ui/react';
+import {Box, Heading, Text, VStack} from '@chakra-ui/react';
 
 function Card({image, heading, date, subtitle, url, ...rest}) {
   return (
-    <Link
+    <Box
+      as={Link}
+      role="group"
       to={url}
-      className="group transform hover:-translate-y-2 duration-200"
+      sx={{
+        transitionDuration: '200ms',
+        ':hover': {
+          transform: 'translateY(-0.5rem)',
+        },
+      }}
       {...rest}
     >
       <Image
@@ -18,19 +25,19 @@ function Card({image, heading, date, subtitle, url, ...rest}) {
         className="rounded-md overflow-hidden"
       />
       <VStack spacing={2} alignItems="initial" mt={4}>
-        <div className="flex items-baseline gap-x-2 justify-between">
-          <Text color="text.secondary" fontSize="sm">
-            {dateFns.format(new Date(date), 'PP', {
-              addSuffix: true,
-              locale: frLocale,
-            })}
-          </Text>
-        </div>
+        <Text color="text.secondary" fontSize="sm">
+          {dateFns.format(new Date(date), 'PP', {
+            addSuffix: true,
+            locale: frLocale,
+          })}
+        </Text>
         <Heading
           as="h3"
           color="text.main"
           size="sm"
-          className="group-hover:underline"
+          _groupHover={{
+            textDecoration: 'underline',
+          }}
         >
           {heading}
         </Heading>
@@ -40,7 +47,7 @@ function Card({image, heading, date, subtitle, url, ...rest}) {
           </Text>
         )}
       </VStack>
-    </Link>
+    </Box>
   );
 }
 

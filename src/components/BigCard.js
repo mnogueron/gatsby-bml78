@@ -28,9 +28,14 @@ function BigCard({
       to={url}
       display="block"
       position="relative"
-      className="group transform hover:-translate-y-2 duration-200"
       borderRadius={20}
       boxShadow="md"
+      sx={{
+        transitionDuration: '200ms',
+        ':hover': {
+          transform: 'translateY(-0.5rem)',
+        },
+      }}
       {...rest}
     >
       <Box

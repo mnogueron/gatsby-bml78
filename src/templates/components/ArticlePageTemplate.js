@@ -12,9 +12,9 @@ function ArticlePageTemplate({heading, date, image, body}) {
         <Flex px={4} mb={{base: 0, md: 5, lg: 10}} justifyContent="center">
           <Box
             as={Image}
-            className="rounded-md"
             image={image.image}
             alt={image.alt}
+            borderRadius="md"
             sx={{
               '& img': {
                 maxHeight: {base: '600px', md: '800px'},

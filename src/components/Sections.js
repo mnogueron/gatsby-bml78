@@ -18,17 +18,6 @@ export const Container = ({className, children, ...rest}) => {
 };
 
 /**
- * Basic style for page section heading
- */
-export const SectionHeading = ({children}) => {
-  return (
-    <h2 className="text-2xl font-medium text-gray-800 sm:text-3xl lg:text-4xl">
-      {children}
-    </h2>
-  );
-};
-
-/**
  * Text image split section, with image on the right by default
  */
 export const TextImageSplit = ({

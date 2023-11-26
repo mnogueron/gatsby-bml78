@@ -6,7 +6,11 @@ import {StaticImage} from 'gatsby-plugin-image';
 const BigLogo = () => (
   <Link
     as={GatsbyLink}
-    className="flex items-center gap-1"
+    sx={{
+      display: 'flex',
+      gap: 1,
+      alignItems: 'center',
+    }}
     to="/"
     textDecoration="none"
     _hover={{textDecoration: 'none'}}

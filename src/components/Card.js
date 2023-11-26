@@ -22,7 +22,8 @@ function Card({image, heading, date, subtitle, url, ...rest}) {
       <Image
         image={image?.image || {url: '/static/assets/shuttle.jpg'}}
         alt={image?.alt || 'image de volant'}
-        className="rounded-md overflow-hidden"
+        borderRadius="md"
+        overflow="hidden"
       />
       <VStack spacing={2} alignItems="initial" mt={4}>
         <Text color="text.secondary" fontSize="sm">

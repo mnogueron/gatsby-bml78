@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import {
+  Box,
   Button,
   FormControl,
   FormLabel,
   Input,
   Select,
   Textarea,
+  VStack,
 } from '@chakra-ui/react';
 
 const subjects = [
@@ -80,9 +82,9 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="mt-6">
-        <div className="grid grid-cols-6 gap-6">
-          <div className="col-span-6">
+      <Box mt={6}>
+        <VStack spacing={6} alignItems="initial">
+          <Box>
             <FormControl isRequired={true}>
               <FormLabel htmlFor="subject">Sujet de la demande</FormLabel>
               <Select
@@ -98,10 +100,10 @@ const ContactForm = () => {
                 ))}
               </Select>
             </FormControl>
-          </div>
+          </Box>
 
           {subject && (
-            <div className="col-span-6">
+            <Box>
               <FormControl isRequired={true}>
                 <FormLabel htmlFor="other-subject">
                   Titre de la demande
@@ -112,10 +114,10 @@ const ContactForm = () => {
                   onChange={handleExtendedSubjectChange}
                 />
               </FormControl>
-            </div>
+            </Box>
           )}
 
-          <div className="col-span-6">
+          <Box>
             <FormControl isRequired={true}>
               <FormLabel htmlFor="message">Message</FormLabel>
               <Textarea
@@ -125,20 +127,21 @@ const ContactForm = () => {
                 rows={5}
               />
             </FormControl>
-          </div>
-        </div>
-      </div>
+          </Box>
 
-      <div className="mt-2 py-3 text-right">
-        <Button
-          colorScheme="blue"
-          type="submit"
-          size="md"
-          disabled={!subject || !extendedSubject || !message}
-        >
-          Envoyer
-        </Button>
-      </div>
+          <Box textAlign="right" w="full">
+            <Button
+              colorScheme="red"
+              type="submit"
+              size="md"
+              disabled={!subject || !extendedSubject || !message}
+              width={{base: 'full', md: 'fit-content'}}
+            >
+              Envoyer
+            </Button>
+          </Box>
+        </VStack>
+      </Box>
     </form>
   );
 };

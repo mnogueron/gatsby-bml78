@@ -1,11 +1,12 @@
 import React, {useMemo, useState} from 'react';
 import {graphql, useStaticQuery} from 'gatsby';
-import {Box} from '@chakra-ui/react';
+import {Box, Flex, HStack} from '@chakra-ui/react';
 import MobileMenu from './MobileMenu';
 import DropdownNavLink from './DropdownNavLink';
 import NavLink from './NavLink';
 import {useScroll} from '../../hooks/useScroll';
 import Logo from '../Logo';
+import {Container} from '../Sections';
 
 // TODO use dark / light mode instead of isTransparent
 // TODO review animation on scroll with isTransparent
@@ -151,8 +152,13 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
       }}
       {...rest}
     >
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto lg:flex lg:justify-between lg:items-center">
-        <div className="flex items-center justify-between py-2">
+      <Container
+        py={0}
+        display={{base: 'block', lg: 'flex'}}
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Flex alignItems="center" py={2} justifyContent="space-between">
           <Logo color={isTransparent ? 'text.inverted.main' : 'text.main'} />
 
           {/* Mobile menu button */}
@@ -160,26 +166,26 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
             <Box
               as="button"
               type="button"
-              className="focus:outline-none"
               _hover={{
                 color: isTransparent ? 'gray.200' : 'gray.600',
               }}
               _focus={{
                 color: isTransparent ? 'gray.200' : 'gray.600',
+                outline: 'none',
               }}
               color={isTransparent ? 'gray.100' : 'gray.500'}
               aria-label="toggle menu"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+              <Box as="svg" viewBox="0 0 24 24" w={6} h={6} fill="currentColor">
                 <path
                   fillRule="evenodd"
                   d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
                 ></path>
-              </svg>
+              </Box>
             </Box>
           </Box>
-        </div>
+        </Flex>
 
         <MobileMenu
           isOpen={menuOpen}
@@ -188,8 +194,8 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         />
 
         {/* Mobile Menu open: "block", Menu closed: "hidden" */}
-        <div className={'items-center hidden lg:flex'}>
-          <div className="flex flex-col w-full lg:flex-row lg:mx-6 lg:my-2 items-center">
+        <Box display={{base: 'none', lg: 'flex'}} alignItems="center">
+          <HStack w="full" alignItems="center" mx={6} my={2}>
             {MENU.map(menu => {
               if (menu.options) {
                 return (
@@ -214,9 +220,9 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
                 />
               );
             })}
-          </div>
-        </div>
-      </div>
+          </HStack>
+        </Box>
+      </Container>
     </Box>
   );
 };

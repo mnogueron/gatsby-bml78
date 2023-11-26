@@ -93,17 +93,18 @@ const MobileMenu = ({onClose, isOpen, menu}) => {
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader as={HStack} p="0.5rem 1rem" spacing={1}>
-          <StaticImage
-            src="../../img/bml-icon.png"
-            alt="Badminton Maisons-Laffitte icon"
-            className="w-12 h-8 sm:w-14 sm:h-10"
-            layout="constrained"
-            width={114}
-            height={85}
-            loading="eager"
-            backgroundColor="transparent"
-            placeholder="blurred"
-          />
+          <Box w={{base: 12, sm: 14}} h={{base: 8, sm: 10}}>
+            <StaticImage
+              src="../../img/bml-icon.png"
+              alt="Badminton Maisons-Laffitte icon"
+              layout="constrained"
+              width={114}
+              height={85}
+              loading="eager"
+              backgroundColor="transparent"
+              placeholder="blurred"
+            />
+          </Box>
           <Heading fontSize={{base: 'md', sm: 'lg'}}>
             Badminton Maisons-Laffitte
           </Heading>

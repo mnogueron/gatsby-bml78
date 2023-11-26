@@ -9,8 +9,8 @@ import Logo from '../Logo';
 
 // TODO use dark / light mode instead of isTransparent
 // TODO review animation on scroll with isTransparent
-const Navbar = ({className, isTransparentAtTop}) => {
-  const {scrollY} = useScroll();
+const Navbar = ({isTransparentAtTop, ...rest}) => {
+  const {scrollY, scrollDirection} = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
   const {infosPratiquesMenu, resultsMenu} = useStaticQuery(graphql`
     query NAVBAR {
@@ -136,7 +136,20 @@ const Navbar = ({className, isTransparentAtTop}) => {
       as="nav"
       shadow={scrollY < 1 ? undefined : 'xl'}
       bg={isTransparent ? 'transparent' : 'bg.main'}
-      className={`fixed top-0 w-full z-30 ${className}`}
+      sx={{
+        w: '100%',
+        zIndex: 30,
+        top: 0,
+        position: 'fixed',
+        transitionDuration: '300ms, 150ms, 150ms, 300ms',
+        transitionProperty: 'transform, background-color, color, box-shadow',
+        transitionTimingFunction: 'ease-in-out',
+        transform:
+          scrollDirection === 'down' || scrollY < 200
+            ? 'translateY(0)'
+            : 'translateY(-100%)',
+      }}
+      {...rest}
     >
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between py-2">

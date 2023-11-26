@@ -27,7 +27,6 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@emotion/weak-memoize": "^0.2.5",
-    "@heroicons/react": "^1.0.4",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "date-fns": "^2.30.0",

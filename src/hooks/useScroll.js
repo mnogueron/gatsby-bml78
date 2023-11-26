@@ -12,6 +12,7 @@
 import {useState, useEffect} from 'react';
 import {globalHistory} from '@reach/router';
 
+// TODO optimise this hook
 export function useScroll() {
   // storing this to get the scroll direction
   const [lastScrollTop, setLastScrollTop] = useState(0);

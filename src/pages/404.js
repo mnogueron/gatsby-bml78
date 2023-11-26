@@ -1,14 +1,18 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import {GiShuttlecock} from 'react-icons/gi';
-import {Button, Heading, Icon, Text} from '@chakra-ui/react';
-import {Container} from '../components/Sections';
+import {Button, Heading, Icon, Text, Container} from '@chakra-ui/react';
 import PageLayout from '../components/PageLayout';
 
 function PageNotFound() {
   return (
     <PageLayout>
-      <Container className="text-center">
+      <Container
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        py={{base: 10, md: 16}}
+      >
         <Icon as={GiShuttlecock} boxSize={48} />
         <Heading
           as="h2"

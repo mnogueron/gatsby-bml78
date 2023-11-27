@@ -1,11 +1,11 @@
 import React from 'react';
 import {GatsbyImage, getImage} from 'gatsby-plugin-image';
-import {Box} from '@chakra-ui/react';
+import {Box, Image as ChakraImage} from '@chakra-ui/react';
 
 const Image = ({image, alt, ...rest}) => {
   if (image && image.url) {
     // this is an image coming from Decap CMS
-    return <Image src={image.url} alt={alt} {...rest} />;
+    return <ChakraImage src={image.url} alt={alt} {...rest} />;
   } else if (image && image.childImageSharp) {
     // this should be an image processed by gatsby-plugin-image
     const imageRef = getImage(image);

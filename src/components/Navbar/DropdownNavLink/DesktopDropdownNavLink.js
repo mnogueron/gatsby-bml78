@@ -73,7 +73,6 @@ const DesktopDropdownNavLink = ({
         ) : (
           <NavLabel
             label={label}
-            isHover={isOpen}
             icon={<Icon as={MdExpandMore} boxSize={26} />}
           />
         )}

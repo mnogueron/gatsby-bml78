@@ -3,6 +3,8 @@ import {Link} from 'gatsby';
 import NavLabel from './NavLabel';
 
 const NavLink = ({to, label, partial, ...rest}) => {
+  // TODO do something with the is active value
+  // eslint-disable-next-line no-unused-vars
   const [isActive, setIsActive] = useState(false);
 
   const getProps = useCallback(
@@ -14,14 +16,7 @@ const NavLink = ({to, label, partial, ...rest}) => {
   );
 
   return (
-    <NavLabel
-      label={label}
-      isActive={isActive}
-      as={Link}
-      to={to}
-      getProps={getProps}
-      {...rest}
-    />
+    <NavLabel label={label} as={Link} to={to} getProps={getProps} {...rest} />
   );
 };
 

@@ -148,7 +148,6 @@ module.exports = {
         htmlFavicon: `src/img/bml-icon.png`,
       },
     },
-    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {

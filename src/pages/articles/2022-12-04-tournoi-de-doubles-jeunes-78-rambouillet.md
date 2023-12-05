@@ -31,4 +31,4 @@ Charles-Frédérik et Marius ne remportent pas de matches mais font de super mat
 
 ## Galerie
 
-<gallery>{"pictures":[{"image":"images/image_6483441.jpg"},{"image":"images/image_50420737.jpg"}]}</gallery>
+<gallery>{"pictures":[{"image":"/assets/image_6483441.jpg"},{"image":"/assets/image_50420737.jpg"}]}</gallery>

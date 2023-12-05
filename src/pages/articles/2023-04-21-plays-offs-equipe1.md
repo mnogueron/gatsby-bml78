@@ -11,7 +11,7 @@ featuredimage:
   hidden: true
   alt: Photo d'équipe 1
 ---
-<gallery>{"pictures":[{"image":"images/ic-n2-j2-ml-vs-salbris-7.jpg"},{"image":"images/ic-n2-j8-ml-vs-nozay.jpg"},{"image":"images/ic-n2-j6-ml-vs-metz.jpg"},{"image":"images/ic-n2-j6-ml-vs-metz-7.jpg"},{"image":"images/ic-n2-j6-ml-vs-metz-5.jpg"},{"image":"images/ic-n2-j6-ml-vs-metz-10.jpg"},{"image":"images/ic-n2-j6-ml-vs-metz-4.jpg"},{"image":"images/ic-n2-j6-ml-vs-metz-8.jpg"},{"image":"images/ic-n2-j2-ml-vs-salbris-38.jpg"},{"image":"images/ic-n2-j2-ml-vs-salbris-47.jpg"}]}</gallery>
+<gallery>{"pictures":[{"image":"/assets/ic-n2-j2-ml-vs-salbris-7.jpg"},{"image":"/assets/ic-n2-j8-ml-vs-nozay.jpg"},{"image":"/assets/ic-n2-j6-ml-vs-metz.jpg"},{"image":"/assets/ic-n2-j6-ml-vs-metz-7.jpg"},{"image":"/assets/ic-n2-j6-ml-vs-metz-5.jpg"},{"image":"/assets/ic-n2-j6-ml-vs-metz-10.jpg"},{"image":"/assets/ic-n2-j6-ml-vs-metz-4.jpg"},{"image":"/assets/ic-n2-j6-ml-vs-metz-8.jpg"},{"image":"/assets/ic-n2-j2-ml-vs-salbris-38.jpg"},{"image":"/assets/ic-n2-j2-ml-vs-salbris-47.jpg"}]}</gallery>
 
 Après **une saison sans faute** qui s'est conclue par une égalité à domicile contre Bourges lors de la dernière rencontre de la saison (retrouvez les [résultats ici](https://badml.com/results/2023-04-15-16-00-interclub-equipe-1/)), notre équipe 1 est à une marche de la **Nationale 1** !
 

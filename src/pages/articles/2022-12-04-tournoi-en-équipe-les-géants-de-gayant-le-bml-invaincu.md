@@ -48,4 +48,4 @@ Après 7 étapes constituées d'un double homme, un double dame et deux double m
 
 ## G﻿alerie
 
-<gallery>{"pictures":[{"image":"images/img_20221203_172416.jpg"},{"image":"images/received_713613599895882.jpeg"}]}</gallery>
+<gallery>{"pictures":[{"image":"/assets/img_20221203_172416.jpg"},{"image":"/assets/received_713613599895882.jpeg"}]}</gallery>

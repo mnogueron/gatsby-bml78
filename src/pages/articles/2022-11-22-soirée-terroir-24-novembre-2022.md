@@ -5,7 +5,7 @@ heading: Soirée terroir - 24 Novembre 2022
 date: 2022-11-22T09:06:54.122Z
 featured: true
 featuredimage:
-  image: /assets/soiree-terroir.jpg
+  image: images/soiree-terroir.jpg
   alt: Beaujolais nouveau
 ---
 A﻿fin de fêter l'arrivée du **beaujolais nouveau**, le BML vous invite à sa soirée terroir organisée au **CSC de Maisons-Laffitte** le jeudi **24 novembre** 2022 !

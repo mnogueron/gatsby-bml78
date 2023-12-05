@@ -7,7 +7,7 @@ heading: |-
   Les inscriptions sont ouvertes !
 date: 2023-08-31T16:40:08.994Z
 featuredimage:
-  image: /assets/7eme-ecotournoi-bml.jpg
+  image: images/7eme-ecotournoi-bml.jpg
   alt: Affiche 7ème eco-tournoi BML
   hidden: false
 ---

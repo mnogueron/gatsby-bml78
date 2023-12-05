@@ -355,6 +355,8 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     summary: '[{{day}}-{{month}}-{{year}}] {{title}}'
+    media_folder: 'images'
+    public_folder: 'images'
     fields: *ARTICLE_PAGE
 
   - name: 'results'

@@ -5,7 +5,7 @@ heading: Back to Bad ! Nouvelle saison 2022-2023
 date: 2022-09-05T09:20:57.389Z
 featured: true
 featuredimage:
-  image: /assets/back-to-bad.jpg
+  image: images/back-to-bad.jpg
   alt: Back to bad
   hidden: true
 ---
@@ -13,9 +13,9 @@ P﻿our bien commencer cette nouvelle saison 2022-2023, v﻿ous avez été très
 
 ### Ne tardez pas !
 
-##### I﻿nscriptions : mode d'emploi et infos essentielles en un clin d'oeil sur [notre flyer de présentation](/assets/v7_flyer_bml-22-23.pdf).
+##### I﻿nscriptions : mode d'emploi et infos essentielles en un clin d'oeil sur [notre flyer de présentation](images/v7_flyer_bml-22-23.pdf).
 
-![Flyer de présentation 2022-2023](/assets/flyer-apercu.png "Flyer de présentation 2022-2023")
+![Flyer de présentation 2022-2023](images/flyer-apercu.png "Flyer de présentation 2022-2023")
 
 Les inscriptions sur les créneaux d'entrainements (jeunes et adultes) notamment ont eu beaucoup de succès : il ne nous reste que **très peu de places** donc ne tardez pas à vous inscrire. Toutes les informations ainsi que les documents à remplir [sont disponibles ici](https://badml.com/infos-pratiques/inscription). 
 
@@ -34,7 +34,7 @@ La reprise, toutes sections confondues, a lieue cette semaine ! Retrouvez tous l
 
 D﻿es raquettes pourront vous être prêtées lors des premières séances mais si vous êtes toujours à la recherche de matériel (raquettes, chaussures de badminton, sac à dos...), n'hésitez pas à vous rendre sur le site ou dans la boutique de notre partenaire, [Bad Addict](http://badaddict.fr/). En tant qu'adhérent au BML, vous bénéficierez de **10% de réduction** sur vos achats !
 
-![Bad Addict](/assets/bad-addict.png "Bad Addict")
+![Bad Addict](images/bad-addict.png "Bad Addict")
 
 ### D﻿'autres questions ?
 

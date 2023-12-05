@@ -8,7 +8,7 @@ heading: |-
 date: 2023-02-20T09:05:52.815Z
 featured: true
 featuredimage:
-  image: /assets/6eme-ecotournoi-bml.jpg
+  image: images/6eme-ecotournoi-bml.jpg
   alt: 6eme ecotournoi Maisons-Laffitte
 ---
 Le Badminton Maisons-Laffitte est heureux de vous inviter à son **6ème Ecotournoi National** ouvert aux catégories de **N2 à P12** **et Benjamins** qui se déroulera le week-end du **3 et 4 juin 2023**.\

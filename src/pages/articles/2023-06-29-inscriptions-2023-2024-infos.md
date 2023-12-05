@@ -8,7 +8,7 @@ heading: |-
 date: 2023-06-29T16:42:10.576Z
 featuredimage:
   hidden: true
-  image: /assets/photo-1521537634581-0dced2fee2ef.jpeg
+  image: images/photo-1521537634581-0dced2fee2ef.jpeg
   alt: Image principale
 ---
 Afin de vous aider à préparer au mieux la rentrée sportive, nous avons mis à jour les informations concernant les inscriptions pour la saison 2023-2024.

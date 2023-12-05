@@ -5,7 +5,7 @@ heading: Déplacement Tournoi National de Dreux
 date: 2022-06-27T13:50:19.263Z
 featured: true
 featuredimage:
-  image: /assets/dreux.jpeg
+  image: images/dreux.jpeg
   alt: tournoi dreux
   hidden: true
 ---

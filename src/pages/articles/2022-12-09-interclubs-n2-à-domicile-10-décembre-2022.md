@@ -5,7 +5,7 @@ heading: Interclubs N2 à domicile - 10 Décembre 2022
 date: 2022-12-09T01:01:38.287Z
 featured: true
 featuredimage:
-  image: /assets/affiche-j4-n2.jpg
+  image: images/affiche-j4-n2.jpg
   alt: Affiche rencontre BML vs Boulogne à domicile
 ---
 ### En route vers la Nationale 1 !

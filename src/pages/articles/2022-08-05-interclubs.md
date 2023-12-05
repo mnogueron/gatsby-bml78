@@ -5,7 +5,7 @@ heading: Championnats d'interclub auxquels le BML participe
 date: 2022-08-23T16:12:43.634Z
 featured: false
 featuredimage:
-  image: /assets/bmlic.png
+  image: images/bmlic.png
   alt: Interclub Badminton Maisons-Laffitte
   hidden: true
 seo:

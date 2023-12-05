@@ -7,7 +7,7 @@ heading: |-
   au CSC le 21 Septembre 2023
 date: 2023-09-20T08:12:40.913Z
 featuredimage:
-  image: /assets/stand-playsport.jpg
+  image: images/stand-playsport.jpg
   alt: Stand PlaySport
 ---
 Notre partenaire **PlaySport** vous donne rendez-vous ce **jeudi 21 septembre au CSC** (Maisons-Laffitte). L'équipe PlaySport sera là pour vous aider et vous conseiller et vous pourrez profiter de cette occasion pour faire vos achats badminton à **prix préférentiels**.

@@ -5,7 +5,7 @@ heading: Créneaux jeu libre - vacances de Février
 date: 2023-02-20T08:54:42.190Z
 featured: true
 featuredimage:
-  image: /assets/photo-1626721105368-a69248e93b32.jpeg
+  image: images/photo-1626721105368-a69248e93b32.jpeg
   alt: Volant filet
   hidden: true
 ---

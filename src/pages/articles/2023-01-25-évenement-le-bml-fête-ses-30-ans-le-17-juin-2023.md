@@ -5,7 +5,7 @@ heading: "Évenement : le BML fête ses 30 ans le 17 Juin 2023 !"
 date: 2023-01-25T15:36:02.698Z
 featured: true
 featuredimage:
-  image: /assets/30-ans-bml-save-the-date.jpeg
+  image: images/30-ans-bml-save-the-date.jpeg
   alt: 30 ans BML 17/06/2023 save the date
 ---
 S﻿'il y a un évenement à ne surtout pas rater cette année, c﻿e sont **les 30 ans du BML** ! 

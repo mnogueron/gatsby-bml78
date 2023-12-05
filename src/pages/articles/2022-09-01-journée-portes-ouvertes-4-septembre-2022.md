@@ -5,7 +5,7 @@ heading: Journée Portes Ouvertes - 4 Septembre 2022
 date: 2022-09-01T07:28:22.160Z
 featured: true
 featuredimage:
-  image: /assets/img-20220901-wa0003.jpg
+  image: images/img-20220901-wa0003.jpg
   alt: Journée portes ouvertes
 ---
 Tenté.e de découvrir ou de faire découvrir le badminton ? Que ce soit seul, en couple, en famille ou entre amis, nous vous attendons nombreux au **gymnase Jules Verne** (Sartrouville) le **dimanche 4 septembre** 2022 de **10h à 13h** pour découvrir (ou redécouvrir) les joies du badminton dans une ambiance conviviale.

@@ -5,11 +5,11 @@ heading: "Tournoi en équipe Les Géants de Gayant : le BML invaincu !"
 date: 2022-12-04T20:51:10.353Z
 featured: true
 featuredimage:
-  image: /assets/received_713613599895882.jpeg
+  image: images/received_713613599895882.jpeg
   alt: Podium du tournoi par équipe des Géants de Gayant avec le BML en première
     position
 seo:
-  image: /assets/bml_les_geants_gayant_cropped.jpg
+  image: images/bml_les_geants_gayant_cropped.jpg
   title: ""
 ---
 Le BML était représenté ce week-end au tournoi par équipe des Géants de Gayant par 3 membres du club : Jean-Michel Remeur, Kevin Held et Juliette Lardet. Une équipe de 3 à laquelle s'ajoutait Juliette Caron, membre du club Bad' A Paname.
@@ -48,4 +48,4 @@ Après 7 étapes constituées d'un double homme, un double dame et deux double m
 
 ## G﻿alerie
 
-<gallery>{"pictures":[{"image":"/assets/img_20221203_172416.jpg"},{"image":"/assets/received_713613599895882.jpeg"}]}</gallery>
+<gallery>{"pictures":[{"image":"images/img_20221203_172416.jpg"},{"image":"images/received_713613599895882.jpeg"}]}</gallery>

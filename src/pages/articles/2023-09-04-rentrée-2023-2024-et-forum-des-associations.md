@@ -8,7 +8,7 @@ heading: |-
   Toutes les informations de rentrée
 date: 2023-09-04T08:36:41.642Z
 featuredimage:
-  image: /assets/forum-assoc-2023.jpg
+  image: images/forum-assoc-2023.jpg
   alt: forum associations ML 2023
 ---
 Vous l'attendiez, elle est là ! Cette semaine marque la reprise pour le BML !

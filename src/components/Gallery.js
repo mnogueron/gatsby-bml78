@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import ImageGallery from 'react-image-gallery';
 import {Box} from '@chakra-ui/react';
 
+// TODO create gatsby plugin to generate gallery component from MDX
 const Gallery = ({pictures}) => {
   const images = useMemo(() => {
     return (

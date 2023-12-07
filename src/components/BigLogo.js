@@ -16,7 +16,7 @@ const BigLogo = () => (
     _hover={{textDecoration: 'none'}}
   >
     <StaticImage
-      src="../img/bml-icon.png"
+      src="../../static/assets/bml-icon.png"
       alt="Badminton Maisons-Laffitte icon"
       layout="fixed"
       width={114}

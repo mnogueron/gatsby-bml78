@@ -18,7 +18,7 @@ const BigLogo = ({color}) => {
     >
       <Box width={{base: 12, md: 14}}>
         <StaticImage
-          src="../img/bml-icon.png"
+          src="../../static/assets/bml-icon.png"
           alt="Badminton Maisons-Laffitte icon"
           layout="constrained"
           width={114}

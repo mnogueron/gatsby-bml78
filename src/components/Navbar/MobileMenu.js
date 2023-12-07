@@ -95,7 +95,7 @@ const MobileMenu = ({onClose, isOpen, menu}) => {
         <DrawerHeader as={HStack} p="0.5rem 1rem" spacing={1}>
           <Box w={{base: 12, sm: 14}} h={{base: 8, sm: 10}}>
             <StaticImage
-              src="../../img/bml-icon.png"
+              src="../../../static/assets/bml-icon.png"
               alt="Badminton Maisons-Laffitte icon"
               layout="constrained"
               width={114}

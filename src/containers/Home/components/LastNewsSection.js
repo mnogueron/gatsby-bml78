@@ -1,8 +1,8 @@
 import React from 'react';
 import {SimpleGrid, VStack} from '@chakra-ui/react';
-import {CardGrid} from '../../components/Sections';
+import CardGrid from '../../../components/CardGrid';
 import HomeSection from './HomeSection';
-import PostBigCard from '../../components/PostBigCard';
+import PostBigCard from '../../../components/PostBigCard';
 
 const LastNewsSection = ({posts}) => {
   const [firstPost, secondPost, ...otherPosts] = posts;

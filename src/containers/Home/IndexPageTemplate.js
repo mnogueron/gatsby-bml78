@@ -1,10 +1,10 @@
 import React, {useMemo} from 'react';
 import {Box} from '@chakra-ui/react';
-import Header from '../../containers/home/Header';
-import ClubQuoteSection from '../../containers/home/ClubQuoteSection';
-import LastNewsSection from '../../containers/home/LastNewsSection';
-import LastResultsSection from '../../containers/home/LastResultsSection';
-import VideosSection from '../../containers/home/VideosSection';
+import Header from './components/Header';
+import ClubQuoteSection from './components/ClubQuoteSection';
+import LastNewsSection from './components/LastNewsSection';
+import LastResultsSection from './components/LastResultsSection';
+import VideosSection from './components/VideosSection';
 import {preparePosts} from '../../utils';
 
 const IndexPageTemplate = ({

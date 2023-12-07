@@ -1,5 +1,5 @@
 import React from 'react';
-import BoardChartPageTemplate from '../../templates/components/BoardChartPageTemplate';
+import BoardChartPageTemplate from '../../containers/Board/BoardChartPageTemplate';
 import useProcessedHAST from '../useProcessedHAST';
 
 const ContentPagePreview = ({data, getAsset}) => {

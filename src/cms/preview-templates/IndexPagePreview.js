@@ -1,5 +1,5 @@
 import React from 'react';
-import IndexPageTemplate from '../../templates/components/IndexPageTemplate';
+import IndexPageTemplate from '../../containers/Home/IndexPageTemplate';
 import useProcessedHAST from '../useProcessedHAST';
 
 const IndexPagePreview = ({data, getAsset}) => {

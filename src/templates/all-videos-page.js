@@ -2,7 +2,7 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 import PageLayout from '../components/PageLayout';
-import VideosPageTemplate from './components/VideosPageTemplate';
+import VideosPageTemplate from '../containers/Videos/VideosPageTemplate';
 
 const AllVideosPage = ({data, pageContext}) => {
   const {frontmatter: fm} = data.markdownRemark;

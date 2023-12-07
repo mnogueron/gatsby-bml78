@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticlePageTemplate from '../../templates/components/ArticlePageTemplate';
+import ArticlePageTemplate from '../../containers/Articles/ArticlePageTemplate';
 import useProcessedHAST from '../useProcessedHAST';
 
 const ArticlePagePreview = ({data, getAsset}) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
-import ArticlePageTemplate from './components/ArticlePageTemplate';
+import ArticlePageTemplate from '../containers/Articles/ArticlePageTemplate';
 import PageLayout from '../components/PageLayout';
 
 const TournamentPage = ({data, pageContext}) => {

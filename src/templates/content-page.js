@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
-import ContentPageTemplate from './components/ContentPageTemplate';
+import ContentPageTemplate from '../containers/Articles/ContentPageTemplate';
 import PageLayout from '../components/PageLayout';
 
 const ContentPage = ({data, pageContext}) => {

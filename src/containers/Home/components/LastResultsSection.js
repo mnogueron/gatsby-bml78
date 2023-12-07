@@ -1,8 +1,8 @@
 import React from 'react';
-import {CardGrid} from '../../components/Sections';
+import CardGrid from '../../../components/CardGrid';
 import HomeSection from './HomeSection';
 import {SimpleGrid, VStack} from '@chakra-ui/react';
-import PostBigCard from '../../components/PostBigCard';
+import PostBigCard from '../../../components/PostBigCard';
 
 const LastResultsSection = ({results}) => {
   const [firstPost, ...otherPosts] = results;

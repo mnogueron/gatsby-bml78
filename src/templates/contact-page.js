@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
-import ContactPageTemplate from './components/ContactPageTemplate';
+import ContactPageTemplate from '../containers/Contact/ContactPageTemplate';
 import PageLayout from '../components/PageLayout';
 
 function ContactPage({data, pageContext}) {

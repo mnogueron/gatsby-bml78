@@ -2,7 +2,7 @@ import React, {useMemo} from 'react';
 import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 
-import IndexPageTemplate from './components/IndexPageTemplate';
+import IndexPageTemplate from '../containers/Home/IndexPageTemplate';
 import PageLayout from '../components/PageLayout';
 
 const IndexPage = ({data, pageContext}) => {

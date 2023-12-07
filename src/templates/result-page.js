@@ -1,9 +1,9 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
-import ContentPageTemplate from './components/ContentPageTemplate';
+import ContentPageTemplate from '../containers/Articles/ContentPageTemplate';
 import PageLayout from '../components/PageLayout';
-import ArticleNavigation from '../containers/Articles/ArticleNavigation';
+import ArticleNavigation from '../containers/Articles/components/ArticleNavigation';
 
 const ResultPage = ({data, pageContext}) => {
   const {next, previous} = pageContext;

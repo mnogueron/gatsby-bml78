@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticlesPageTemplate from '../../templates/components/ArticlesPageTemplate';
+import ArticlesPageTemplate from '../../containers/Articles/ArticlesPageTemplate';
 
 const ArticlesPagePreview = ({data}) => {
   return (

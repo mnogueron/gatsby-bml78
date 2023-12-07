@@ -6,7 +6,7 @@ import DropdownNavLink from './DropdownNavLink';
 import NavLink from './NavLink';
 import {useScroll} from '../../hooks/useScroll';
 import Logo from '../Logo';
-import {Container} from '../Sections';
+import LegacyContainer from '../LegacyContainer';
 
 // TODO use dark / light mode instead of isTransparent
 // TODO review animation on scroll with isTransparent
@@ -152,7 +152,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
       }}
       {...rest}
     >
-      <Container
+      <LegacyContainer
         py={0}
         display={{base: 'block', lg: 'flex'}}
         alignItems="center"
@@ -222,7 +222,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
             })}
           </HStack>
         </Box>
-      </Container>
+      </LegacyContainer>
     </Box>
   );
 };

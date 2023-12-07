@@ -1,8 +1,8 @@
 import React from 'react';
 import {Box, Button, Container, Flex, Heading, Text} from '@chakra-ui/react';
-import Image from '../../components/Image';
+import Image from '../../../components/Image';
 import {Link} from 'gatsby';
-import Banner from '../../components/Banner';
+import Banner from '../../../components/Banner';
 
 const Header = ({headerImage, heading, subheading, image, banner}) => {
   return (

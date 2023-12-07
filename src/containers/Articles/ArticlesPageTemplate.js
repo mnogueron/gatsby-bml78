@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Container from '../../components/Container';
-import {CardGrid} from '../../components/Sections';
+import CardGrid from '../../components/CardGrid';
 import {Center, Heading, SimpleGrid, VStack} from '@chakra-ui/react';
 import PostBigCard from '../../components/PostBigCard';
 

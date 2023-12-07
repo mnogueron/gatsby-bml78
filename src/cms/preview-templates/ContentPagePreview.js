@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentPageTemplate from '../../templates/components/ContentPageTemplate';
+import ContentPageTemplate from '../../containers/Articles/ContentPageTemplate';
 import useProcessedHAST from '../useProcessedHAST';
 
 const ContentPagePreview = ({data}) => {

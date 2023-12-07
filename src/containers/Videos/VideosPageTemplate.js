@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import Container from '../../components/Container';
 import {SimpleGrid} from '@chakra-ui/react';
-import YoutubeVideo from '../../containers/home/YoutubeVideo';
+import YoutubeVideo from '../Home/components/YoutubeVideo';
 
 function VideosPageTemplate({heading, subheading, videos = []}) {
   return (

@@ -8,9 +8,9 @@ import {
   Text,
   Container as ChakraContainer,
 } from '@chakra-ui/react';
-import {Container} from '../../components/Sections';
+import LegacyContainer from '../../components/LegacyContainer';
 import Content from '../../components/Content';
-import ContactForm from '../../components/ContactForm';
+import ContactForm from './components/ContactForm';
 import Image from '../../components/Image';
 
 function ContactPageTemplate({heading, subheading, contactform, body}) {
@@ -18,7 +18,7 @@ function ContactPageTemplate({heading, subheading, contactform, body}) {
     <div>
       <Header heading={heading} subheading={subheading} />
 
-      <Container pb={'0 !important'}>
+      <LegacyContainer pb={'0 !important'}>
         <Stack
           direction={{base: 'column', lg: 'row'}}
           gap={{base: 0, lg: 10}}
@@ -60,7 +60,7 @@ function ContactPageTemplate({heading, subheading, contactform, body}) {
             />
           </Flex>
         </Stack>
-      </Container>
+      </LegacyContainer>
 
       {body && (
         <Content

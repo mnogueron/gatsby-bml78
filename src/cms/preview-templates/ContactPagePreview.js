@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactPageTemplate from '../../templates/components/ContactPageTemplate';
+import ContactPageTemplate from '../../containers/Contact/ContactPageTemplate';
 import useProcessedHAST from '../useProcessedHAST';
 
 const ContactPagePreview = ({data, getAsset}) => {

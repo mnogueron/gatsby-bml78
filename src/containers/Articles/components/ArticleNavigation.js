@@ -1,12 +1,12 @@
 import {Divider, Flex} from '@chakra-ui/react';
-import NextArticleButton from '../../components/NextArticleButton';
-import PreviousArticleButton from '../../components/PreviousArticleButton';
-import {Container} from '../../components/Sections';
+import NextArticleButton from './NextArticleButton';
+import PreviousArticleButton from './PreviousArticleButton';
+import LegacyContainer from '../../../components/LegacyContainer';
 import React from 'react';
 
 const ArticleNavigation = ({toPrevious, previousTitle, toNext, nextTitle}) => {
   return (
-    <Container as="nav">
+    <LegacyContainer as="nav">
       <Divider borderColor={'gray.200'} />
       <Flex
         direction={{base: 'column', sm: 'row'}}
@@ -23,7 +23,7 @@ const ArticleNavigation = ({toPrevious, previousTitle, toNext, nextTitle}) => {
           <div />
         )}
       </Flex>
-    </Container>
+    </LegacyContainer>
   );
 };
 

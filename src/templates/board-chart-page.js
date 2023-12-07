@@ -2,7 +2,7 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
 import PageLayout from '../components/PageLayout';
-import BoardChartPageTemplate from './components/BoardChartPageTemplate';
+import BoardChartPageTemplate from '../containers/Board/BoardChartPageTemplate';
 
 const BoardChartPage = ({data, pageContext}) => {
   const {markdownRemark: post} = data;

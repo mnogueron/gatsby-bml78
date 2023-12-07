@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, Icon} from '@chakra-ui/react';
 import {RiDoubleQuotesL, RiDoubleQuotesR} from 'react-icons/ri';
-import Content from '../../components/Content';
+import Content from '../../../components/Content';
 
 const ClubQuote = ({content}) => {
   return (

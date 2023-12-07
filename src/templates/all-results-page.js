@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import {graphql} from 'gatsby';
 import SEO from '../components/SEO';
-import ArticlesPageTemplate from './components/ArticlesPageTemplate';
+import ArticlesPageTemplate from '../containers/Articles/ArticlesPageTemplate';
 import PageLayout from '../components/PageLayout';
 import {preparePosts} from '../utils';
 

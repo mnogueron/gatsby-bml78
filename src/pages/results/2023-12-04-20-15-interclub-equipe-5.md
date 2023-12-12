@@ -1,15 +1,17 @@
 ---
 templateKey: result-page
 title: interclub-equipe-5
-cardTitle: Saison 23-24 - Équipe 5 - BML vs CBC 
+cardTitle: Saison 23-24 - Équipe 5 - BML vs CBC
 heading: |-
   Saison 23-24 - Équipe 5
   BML vs CBC
+subheading: ""
 date: 2023-12-04T19:15:00.000Z
 category: equipe-5-s23-24
 featuredimage:
-  image: /assets/shuttle.jpg
+  image: /assets/ic-d3-j5.png
 ---
+![](/assets/ic-d3-j5.png "BML5 - J5")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":4},"teamB":{"shortName":"CBC","longName":"Chatou Badminton Club","result":3}}}</teamscoreboard>
 

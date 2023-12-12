@@ -1,15 +1,16 @@
 ---
 templateKey: result-page
 title: interclub-equipe-4
-cardTitle: Saison 23-24 - Équipe 4 - ASFF vs BML 
+cardTitle: Saison 23-24 - Équipe 4 - ASFF vs BML
 heading: |-
   Saison 23-24 - Équipe 4
   ASFF vs BML
 date: 2023-12-04T19:00:00.000Z
 category: equipe-4-s23-24
 featuredimage:
-  image: /assets/shuttle.jpg
+  image: /assets/ic-d1-j5.png
 ---
+![](/assets/ic-d1-j5.png "BML4 - J5")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"ASFF","longName":"Ass. Sport. Fontenay Le Fleury","result":5},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":2}}}</teamscoreboard>
 

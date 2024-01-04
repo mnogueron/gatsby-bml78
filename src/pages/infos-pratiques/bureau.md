@@ -7,7 +7,8 @@ president:
   name: Maxime Simon
   picture: /assets/maxime_simon.jpeg
 treasurer:
-  name: Christophe Mieusset
+  name: Jean-Michel Remeur
+  picture: /assets/remeur.jpeg
 secretary:
   name: Kevin Held
   picture: /assets/kevin-held.jpg
@@ -25,18 +26,14 @@ board:
     title: Animation Section Adultes Jeu Libre
   - name: Olivier Marechal
     title: Co-Responsable Section Compétition
-  - name: Philippe Chanonat
-    title: Gestion Administrative du Personnel
   - name: Delphine Conte
-    title: Animation Section Adultes Jeu Libre
+    title: Responsable Label EcoBad
     picture: /assets/delphine-conte.jpg
   - name: Reatha Tith
     title: Animation Section Adultes Jeu Libre
   - name: Isabelle Laborie
     title: Animation Section Adultes Jeu Libre / Officiels Techniques
     picture: /assets/screenshot_20221202-175212_gallery.jpg
-  - name: Magalie Mongrolle
-    title: Responsable Label EcoBad
   - name: Matthieu Nogueron
     title: Responsable Web
     picture: /assets/matthieu_nogueron.jpg

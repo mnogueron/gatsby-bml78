@@ -8,9 +8,9 @@ heading: |-
 date: 2023-12-02T12:30:00.000Z
 category: equipe-3-s23-24
 featuredimage:
-  image: /assets/ic-r2-j3.png
+  image: /assets/ic-r3-j3.png
 ---
-![](/assets/ic-r2-j3.png "BML2 - J3")
+![](/assets/ic-r3-j3.png "BML3 - J3")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":1},"teamB":{"shortName":"BCS","longName":"Badminton Club Suresnois","result":7}}}</teamscoreboard>
 

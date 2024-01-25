@@ -8,9 +8,9 @@ heading: |-
 date: 2023-12-02T09:00:00.000Z
 category: equipe-3-s23-24
 featuredimage:
-  image: /assets/ic-r2-j3.png
+  image: /assets/ic-r3-j3.png
 ---
-![](/assets/ic-r2-j3.png "BML3 - J3")
+![](/assets/ic-r3-j3.png "BML3 - J3")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"SMM","longName":"Stade Multisports De Montrouge","result":4},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":4}}}</teamscoreboard>
 

@@ -47,7 +47,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
     }
   `);
 
-  const MENU = useMemo(() => {
+  const {mobileMenu, desktopMenu} = useMemo(() => {
     const extractSubMenus = (item, index) => {
       if (item.items) {
         return {
@@ -71,12 +71,8 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
       infosPratiquesMenu.frontmatter.items.map(extractSubMenus);
     const resultsCategories =
       resultsMenu.frontmatter.items.map(extractSubMenus);
-    return [
-      {
-        key: 'accueil',
-        label: 'Accueil',
-        to: '/',
-      },
+
+    const desktopMenu = [
       {
         key: 'actus',
         label: 'Actualités',
@@ -86,25 +82,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
       {
         key: 'infospratiques',
         label: 'Infos Pratiques',
-        options: [
-          ...infoPratiquesCategories,
-          /*{
-            key: 'Category test',
-            label: 'Category test',
-            options: [
-              {
-                key: `test1`,
-                label: 'Test 1',
-                to: '/infos-pratiques/inscription',
-              },
-              {
-                key: `test2`,
-                label: 'Test 2',
-                to: '/infos-pratiques/bureau',
-              }
-            ],
-          },*/
-        ],
+        options: [...infoPratiquesCategories],
       },
       {
         key: 'resultats',
@@ -124,6 +102,18 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         to: '/contact',
       },
     ];
+
+    return {
+      mobileMenu: [
+        {
+          key: 'accueil',
+          label: 'Accueil',
+          to: '/',
+        },
+        ...desktopMenu,
+      ],
+      desktopMenu: desktopMenu,
+    };
   }, [infosPratiquesMenu, resultsMenu]);
 
   const isTransparent = isTransparentAtTop && scrollY < 1;
@@ -190,13 +180,13 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         <MobileMenu
           isOpen={menuOpen}
           onClose={() => setMenuOpen(!menuOpen)}
-          menu={MENU}
+          menu={mobileMenu}
         />
 
         {/* Mobile Menu open: "block", Menu closed: "hidden" */}
         <Box display={{base: 'none', lg: 'flex'}} alignItems="center">
           <HStack w="full" alignItems="center" mx={6} my={2}>
-            {MENU.map(menu => {
+            {desktopMenu.map(menu => {
               if (menu.options) {
                 return (
                   <DropdownNavLink

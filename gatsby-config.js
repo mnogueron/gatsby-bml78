@@ -1,5 +1,5 @@
 const siteUrl = process.env.URL || `https://badml.com/`;
-const GA_ID = process.env.GA_ID;
+const GA_ID = process.env.GA_ID || 'undefined';
 
 /*const excerptExcludedRegexes = [
   /^(#)+/,

@@ -35,6 +35,7 @@
     "framer-motion": "^6.3.11",
     "gatsby": "^5.12.11",
     "gatsby-plugin-decap-cms": "git@github.com:decaporg/gatsby-plugin-decap-cms.git",
+    "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-layout": "^4.12.0",
     "gatsby-plugin-manifest": "^5.12.3",

@@ -9,6 +9,7 @@ import Logo from '../Logo';
 import LegacyContainer from '../LegacyContainer';
 
 let badmintonMenuVisibility =
+  typeof localStorage !== 'undefined' &&
   localStorage.getItem('menu-badminton') === 'enabled';
 
 if (typeof window !== 'undefined') {

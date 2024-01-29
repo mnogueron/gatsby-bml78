@@ -8,6 +8,21 @@ import {useScroll} from '../../hooks/useScroll';
 import Logo from '../Logo';
 import LegacyContainer from '../LegacyContainer';
 
+let badmintonMenuVisibility =
+  localStorage.getItem('menu-badminton') === 'enabled';
+
+if (typeof window !== 'undefined') {
+  window.toggleBadmintonMenu = () => {
+    if (!localStorage.getItem('menu-badminton')) {
+      localStorage.setItem('menu-badminton', 'enabled');
+      badmintonMenuVisibility = true;
+    } else {
+      localStorage.removeItem('menu-badminton');
+      badmintonMenuVisibility = false;
+    }
+  };
+}
+
 // TODO use dark / light mode instead of isTransparent
 // TODO review animation on scroll with isTransparent
 const Navbar = ({isTransparentAtTop, ...rest}) => {
@@ -104,7 +119,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         label: 'Infos Pratiques',
         options: [...infoPratiquesCategories],
       },
-      {
+      badmintonMenuVisibility && {
         key: 'badminton',
         label: 'Le Badminton',
         options: badmintonCategories,
@@ -126,7 +141,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         label: 'Contact',
         to: '/contact',
       },
-    ];
+    ].filter(Boolean);
 
     return {
       mobileMenu: [

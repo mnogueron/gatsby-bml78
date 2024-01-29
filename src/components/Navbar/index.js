@@ -13,39 +13,57 @@ import LegacyContainer from '../LegacyContainer';
 const Navbar = ({isTransparentAtTop, ...rest}) => {
   const {scrollY, scrollDirection} = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
-  const {infosPratiquesMenu, resultsMenu} = useStaticQuery(graphql`
-    query NAVBAR {
-      infosPratiquesMenu: markdownRemark(
-        frontmatter: {menuKey: {eq: "infos-pratiques"}}
-      ) {
-        frontmatter {
-          menuKey
-          items {
-            title
-            url
+  const {infosPratiquesMenu, badmintonMenu, resultsMenu} = useStaticQuery(
+    graphql`
+      query NAVBAR {
+        infosPratiquesMenu: markdownRemark(
+          frontmatter: {menuKey: {eq: "infos-pratiques"}}
+        ) {
+          frontmatter {
+            menuKey
             items {
               title
               url
+              items {
+                title
+                url
+              }
             }
           }
         }
-      }
 
-      resultsMenu: markdownRemark(frontmatter: {menuKey: {eq: "resultats"}}) {
-        frontmatter {
-          menuKey
-          items {
-            title
-            url
+        badmintonMenu: markdownRemark(
+          frontmatter: {menuKey: {eq: "badminton"}}
+        ) {
+          frontmatter {
+            menuKey
             items {
               title
               url
+              items {
+                title
+                url
+              }
+            }
+          }
+        }
+
+        resultsMenu: markdownRemark(frontmatter: {menuKey: {eq: "resultats"}}) {
+          frontmatter {
+            menuKey
+            items {
+              title
+              url
+              items {
+                title
+                url
+              }
             }
           }
         }
       }
-    }
-  `);
+    `
+  );
 
   const {mobileMenu, desktopMenu} = useMemo(() => {
     const extractSubMenus = (item, index) => {
@@ -69,6 +87,8 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
     };
     const infoPratiquesCategories =
       infosPratiquesMenu.frontmatter.items.map(extractSubMenus);
+    const badmintonCategories =
+      badmintonMenu.frontmatter.items.map(extractSubMenus);
     const resultsCategories =
       resultsMenu.frontmatter.items.map(extractSubMenus);
 
@@ -83,6 +103,11 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         key: 'infospratiques',
         label: 'Infos Pratiques',
         options: [...infoPratiquesCategories],
+      },
+      {
+        key: 'badminton',
+        label: 'Le Badminton',
+        options: badmintonCategories,
       },
       {
         key: 'resultats',

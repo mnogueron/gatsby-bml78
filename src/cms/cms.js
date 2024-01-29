@@ -17,20 +17,30 @@ import './cms-utils';
 
 console.log(CMS);
 
+const ContentPages = [
+  'results',
+  'inscription',
+  'avantages',
+  'entrainements',
+  'sections',
+  'calendrier',
+  'acces-horaires',
+  'histoire-badminton',
+  'regles-badminton',
+  'interclubs',
+];
+
 const previewTemplates = {
+  ...ContentPages.reduce((acc, pageKey) => {
+    acc[pageKey] = ContentPagePreview;
+    return acc;
+  }, {}),
   index: IndexPagePreview,
   'articles-index': ArticlesPagePreview,
   articles: ArticlePagePreview,
   tournaments: ArticlePagePreview,
   contact: ContactPagePreview,
 
-  results: ContentPagePreview,
-  inscription: ContentPagePreview,
-  avantages: ContentPagePreview,
-  entrainements: ContentPagePreview,
-  sections: ContentPagePreview,
-  'acces-horaires': ContentPagePreview,
-  calendrier: ContentPagePreview,
   bureau: BoardChartPagePreview,
   'result-sections': ArticlesPagePreview,
   'all-results-index': ArticlesPagePreview,

@@ -347,6 +347,21 @@ collections:
               - { label: Photo, name: picture, widget: image, required: false }
 
           - <<: *SEO
+  - name: 'badminton'
+    label: 'Le Badminton'
+    files:
+      - file: 'src/pages/badminton/histoire.md'
+        label: "L'histoire"
+        name: 'histoire'
+        fields: *CONTENT_PAGE
+      - file: 'src/pages/badminton/regles.md'
+        label: 'Les règles'
+        name: 'regles'
+        fields: *CONTENT_PAGE
+      - file: 'src/pages/badminton/interclubs.md'
+        label: 'Les Interclubs'
+        name: 'interclubs'
+        fields: *CONTENT_PAGE
 
   - name: 'articles'
     label: 'Articles'
@@ -452,6 +467,44 @@ collections:
                 search_fields: ['title']
                 value_field: '/infos-pratiques/{{slug}}'
                 display_fields: ['title']
+              - label: Sous-sections
+                label_singular: Sous-section
+                name: items
+                required: false
+                widget: list
+                summary: 'Sous-section : {{fields.title}} - Page associée : {{fields.url}}'
+                fields:
+                  - label: Titre
+                    name: title
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
+      - file: 'src/pages/menus/badminton.md'
+        label: 'Menu - Le Badminton'
+        name: 'badminton'
+        fields:
+          - label: 'Menu key'
+            name: 'menuKey'
+            widget: 'hidden'
+            default: 'badminton'
+          - label: Sections
+            label_singular: Section
+            name: items
+            widget: list
+            summary: 'Titre de la section : {{fields.title}} - Page associée : {{fields.url}}'
+            fields:
+              - label: Titre
+                name: title
+                widget: string
+              - label: Page
+                name: url
+                widget: relation
+                required: false
+                collection: 'badminton'
+                search_fields: [ 'title' ]
+                value_field: '/badminton/{{slug}}'
+                display_fields: [ 'title' ]
               - label: Sous-sections
                 label_singular: Sous-section
                 name: items

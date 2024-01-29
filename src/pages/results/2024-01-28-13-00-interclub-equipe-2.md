@@ -1,0 +1,17 @@
+---
+templateKey: result-page
+title: interclub-equipe-2
+cardTitle: Saison 23-24 - Équipe 2 - BAD18 vs BML
+heading: |-
+  Saison 23-24 - Équipe 2
+  BAD18 vs BML
+date: 2024-01-28T12:00:00.000Z
+category: equipe-2-s23-24
+featuredimage:
+  image: /assets/ic-r2-j4.png
+---
+![](/assets/ic-r2-j4.png "BML2 - J4")
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"BAD18","longName":"Badminton Paris 18eme","result":3},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":5}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Durand","firstname":"Lucas","club":"BAD18","ranking":"N3"}],"teamB":[{"lastname":"Girault","firstname":"Maxime","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":18,"scoreB":21},{"scoreA":15,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Le Dastumer","firstname":"Mael","club":"BAD18","ranking":"R4"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"}],"score":{"set":[{"scoreA":11,"scoreB":21},{"scoreA":12,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Petit","firstname":"Lucie","club":"BAD18","ranking":"R4"}],"teamB":[{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":21,"scoreB":14},{"scoreA":18,"scoreB":21},{"scoreA":21,"scoreB":16}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Lepage","firstname":"Bertille","club":"BAD18","ranking":"R4"}],"teamB":[{"lastname":"Ducros","firstname":"Marie","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":14},{"scoreA":21,"scoreB":15}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Dourel","firstname":"Lucas","club":"BAD18","ranking":"N3"},{"lastname":"Durand","firstname":"Lucas","club":"BAD18","ranking":"N3"}],"teamB":[{"lastname":"Poudens","firstname":"William","club":"BML","ranking":"N3"},{"lastname":"Simon","firstname":"Maxime","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":21,"scoreB":16},{"scoreA":13,"scoreB":21},{"scoreA":16,"scoreB":21}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Lecoq","firstname":"Julie","club":"BAD18","ranking":"R5"},{"lastname":"Lepage","firstname":"Bertille","club":"BAD18","ranking":"R6"}],"teamB":[{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"R4"},{"lastname":"Slowakiewicz","firstname":"Karolina","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":21,"scoreB":15},{"scoreA":13,"scoreB":21},{"scoreA":21,"scoreB":6}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"Le Dastumer","firstname":"Mael","club":"BAD18","ranking":"R5"},{"lastname":"Petit","firstname":"Lucie","club":"BAD18","ranking":"R4"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"},{"lastname":"Slowakiewicz","firstname":"Karolina","club":"BML","ranking":"R5"}],"score":{"set":[{"scoreA":20,"scoreB":22},{"scoreA":12,"scoreB":21}]},"type":"MX","hideClub":true},{"teamA":[{"lastname":"Dourel","firstname":"Lucas","club":"BAD18","ranking":"R4"},{"lastname":"Lecoq","firstname":"Julie","club":"BAD18","ranking":"R5"}],"teamB":[{"lastname":"Girault","firstname":"Maxime","club":"BML","ranking":"N3"},{"lastname":"Ducros","firstname":"Marie","club":"BML","ranking":"R5"}],"score":{"set":[{"scoreA":22,"scoreB":24},{"scoreA":21,"scoreB":12},{"scoreA":18,"scoreB":21}]},"type":"MX","hideClub":true}]}</scoreboard>

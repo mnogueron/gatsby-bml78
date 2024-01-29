@@ -1,0 +1,17 @@
+---
+templateKey: result-page
+title: interclub-equipe-1
+cardTitle: Saison 23-24 - Équipe 1 - BML vs BCD
+heading: |-
+  Saison 23-24 - Équipe 1
+  BML vs BCD
+date: 2024-01-27T15:00:00.000Z
+category: equipe-1-s23-24
+featuredimage:
+  image: /assets/ic-n2-j6.png
+---
+![](/assets/ic-n2-j6.png "BML1 - J6")
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":5},"teamB":{"shortName":"BCD","longName":"Badminton Club Divais","result":3}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Houthoofd","firstname":"Senne","club":"BML","ranking":"N3"}],"teamB":[{"lastname":"Lanier","firstname":"Theo","club":"BCD","ranking":"N1"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":21,"scoreB":18},{"scoreA":22,"scoreB":20}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Guinouet","firstname":"Amaury","club":"BML","ranking":"D8"}],"teamB":[{"lastname":"Vaugeois","firstname":"Arthur","club":"BCD","ranking":"N1"}],"score":{"set":[{"scoreA":6,"scoreB":21},{"scoreA":10,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Middleton","firstname":"Lauren","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Sochon","firstname":"Céline","club":"BCD","ranking":"R5"}],"score":{"set":[{"scoreA":21,"scoreB":6},{"scoreA":21,"scoreB":3}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Lesne","firstname":"Cassandre","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Puche","firstname":"Camille","club":"BCD","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":12},{"scoreA":21,"scoreB":13}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Esteve Garcia","firstname":"Miguel","club":"BML","ranking":"N2"},{"lastname":"Riancho","firstname":"Florent","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Mispelaere","firstname":"Aymeric","club":"BCD","ranking":"R4"},{"lastname":"Vaugeois","firstname":"Arthur","club":"BCD","ranking":"N1"}],"score":{"set":[{"scoreA":21,"scoreB":18},{"scoreA":21,"scoreB":9}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Galve","firstname":"Julia","club":"BML","ranking":"N3"},{"lastname":"Lesne","firstname":"Candice","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Nambot","firstname":"Anouk","club":"BCD","ranking":"N1"},{"lastname":"Puche","firstname":"Camille","club":"BCD","ranking":"R5"}],"score":{"set":[{"scoreA":19,"scoreB":21},{"scoreA":21,"scoreB":23}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"Houthoofd","firstname":"Senne","club":"BML","ranking":"N3"},{"lastname":"Middleton","firstname":"Lauren","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Lanier","firstname":"Theo","club":"BCD","ranking":"N1"},{"lastname":"Nambot","firstname":"Anouk","club":"BCD","ranking":"N1"}],"score":{"set":[{"scoreA":19,"scoreB":21},{"scoreA":12,"scoreB":21}]},"type":"MX","hideClub":true},{"teamA":[{"lastname":"Esteve Garcia","firstname":"Miguel","club":"BML","ranking":"N2"},{"lastname":"Galve","firstname":"Julia","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Mispelaere","firstname":"Aymeric","club":"BCD","ranking":"R5"},{"lastname":"Sochon","firstname":"Céline","club":"BCD","ranking":"N3"}],"score":{"set":[{"scoreA":21,"scoreB":12},{"scoreA":21,"scoreB":13}]},"type":"MX","hideClub":true}]}</scoreboard>

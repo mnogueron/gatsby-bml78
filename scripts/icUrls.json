@@ -27,7 +27,8 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348666",
-            "date": "27/01/2024"
+            "date": "27/01/2024",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348669",
@@ -79,11 +80,13 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392419",
-            "date": "28/01/2024"
+            "date": "28/01/2024",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392421",
-            "date": "28/01/2024"
+            "date": "28/01/2024",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392425",
@@ -127,11 +130,13 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392689",
-            "date": "28/01/2024"
+            "date": "28/01/2024",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392693",
-            "date": "28/01/2024"
+            "date": "28/01/2024",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392695",
@@ -185,11 +190,13 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425445",
-            "date": "26/01/2024"
+            "date": "26/01/2024",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425446",
-            "date": "29/01/2024"
+            "date": "29/01/2024",
+            "parsed": false
         },
         {
             "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425450",
@@ -251,7 +258,8 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423979",
-            "date": "22/01/2024"
+            "date": "22/01/2024",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423985",
@@ -317,11 +325,13 @@
         },
         {
             "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425779",
-            "date": "24/01/2024"
+            "date": "24/01/2024",
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425782",
-            "date": "29/01/2024"
+            "date": "29/01/2024",
+            "parsed": false
         },
         {
             "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425787",
@@ -384,7 +394,7 @@
         {
             "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426158",
             "date": "24/01/2024",
-            "parsed": false
+            "parsed": true
         },
         {
             "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426162",

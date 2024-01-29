@@ -1,25 +1,23 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import SEO from '../components/SEO';
 import ContentPageTemplate from '../containers/Articles/ContentPageTemplate';
-import PageLayout from '../components/PageLayout';
+import PageHead from '../components/PageHead';
 
-const ContentPage = ({data, pageContext}) => {
+const ContentPage = ({data}) => {
   const {markdownRemark: post} = data;
   const {frontmatter: fm} = post;
 
   return (
-    <>
-      <SEO data={data} pageContext={pageContext} />
-      <PageLayout>
-        <ContentPageTemplate
-          heading={fm.heading}
-          subheading={fm.subheading}
-          body={post.htmlAst}
-        />
-      </PageLayout>
-    </>
+    <ContentPageTemplate
+      heading={fm.heading}
+      subheading={fm.subheading}
+      body={post.htmlAst}
+    />
   );
+};
+
+export const Head = ({data, pageContext}) => {
+  return <PageHead data={data} pageContext={pageContext} />;
 };
 
 export default ContentPage;

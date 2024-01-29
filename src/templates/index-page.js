@@ -1,11 +1,10 @@
 import React, {useMemo} from 'react';
 import {graphql} from 'gatsby';
-import SEO from '../components/SEO';
 
 import IndexPageTemplate from '../containers/Home/IndexPageTemplate';
-import PageLayout from '../components/PageLayout';
+import PageHead from '../components/PageHead';
 
-const IndexPage = ({data, pageContext}) => {
+const IndexPage = ({data}) => {
   const {frontmatter: fm} = data.markdownRemark;
 
   // latest posts and results
@@ -20,24 +19,23 @@ const IndexPage = ({data, pageContext}) => {
   }, [data.allVideosMarkdownRemark.edges]);
 
   return (
-    <>
-      <SEO data={data} pageContext={pageContext} />
-      <PageLayout marginTop={0}>
-        <IndexPageTemplate
-          heading={fm.heading}
-          subheading={fm.subheading}
-          image={fm.image}
-          headerImage={fm.headerImage}
-          banner={fm.banner}
-          clubSectionContent={data.markdownRemark.htmlAst}
-          posts={posts}
-          results={results}
-          videos={videos}
-          about={fm.about}
-        />
-      </PageLayout>
-    </>
+    <IndexPageTemplate
+      heading={fm.heading}
+      subheading={fm.subheading}
+      image={fm.image}
+      headerImage={fm.headerImage}
+      banner={fm.banner}
+      clubSectionContent={data.markdownRemark.htmlAst}
+      posts={posts}
+      results={results}
+      videos={videos}
+      about={fm.about}
+    />
   );
+};
+
+export const Head = ({data, pageContext}) => {
+  return <PageHead data={data} pageContext={pageContext} />;
 };
 
 export default IndexPage;

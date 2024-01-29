@@ -1,27 +1,25 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import SEO from '../components/SEO';
 import ContactPageTemplate from '../containers/Contact/ContactPageTemplate';
-import PageLayout from '../components/PageLayout';
+import PageHead from '../components/PageHead';
 
-function ContactPage({data, pageContext}) {
+function ContactPage({data}) {
   const {markdownRemark: contact} = data;
   const {subheading, heading, contactform} = contact.frontmatter;
 
   return (
-    <>
-      <SEO data={data} pageContext={pageContext} />
-      <PageLayout>
-        <ContactPageTemplate
-          heading={heading}
-          subheading={subheading}
-          contactform={contactform}
-          body={contact.htmlAst}
-        />
-      </PageLayout>
-    </>
+    <ContactPageTemplate
+      heading={heading}
+      subheading={subheading}
+      contactform={contactform}
+      body={contact.htmlAst}
+    />
   );
 }
+
+export const Head = ({data, pageContext}) => {
+  return <PageHead data={data} pageContext={pageContext} />;
+};
 
 export default ContactPage;
 

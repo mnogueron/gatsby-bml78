@@ -1,29 +1,27 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import SEO from '../components/SEO';
-import PageLayout from '../components/PageLayout';
 import BoardChartPageTemplate from '../containers/Board/BoardChartPageTemplate';
+import PageHead from '../components/PageHead';
 
-const BoardChartPage = ({data, pageContext}) => {
+const BoardChartPage = ({data}) => {
   const {markdownRemark: post} = data;
   const {frontmatter: fm} = post;
 
   return (
-    <>
-      <SEO data={data} pageContext={pageContext} />
-      <PageLayout>
-        <BoardChartPageTemplate
-          heading={fm.heading}
-          subheading={fm.subheading}
-          html={post.htmlAst}
-          president={fm.president}
-          treasurer={fm.treasurer}
-          secretary={fm.secretary}
-          team={fm.board}
-        />
-      </PageLayout>
-    </>
+    <BoardChartPageTemplate
+      heading={fm.heading}
+      subheading={fm.subheading}
+      html={post.htmlAst}
+      president={fm.president}
+      treasurer={fm.treasurer}
+      secretary={fm.secretary}
+      team={fm.board}
+    />
   );
+};
+
+export const Head = ({data, pageContext}) => {
+  return <PageHead data={data} pageContext={pageContext} />;
 };
 
 export default BoardChartPage;

@@ -1,28 +1,25 @@
 import React, {useMemo} from 'react';
 import {graphql} from 'gatsby';
-import SEO from '../components/SEO';
 import ArticlesPageTemplate from '../containers/Articles/ArticlesPageTemplate';
-import PageLayout from '../components/PageLayout';
 import {preparePosts} from '../utils';
+import PageHead from '../components/PageHead';
 
-const AllResultsPage = ({data, pageContext}) => {
+const AllResultsPage = ({data}) => {
   const {frontmatter: fm} = data.markdownRemark;
   const {edges: posts} = data.allMarkdownRemark;
   const preparedPosts = useMemo(() => preparePosts(posts), [posts]);
 
   return (
-    <>
-      <SEO data={data} pageContext={pageContext} />
-      <PageLayout>
-        <ArticlesPageTemplate
-          heading={fm.heading}
-          subheading={fm.subheading}
-          posts={preparedPosts}
-          seo={fm.seo}
-        />
-      </PageLayout>
-    </>
+    <ArticlesPageTemplate
+      heading={fm.heading}
+      subheading={fm.subheading}
+      posts={preparedPosts}
+    />
   );
+};
+
+export const Head = ({data, pageContext}) => {
+  return <PageHead data={data} pageContext={pageContext} />;
 };
 
 export default AllResultsPage;

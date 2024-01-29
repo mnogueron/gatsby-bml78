@@ -5,23 +5,9 @@ import {useLocation} from '@reach/router';
 import format from 'date-fns/format';
 import frLocale from 'date-fns/locale/fr';
 
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        titleTemplate
-        defaultDescription: description
-        siteUrl
-        defaultImage: image
-      }
-    }
-  }
-`;
-
 export const getSEOData = data => {
-  const {frontmatter: fm} = data.markdownRemark;
-  switch (fm.templateKey) {
+  const {frontmatter: fm} = data.markdownRemark || {};
+  switch (fm?.templateKey) {
     case 'article-page':
     case 'tournament-page':
       return {
@@ -65,7 +51,19 @@ export const getSEOData = data => {
 
 const SEO = ({data, pageContext}) => {
   const {pathname} = useLocation();
-  const {site} = useStaticQuery(query);
+  const {site} = useStaticQuery(graphql`
+    query SEO {
+      site {
+        siteMetadata {
+          defaultTitle: title
+          titleTemplate
+          defaultDescription: description
+          siteUrl
+          defaultImage: image
+        }
+      }
+    }
+  `);
   const {seo: override} = pageContext;
   const {
     title,

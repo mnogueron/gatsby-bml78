@@ -1,25 +1,22 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import SEO from '../components/SEO';
-import PageLayout from '../components/PageLayout';
 import VideosPageTemplate from '../containers/Videos/VideosPageTemplate';
+import PageHead from '../components/PageHead';
 
-const AllVideosPage = ({data, pageContext}) => {
+const AllVideosPage = ({data}) => {
   const {frontmatter: fm} = data.markdownRemark;
 
   return (
-    <>
-      <SEO data={data} pageContext={pageContext} />
-      <PageLayout>
-        <VideosPageTemplate
-          heading={fm.heading}
-          subheading={fm.subheading}
-          videos={fm.videos}
-          seo={fm.seo}
-        />
-      </PageLayout>
-    </>
+    <VideosPageTemplate
+      heading={fm.heading}
+      subheading={fm.subheading}
+      videos={fm.videos}
+    />
   );
+};
+
+export const Head = ({data, pageContext}) => {
+  return <PageHead data={data} pageContext={pageContext} />;
 };
 
 export default AllVideosPage;

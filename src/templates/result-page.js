@@ -1,9 +1,8 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import SEO from '../components/SEO';
 import ContentPageTemplate from '../containers/Articles/ContentPageTemplate';
-import PageLayout from '../components/PageLayout';
 import ArticleNavigation from '../containers/Articles/components/ArticleNavigation';
+import PageHead from '../components/PageHead';
 
 const ResultPage = ({data, pageContext}) => {
   const {next, previous} = pageContext;
@@ -12,28 +11,29 @@ const ResultPage = ({data, pageContext}) => {
 
   return (
     <>
-      <SEO data={data} pageContext={pageContext} />
-      <PageLayout>
-        <ContentPageTemplate
-          heading={fm.heading}
-          subheading={fm.subheading}
-          date={fm.date}
-          body={result.htmlAst}
-        />
+      <ContentPageTemplate
+        heading={fm.heading}
+        subheading={fm.subheading}
+        date={fm.date}
+        body={result.htmlAst}
+      />
 
-        <ArticleNavigation
-          toNext={previous?.fields?.slug}
-          nextTitle={
-            previous?.frontmatter?.cardTitle || previous?.frontmatter?.heading
-          }
-          toPrevious={next?.fields?.slug}
-          previousTitle={
-            next?.frontmatter?.cardTitle || next?.frontmatter?.heading
-          }
-        />
-      </PageLayout>
+      <ArticleNavigation
+        toNext={previous?.fields?.slug}
+        nextTitle={
+          previous?.frontmatter?.cardTitle || previous?.frontmatter?.heading
+        }
+        toPrevious={next?.fields?.slug}
+        previousTitle={
+          next?.frontmatter?.cardTitle || next?.frontmatter?.heading
+        }
+      />
     </>
   );
+};
+
+export const Head = ({data, pageContext}) => {
+  return <PageHead data={data} pageContext={pageContext} />;
 };
 
 export default ResultPage;

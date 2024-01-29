@@ -134,7 +134,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#2C5282`,
         display: `standalone`,
-        icon: `src/img/bml-icon.png`,
+        icon: `src/img/bml-icon-squared.png`,
       },
     },
     {

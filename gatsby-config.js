@@ -1,3 +1,4 @@
+const fs = require('fs');
 const siteUrl = process.env.URL || `https://badml.com/`;
 const GA_ID = process.env.GA_ID || 'undefined';
 
@@ -20,6 +21,17 @@ module.exports = {
     image: '/assets/bml-icon.png',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-extract-schema',
+      options: {
+        writeSchema: async (location, schema) => {
+          // custom implementation to write the schema-string
+          if (process.env.NODE_ENV === 'development') {
+            fs.writeFileSync(location, schema);
+          }
+        },
+      },
+    },
     {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {

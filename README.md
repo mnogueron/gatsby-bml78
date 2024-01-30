@@ -6,30 +6,24 @@
     <a href="https://www.decapcms.org/" target="_blank">
       <img alt="Decap CMS" src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Netlify_CMS_logo.svg" height="30" />
     </a>
-      &nbsp;
-    <a href="https://tailwindcss.com/" target="_blank">
-      <img alt="Tailwind CSS" src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.cb8046c163f77190406dfbf4dec89848.svg" height="40" />
-    </a>
 </div>
 <h1 align="center">
-  Gatsby v3 - Decap CMS - Tailwind CSS - Starter
+  Gatsby v3 - Decap CMS - Chakra-UI - Starter
 </h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b13fc0e1-9fca-48c2-b078-12722c7e0357/deploy-status)](https://app.netlify.com/sites/infallible-varahamihira-058515/deploys)
 
-An example website built using Gatsby v3, Decap CMS and Tailwind CSS.
+An example website built using Gatsby v3, Decap CMS and Chakra-UI.
 
 It's a website of a fake urban gardening agency and comprises of a landing page, a project portfolio, about page with team members, and a contact form.
 
  👉 Check out the [demo site](https://infallible-varahamihira-058515.netlify.app/)!
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/jimmybutton/gatsby-netlifycms-tailwind-starter" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg"></a>
-
 ## 🦾 Technologies and Plugins
 
 - ⚛️ **Gatsby v3**
 - ✍️ **Decap CMS** (incl. Admin live preview for all pages)
-- 💨 **Tailwind CSS** for styling
+- 💨 **Chakra-UI** for styling
 - 🌃 Performant images with gatsby-plugin-image and gatsby-plugin-sharp
 - 🗺 Sitemap with gatsby-plugin-sitemap
 - 🤖 Robots.txt with gatsby-plugin-robots-txt
@@ -41,8 +35,6 @@ It's a website of a fake urban gardening agency and comprises of a landing page,
 Start development environment with
 
 ```
-$ git clone https://github.com/jimmybutton/gatsby-netlifycms-tailwind-starter.git
-$ cd gatsby-netlifycms-tailwind-starter
 $ npm install
 $ gatsby develop
 ```
@@ -73,7 +65,6 @@ I've you find a solution that works, please let me know or submit a pull request
 
 - This template was inspired by [gatsby-starter-netlify-cms](https://github.com/netlify-templates/gatsby-starter-netlify-cms)
 - Taylor Bell for his great course [Build a Blog with React and Markdown using Gatsby](https://egghead.io/courses/build-a-blog-with-react-and-markdown-using-gatsby), available for free on Egghead.io
-- [Merakiui.com](https://merakiui.com/) for the great free Tailwind CSS components
 - [Unsplash](https://unsplash.com/) and photographers for amazing photos
 - How to hide and show navbar on scroll: https://dev.to/pratiksharm/navbar-hide-and-show-on-scroll-using-custom-react-hooks-1k98
 - How to use prevent layout components from unmounting: https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-prevent-layout-components-from-unmounting

@@ -1,7 +1,7 @@
 {
   "name": "gatsby-bml78",
   "private": true,
-  "description": "An opinionated starter for Gatsby using Decap CMS and Tailwind CSS",
+  "description": "Site du club de Badminton de Maisons-Laffitte",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -27,8 +27,6 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@emotion/weak-memoize": "^0.2.5",
-    "@tailwindcss/forms": "^0.3.3",
-    "@tailwindcss/typography": "^0.4.1",
     "date-fns": "^2.30.0",
     "decap-cms-app": "^3.0.12",
     "decap-cms-locales": "^3.1.2",

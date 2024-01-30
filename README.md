@@ -31,7 +31,6 @@ It's a website of a fake urban gardening agency and comprises of a landing page,
 - ✍️ **Decap CMS** (incl. Admin live preview for all pages)
 - 💨 **Tailwind CSS** for styling
 - 🌃 Performant images with gatsby-plugin-image and gatsby-plugin-sharp
-- ⛑ Site metadata with react-helmet
 - 🗺 Sitemap with gatsby-plugin-sitemap
 - 🤖 Robots.txt with gatsby-plugin-robots-txt
 - 🧩 Persistent navbar and footer with gatsby-plugin-layout

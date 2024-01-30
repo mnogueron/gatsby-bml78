@@ -1,5 +1,5 @@
 import React from 'react';
-import {Badge, Box, useBreakpointValue} from '@chakra-ui/react';
+import {Badge, useBreakpointValue} from '@chakra-ui/react';
 
 const BreakpointTag = () => {
   const breakpoint = useBreakpointValue([
@@ -11,11 +11,15 @@ const BreakpointTag = () => {
     '2xl',
   ]);
   return (
-    <Box bottom={4} right={4} position="fixed">
-      <Badge colorScheme="red" fontSize="sm">
-        {breakpoint}
-      </Badge>
-    </Box>
+    <Badge
+      colorScheme="red"
+      fontSize="sm"
+      bottom={4}
+      right={4}
+      position="fixed"
+    >
+      {breakpoint}
+    </Badge>
   );
 };
 

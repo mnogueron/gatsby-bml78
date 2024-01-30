@@ -9,7 +9,6 @@ const GA_ID = process.env.GA_ID || 'undefined';
   /^`youtube:\s(.*)`$/,
 ];*/
 
-// TODO change title and description
 module.exports = {
   trailingSlash: `ignore`,
   siteMetadata: {
@@ -164,7 +163,6 @@ module.exports = {
         policy: [{userAgent: '*', allow: '/'}],
       },
     },
-    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

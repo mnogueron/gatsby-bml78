@@ -1,3 +1,5 @@
+import type {GatsbyConfig} from 'gatsby';
+
 const siteUrl = process.env.URL || `https://badml.com/`;
 const GA_ID = process.env.GA_ID || 'undefined';
 
@@ -9,7 +11,7 @@ const GA_ID = process.env.GA_ID || 'undefined';
   /^`youtube:\s(.*)`$/,
 ];*/
 
-module.exports = {
+const config: GatsbyConfig = {
   trailingSlash: `ignore`,
   siteMetadata: {
     title: 'Badminton Maisons-Laffitte',
@@ -82,7 +84,7 @@ module.exports = {
               urlOverrides: [
                 {
                   id: 'youtube',
-                  embedURL: videoId =>
+                  embedURL: (videoId: string) =>
                     `https://www.youtube-nocookie.com/embed/${videoId}`,
                 },
               ], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
@@ -196,3 +198,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;

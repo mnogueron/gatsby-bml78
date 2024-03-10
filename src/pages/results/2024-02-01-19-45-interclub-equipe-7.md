@@ -10,7 +10,7 @@ category: equipe-7-s23-24
 featuredimage:
   image: /assets/2023-2024/ic-d5-j10.png
 ---
-![](/assets/2023-2024/ic-d4-j15.png "BML7 - J10")
+![](/assets/2023-2024/ic-d4-j10.png "BML7 - J10")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"ALJL","longName":"ALJ Limay Badminton","result":1},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":5}}}</teamscoreboard>
 

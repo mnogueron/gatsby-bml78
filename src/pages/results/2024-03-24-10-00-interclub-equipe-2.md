@@ -1,0 +1,16 @@
+---
+templateKey: result-page
+title: interclub-equipe-2
+cardTitle: Saison 23-24 - Équipe 2 - ESV vs BML 
+heading: |-
+  Saison 23-24 - Équipe 2
+  ESV vs BML
+date: 2024-03-24T09:00:00.000Z
+category: equipe-2-s23-24
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"ESV","longName":"Entente Sportive De Vitry","result":3},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":5}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Debard","firstname":"Colin","club":"ESV","ranking":"N3"}],"teamB":[{"lastname":"Girault","firstname":"Maxime","club":"BML","ranking":"N2"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":21,"scoreB":19},{"scoreA":16,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Phanthavong","firstname":"Victor","club":"ESV","ranking":"R5"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"}],"score":{"set":[{"scoreA":10,"scoreB":21},{"scoreA":9,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Phanthavong","firstname":"Celine","club":"ESV","ranking":"R4"}],"teamB":[{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":21,"scoreB":7},{"scoreA":21,"scoreB":5}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Boulay","firstname":"Taîna","club":"ESV","ranking":"R6"}],"teamB":[{"lastname":"Ducros","firstname":"Marie","club":"BML","ranking":"R6"}],"score":{"set":[{"scoreA":21,"scoreB":19},{"scoreA":12,"scoreB":21},{"scoreA":18,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Debard","firstname":"Colin","club":"ESV","ranking":"R4"},{"lastname":"Srinivasan","firstname":"Vijay","club":"ESV","ranking":"R4"}],"teamB":[{"lastname":"Poudens","firstname":"William","club":"BML","ranking":"N3"},{"lastname":"Simon","firstname":"Maxime","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":21,"scoreB":18},{"scoreA":21,"scoreB":17}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Boulay","firstname":"Taîna","club":"ESV","ranking":"R6"},{"lastname":"Brouquieres","firstname":"France","club":"ESV","ranking":"R5"}],"teamB":[{"lastname":"Lardet","firstname":"Juliette","club":"BML","ranking":"R4"},{"lastname":"Slowakiewicz","firstname":"Karolina","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":15,"scoreB":21},{"scoreA":14,"scoreB":21}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"Srinivasan","firstname":"Vijay","club":"ESV","ranking":"R5"},{"lastname":"Brouquieres","firstname":"France","club":"ESV","ranking":"R4"}],"teamB":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"},{"lastname":"Slowakiewicz","firstname":"Karolina","club":"BML","ranking":"R4"}],"score":{"set":[{"scoreA":13,"scoreB":21},{"scoreA":21,"scoreB":15},{"scoreA":21,"scoreB":11}]},"type":"MX","hideClub":true},{"teamA":[{"lastname":"Phanthavong","firstname":"Victor","club":"ESV","ranking":"D7"},{"lastname":"Phanthavong","firstname":"Celine","club":"ESV","ranking":"R4"}],"teamB":[{"lastname":"Girault","firstname":"Maxime","club":"BML","ranking":"N3"},{"lastname":"Ducros","firstname":"Marie","club":"BML","ranking":"R5"}],"score":{"set":[{"scoreA":9,"scoreB":21},{"scoreA":14,"scoreB":21}]},"type":"MX","hideClub":true}]}</scoreboard>

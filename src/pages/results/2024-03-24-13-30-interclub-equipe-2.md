@@ -8,8 +8,9 @@ heading: |-
 date: 2024-03-24T12:30:00.000Z
 category: equipe-2-s23-24
 featuredimage:
-  image: /assets/shuttle.jpg
+  image: /assets/2023-2024/ic-r2-j5.png
 ---
+![](/assets/2023-2024/ic-r2-j5.png "BML2 - J5")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":5},"teamB":{"shortName":"BCN","longName":"Badminton Club De Noisiel","result":3}}}</teamscoreboard>
 

@@ -8,8 +8,9 @@ heading: |-
 date: 2024-03-24T08:00:00.000Z
 category: equipe-3-s23-24
 featuredimage:
-  image: /assets/shuttle.jpg
+  image: /assets/2023-2024/ic-r3-j5.png
 ---
+![](/assets/2023-2024/ic-r3-j5.png "BML3 - J5")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":4},"teamB":{"shortName":"BIM","longName":"Bad in Montreuil","result":4}}}</teamscoreboard>
 

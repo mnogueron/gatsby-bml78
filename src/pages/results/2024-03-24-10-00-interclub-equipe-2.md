@@ -8,8 +8,9 @@ heading: |-
 date: 2024-03-24T09:00:00.000Z
 category: equipe-2-s23-24
 featuredimage:
-  image: /assets/shuttle.jpg
+  image: /assets/2023-2024/ic-r2-j5.png
 ---
+![](/assets/2023-2024/ic-r2-j5.png "BML2 - J5")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"ESV","longName":"Entente Sportive De Vitry","result":3},"teamB":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":5}}}</teamscoreboard>
 

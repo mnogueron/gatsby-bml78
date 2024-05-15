@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react';
-import rehypeReact from 'rehype-react';
+import RehypeReact from 'rehype-react';
 import Scoreboard from '../components/Scoreboard';
 import TeamScoreboard from '../components/TeamScoreboard';
 import Gallery from '../components/Gallery';
@@ -125,7 +125,7 @@ const withChildrenAsJSONProps = Component => {
   return PreparedComponent;
 };
 
-export const renderAst = new rehypeReact({
+export const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
     scoreboard: withChildrenAsJSONProps(Scoreboard),

@@ -6,8 +6,9 @@ import {
   AlertDescription,
   CloseButton,
 } from '@chakra-ui/react';
+import {BannerType} from '../types/types';
 
-const Banner = ({text, level}) => {
+const Banner = ({text, level}: Omit<BannerType, 'hide'>) => {
   const {isOpen, onClose, onOpen} = useDisclosure({defaultIsOpen: true});
 
   useEffect(() => {

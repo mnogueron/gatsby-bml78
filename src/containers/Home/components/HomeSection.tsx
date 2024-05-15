@@ -1,8 +1,19 @@
 import React from 'react';
-import {Box, Container, Flex, Heading} from '@chakra-ui/react';
+import {Box, BoxProps, Container, Flex, Heading} from '@chakra-ui/react';
 import SeeMoreButton from './SeeMoreButton';
 
-const HomeSection = ({title, moreButtonRedirectTo, children, ...rest}) => {
+type HomeSectionProps = {
+  title: string | null;
+  moreButtonRedirectTo?: string;
+  children: React.ReactElement;
+} & BoxProps;
+
+const HomeSection = ({
+  title,
+  moreButtonRedirectTo,
+  children,
+  ...rest
+}: HomeSectionProps) => {
   return (
     <Container maxW="7xl" mt={{base: 8, md: 12, lg: 16}} as="section" {...rest}>
       <Flex justifyContent="space-between" alignItems="center">

@@ -1,9 +1,13 @@
 import React from 'react';
-import {Button, Icon} from '@chakra-ui/react';
+import {Button, ButtonProps, Icon} from '@chakra-ui/react';
 import {Link} from 'gatsby';
 import {MdChevronRight} from 'react-icons/md';
 
-const SeeMoreButton = ({to, ...rest}) => {
+type SeeMoreButtonProps = {
+  to: string;
+} & ButtonProps;
+
+const SeeMoreButton = ({to, ...rest}: SeeMoreButtonProps) => {
   return (
     <Button
       variant="ghost"

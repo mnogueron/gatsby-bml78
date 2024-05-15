@@ -60,6 +60,11 @@
     "unified": "^10.1.2"
   },
   "devDependencies": {
+    "@types/node": "^18.19.10",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
     "chalk": "^5.0.0",
     "concurrently": "^8.2.2",
     "decap-server": "^3.0.1",
@@ -72,7 +77,8 @@
     "lint-staged": "^15.1.0",
     "node-cron": "^3.0.0",
     "prettier": "^3.1.0",
-    "puppeteer": "^13.7.0"
+    "puppeteer": "^13.7.0",
+    "typescript": "^5.3.3"
   },
   "overrides": {
     "graphql": "^16.0.0",

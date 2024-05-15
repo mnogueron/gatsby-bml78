@@ -1,12 +1,13 @@
 import React, {useMemo} from 'react';
-import {graphql} from 'gatsby';
+import {graphql, PageProps} from 'gatsby';
 
+// @ts-ignore
 import IndexPageTemplate from '../containers/Home/IndexPageTemplate';
+// @ts-ignore
 import PageHead from '../components/PageHead';
 
-const IndexPage = ({data}) => {
-  const {frontmatter: fm} = data.markdownRemark;
-
+const IndexPage = ({data}: PageProps<Queries.IndexPageQuery>) => {
+  const {frontmatter: fm, htmlAst} = data.markdownRemark!!;
   // latest posts and results
   const {edges: posts} = data.allPostsMarkdownRemark;
   const {edges: results} = data.allResultsMarkdownRemark;
@@ -15,8 +16,12 @@ const IndexPage = ({data}) => {
       return [];
     }
 
-    return data.allVideosMarkdownRemark.edges[0].node.frontmatter.videos;
+    return data.allVideosMarkdownRemark.edges[0].node.frontmatter!!.videos;
   }, [data.allVideosMarkdownRemark.edges]);
+
+  if (!fm) {
+    return null;
+  }
 
   return (
     <IndexPageTemplate
@@ -25,16 +30,15 @@ const IndexPage = ({data}) => {
       image={fm.image}
       headerImage={fm.headerImage}
       banner={fm.banner}
-      clubSectionContent={data.markdownRemark.htmlAst}
+      clubSectionContent={htmlAst}
       posts={posts}
       results={results}
       videos={videos}
-      about={fm.about}
     />
   );
 };
 
-export const Head = ({data, pageContext}) => {
+export const Head = ({data, pageContext}: PageProps) => {
   return <PageHead data={data} pageContext={pageContext} />;
 };
 

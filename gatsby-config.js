@@ -11,6 +11,7 @@ const GA_ID = process.env.GA_ID || 'undefined';
 ];*/
 
 module.exports = {
+  graphqlTypegen: true,
   trailingSlash: `ignore`,
   siteMetadata: {
     title: 'Badminton Maisons-Laffitte',

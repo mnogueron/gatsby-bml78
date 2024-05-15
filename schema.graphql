@@ -411,15 +411,21 @@ type Site implements Node {
   siteMetadata: SiteSiteMetadata
   port: Int
   host: String
+  graphqlTypegen: SiteGraphqlTypegen
   trailingSlash: String
   polyfill: Boolean
   pathPrefix: String
   jsxRuntime: String
-  graphqlTypegen: Boolean
   id: ID!
   parent: Node
   children: [Node!]!
   internal: Internal!
+}
+
+type SiteGraphqlTypegen {
+  typesOutputPath: String
+  documentSearchPaths: [String]
+  generateOnBuild: Boolean
 }
 
 type SiteSiteMetadata {
@@ -960,7 +966,7 @@ type Query {
   allFile(filter: FileFilterInput, sort: [FileSortInput], skip: Int, limit: Int): FileConnection!
   directory(sourceInstanceName: StringQueryOperatorInput, absolutePath: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, extension: StringQueryOperatorInput, size: IntQueryOperatorInput, prettySize: StringQueryOperatorInput, modifiedTime: DateQueryOperatorInput, accessTime: DateQueryOperatorInput, changeTime: DateQueryOperatorInput, birthTime: DateQueryOperatorInput, root: StringQueryOperatorInput, dir: StringQueryOperatorInput, base: StringQueryOperatorInput, ext: StringQueryOperatorInput, name: StringQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, dev: IntQueryOperatorInput, mode: IntQueryOperatorInput, nlink: IntQueryOperatorInput, uid: IntQueryOperatorInput, gid: IntQueryOperatorInput, rdev: IntQueryOperatorInput, ino: FloatQueryOperatorInput, atimeMs: FloatQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, atime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, ctime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Directory
   allDirectory(filter: DirectoryFilterInput, sort: [DirectorySortInput], skip: Int, limit: Int): DirectoryConnection!
-  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, port: IntQueryOperatorInput, host: StringQueryOperatorInput, trailingSlash: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, pathPrefix: StringQueryOperatorInput, jsxRuntime: StringQueryOperatorInput, graphqlTypegen: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
+  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, port: IntQueryOperatorInput, host: StringQueryOperatorInput, graphqlTypegen: SiteGraphqlTypegenFilterInput, trailingSlash: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, pathPrefix: StringQueryOperatorInput, jsxRuntime: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
   allSite(filter: SiteFilterInput, sort: [SiteSortInput], skip: Int, limit: Int): SiteConnection!
   siteFunction(functionRoute: StringQueryOperatorInput, pluginName: StringQueryOperatorInput, originalAbsoluteFilePath: StringQueryOperatorInput, originalRelativeFilePath: StringQueryOperatorInput, relativeCompiledFilePath: StringQueryOperatorInput, absoluteCompiledFilePath: StringQueryOperatorInput, matchPath: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): SiteFunction
   allSiteFunction(filter: SiteFunctionFilterInput, sort: [SiteFunctionSortInput], skip: Int, limit: Int): SiteFunctionConnection!
@@ -1950,6 +1956,12 @@ input SiteSiteMetadataFilterInput {
   image: StringQueryOperatorInput
 }
 
+input SiteGraphqlTypegenFilterInput {
+  typesOutputPath: StringQueryOperatorInput
+  documentSearchPaths: StringQueryOperatorInput
+  generateOnBuild: BooleanQueryOperatorInput
+}
+
 type SiteConnection {
   totalCount: Int!
   edges: [SiteEdge!]!
@@ -1973,11 +1985,11 @@ input SiteFieldSelector {
   siteMetadata: SiteSiteMetadataFieldSelector
   port: FieldSelectorEnum
   host: FieldSelectorEnum
+  graphqlTypegen: SiteGraphqlTypegenFieldSelector
   trailingSlash: FieldSelectorEnum
   polyfill: FieldSelectorEnum
   pathPrefix: FieldSelectorEnum
   jsxRuntime: FieldSelectorEnum
-  graphqlTypegen: FieldSelectorEnum
   id: FieldSelectorEnum
   parent: NodeFieldSelector
   children: NodeFieldSelector
@@ -1990,6 +2002,12 @@ input SiteSiteMetadataFieldSelector {
   titleTemplate: FieldSelectorEnum
   siteUrl: FieldSelectorEnum
   image: FieldSelectorEnum
+}
+
+input SiteGraphqlTypegenFieldSelector {
+  typesOutputPath: FieldSelectorEnum
+  documentSearchPaths: FieldSelectorEnum
+  generateOnBuild: FieldSelectorEnum
 }
 
 type SiteGroupConnection {
@@ -2011,11 +2029,11 @@ input SiteFilterInput {
   siteMetadata: SiteSiteMetadataFilterInput
   port: IntQueryOperatorInput
   host: StringQueryOperatorInput
+  graphqlTypegen: SiteGraphqlTypegenFilterInput
   trailingSlash: StringQueryOperatorInput
   polyfill: BooleanQueryOperatorInput
   pathPrefix: StringQueryOperatorInput
   jsxRuntime: StringQueryOperatorInput
-  graphqlTypegen: BooleanQueryOperatorInput
   id: StringQueryOperatorInput
   parent: NodeFilterInput
   children: NodeFilterListInput
@@ -2027,11 +2045,11 @@ input SiteSortInput {
   siteMetadata: SiteSiteMetadataSortInput
   port: SortOrderEnum
   host: SortOrderEnum
+  graphqlTypegen: SiteGraphqlTypegenSortInput
   trailingSlash: SortOrderEnum
   polyfill: SortOrderEnum
   pathPrefix: SortOrderEnum
   jsxRuntime: SortOrderEnum
-  graphqlTypegen: SortOrderEnum
   id: SortOrderEnum
   parent: NodeSortInput
   children: NodeSortInput
@@ -2044,6 +2062,12 @@ input SiteSiteMetadataSortInput {
   titleTemplate: SortOrderEnum
   siteUrl: SortOrderEnum
   image: SortOrderEnum
+}
+
+input SiteGraphqlTypegenSortInput {
+  typesOutputPath: SortOrderEnum
+  documentSearchPaths: SortOrderEnum
+  generateOnBuild: SortOrderEnum
 }
 
 type SiteFunctionConnection {

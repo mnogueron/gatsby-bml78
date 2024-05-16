@@ -1,11 +1,15 @@
 import React from 'react';
-import {Container as ChakraContainer} from '@chakra-ui/react';
+import {BoxProps, Container as ChakraContainer} from '@chakra-ui/react';
+
+type ContainerProps = {
+  children: React.ReactNode;
+} & BoxProps;
 
 /**
  * Section for markdown content (prose)
  * applies max width and padding
  */
-function Container({children, ...rest}) {
+function Container({children, ...rest}: ContainerProps) {
   return (
     <ChakraContainer
       maxW="5xl"

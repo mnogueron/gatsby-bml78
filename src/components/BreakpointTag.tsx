@@ -2,14 +2,7 @@ import React from 'react';
 import {Badge, useBreakpointValue} from '@chakra-ui/react';
 
 const BreakpointTag = () => {
-  const breakpoint = useBreakpointValue([
-    'base',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    '2xl',
-  ]);
+  const label = useBreakpointValue(['base', 'sm', 'md', 'lg', 'xl', '2xl']);
   return (
     <Badge
       colorScheme="red"
@@ -18,7 +11,7 @@ const BreakpointTag = () => {
       right={4}
       position="fixed"
     >
-      {breakpoint}
+      {label}
     </Badge>
   );
 };

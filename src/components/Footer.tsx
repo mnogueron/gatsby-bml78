@@ -11,6 +11,7 @@ import {
   Divider,
   Icon,
   HStack,
+  LinkProps,
 } from '@chakra-ui/react';
 import {
   FaInstagram,
@@ -20,7 +21,12 @@ import {
 } from 'react-icons/fa';
 import BigLogo from './BigLogo';
 
-const FooterLink = ({to, children, ...rest}) => (
+type FooterLinkProps = {
+  to: string;
+  children: React.ReactNode;
+} & LinkProps;
+
+const FooterLink = ({to, children, ...rest}: FooterLinkProps) => (
   <Link
     as={rest.isExternal ? 'a' : GatsbyLink}
     to={rest.isExternal ? undefined : to}
@@ -34,7 +40,10 @@ const FooterLink = ({to, children, ...rest}) => (
   </Link>
 );
 
-const footerSections = [
+const footerSections: {
+  title: string;
+  links: ({title: string; to: string} & LinkProps)[];
+}[] = [
   {
     title: 'Infos Pratiques',
     links: [

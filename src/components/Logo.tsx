@@ -3,7 +3,11 @@ import {Box, Heading, Link} from '@chakra-ui/react';
 import {Link as GatsbyLink} from 'gatsby';
 import {StaticImage} from 'gatsby-plugin-image';
 
-const BigLogo = ({color}) => {
+type BigLogoProps = {
+  color: string;
+};
+
+const BigLogo = ({color}: BigLogoProps) => {
   return (
     <Link
       as={GatsbyLink}

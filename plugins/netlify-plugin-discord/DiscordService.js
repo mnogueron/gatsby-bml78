@@ -31,11 +31,11 @@ const getPayload = (buildStatus, git) => {
     avatar_url: netlify.logo,
     embeds: [
       {
-        /*author: {
+        author: {
           name: netlify.name,
           url: netlify.url,
           icon_url: netlify.logo,
-        },*/
+        },
         url: netlify.appUrl,
         color,
         title,

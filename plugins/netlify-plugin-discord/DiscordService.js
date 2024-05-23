@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const axios = require('axios');
+const dateFns = require('date-fns');
 
 const BuildStatus = {
   SUCCESS: 'success',
@@ -13,7 +14,9 @@ const netlify = {
   appUrl: `https://app.netlify.com/sites/${process.env['SITE_NAME']}`,
 };
 
-const getPayload = buildStatus => {
+const getCommitUrl = sha => `${process.env['REPOSITORY_URL']}/commit/${sha}`;
+
+const getPayload = (buildStatus, git) => {
   const title = buildStatus === 'success' ? `Build deployed` : `Build failed`;
   const status = buildStatus === 'success' ? `deployed` : `failed to deploy`;
   const color = buildStatus === 'success' ? 0x1f8b4c : 0x992d22;
@@ -28,19 +31,17 @@ const getPayload = buildStatus => {
     avatar_url: netlify.logo,
     embeds: [
       {
-        author: {
+        /*author: {
           name: netlify.name,
           url: netlify.url,
           icon_url: netlify.logo,
-        },
+        },*/
         url: netlify.appUrl,
         color,
         title,
         description: `[${
           process.env['SITE_NAME']
-        }](${deployUrl}) ${status} at ${
-          new Date().toTimeString().split(' ')[0]
-        }.`,
+        }](${deployUrl}) ${status} at ${dateFns.format(new Date(), 'P')}.`,
         fields: [
           {
             name: 'Build ID',
@@ -55,8 +56,22 @@ const getPayload = buildStatus => {
             value: process.env['BRANCH'],
           },
           {
-            name: 'Commit',
-            value: `[${process.env['COMMIT_REF']}](${process.env['REPOSITORY_URL']}/commit/${process.env['COMMIT_REF']})`,
+            name: 'Deployed Commit',
+            value: `[${process.env['COMMIT_REF']}](${getCommitUrl(
+              process.env['COMMIT_REF']
+            )})`,
+          },
+          {
+            details: 'Content',
+            value: git.commits
+              .map(
+                c =>
+                  `* ${c.message} - @${c.committer.name} [${c.sha.slice(
+                    0,
+                    7
+                  )}(${getCommitUrl(c.sha)}))]`
+              )
+              .join('\n'),
           },
           {
             name: 'Logs',
@@ -69,14 +84,15 @@ const getPayload = buildStatus => {
 };
 
 const Discord = {
-  sendBuildReport: async buildStatus => {
+  sendBuildReport: async (buildStatus, utils) => {
+    const {git} = utils;
     try {
       const webhook = process.env['DISCORD_WEBHOOK_URL'];
       if (!webhook) {
         console.log('No webhook set. Skipping.');
         return;
       }
-      await axios.post(webhook, getPayload(buildStatus));
+      await axios.post(webhook, getPayload(buildStatus, git));
 
       switch (buildStatus) {
         case BuildStatus.ERROR:

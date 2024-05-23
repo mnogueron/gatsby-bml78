@@ -2,6 +2,8 @@
 const {Discord, BuildStatus} = require('./DiscordService');
 
 module.exports = {
-  onSuccess: async () => await Discord.sendBuildReport(BuildStatus.SUCCESS),
-  onError: async () => await Discord.sendBuildReport(BuildStatus.ERROR),
+  onSuccess: async ({utils}) =>
+    await Discord.sendBuildReport(BuildStatus.SUCCESS, utils),
+  onError: async ({utils}) =>
+    await Discord.sendBuildReport(BuildStatus.ERROR, utils),
 };

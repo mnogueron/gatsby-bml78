@@ -69,10 +69,9 @@ const getPayload = buildStatus => {
 };
 
 const Discord = {
-  webhook: process.env['DISCORD_WEBHOOK_URL'],
   sendBuildReport: async buildStatus => {
     try {
-      const webhook = Discord.webhook;
+      const webhook = process.env['DISCORD_WEBHOOK_URL'];
       if (!webhook) {
         console.log('No webhook set. Skipping.');
         return;
@@ -93,7 +92,7 @@ const Discord = {
   },
 };
 
-module.expors = {
+module.exports = {
   Discord,
   BuildStatus,
 };

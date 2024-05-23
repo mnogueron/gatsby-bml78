@@ -1,9 +1,10 @@
-import axios from 'axios';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const axios = require('axios');
 
-export enum BuildStatus {
-  SUCCESS = 'success',
-  ERROR = 'error',
-}
+const BuildStatus = {
+  SUCCESS: 'success',
+  ERROR: 'error',
+};
 
 const netlify = {
   name: 'Netlify',
@@ -12,7 +13,7 @@ const netlify = {
   appUrl: `https://app.netlify.com/sites/${process.env['SITE_NAME']}`,
 };
 
-const getPayload = (buildStatus: BuildStatus) => {
+const getPayload = buildStatus => {
   const title = buildStatus === 'success' ? `Build deployed` : `Build failed`;
   const status = buildStatus === 'success' ? `deployed` : `failed to deploy`;
   const color = buildStatus === 'success' ? 0x1f8b4c : 0x992d22;
@@ -67,9 +68,9 @@ const getPayload = (buildStatus: BuildStatus) => {
   };
 };
 
-export const Discord = {
+const Discord = {
   webhook: process.env['DISCORD_WEBHOOK_URL'],
-  sendBuildReport: async (buildStatus: BuildStatus) => {
+  sendBuildReport: async buildStatus => {
     try {
       const webhook = Discord.webhook;
       if (!webhook) {
@@ -92,4 +93,7 @@ export const Discord = {
   },
 };
 
-export default Discord;
+module.expors = {
+  Discord,
+  BuildStatus,
+};

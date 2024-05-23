@@ -73,3 +73,6 @@ yarn-error.log
 
 # Husky
 /.husky/_/
+
+# Local Netlify folder
+.netlify

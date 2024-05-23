@@ -1,2 +1,2 @@
 [[plugins]]
-package = "./plugins/netlify-plugin-discord"
+package = "/plugins/netlify-plugin-discord"

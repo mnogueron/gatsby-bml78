@@ -1,5 +1,5 @@
 import React from 'react';
-import {Stack, useBreakpointValue} from '@chakra-ui/react';
+import {Stack} from '@chakra-ui/react';
 import Score from './Score';
 import {SetScore} from './types';
 
@@ -12,7 +12,6 @@ const PlayerTeamScoreRow = ({
   score,
   scoreOpponent,
 }: PlayerTeamScoreRowProps) => {
-  const isMobile = useBreakpointValue({base: true, md: false});
   return (
     <Stack
       direction={{base: 'row', md: 'column'}}
@@ -22,11 +21,18 @@ const PlayerTeamScoreRow = ({
     >
       <Score score={score[0]} opponentScore={scoreOpponent[0]} />
       <Score score={score[1]} opponentScore={scoreOpponent[1]} />
-      {(isMobile ||
-        typeof score[2] !== 'undefined' ||
-        typeof scoreOpponent[2] !== 'undefined') && (
-        <Score score={score[2]} opponentScore={scoreOpponent[2]} />
-      )}
+      <Score
+        score={score[2]}
+        opponentScore={scoreOpponent[2]}
+        display={{
+          base: 'flex',
+          md:
+            typeof score[2] !== 'undefined' ||
+            typeof scoreOpponent[2] !== 'undefined'
+              ? 'flex'
+              : 'none',
+        }}
+      />
     </Stack>
   );
 };

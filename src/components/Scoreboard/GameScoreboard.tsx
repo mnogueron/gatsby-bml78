@@ -38,9 +38,9 @@ const GameScoreboard = ({match}: GameScoreboardProps) => {
 
     const {winningSetsA, winningSetsB} = score.set.reduce(
       (agg, s) => {
-        if ((s.scoreA || -1) > (s.scoreB || -1)) {
+        if ((s.scoreA ?? -1) > (s.scoreB ?? -1)) {
           return {...agg, winningSetsA: agg.winningSetsA + 1};
-        } else if ((s.scoreB || -1) > (s.scoreA || -1)) {
+        } else if ((s.scoreB ?? -1) > (s.scoreA ?? -1)) {
           return {...agg, winningSetsB: agg.winningSetsB + 1};
         }
         return agg;

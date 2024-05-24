@@ -1,25 +1,26 @@
 import React from 'react';
-import {Center, Text} from '@chakra-ui/react';
+import {BoxProps, Center, Text} from '@chakra-ui/react';
 import {SetScore} from './types';
 
 type ScoreProps = {
   score: SetScore;
   opponentScore: SetScore;
-};
+} & BoxProps;
 
-const Score = ({score, opponentScore}: ScoreProps) => {
+const Score = ({score, opponentScore, ...rest}: ScoreProps) => {
   const isEmpty =
     typeof score === 'undefined' && typeof opponentScore === 'undefined';
   const isWinning =
     !isEmpty &&
     ((score && typeof opponentScore === 'undefined') ||
-      (score || -1) > (opponentScore || -1));
+      (score ?? -1) > (opponentScore ?? -1));
   return (
     <Center
       borderRadius={4}
       bg="blackAlpha.100"
       width={{base: '22px', sm: '26px', lg: '32px'}}
       height={{base: '28px', sm: '32px', lg: '38px'}}
+      {...rest}
     >
       <Text
         fontSize={{base: 'xs', sm: 'sm', lg: 'md'}}
@@ -32,7 +33,7 @@ const Score = ({score, opponentScore}: ScoreProps) => {
         }
         fontWeight={isWinning ? 'semibold' : 'normal'}
       >
-        {typeof score === 'undefined' ? '-' : score}
+        {score ?? '-'}
       </Text>
     </Center>
   );

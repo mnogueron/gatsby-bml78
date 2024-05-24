@@ -1,37 +1,42 @@
 import React, {useMemo} from 'react';
-import {Box, Text} from '@chakra-ui/react';
+import {Box, BoxProps, Text} from '@chakra-ui/react';
+import {Rank} from '../types';
 
-const SmallRankingBadge = ({ranking}) => {
+type SmallRankBadgeProps = {
+  rank: Rank;
+} & BoxProps;
+
+const SmallRankBadge = ({rank, ...rest}: SmallRankBadgeProps) => {
   const bgColor = useMemo(() => {
-    switch (ranking) {
-      case 'NC':
+    switch (rank) {
+      case Rank.NC:
         return 'gray.400';
-      case 'P12':
-      case 'P11':
-      case 'P10':
+      case Rank.P12:
+      case Rank.P11:
+      case Rank.P10:
         return '#f8e71c';
-      case 'D9':
-      case 'D8':
-      case 'D7':
+      case Rank.D9:
+      case Rank.D8:
+      case Rank.D7:
         return '#7ed321';
-      case 'R6':
-      case 'R5':
-      case 'R4':
+      case Rank.R6:
+      case Rank.R5:
+      case Rank.R4:
         return '#4a90e2';
-      case 'N3':
-      case 'N2':
-      case 'N1':
+      case Rank.N3:
+      case Rank.N2:
+      case Rank.N1:
         return '#f80220';
       default:
         return 'white';
     }
-  }, [ranking]);
+  }, [rank]);
 
   return (
-    <Box width="26px">
+    <Box width="26px" {...rest}>
       <Box position="relative" width="fit-content" marginLeft="auto">
         <Text fontSize={{base: 'sm', md: 'md'}} letterSpacing="tight">
-          {ranking}
+          {rank}
         </Text>
         <Box
           height="3px"
@@ -45,4 +50,4 @@ const SmallRankingBadge = ({ranking}) => {
   );
 };
 
-export default SmallRankingBadge;
+export default SmallRankBadge;

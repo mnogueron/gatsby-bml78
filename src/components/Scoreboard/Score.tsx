@@ -1,12 +1,19 @@
 import React from 'react';
 import {Center, Text} from '@chakra-ui/react';
+import {SetScore} from './types';
 
-const Point = ({score, oppositeScore}) => {
+type ScoreProps = {
+  score: SetScore;
+  opponentScore: SetScore;
+};
+
+const Score = ({score, opponentScore}: ScoreProps) => {
   const isEmpty =
-    typeof score === 'undefined' && typeof oppositeScore === 'undefined';
+    typeof score === 'undefined' && typeof opponentScore === 'undefined';
   const isWinning =
     !isEmpty &&
-    ((score && typeof oppositeScore === 'undefined') || score > oppositeScore);
+    ((score && typeof opponentScore === 'undefined') ||
+      (score || -1) > (opponentScore || -1));
   return (
     <Center
       borderRadius={4}
@@ -17,7 +24,7 @@ const Point = ({score, oppositeScore}) => {
       <Text
         fontSize={{base: 'xs', sm: 'sm', lg: 'md'}}
         textColor={
-          isEmpty || score === oppositeScore
+          isEmpty || score === opponentScore
             ? 'gray.500'
             : isWinning
               ? 'green.500'
@@ -31,4 +38,4 @@ const Point = ({score, oppositeScore}) => {
   );
 };
 
-export default Point;
+export default Score;

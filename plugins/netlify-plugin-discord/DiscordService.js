@@ -73,7 +73,7 @@ const getPayload = (buildStatus, git) => {
                   `* ${c.message} - @${c.committer.name} [${c.sha.slice(
                     0,
                     7
-                  )}](${getCommitUrl(c.sha)}))]`
+                  )}](${getCommitUrl(c.sha)})`
               )
               .join('\n'),
           },

@@ -41,7 +41,10 @@ const getPayload = (buildStatus, git) => {
         title,
         description: `[${
           process.env['SITE_NAME']
-        }](${deployUrl}) ${status} at ${dateFns.format(new Date(), 'P')}.`,
+        }](${deployUrl}) ${status} at ${dateFns.format(
+          new Date(),
+          'HH:mm:ss'
+        )}.`,
         fields: [
           {
             name: 'Build ID',
@@ -64,6 +67,7 @@ const getPayload = (buildStatus, git) => {
           {
             name: 'Details',
             value: git.commits
+              .filter(c => Boolean(c.sha))
               .map(
                 c =>
                   `* ${c.message} - @${c.committer.name} [${c.sha.slice(

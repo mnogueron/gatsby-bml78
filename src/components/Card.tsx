@@ -3,14 +3,22 @@ import {Link} from 'gatsby';
 import Image from '../components/Image';
 import * as dateFns from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
-import {Box, Heading, Text, VStack} from '@chakra-ui/react';
+import {Box, BoxProps, Heading, Text, VStack} from '@chakra-ui/react';
 
-function Card({image, heading, date, subtitle, url, ...rest}) {
+type CardProps = {
+  image: any; // TODO type the image
+  heading: string | null;
+  date: string | null;
+  subtitle: string | null;
+  url: string | null;
+} & BoxProps;
+
+const Card = ({image, heading, date, subtitle, url, ...rest}: CardProps) => {
   return (
     <Box
       as={Link}
       role="group"
-      to={url}
+      to={url || '/'} // TODO ensure url is always defined
       sx={{
         transitionDuration: '200ms',
         ':hover': {
@@ -26,12 +34,13 @@ function Card({image, heading, date, subtitle, url, ...rest}) {
         overflow="hidden"
       />
       <VStack spacing={2} alignItems="initial" mt={4}>
-        <Text color="text.secondary" fontSize="sm">
-          {dateFns.format(new Date(date), 'PP', {
-            addSuffix: true,
-            locale: frLocale,
-          })}
-        </Text>
+        {date && (
+          <Text color="text.secondary" fontSize="sm">
+            {dateFns.format(new Date(date), 'PP', {
+              locale: frLocale,
+            })}
+          </Text>
+        )}
         <Heading
           as="h3"
           color="text.main"
@@ -50,6 +59,6 @@ function Card({image, heading, date, subtitle, url, ...rest}) {
       </VStack>
     </Box>
   );
-}
+};
 
 export default Card;

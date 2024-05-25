@@ -5,14 +5,25 @@ import * as dateFns from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
 import {
   Box,
+  BoxProps,
   Flex,
   Heading,
+  ResponsiveValue,
   Text,
   useBreakpointValue,
   VStack,
 } from '@chakra-ui/react';
 
-function BigCard({
+type BigCardProps = {
+  image: any; // TODO type the image
+  heading: string | null;
+  date: string | null;
+  subtitle: string | null;
+  url: string | null;
+  size: ResponsiveValue<'sm' | 'md' | 'lg'>;
+} & BoxProps;
+
+const BigCard = ({
   image,
   heading,
   date,
@@ -20,8 +31,10 @@ function BigCard({
   size: responsiveSize,
   url,
   ...rest
-}) {
-  const size = useBreakpointValue(responsiveSize);
+}: BigCardProps) => {
+  const size = useBreakpointValue(
+    typeof responsiveSize === 'string' ? {base: responsiveSize} : responsiveSize
+  );
   return (
     <Box
       as={Link}
@@ -77,12 +90,13 @@ function BigCard({
             borderBottomRightRadius={20}
             bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.4) 25.2%, #000000 81.21%)"
           />
-          <Text color="white" fontSize="sm" zIndex={1}>
-            {dateFns.format(new Date(date), 'PP', {
-              addSuffix: true,
-              locale: frLocale,
-            })}
-          </Text>
+          {date && (
+            <Text color="white" fontSize="sm" zIndex={1}>
+              {dateFns.format(new Date(date), 'PP', {
+                locale: frLocale,
+              })}
+            </Text>
+          )}
           <Heading
             zIndex={1}
             as="h3"
@@ -109,7 +123,7 @@ function BigCard({
       </Flex>
     </Box>
   );
-}
+};
 
 BigCard.defaultProps = {
   size: 'lg',

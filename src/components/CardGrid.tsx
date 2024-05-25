@@ -1,8 +1,13 @@
 import React from 'react';
 import {SimpleGrid} from '@chakra-ui/react';
 import Card from './Card';
+import {Post} from '../types/post';
 
-const CardGrid = ({posts}) => {
+type CardGridProps = {
+  posts: Post[];
+};
+
+const CardGrid = ({posts}: CardGridProps) => {
   return (
     <SimpleGrid
       columns={{base: 1, sm: 2, lg: 3}}
@@ -16,7 +21,7 @@ const CardGrid = ({posts}) => {
             heading={post.cardTitle || post.heading}
             subtitle={post.cardSubtitle}
             date={post.date}
-            to={post.fields.slug}
+            url={post.fields.slug}
           />
         );
       })}

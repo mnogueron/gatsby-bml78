@@ -1,10 +1,14 @@
 import React from 'react';
-import {Box} from '@chakra-ui/react';
+import {Box, BoxProps} from '@chakra-ui/react';
+
+type LegacyContainerProps = {
+  children: React.ReactNode;
+} & BoxProps;
 
 /**
  * Basic container to add max-w-7xl, some p-x and p-y
  */
-const LegacyContainer = ({children, ...rest}) => {
+const LegacyContainer = ({children, ...rest}: LegacyContainerProps) => {
   return (
     <Box
       maxW="7xl"

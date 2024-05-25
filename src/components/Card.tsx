@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from 'gatsby';
-import Image from '../components/Image';
 import * as dateFns from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
 import {Box, BoxProps, Heading, Text, VStack} from '@chakra-ui/react';
+import {Link} from 'gatsby';
+import Image from './Image';
 
 type CardProps = {
   image: any; // TODO type the image

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'gatsby';
-import Image from '../components/Image';
+import Image from './Image';
 import * as dateFns from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
 import {

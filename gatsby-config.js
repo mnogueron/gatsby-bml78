@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs');
 const siteUrl = process.env.URL || `https://badml.com/`;
 const GA_ID = process.env.GA_ID || 'undefined';

@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
+import {graphql, useStaticQuery} from 'gatsby';
 import {getSEOData} from '../seoUtils';
 import {useLocation} from '@reach/router';
-import {graphql, useStaticQuery} from 'gatsby';
 
 const PageHead = ({data, pageContext}) => {
   const {pathname} = useLocation();

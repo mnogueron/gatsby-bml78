@@ -5,6 +5,7 @@ import {graphql, PageProps} from 'gatsby';
 import IndexPageTemplate from '../containers/Home/IndexPageTemplate';
 // @ts-ignore
 import PageHead from '../components/PageHead';
+import {SitePageContext} from '../types/gatsby';
 
 const IndexPage = ({data}: PageProps<Queries.IndexPageQuery>) => {
   const {frontmatter: fm, htmlAst} = data.markdownRemark!!;
@@ -38,7 +39,10 @@ const IndexPage = ({data}: PageProps<Queries.IndexPageQuery>) => {
   );
 };
 
-export const Head = ({data, pageContext}: PageProps) => {
+export const Head = ({
+  data,
+  pageContext,
+}: PageProps<Queries.IndexPageQuery, SitePageContext>) => {
   return <PageHead data={data} pageContext={pageContext} />;
 };
 

@@ -1,6 +1,6 @@
 import {execSync} from 'child_process';
 import {Octokit} from '@octokit/rest';
-import {simpleGit} from 'simple-git';
+import {simpleGit, CleanOptions} from 'simple-git';
 import * as dateFns from 'date-fns';
 import {notifyDiscordICs} from './notifyDiscordICs.js';
 
@@ -22,7 +22,7 @@ const run = async () => {
   };
   const git = simpleGit(options);
   await git.checkout('master');
-  await git.clean();
+  await git.clean(CleanOptions.FORCE);
   await git.fetch();
   await git.pull();
   const existingBranches = await git.branchLocal();
@@ -46,7 +46,7 @@ const run = async () => {
 
   if (modifiedFilePaths.length === 0) {
     console.log('No IC has been imported, cleaning current branch.');
-    git.clean();
+    git.clean(CleanOptions.FORCE);
     return;
   }
 

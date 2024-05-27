@@ -3,7 +3,7 @@ import {Octokit} from '@octokit/rest';
 import {simpleGit} from 'simple-git';
 import * as dateFns from 'date-fns';
 
-const owner = 'mnogueron';
+const owner = 'mnogueron'; // TODO replace that with proper gt git owner
 const repo = 'gatsby-bml78';
 
 const octokit = new Octokit({
@@ -20,6 +20,8 @@ const run = async () => {
     trimmed: false,
   };
   const git = simpleGit(options);
+  await git.fetch();
+  await git.pull();
   const existingBranches = await git.branchLocal();
 
   // Generate IC
@@ -35,6 +37,9 @@ const run = async () => {
   const modifiedFilePaths = status.files
     .map(f => f.path)
     .filter(p => p.startsWith('src/pages'));
+  const icFiles = modifiedFilePaths.filter(p =>
+    p.startsWith('src/pages/results')
+  );
 
   if (modifiedFilePaths.length === 0) {
     console.log('No IC has been imported, cleaning current branch.');
@@ -77,23 +82,52 @@ const run = async () => {
     i++;
   }
 
-  // TODO if so, use that PR, delete the files in common and push the new ones
   if (existingPull) {
     console.log('Found existing PR with id: ', existingPull.number);
-    // Search common files to remove them from the PR and avoid merge issues
-    const commonFiles = existingFiles.filter(f =>
-      modifiedFilePaths.includes(f.filename)
-    );
-    // TODO remove existing files in PR
     const branchName = existingPull.head.label.split(':')[1];
+
+    // Search common files to remove them from the PR and avoid merge issues
+    /*const commonFiles = existingFiles.filter(f =>
+      modifiedFilePaths.includes(f.filename)
+    );*/
+
+    console.log('Stashing modifications');
+    await git.stash();
+
     console.log('Switching to branch');
-    // TODO push new files
-    /* empty */
+    await git.checkoutLocalBranch(branchName);
+
+    console.log('Unstashing and overwrite branch modifications');
+    await git.raw('cherry-pick', '-n', '-m1', '-Xtheirs', 'stash');
+
+    // TODO split in multiple message per IC
+    await git.add(['../src', 'icUrls.json']);
+    await git.commit('feat: import IC');
+    await git.push('origin', branchName);
+
+    // TODO update PR
+    console.log('Updating PR', existingPull.number);
+    const pr = await octokit.rest.pulls.update({
+      owner,
+      repo,
+      pull_number: existingPull.number,
+      body: `
+### Description
+Auto-import of IC results.
+
+### Imported ICs
+${icFiles
+  .map(p => '- [x] : ' + p.replace('src/pages/results/', ''))
+  .join('\n')} 
+      `,
+    });
+
+    console.log(pr);
+
+    // TODO report to Slack
   } else {
-    const branchName = `auto-ic/import-${dateFns.format(
-      new Date(),
-      'dd-MM-yyyy'
-    )}`;
+    const date = dateFns.format(new Date(), 'dd-MM-yyyy');
+    const branchName = `auto-ic/import-${date}`;
 
     // Delete branch if already exist
     if (existingBranches.all.includes(branchName)) {
@@ -109,9 +143,28 @@ const run = async () => {
     await git.add(['../src', 'icUrls.json']);
     await git.commit('feat: import IC');
     await git.push('origin', branchName);
-    // TODO if not
-    //  create a new branch
-    //  create a new PR
+
+    // Create new PR
+    console.log('Creating new PR');
+    const pr = await octokit.rest.pulls.create({
+      owner,
+      repo,
+      head: `${owner}:${branchName}`,
+      base: 'master',
+      title: `[Feat] Import IC - ${date}`,
+      body: `
+### Description
+Auto-import of IC results.
+
+### Imported ICs
+${icFiles
+  .map(p => '- [x] : ' + p.replace('src/pages/results/', ''))
+  .join('\n')} 
+      `,
+    });
+
+    console.log(pr);
+    // TODO report to Slack
   }
 };
 

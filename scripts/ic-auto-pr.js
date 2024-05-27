@@ -101,6 +101,12 @@ const run = async () => {
     console.log('Unstashing and overwrite branch modifications');
     await git.raw('cherry-pick', '-n', '-m1', '-Xtheirs', 'stash');
 
+    const status = await git.status();
+    if (status.files.length === 0) {
+      console.log(`No file has been modified since PR ${existingPull.number}`);
+      return;
+    }
+
     // TODO split in multiple message per IC
     await git.commit('feat: import IC');
     await git.push('origin', branchName);

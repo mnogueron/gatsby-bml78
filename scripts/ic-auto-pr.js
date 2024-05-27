@@ -58,8 +58,6 @@ const run = async () => {
   // Only consider PRs created with the same owner
   const sameRepoPRs = pulls.filter(p => p.head.repo.owner.login === owner);
 
-  console.log(pulls[1]);
-
   // Search for an existing PR
   let i = 0;
   let existingPull = undefined;
@@ -91,17 +89,19 @@ const run = async () => {
       modifiedFilePaths.includes(f.filename)
     );*/
 
-    console.log('Stashing modifications');
+    console.log('Add files before stashing...');
+    await git.add(['../src', 'icUrls.json']);
+
+    console.log('Stashing modifications...');
     await git.stash();
 
-    console.log('Switching to branch');
+    console.log('Switching to branch...');
     await git.checkoutLocalBranch(branchName);
 
     console.log('Unstashing and overwrite branch modifications');
     await git.raw('cherry-pick', '-n', '-m1', '-Xtheirs', 'stash');
 
     // TODO split in multiple message per IC
-    await git.add(['../src', 'icUrls.json']);
     await git.commit('feat: import IC');
     await git.push('origin', branchName);
 
@@ -140,6 +140,7 @@ ${icFiles
     await git.checkoutLocalBranch(branchName);
 
     // TODO split in multiple message per IC
+    console.log('Committing and pushing ICs');
     await git.add(['../src', 'icUrls.json']);
     await git.commit('feat: import IC');
     await git.push('origin', branchName);

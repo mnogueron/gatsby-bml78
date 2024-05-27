@@ -98,8 +98,8 @@ const run = async () => {
     // Delete branch if already exist
     if (existingBranches.all.includes(branchName)) {
       console.log(`"${branchName}" already exists, deleting branch.`);
-      await git.deleteLocalBranch(branchName);
-      await git.push(origin, branchName, ['--delete']);
+      await git.deleteLocalBranch(branchName, true);
+      await git.push('origin', branchName, ['--delete']);
     }
 
     console.log('Creating new branch', branchName);

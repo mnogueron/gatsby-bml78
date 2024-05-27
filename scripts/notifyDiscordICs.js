@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const getPayload = (prUrl, icList, isUpdated) => {
+const getPayload = (prUrl, importedICList, updatedICList, isUpdated) => {
   const title = isUpdated
     ? 'IC results have been updated!'
     : 'New IC results have been imported!';
-  const color = isUpdated ? 0x1f8b4c : 0x1f8b4c;
+  const color = isUpdated ? 0x206694 : 0x1f8b4c;
   return {
     embeds: [
       {
@@ -15,20 +15,32 @@ const getPayload = (prUrl, icList, isUpdated) => {
             name: 'PR url',
             value: prUrl,
           },
-          {
+          importedICList.length > 0 && {
             name: 'Imported ICs',
-            value: icList.map(ic => `* ${ic}`).join('\n'),
+            value: importedICList.map(ic => `* ${ic}`).join('\n'),
           },
-        ],
+          updatedICList.length > 0 && {
+            name: 'Updated ICs',
+            value: updatedICList.map(ic => `* ${ic}`).join('\n'),
+          },
+        ].filter(Boolean),
       },
     ],
   };
 };
 
-export const notifyDiscordICs = async (prUrl, icList, isUpdated) => {
+export const notifyDiscordICs = async (
+  prUrl,
+  importedICList,
+  updatedICList,
+  isUpdated
+) => {
   const webhook = process.env['DISCORD_WEBHOOK'];
   if (!webhook) {
     console.error('Missing webhook. Could not report to Discord.');
   }
-  await axios.post(webhook, getPayload(prUrl, icList, isUpdated));
+  await axios.post(
+    webhook,
+    getPayload(prUrl, importedICList, updatedICList, isUpdated)
+  );
 };

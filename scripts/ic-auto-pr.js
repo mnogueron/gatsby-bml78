@@ -12,15 +12,53 @@ const octokit = new Octokit({
   userAgent: 'badml-ic-auto-importer',
 });
 
+// init git
+const options = {
+  baseDir: process.cwd(),
+  binary: 'git',
+  maxConcurrentProcesses: 6,
+  trimmed: false,
+};
+const git = simpleGit(options);
+
+const getICFileName = f => f.replace('src/pages/results/', '');
+const isICFileName = f => f.startsWith('src/pages/results');
+const isICMetadata = f =>
+  f === 'scripts/icUrls.json' || f.startsWith('static/assets');
+
+const commitICChanges = async () => {
+  const status = await git.status();
+  let updatedICs = [];
+  let createdICs = [];
+  const modifiedPromises = status.modified.filter(isICFileName).map(async f => {
+    const icFilename = getICFileName(f);
+    updatedICs.push(icFilename);
+    console.log('Committing update for IC', icFilename);
+    await git.add(['../' + f]);
+    return git.commit(`feat: update IC result for ${icFilename}`);
+  });
+  const createdPromises = [...status.created, ...status.not_added]
+    .filter(isICFileName)
+    .map(async f => {
+      const icFilename = getICFileName(f);
+      createdICs.push(icFilename);
+      console.log('Committing import for IC', icFilename);
+      await git.add(['../' + f]);
+      return git.commit(`feat: import IC result for ${icFilename}`);
+    });
+
+  await Promise.all([...modifiedPromises, ...createdPromises]);
+
+  if (status.modified.filter(isICMetadata)) {
+    console.log('Committing metadata updates');
+    await git.add(['../static/assets', 'icUrls.json']);
+    await git.commit('feat: update metadata files');
+  }
+
+  return {createdICs, updatedICs};
+};
+
 const run = async () => {
-  // init git
-  const options = {
-    baseDir: process.cwd(),
-    binary: 'git',
-    maxConcurrentProcesses: 6,
-    trimmed: false,
-  };
-  const git = simpleGit(options);
   await git.checkout('master');
   await git.clean(CleanOptions.FORCE);
   await git.fetch();
@@ -99,16 +137,17 @@ const run = async () => {
     const status = await git.status();
     if (status.files.length === 0) {
       console.log(`No file has been modified since PR ${existingPull.number}`);
+      await git.checkout('master');
       return;
     }
 
-    // TODO split in multiple message per IC
-    await git.commit('feat: import IC');
+    // Split commit for every change
+    const {createdICs, updatedICs} = await commitICChanges();
     await git.push('origin', branchName);
     await git.checkout('master');
 
     console.log('Updating PR', existingPull.number);
-    const pr = await octokit.rest.pulls.update({
+    const {data: pr} = await octokit.rest.pulls.update({
       owner,
       repo,
       pull_number: existingPull.number,
@@ -117,14 +156,12 @@ const run = async () => {
 Auto-import of IC results.
 
 ### Imported ICs
-${icFiles
-  .map(p => '- [x] : ' + p.replace('src/pages/results/', ''))
-  .join('\n')} 
+${icFiles.map(p => '- [x] : ' + getICFileName(p)).join('\n')} 
       `,
     });
 
     // Report to Discord
-    await notifyDiscordICs(pr.url, icFiles, true);
+    await notifyDiscordICs(pr.html_url, createdICs, updatedICs, true);
   } else {
     const date = dateFns.format(new Date(), 'dd-MM-yyyy');
     const branchName = `auto-ic/import-${date}`;
@@ -133,22 +170,26 @@ ${icFiles
     if (existingBranches.all.includes(branchName)) {
       console.log(`"${branchName}" already exists, deleting branch.`);
       await git.deleteLocalBranch(branchName, true);
-      await git.push('origin', branchName, ['--delete']);
+      try {
+        await git.push('origin', branchName, ['--delete']);
+      } catch {
+        console.error(
+          `Could not delete remote branch. It's likely due to a deleted PR.`
+        );
+      }
     }
 
     console.log('Creating new branch', branchName);
     await git.checkoutLocalBranch(branchName);
 
-    // TODO split in multiple message per IC
-    console.log('Committing and pushing ICs');
-    await git.add(['../src', 'icUrls.json']);
-    await git.commit('feat: import IC');
+    // Split commit for every change
+    const {createdICs, updatedICs} = await commitICChanges();
     await git.push('origin', branchName);
     await git.checkout('master');
 
     // Create new PR
     console.log('Creating new PR');
-    const pr = await octokit.rest.pulls.create({
+    const {data: pr} = await octokit.rest.pulls.create({
       owner,
       repo,
       head: `${owner}:${branchName}`,
@@ -159,14 +200,12 @@ ${icFiles
 Auto-import of IC results.
 
 ### Imported ICs
-${icFiles
-  .map(p => '- [x] : ' + p.replace('src/pages/results/', ''))
-  .join('\n')} 
+${icFiles.map(p => '- [x] : ' + getICFileName(p)).join('\n')} 
       `,
     });
 
     // Report to Discord
-    await notifyDiscordICs(pr.url, icFiles, false);
+    await notifyDiscordICs(pr.html_url, createdICs, updatedICs, false);
   }
 };
 

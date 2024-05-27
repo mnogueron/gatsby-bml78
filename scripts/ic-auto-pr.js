@@ -2,6 +2,7 @@ import {execSync} from 'child_process';
 import {Octokit} from '@octokit/rest';
 import {simpleGit} from 'simple-git';
 import * as dateFns from 'date-fns';
+import {notifyDiscordICs} from './notifyDiscordICs.js';
 
 const owner = 'mnogueron'; // TODO replace that with proper gt git owner
 const repo = 'gatsby-bml78';
@@ -20,6 +21,8 @@ const run = async () => {
     trimmed: false,
   };
   const git = simpleGit(options);
+  await git.checkout('master');
+  await git.clean();
   await git.fetch();
   await git.pull();
   const existingBranches = await git.branchLocal();
@@ -43,8 +46,7 @@ const run = async () => {
 
   if (modifiedFilePaths.length === 0) {
     console.log('No IC has been imported, cleaning current branch.');
-    // TODO clean branch
-    // git.clean();
+    git.clean();
     return;
   }
 
@@ -52,7 +54,7 @@ const run = async () => {
   const {data: pulls} = await octokit.rest.pulls.list({
     owner,
     repo,
-    state: 'all', // TODO just consider open PRs
+    state: 'open',
   });
 
   // Only consider PRs created with the same owner
@@ -61,7 +63,6 @@ const run = async () => {
   // Search for an existing PR
   let i = 0;
   let existingPull = undefined;
-  let existingFiles = [];
   while (i < sameRepoPRs.length && !existingPull) {
     const pull = sameRepoPRs[i];
     const pull_number = pull.number;
@@ -74,7 +75,6 @@ const run = async () => {
 
     if (files.some(f => modifiedFilePaths.includes(f.filename))) {
       existingPull = pull;
-      existingFiles = files;
     }
 
     i++;
@@ -83,11 +83,6 @@ const run = async () => {
   if (existingPull) {
     console.log('Found existing PR with id: ', existingPull.number);
     const branchName = existingPull.head.label.split(':')[1];
-
-    // Search common files to remove them from the PR and avoid merge issues
-    /*const commonFiles = existingFiles.filter(f =>
-      modifiedFilePaths.includes(f.filename)
-    );*/
 
     console.log('Add files before stashing...');
     await git.add(['../src', 'icUrls.json']);
@@ -110,8 +105,8 @@ const run = async () => {
     // TODO split in multiple message per IC
     await git.commit('feat: import IC');
     await git.push('origin', branchName);
+    await git.checkout('master');
 
-    // TODO update PR
     console.log('Updating PR', existingPull.number);
     const pr = await octokit.rest.pulls.update({
       owner,
@@ -128,9 +123,8 @@ ${icFiles
       `,
     });
 
-    console.log(pr);
-
-    // TODO report to Slack
+    // Report to Discord
+    await notifyDiscordICs(pr.url, icFiles, true);
   } else {
     const date = dateFns.format(new Date(), 'dd-MM-yyyy');
     const branchName = `auto-ic/import-${date}`;
@@ -150,6 +144,7 @@ ${icFiles
     await git.add(['../src', 'icUrls.json']);
     await git.commit('feat: import IC');
     await git.push('origin', branchName);
+    await git.checkout('master');
 
     // Create new PR
     console.log('Creating new PR');
@@ -170,8 +165,8 @@ ${icFiles
       `,
     });
 
-    console.log(pr);
-    // TODO report to Slack
+    // Report to Discord
+    await notifyDiscordICs(pr.url, icFiles, false);
   }
 };
 

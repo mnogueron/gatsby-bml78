@@ -133,7 +133,13 @@ ${icFiles
     if (existingBranches.all.includes(branchName)) {
       console.log(`"${branchName}" already exists, deleting branch.`);
       await git.deleteLocalBranch(branchName, true);
-      await git.push('origin', branchName, ['--delete']);
+      try {
+        await git.push('origin', branchName, ['--delete']);
+      } catch {
+        console.error(
+          `Could not delete remote branch. It's likely due to a deleted PR.`
+        );
+      }
     }
 
     console.log('Creating new branch', branchName);

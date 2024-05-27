@@ -131,7 +131,7 @@ const extractICData = async (url, dryRun) => {
     };
 
     const title = document
-      .getElementsByTagName('h1')[0]
+      .querySelectorAll('h1[class^="uk-visible"]')[0]
       .getElementsByTagName('a');
     const results = parseResults();
     const hostClub = parseClub(title[0].innerHTML);

@@ -1,0 +1,16 @@
+---
+templateKey: result-page
+title: interclub-equipe-1
+cardTitle: Saison 23-24 - Équipe 1 - BML vs LVA 
+heading: |-
+  Saison 23-24 - Équipe 1
+  BML vs LVA
+date: 2024-04-20T14:00:00.000Z
+category: equipe-1-s23-24
+featuredimage:
+  image: /assets/shuttle.jpg
+---
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML","longName":"Badminton Maisons-laffitte","result":3},"teamB":{"shortName":"LVA","longName":"LE VOLANT AIROIS","result":5}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"lastname":"Houthoofd","firstname":"Senne","club":"BML","ranking":"N1"}],"teamB":[{"lastname":"Osvald","firstname":"Yohann","club":"LVA","ranking":"N1"}],"score":{"set":[{"scoreA":18,"scoreB":21},{"scoreA":14,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Gautier","firstname":"Marc","club":"BML","ranking":"N3"}],"teamB":[{"lastname":"Rogez","firstname":"Lucas","club":"LVA","ranking":"N2"}],"score":{"set":[{"scoreA":14,"scoreB":21},{"scoreA":16,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"lastname":"Middleton","firstname":"Lauren","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Polito","firstname":"Nina","club":"LVA","ranking":"N2"}],"score":{"set":[{"scoreA":21,"scoreB":6},{"scoreA":21,"scoreB":8}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Lesne","firstname":"Cassandre","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Delannoy-seillier","firstname":"Maeve","club":"LVA","ranking":"N2"}],"score":{"set":[{"scoreA":22,"scoreB":20},{"scoreA":21,"scoreB":16}]},"type":"SD","hideClub":true},{"teamA":[{"lastname":"Gautier","firstname":"Marc","club":"BML","ranking":"R5"},{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"}],"teamB":[{"lastname":"Linster","firstname":"Romain","club":"LVA","ranking":"N3"},{"lastname":"Osvald","firstname":"Yohann","club":"LVA","ranking":"N1"}],"score":{"set":[{"scoreA":21,"scoreB":16},{"scoreA":9,"scoreB":21},{"scoreA":16,"scoreB":21}]},"type":"DH","hideClub":true},{"teamA":[{"lastname":"Lesne","firstname":"Candice","club":"BML","ranking":"N2"},{"lastname":"Lesne","firstname":"Cassandre","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Polito","firstname":"Nina","club":"LVA","ranking":"N2"},{"lastname":"Vandenhoucke","firstname":"Flore","club":"LVA","ranking":"R5"}],"score":{"set":[{"scoreA":11,"scoreB":21},{"scoreA":18,"scoreB":21}]},"type":"DD","hideClub":true},{"teamA":[{"lastname":"Houthoofd","firstname":"Senne","club":"BML","ranking":"N3"},{"lastname":"Middleton","firstname":"Lauren","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Linster","firstname":"Romain","club":"LVA","ranking":"N3"},{"lastname":"Delannoy-seillier","firstname":"Maeve","club":"LVA","ranking":"N2"}],"score":{"set":[{"scoreA":21,"scoreB":7},{"scoreA":21,"scoreB":14}]},"type":"MX","hideClub":true},{"teamA":[{"lastname":"Le Moulec","firstname":"Corentin","club":"BML","ranking":"N3"},{"lastname":"Galve","firstname":"Julia","club":"BML","ranking":"N2"}],"teamB":[{"lastname":"Rogez","firstname":"Lucas","club":"LVA","ranking":"R4"},{"lastname":"Vandenhoucke","firstname":"Flore","club":"LVA","ranking":"N3"}],"score":{"set":[{"scoreA":21,"scoreB":14},{"scoreA":10,"scoreB":21},{"scoreA":21,"scoreB":23}]},"type":"MX","hideClub":true}]}</scoreboard>

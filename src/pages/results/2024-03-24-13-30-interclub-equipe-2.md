@@ -5,7 +5,7 @@ cardTitle: Saison 23-24 - Équipe 2 - BML vs BCN
 heading: |-
   Saison 23-24 - Équipe 2
   BML vs BCN
-date: 2024-03-24T12:30:00.000Z
+date: 2024-03-24T12:30:00.001Z
 category: equipe-2-s23-24
 featuredimage:
   image: /assets/2023-2024/ic-r2-j5.png

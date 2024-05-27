@@ -20,6 +20,7 @@ const run = async () => {
     trimmed: false,
   };
   const git = simpleGit(options);
+  const existingBranches = await git.branchLocal();
 
   // Generate IC
   try {
@@ -93,8 +94,21 @@ const run = async () => {
       new Date(),
       'dd-MM-yyyy'
     )}`;
-    console.log('Create new branch', branchName);
+
+    // Delete branch if already exist
+    if (existingBranches.all.includes(branchName)) {
+      console.log(`"${branchName}" already exists, deleting branch.`);
+      await git.deleteLocalBranch(branchName);
+      await git.push(origin, branchName, ['--delete']);
+    }
+
+    console.log('Creating new branch', branchName);
     await git.checkoutLocalBranch(branchName);
+
+    // TODO split in multiple message per IC
+    await git.add(['../src', 'icUrls.json']);
+    await git.commit('feat: import IC');
+    await git.push('origin', branchName);
     // TODO if not
     //  create a new branch
     //  create a new PR

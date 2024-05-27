@@ -22,7 +22,7 @@ const run = async () => {
   };
   const git = simpleGit(options);
   await git.checkout('master');
-  await git.clean(CleanOptions.FORCE);
+  //await git.clean(CleanOptions.FORCE);
   await git.fetch();
   await git.pull();
   const existingBranches = await git.branchLocal();

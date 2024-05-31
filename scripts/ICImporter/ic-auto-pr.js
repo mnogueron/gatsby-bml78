@@ -136,6 +136,7 @@ const run = async () => {
 
     console.log('Switching to branch...');
     await git.checkout(branchName);
+    await git.rebase();
 
     console.log('Unstashing and overwrite branch modifications');
     await git.raw('cherry-pick', '-n', '-m1', '-Xtheirs', 'stash');

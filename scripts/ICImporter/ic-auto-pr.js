@@ -75,7 +75,10 @@ const run = async () => {
 
   // Generate IC
   try {
-    execSync('node ./extract-all-ics.js');
+    execSync(
+      'node --env-file=.env --no-warnings  ICImporter/extract-all-ics.js',
+      {stdio: 'inherit'}
+    );
   } catch (e) {
     console.error('Could not extract IC');
     process.exit(1);

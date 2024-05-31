@@ -44,7 +44,7 @@ const commitICChanges = async () => {
   let updatedICs = [];
   let createdICs = [];
 
-  for (let f in status.modified.filter(isICFileName)) {
+  for (const f of status.modified.filter(isICFileName)) {
     const icFilename = getICFileName(f);
     updatedICs.push(icFilename);
     console.log('Committing update for IC', icFilename);
@@ -54,7 +54,9 @@ const commitICChanges = async () => {
     await git.commit(`feat: update IC result for ${icFilename}`);
   }
 
-  for (let f in [...status.created, ...status.not_added].filter(isICFileName)) {
+  for (const f of [...status.created, ...status.not_added].filter(
+    isICFileName
+  )) {
     const icFilename = getICFileName(f);
     createdICs.push(icFilename);
     console.log('Committing import for IC', icFilename);

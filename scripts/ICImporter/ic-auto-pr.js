@@ -5,6 +5,11 @@ import * as dateFns from 'date-fns';
 import Discord from './DiscordNotifier/index.js';
 import {ASSETS_FOLDER, META_FILEPATH, RESULT_FOLDER} from './constants.js';
 import yargs from 'yargs';
+import {fileURLToPath} from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const argv = yargs(process.argv).option('d', {
   alias: 'dry-pr',
@@ -42,7 +47,8 @@ const commitICChanges = async () => {
     const icFilename = getICFileName(f);
     updatedICs.push(icFilename);
     console.log('Committing update for IC', icFilename);
-    await git.add(['../' + f]); // TODO use absolute path
+    const filePath = path.resolve('../../', f);
+    await git.add([filePath]);
     return git.commit(`feat: update IC result for ${icFilename}`);
   });
   const createdPromises = [...status.created, ...status.not_added]
@@ -51,7 +57,8 @@ const commitICChanges = async () => {
       const icFilename = getICFileName(f);
       createdICs.push(icFilename);
       console.log('Committing import for IC', icFilename);
-      await git.add(['../' + f]); // TODO use absolute path
+      const filePath = path.resolve('../../', f);
+      await git.add([filePath]);
       return git.commit(`feat: import IC result for ${icFilename}`);
     });
 
@@ -59,7 +66,9 @@ const commitICChanges = async () => {
 
   if (status.modified.filter(isICMetadata)) {
     console.log('Committing metadata updates');
-    await git.add(['../static/assets', './ICImporter/metas/ic.json']); // TODO use absolute path
+    const assetsFolderPath = path.resolve('../../', ASSETS_FOLDER);
+    const icMetaFilePath = path.resolve('../../', META_FILEPATH);
+    await git.add([assetsFolderPath, icMetaFilePath]);
     await git.commit('feat: update metadata files');
   }
 
@@ -86,12 +95,11 @@ const run = async () => {
 
   // Get modified files
   const status = await git.status();
-  const modifiedFilePaths = status.files
+  const icFiles = status.files
     .map(f => f.path)
-    .filter(p => p.startsWith('src/pages'));
-  const icFiles = modifiedFilePaths.filter(p => p.startsWith(RESULT_FOLDER));
+    .filter(p => p.startsWith(RESULT_FOLDER));
 
-  if (modifiedFilePaths.length === 0) {
+  if (icFiles.length === 0) {
     console.log('No IC has been imported, cleaning current branch.');
     git.clean(CleanOptions.FORCE);
     return;
@@ -120,7 +128,7 @@ const run = async () => {
       pull_number,
     });
 
-    if (files.some(f => modifiedFilePaths.includes(f.filename))) {
+    if (files.some(f => icFiles.includes(f.filename))) {
       existingPull = pull;
     }
 
@@ -132,7 +140,9 @@ const run = async () => {
     const branchName = existingPull.head.label.split(':')[1];
 
     console.log('Add files before stashing...');
-    await git.add(['../src', './ICImporter/metas/ic.json']); // TODO use absolute path
+    const srcFolderPath = path.resolve('../../', 'src');
+    const icMetaFilePath = path.resolve('../../', META_FILEPATH);
+    await git.add([srcFolderPath, icMetaFilePath]);
 
     console.log('Stashing modifications...');
     await git.stash();

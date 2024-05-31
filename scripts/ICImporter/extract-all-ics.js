@@ -12,6 +12,7 @@ import {downloadFile, getFilesForIC} from './GoogleDriveService/index.js';
 import * as dateFns from 'date-fns';
 import yargs from 'yargs';
 import fs from 'fs';
+import {ASSETS_FOLDER, ASSETS_PATH} from './constants.js';
 
 const argv = yargs(process.argv)
   .option('d', {
@@ -50,7 +51,7 @@ const run = async () => {
             const meeting = await ICBadCrawler.getICData(ic.url);
 
             if (meeting) {
-              const season = '2023-2024'; // TODO use meta instead
+              const season = icMetas.meta.season;
               const teamNumber = getTeamNumber(meeting);
 
               const {date} = meeting;
@@ -73,9 +74,13 @@ const run = async () => {
                   availableICAssets.find(f => f.name.startsWith(icDateTime)) ||
                   availableICAssets[0];
                 if (!dry) {
-                  await downloadFile(file.id, 'static/assets/2023-2024');
+                  const folder = `${ASSETS_FOLDER}/${icMetas.meta.season}`;
+                  if (!fs.existsSync(folder)) {
+                    fs.mkdirSync(folder);
+                  }
+                  await downloadFile(file.id, folder);
                 }
-                assetURL = `/assets/2023-2024/${file.name}`;
+                assetURL = `${ASSETS_PATH}/${icMetas.meta.season}/${file.name}`;
               }
 
               writeICFile(meeting, icMetas.meta.shortSeason, {

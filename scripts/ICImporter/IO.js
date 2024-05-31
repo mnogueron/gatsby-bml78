@@ -22,6 +22,14 @@ export const getICResultFilename = (date, teamNumber) =>
     'yyyy-MM-dd-HH-mm'
   )}-interclub-equipe-${teamNumber}.md`;
 
+export const getICResultPath = (date, teamNumber) =>
+  path.resolve(
+    __dirname,
+    '../../',
+    RESULT_FOLDER,
+    getICResultFilename(date, teamNumber)
+  );
+
 export const writeICFile = (meeting, shortSeason, options = {}) => {
   const {hostClub, guestClub, date, matches, results, meetingNumber} = meeting;
   const {dryRun, overwrite, assetURL} = options;
@@ -38,7 +46,6 @@ export const writeICFile = (meeting, shortSeason, options = {}) => {
     },
   };
   const teamNumber = getTeamNumber(meeting);
-  const filename = getICResultFilename(date, teamNumber);
 
   const content = template({
     teamNumber,
@@ -57,7 +64,7 @@ export const writeICFile = (meeting, shortSeason, options = {}) => {
     return;
   }
 
-  const filePath = path.resolve(__dirname, '../../', RESULT_FOLDER, filename);
+  const filePath = getICResultPath(date, teamNumber);
   if (overwrite || !fs.existsSync(filePath)) {
     fs.writeFileSync(filePath, content);
   }

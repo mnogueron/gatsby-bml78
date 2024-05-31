@@ -2,10 +2,16 @@ import ICBadCrawler from './ICBadCrawler.js';
 import {initLogger} from './logger.js';
 import icMetas from './metas/ic.json' assert {type: 'json'};
 import {getICsToImport} from './utils.js';
-import {getTeamNumber, writeICFile, writeICMetas} from './IO.js';
+import {
+  getICResultPath,
+  getTeamNumber,
+  writeICFile,
+  writeICMetas,
+} from './IO.js';
 import {downloadFile, getFilesForIC} from './GoogleDriveService/index.js';
 import * as dateFns from 'date-fns';
 import yargs from 'yargs';
+import fs from 'fs';
 
 const argv = yargs(process.argv)
   .option('d', {
@@ -58,7 +64,11 @@ const run = async () => {
               );
               let assetURL = undefined;
 
-              if (availableICAssets.length > 0) {
+              const filePath = getICResultPath(date, teamNumber);
+              if (
+                availableICAssets.length > 0 &&
+                (overwrite || !fs.existsSync(filePath)) // Ignore download if the IC already exists
+              ) {
                 const file =
                   availableICAssets.find(f => f.name.startsWith(icDateTime)) ||
                   availableICAssets[0];

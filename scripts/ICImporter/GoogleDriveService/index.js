@@ -76,10 +76,14 @@ export const downloadFile = async (fileId, folder) => {
     }
   );
 
-  file.data.on('end', () =>
-    console.log(`Finished downloading: ${folder}/${fileMetaData.data.name}`)
-  );
-  file.data.pipe(fileStream);
+  return new Promise((resolve, reject) => {
+    file.data.on('end', () => {
+      console.log(`Finished downloading: ${folder}/${fileMetaData.data.name}`);
+      resolve(file.status);
+    });
 
-  return file.status;
+    file.data.on('error', reject);
+
+    file.data.pipe(fileStream);
+  });
 };

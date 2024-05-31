@@ -15,6 +15,8 @@ const netlify = {
 };
 
 const getCommitUrl = sha => `${process.env['REPOSITORY_URL']}/commit/${sha}`;
+const getDiffUrl = (head, commitSha) =>
+  `${process.env['REPOSITORY_URL']}/compare/${head}...${commitSha}`;
 
 const getPayload = (buildStatus, git) => {
   const title = buildStatus === 'success' ? `Build deployed` : `Build failed`;
@@ -65,17 +67,8 @@ const getPayload = (buildStatus, git) => {
             )})`,
           },
           {
-            name: 'Details',
-            value: git.commits
-              .filter(c => Boolean(c.sha))
-              .map(
-                c =>
-                  `* ${c.message} - @${c.committer.name} [${c.sha.slice(
-                    0,
-                    7
-                  )}](${getCommitUrl(c.sha)})`
-              )
-              .join('\n'),
+            name: 'Diff',
+            value: getDiffUrl(process.env['HEAD'], process.env['COMMIT_REF']),
           },
           {
             name: 'Logs',

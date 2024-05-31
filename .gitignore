@@ -76,3 +76,7 @@ yarn-error.log
 
 # Local Netlify folder
 .netlify
+
+# Scripts
+scripts/.env
+scripts/ICImporter/GoogleDriveService/credentials.json

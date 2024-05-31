@@ -1,0 +1,470 @@
+{
+    "meta": {
+        "season": "2023-2024",
+        "shortSeason": "23-24"
+    },
+    "teams": [
+        {
+            "id": "28203",
+            "teamNumber": 1,
+            "ics": [
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348650",
+                    "date": "09/09/2023 16:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348652",
+                    "date": "07/10/2023 12:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348657",
+                    "date": "04/11/2023 16:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348658",
+                    "date": "25/11/2023 16:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348661",
+                    "date": "16/12/2023 11:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348666",
+                    "date": "27/01/2024 16:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348669",
+                    "date": "10/02/2024 16:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348671",
+                    "date": "24/02/2024 16:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348675",
+                    "date": "23/03/2024 12:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348678",
+                    "date": "20/04/2024 16:00",
+                    "parsed": false
+                }
+            ]
+        },
+        {
+            "id": "30694",
+            "teamNumber": 2,
+            "ics": [
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392402",
+                    "date": "08/10/2023 10:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392403",
+                    "date": "08/10/2023 13:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392407",
+                    "date": "26/11/2023 10:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392411",
+                    "date": "26/11/2023 13:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392414",
+                    "date": "17/12/2023 10:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392415",
+                    "date": "17/12/2023 13:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392419",
+                    "date": "28/01/2024 09:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392421",
+                    "date": "28/01/2024 13:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392425",
+                    "date": "24/03/2024 10:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300264/tableau/6469/rencontre/392428",
+                    "date": "24/03/2024 13:30",
+                    "parsed": true
+                }
+            ]
+        },
+        {
+            "id": "30748",
+            "teamNumber": 3,
+            "ics": [
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392677",
+                    "date": "26/11/2023 09:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392680",
+                    "date": "26/11/2023 13:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392672",
+                    "date": "02/12/2023 10:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392673",
+                    "date": "02/12/2023 13:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392682",
+                    "date": "17/12/2023 10:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392686",
+                    "date": "17/12/2023 13:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392689",
+                    "date": "28/01/2024 10:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392693",
+                    "date": "28/01/2024 13:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392695",
+                    "date": "24/03/2024 09:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2300265/tableau/6478/rencontre/392699",
+                    "date": "24/03/2024 13:00",
+                    "parsed": true
+                }
+            ]
+        },
+        {
+            "id": "31912",
+            "teamNumber": 4,
+            "ics": [
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423947",
+                    "date": "06/11/2023 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423952",
+                    "date": "17/11/2023 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423955",
+                    "date": "20/11/2023 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423958",
+                    "date": "27/11/2023 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423962",
+                    "date": "04/12/2023 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423967",
+                    "date": "11/12/2023 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423972",
+                    "date": "12/01/2024 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423974",
+                    "date": "16/01/2024 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423979",
+                    "date": "22/01/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423985",
+                    "date": "02/02/2024 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423987",
+                    "date": "28/02/2024 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423991",
+                    "date": "04/03/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423996",
+                    "date": "13/03/2024 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423999",
+                    "date": "18/03/2024 20:15",
+                    "parsed": false
+                }
+            ]
+        },
+        {
+            "id": "31881",
+            "teamNumber": 5,
+            "ics": [
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425410",
+                    "date": "08/11/2023 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425414",
+                    "date": "13/11/2023 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425420",
+                    "date": "24/11/2023 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425422",
+                    "date": "30/11/2023 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425426",
+                    "date": "04/12/2023 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425433",
+                    "date": "15/12/2023 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425434",
+                    "date": "08/01/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425438",
+                    "date": "15/01/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425445",
+                    "date": "26/01/2024 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425446",
+                    "date": "29/01/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425450",
+                    "date": "26/02/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425455",
+                    "date": "08/03/2024 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425458",
+                    "date": "11/03/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302514/tableau/6709/rencontre/425463",
+                    "date": "22/03/2024 20:00",
+                    "parsed": true
+                }
+            ]
+        },
+        {
+            "id": "32169",
+            "teamNumber": 6,
+            "ics": [
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425747",
+                    "date": "08/11/2023 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425752",
+                    "date": "17/11/2023 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425755",
+                    "date": "22/11/2023 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425760",
+                    "date": "01/12/2023 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425763",
+                    "date": "06/12/2023 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425766",
+                    "date": "11/12/2023 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425772",
+                    "date": "12/01/2024 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425777",
+                    "date": "19/01/2024 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425779",
+                    "date": "24/01/2024 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425782",
+                    "date": "29/01/2024 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425787",
+                    "date": "28/02/2024 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425791",
+                    "date": "06/03/2024 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425795",
+                    "date": "13/03/2024 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302515/tableau/6789/rencontre/425799",
+                    "date": "20/03/2024 20:00",
+                    "parsed": true
+                }
+            ]
+        },
+        {
+            "id": "32539",
+            "teamNumber": 7,
+            "ics": [
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426126",
+                    "date": "08/11/2023 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426131",
+                    "date": "16/11/2023 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426134",
+                    "date": "22/11/2023 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426140",
+                    "date": "01/12/2023 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426146",
+                    "date": "13/12/2023 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426152",
+                    "date": "12/01/2024 20:00",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426157",
+                    "date": "19/01/2024 20:30",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426158",
+                    "date": "24/01/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426162",
+                    "date": "01/02/2024 19:45",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426166",
+                    "date": "28/02/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426174",
+                    "date": "13/03/2024 20:15",
+                    "parsed": true
+                },
+                {
+                    "url": "https://icbad.ffbad.org/competition/2302516/tableau/6859/rencontre/426178",
+                    "date": "20/03/2024 20:15",
+                    "parsed": true
+                }
+            ]
+        }
+    ]
+}

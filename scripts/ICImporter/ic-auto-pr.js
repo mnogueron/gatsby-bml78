@@ -47,7 +47,7 @@ const commitICChanges = async () => {
     const icFilename = getICFileName(f);
     updatedICs.push(icFilename);
     console.log('Committing update for IC', icFilename);
-    const filePath = path.resolve('../../', f);
+    const filePath = path.resolve(__dirname, '../../', f);
     await git.add([filePath]);
     return git.commit(`feat: update IC result for ${icFilename}`);
   });
@@ -57,7 +57,7 @@ const commitICChanges = async () => {
       const icFilename = getICFileName(f);
       createdICs.push(icFilename);
       console.log('Committing import for IC', icFilename);
-      const filePath = path.resolve('../../', f);
+      const filePath = path.resolve(__dirname, '../../', f);
       await git.add([filePath]);
       return git.commit(`feat: import IC result for ${icFilename}`);
     });
@@ -66,8 +66,8 @@ const commitICChanges = async () => {
 
   if (status.modified.filter(isICMetadata)) {
     console.log('Committing metadata updates');
-    const assetsFolderPath = path.resolve('../../', ASSETS_FOLDER);
-    const icMetaFilePath = path.resolve('../../', META_FILEPATH);
+    const assetsFolderPath = path.resolve(__dirname, '../../', ASSETS_FOLDER);
+    const icMetaFilePath = path.resolve(__dirname, '../../', META_FILEPATH);
     await git.add([assetsFolderPath, icMetaFilePath]);
     await git.commit('feat: update metadata files');
   }
@@ -140,8 +140,8 @@ const run = async () => {
     const branchName = existingPull.head.label.split(':')[1];
 
     console.log('Add files before stashing...');
-    const srcFolderPath = path.resolve('../../', 'src');
-    const icMetaFilePath = path.resolve('../../', META_FILEPATH);
+    const srcFolderPath = path.resolve(__dirname, '../../', 'src');
+    const icMetaFilePath = path.resolve(__dirname, '../../', META_FILEPATH);
     await git.add([srcFolderPath, icMetaFilePath]);
 
     console.log('Stashing modifications...');

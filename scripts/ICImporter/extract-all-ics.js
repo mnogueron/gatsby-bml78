@@ -79,16 +79,19 @@ const run = async () => {
                   availableICAssets.find(f => f.name.startsWith(icDateTime)) ||
                   availableICAssets[0];
                 if (!dry) {
-                  const folder = path.resolve(
+                  const folderPath = path.resolve(
                     __dirname,
                     '../..',
                     ASSETS_FOLDER,
                     icMetas.meta.season
                   );
-                  if (!fs.existsSync(folder)) {
-                    fs.mkdirSync(folder);
+                  if (!fs.existsSync(folderPath)) {
+                    fs.mkdirSync(folderPath);
                   }
-                  await downloadFile(file.id, folder);
+                  await downloadFile(
+                    file.id,
+                    path.resolve(ASSETS_FOLDER, icMetas.meta.season)
+                  );
                 }
                 assetURL = `${ASSETS_PATH}/${icMetas.meta.season}/${file.name}`;
               }

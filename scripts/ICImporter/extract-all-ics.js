@@ -12,7 +12,12 @@ import {downloadFile, getFilesForIC} from './GoogleDriveService/index.js';
 import * as dateFns from 'date-fns';
 import yargs from 'yargs';
 import fs from 'fs';
+import path from 'path';
+import {fileURLToPath} from 'url';
 import {ASSETS_FOLDER, ASSETS_PATH} from './constants.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const argv = yargs(process.argv)
   .option('d', {
@@ -74,7 +79,12 @@ const run = async () => {
                   availableICAssets.find(f => f.name.startsWith(icDateTime)) ||
                   availableICAssets[0];
                 if (!dry) {
-                  const folder = `${ASSETS_FOLDER}/${icMetas.meta.season}`;
+                  const folder = path.resolve(
+                    __dirname,
+                    '../..',
+                    ASSETS_FOLDER,
+                    icMetas.meta.season
+                  );
                   if (!fs.existsSync(folder)) {
                     fs.mkdirSync(folder);
                   }

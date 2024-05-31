@@ -43,7 +43,8 @@ const commitICChanges = async () => {
   const status = await git.status();
   let updatedICs = [];
   let createdICs = [];
-  const modifiedPromises = status.modified.filter(isICFileName).map(async f => {
+
+  for (let f in status.modified.filter(isICFileName)) {
     const icFilename = getICFileName(f);
     updatedICs.push(icFilename);
     console.log('Committing update for IC', icFilename);
@@ -51,20 +52,17 @@ const commitICChanges = async () => {
     console.log('Git add', filePath);
     await git.add([filePath]);
     await git.commit(`feat: update IC result for ${icFilename}`);
-  });
-  const createdPromises = [...status.created, ...status.not_added]
-    .filter(isICFileName)
-    .map(async f => {
-      const icFilename = getICFileName(f);
-      createdICs.push(icFilename);
-      console.log('Committing import for IC', icFilename);
-      const filePath = path.resolve(__dirname, '../..', f);
-      console.log('Git add', filePath);
-      await git.add([filePath]);
-      await git.commit(`feat: import IC result for ${icFilename}`);
-    });
+  }
 
-  await Promise.all([...modifiedPromises, ...createdPromises]);
+  for (let f in [...status.created, ...status.not_added].filter(isICFileName)) {
+    const icFilename = getICFileName(f);
+    createdICs.push(icFilename);
+    console.log('Committing import for IC', icFilename);
+    const filePath = path.resolve(__dirname, '../..', f);
+    console.log('Git add', filePath);
+    await git.add([filePath]);
+    await git.commit(`feat: import IC result for ${icFilename}`);
+  }
 
   if (
     status.modified.some(isICMetadata) ||

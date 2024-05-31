@@ -50,7 +50,7 @@ const commitICChanges = async () => {
     const filePath = path.resolve(__dirname, '../..', f);
     console.log('Git add', filePath);
     await git.add([filePath]);
-    return git.commit(`feat: update IC result for ${icFilename}`);
+    await git.commit(`feat: update IC result for ${icFilename}`);
   });
   const createdPromises = [...status.created, ...status.not_added]
     .filter(isICFileName)
@@ -61,7 +61,7 @@ const commitICChanges = async () => {
       const filePath = path.resolve(__dirname, '../..', f);
       console.log('Git add', filePath);
       await git.add([filePath]);
-      return git.commit(`feat: import IC result for ${icFilename}`);
+      await git.commit(`feat: import IC result for ${icFilename}`);
     });
 
   await Promise.all([...modifiedPromises, ...createdPromises]);

@@ -90,7 +90,7 @@ const run = async () => {
                   }
                   await downloadFile(
                     file.id,
-                    path.resolve(ASSETS_FOLDER, icMetas.meta.season)
+                    `${ASSETS_FOLDER}/${icMetas.meta.season}`
                   );
                 }
                 assetURL = `${ASSETS_PATH}/${icMetas.meta.season}/${file.name}`;

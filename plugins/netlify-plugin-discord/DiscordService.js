@@ -68,7 +68,10 @@ const getPayload = (buildStatus, git) => {
           },
           {
             name: 'Diff',
-            value: getDiffUrl(process.env['HEAD'], process.env['COMMIT_REF']),
+            value: getDiffUrl(
+              process.env['CACHED_COMMIT_REF'],
+              process.env['COMMIT_REF']
+            ),
           },
           {
             name: 'Logs',

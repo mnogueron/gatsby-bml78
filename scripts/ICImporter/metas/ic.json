@@ -56,7 +56,7 @@
                 {
                     "url": "https://icbad.ffbad.org/competition/2300440/tableau/5828/rencontre/348678",
                     "date": "20/04/2024 16:00",
-                    "parsed": false
+                    "parsed": true
                 }
             ]
         },
@@ -244,7 +244,7 @@
                 {
                     "url": "https://icbad.ffbad.org/competition/2302512/tableau/6548/rencontre/423999",
                     "date": "18/03/2024 20:15",
-                    "parsed": false
+                    "parsed": true
                 }
             ]
         },

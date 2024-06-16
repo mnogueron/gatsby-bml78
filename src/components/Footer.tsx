@@ -243,7 +243,8 @@ const Footer = () => {
             color="text.inverted.secondary"
             fontSize="sm"
           >
-            © BML 2023 - Tous Droits Réservés - All Rights Reserved
+            © Matthieu Nogueron 2024 - Tous Droits Réservés - All Rights
+            Reserved
           </Text>
         </Stack>
       </Box>

@@ -7,6 +7,7 @@ import ArticlePagePreview from './preview-templates/ArticlePagePreview';
 import ContentPagePreview from './preview-templates/ContentPagePreview';
 import ContactPagePreview from './preview-templates/ContactPagePreview';
 import BoardChartPagePreview from './preview-templates/BoardChartPagePreview';
+import ResultsPagePreview from './preview-templates/ResultsPagePreview';
 import youtubeEditorComponent from './editor-components/youtube';
 import scoreboardEditorComponent from './editor-components/scoreboard';
 import teamScoreboardEditorComponent from './editor-components/teamScoreboard';
@@ -43,7 +44,7 @@ const previewTemplates = {
 
   bureau: BoardChartPagePreview,
   'result-sections': ArticlesPagePreview,
-  'all-results-index': ArticlesPagePreview,
+  'all-results-index': ResultsPagePreview,
 };
 
 CMS.registerLocale('fr', fr);

@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 import {graphql} from 'gatsby';
-import ArticlesPageTemplate from '../containers/Articles/ArticlesPageTemplate';
+import ResultsPageTemplate from '../containers/Articles/ResultsPageTemplate';
 import {preparePosts} from '../utils';
 import PageHead from '../components/PageHead';
 
@@ -10,7 +10,7 @@ const ResultsPage = ({data}) => {
   const preparedPosts = useMemo(() => preparePosts(posts), [posts]);
 
   return (
-    <ArticlesPageTemplate
+    <ResultsPageTemplate
       heading={fm.heading}
       subheading={fm.subheading}
       posts={preparedPosts}

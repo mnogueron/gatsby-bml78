@@ -15,6 +15,9 @@ const baseStyleItem = {
 
 const baseStyle = {
   item: baseStyleItem,
+  list: {
+    zIndex: 'dropdown',
+  },
 };
 
 export default {

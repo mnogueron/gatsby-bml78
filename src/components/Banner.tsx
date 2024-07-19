@@ -22,7 +22,9 @@ type BannerProps = {
 };
 
 const Banner = ({banner}: BannerProps) => {
-  const bodyRef = useRef(document.body);
+  const bodyRef = useRef(
+    typeof document !== 'undefined' ? document.body : null
+  );
   const {scrollY, scrollDirection} = useScroll();
   const {isOpen, onClose, onOpen} = useDisclosure();
 

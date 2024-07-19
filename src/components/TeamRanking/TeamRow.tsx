@@ -1,6 +1,7 @@
 import React from 'react';
-import {Box, Flex, HStack, Text} from '@chakra-ui/react';
-import ResultBadge from './ResultBadge';
+import {Flex, HStack, Text} from '@chakra-ui/react';
+import ResultBadge from '../ResultBadge';
+import {TeamRankDetails} from './types';
 
 const HeaderCell = ({children}: {children: React.ReactNode}) => {
   return (
@@ -17,27 +18,44 @@ const HeaderCell = ({children}: {children: React.ReactNode}) => {
 };
 
 type TeamRowProps = {
+  details: TeamRankDetails;
   index: number;
+  isFirst?: boolean;
+  isLast?: boolean;
 };
 
-const TeamRow = ({index}: TeamRowProps) => {
+const TeamRow = ({details, index, isFirst, isLast}: TeamRowProps) => {
   return (
-    <HStack width="100%">
+    <HStack width="100%" _hover={{bg: 'blackAlpha.100'}} borderRadius="md">
       <HeaderCell>{index}</HeaderCell>
 
-      <Box flex={1} p={2}>
+      <Flex
+        alignSelf="stretch"
+        flex={1}
+        px={2}
+        py={1}
+        borderRightRadius="md"
+        alignItems="center"
+        bg={
+          isFirst
+            ? `linear-gradient(to right, rgba(255, 255, 255, 0), var(--chakra-colors-green-100))`
+            : isLast
+              ? `linear-gradient(to right, rgba(255, 255, 255, 0), var(--chakra-colors-red-100))`
+              : undefined
+        }
+      >
         <Text color="text.secondary" fontSize="md">
-          Équipe
+          {details.name}
         </Text>
-      </Box>
+      </Flex>
 
-      <ResultBadge score={10} />
-      <ResultBadge score={3} variant="win" />
-      <ResultBadge score={3} />
-      <ResultBadge score={4} variant="loss" />
-      <ResultBadge score={1} variant="win" />
-      <ResultBadge score={-1} variant="loss" />
-      <ResultBadge score={28} />
+      <ResultBadge score={details.playedDays} />
+      <ResultBadge score={details.win} variant="win" />
+      <ResultBadge score={details.equal} />
+      <ResultBadge score={details.loss} variant="loss" />
+      <ResultBadge score={details.bonus} variant="win" />
+      <ResultBadge score={details.malus} variant="loss" />
+      <ResultBadge score={details.points} />
     </HStack>
   );
 };

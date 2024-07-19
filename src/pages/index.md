@@ -10,10 +10,10 @@ subheading: |-
   Le badminton pour tous les niveaux, 
   tous les âges, toutes les envies à Maisons-Laffitte !
 banner:
-  text: Les premières informations concernant les inscriptions pour la saison
-    2023-2024 sont désormais disponibles sur le site !
+  text: "Saison 2024-2025 : les inscriptions ne sont pas encore ouvertes. Les
+    informations seront mises à jour au courant de l'été."
   level: info
-  hide: true
+  hide: false
 ---
 Le **BML** vous accueille à **Maisons-Laffitte** et **Sartrouville** (78) pour découvrir la
 pratique du **badminton**, approfondir ses connaissances ou bien se lancer dans la

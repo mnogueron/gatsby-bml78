@@ -6,6 +6,7 @@ import LastNewsSection from './components/LastNewsSection';
 import LastResultsSection from './components/LastResultsSection';
 import VideosSection from './components/VideosSection';
 import {preparePosts} from '../../utils';
+import Banner from '../../components/Banner';
 
 const IndexPageTemplate = ({
   heading,
@@ -28,10 +29,11 @@ const IndexPageTemplate = ({
         heading={heading}
         subheading={subheading}
         image={image}
-        banner={banner}
       />
 
       <Box pb={16}>
+        <Banner banner={banner} />
+
         <ClubQuoteSection content={clubSectionContent} />
         <LastNewsSection posts={preparedPosts} />
         <LastResultsSection results={preparedResults} />

@@ -28,6 +28,7 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@emotion/weak-memoize": "^0.2.5",
+    "crypto-js": "^4.2.0",
     "date-fns": "^2.30.0",
     "decap-cms-app": "^3.0.12",
     "decap-cms-locales": "^3.1.2",
@@ -62,6 +63,7 @@
   },
   "devDependencies": {
     "@octokit/rest": "^20.1.1",
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^18.19.10",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",

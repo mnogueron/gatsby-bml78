@@ -21,7 +21,9 @@ export function useScroll() {
   // the horizontal direction
   const [scrollX, setScrollX] = useState(0);
   // scroll direction would be either up or down
-  const [scrollDirection, setScrollDirection] = useState();
+  const [scrollDirection, setScrollDirection] = useState<
+    'down' | 'up' | undefined
+  >();
 
   const listener = () => {
     const bodyOffset = document.body.getBoundingClientRect();

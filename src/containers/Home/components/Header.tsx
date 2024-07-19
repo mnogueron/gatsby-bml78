@@ -2,8 +2,6 @@ import React from 'react';
 import {Link} from 'gatsby';
 import {Box, Button, Container, Flex, Heading, Text} from '@chakra-ui/react';
 import Image, {ImageType} from '../../../components/Image';
-import Banner from '../../../components/Banner';
-import {BannerType} from '../../../types/types';
 import {DeepNullable} from '../../../types/utils';
 
 type HeaderProps = DeepNullable<{
@@ -11,16 +9,9 @@ type HeaderProps = DeepNullable<{
   image: ImageType;
   heading: string;
   subheading: string;
-  banner: BannerType;
 }>;
 
-const Header = ({
-  headerImage,
-  heading,
-  subheading,
-  image,
-  banner,
-}: HeaderProps) => {
+const Header = ({headerImage, heading, subheading, image}: HeaderProps) => {
   return (
     <Box backgroundColor={'blackAlpha.100'} position="relative" as="header">
       <Container
@@ -132,14 +123,6 @@ const Header = ({
           }}
         />
       </Box>
-
-      {banner && banner.text && !banner.hide && (
-        <Box position="absolute" top={{base: 4, lg: 8}} left={4} right={4}>
-          <Box maxW="4xl" margin="auto">
-            <Banner text={banner.text} level={banner.level} />
-          </Box>
-        </Box>
-      )}
     </Box>
   );
 };

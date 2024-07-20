@@ -167,14 +167,14 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
     <Box
       as="nav"
       shadow={scrollY < 1 ? undefined : 'xl'}
-      bg={isTransparent ? 'transparent' : 'bg.main'}
+      backgroundColor={isTransparent ? 'transparent' : 'bg.main'}
       sx={{
         w: '100%',
         zIndex: 30,
         top: 0,
         position: 'fixed',
-        transitionDuration: '300ms, 150ms, 150ms, 300ms',
-        transitionProperty: 'transform, background-color, color, box-shadow',
+        transitionDuration: '300ms, 500ms, 300ms',
+        transitionProperty: 'transform, background-color, box-shadow',
         transitionTimingFunction: 'ease-in-out',
         transform:
           scrollDirection === 'down' || scrollY < 200
@@ -190,7 +190,14 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         justifyContent="space-between"
       >
         <Flex alignItems="center" py={2} justifyContent="space-between">
-          <Logo color={isTransparent ? 'text.inverted.main' : 'text.main'} />
+          <Logo
+            color={isTransparent ? 'text.inverted.main' : 'text.main'}
+            sx={{
+              transitionDuration: '1000ms',
+              transitionProperty: 'color',
+              transitionTimingFunction: 'ease-in-out',
+            }}
+          />
 
           {/* Mobile menu button */}
           <Box display={{base: 'flex', lg: 'none'}}>

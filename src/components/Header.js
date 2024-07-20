@@ -38,7 +38,7 @@ export function ArticleHeader({heading, subheading, date}) {
   return (
     <Box
       as="header"
-      pt={{base: 8, sm: 12, md: 20, lg: 20}}
+      pt={{base: 8, sm: 12, md: 12}}
       pb={{base: 6, sm: 8, md: 16, lg: 16}}
     >
       <Container

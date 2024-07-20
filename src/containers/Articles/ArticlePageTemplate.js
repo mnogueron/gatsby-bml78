@@ -9,7 +9,7 @@ function ArticlePageTemplate({heading, date, image, body}) {
     <>
       <ArticleHeader heading={heading} date={date} />
       {!image.hidden && (
-        <Flex px={4} mb={{base: 0, md: 5, lg: 10}} justifyContent="center">
+        <Flex px={4} justifyContent="center">
           <Box
             as={Image}
             image={image.image}

@@ -19,4 +19,8 @@ items:
     items:
       - url: /tournois/tournoi-2023
         title: Tournoi 2023
+  - title: Stages
+    items:
+      - title: Stage jeune - Été 2024
+        url: /articles/2024-07-19-stage-jeune-%C3%A9t%C3%A9-2024/
 ---

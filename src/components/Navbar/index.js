@@ -253,7 +253,6 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
                   to={menu.to}
                   onClick={handleMenuClose}
                   label={menu.label}
-                  partial={menu.partial}
                   isTransparent={isTransparent}
                 />
               );

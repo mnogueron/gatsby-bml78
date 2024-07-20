@@ -41,13 +41,11 @@ const DesktopDropdownNavLink = ({
         onClick={onToggle}
         onMouseEnter={handleOpen}
         onMouseLeave={handleClose}
+        role={isRecursive ? 'group' : 'button'}
         {...(isRecursive
           ? {
               sx: {
                 width: 'full',
-                '&:hover': {
-                  backgroundColor: 'red.100',
-                },
               },
             }
           : {
@@ -66,7 +64,11 @@ const DesktopDropdownNavLink = ({
             })}
       >
         {isRecursive ? (
-          <MenuItem justifyContent="space-between">
+          <MenuItem
+            as="div"
+            justifyContent="space-between"
+            _groupHover={{backgroundColor: 'red.100'}}
+          >
             {label}
             <Icon as={MdChevronRight} boxSize={5} />
           </MenuItem>

@@ -1,7 +1,7 @@
-import React, {useMemo} from 'react';
-import {Box, HTMLChakraProps} from '@chakra-ui/react';
+import React, {useMemo, useState} from 'react';
+import {Box, Center, CircularProgress, HTMLChakraProps} from '@chakra-ui/react';
 
-enum HelloAssoWidgetType {
+export enum HelloAssoWidgetType {
   BUTTON = 'button',
   STICKER = 'sticker',
   FORM = 'form',
@@ -13,6 +13,7 @@ type HelloAssoWidgetProps = {
 };
 
 const HelloAssoWidget = ({url, type}: HelloAssoWidgetProps) => {
+  const [isLoading, setIsLoading] = useState(true);
   const props = useMemo((): HTMLChakraProps<'iframe'> => {
     switch (type) {
       case HelloAssoWidgetType.BUTTON:
@@ -26,7 +27,8 @@ const HelloAssoWidget = ({url, type}: HelloAssoWidgetProps) => {
         return {
           src: `${url}/widget-vignette`,
           width: '350px',
-          height: '450px',
+          height: '600px',
+          margin: 'auto',
           border: 'none',
         };
       case HelloAssoWidgetType.FORM:
@@ -43,7 +45,29 @@ const HelloAssoWidget = ({url, type}: HelloAssoWidgetProps) => {
     }
   }, [type, url]);
 
-  return <Box as="iframe" id="haWidget" allowTransparency={true} {...props} />;
+  return (
+    <Box position="relative">
+      <Box
+        as="iframe"
+        id="haWidget"
+        allowTransparency={true}
+        onLoad={() => setIsLoading(false)}
+        {...props}
+      />
+      {isLoading && (
+        <Center
+          position="absolute"
+          top={0}
+          bottom={0}
+          left={0}
+          right={0}
+          pointerEvents="none"
+        >
+          <CircularProgress isIndeterminate color="red.600" size={12} />
+        </Center>
+      )}
+    </Box>
+  );
 };
 
 export default HelloAssoWidget;

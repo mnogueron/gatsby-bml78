@@ -19,7 +19,9 @@ import {
   UnorderedList,
   Link,
   SimpleGrid,
+  Box,
 } from '@chakra-ui/react';
+import HelloAssoWidget from '../components/HelloAssoWidget';
 
 const Table = props => (
   <TableContainer>
@@ -125,6 +127,24 @@ const withChildrenAsJSONProps = Component => {
   return PreparedComponent;
 };
 
+const Shortcode = ({children, ...props}) => {
+  if (children[0] && typeof children[0] === 'string') {
+    const re = new RegExp(`helloasso-(button|sticker|form): (.*)`, 'i');
+
+    const processValue = children[0].match(re);
+    if (processValue) {
+      const type = processValue[1];
+      let url = processValue[2].trim();
+      return <HelloAssoWidget url={url} type={type} {...props} />;
+    }
+  }
+  return (
+    <Box as="code" {...props}>
+      {children}
+    </Box>
+  );
+};
+
 export const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
@@ -152,5 +172,6 @@ export const renderAst = new RehypeReact({
     mediafile: withChildrenAsJSONProps(MediaFile),
     simplegrid: Grid,
     figcaption: FigCaption,
+    code: Shortcode,
   },
 }).Compiler;

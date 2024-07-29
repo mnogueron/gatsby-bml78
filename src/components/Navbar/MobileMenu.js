@@ -34,7 +34,6 @@ const SubMenu = ({label, options, onClose}) => {
         <Accordion
           index={index}
           allowMultiple
-          allowToggle
           onChange={expandedIndex => setIndex(expandedIndex)}
         >
           {options.map(m => (
@@ -88,7 +87,7 @@ const MenuItem = ({item, onClose}) => {
 
 const MobileMenu = ({onClose, isOpen, menu}) => {
   return (
-    <Drawer onClose={onClose} isOpen={isOpen} size={'full'}>
+    <Drawer onClose={onClose} isOpen={isOpen} size={{base: 'full', sm: 'sm'}}>
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
@@ -111,7 +110,7 @@ const MobileMenu = ({onClose, isOpen, menu}) => {
         </DrawerHeader>
 
         <DrawerBody>
-          <Accordion allowMultiple allowToggle>
+          <Accordion allowMultiple>
             {menu.map(m => (
               <MenuItem key={m.key} item={m} onClose={onClose} />
             ))}

@@ -20,6 +20,7 @@ import {
   Link,
   SimpleGrid,
 } from '@chakra-ui/react';
+import ShortCode from '../components/ShortCode';
 
 const Table = props => (
   <TableContainer>
@@ -52,10 +53,10 @@ const H6 = props => <Heading as="h6" size="xs" mt={4} mb={2} {...props} />;
 
 const P = props => (
   <Text
-    my={{base: 2, md: 6}}
-    as={'div'}
+    my={{base: 2, md: 4}}
+    as={'p'}
     fontSize={{base: 'md', md: 'lg'}}
-    lineHeight="tall"
+    lineHeight="base"
     {...props}
   />
 );
@@ -86,7 +87,7 @@ const Ol = props => (
 );
 const Li = props => (
   <ListItem
-    my={{base: 2, md: 4}}
+    my={2}
     fontSize={{base: 'md', md: 'lg'}}
     lineHeight="tall"
     {...props}
@@ -152,5 +153,6 @@ export const renderAst = new RehypeReact({
     mediafile: withChildrenAsJSONProps(MediaFile),
     simplegrid: Grid,
     figcaption: FigCaption,
+    code: ShortCode,
   },
 }).Compiler;

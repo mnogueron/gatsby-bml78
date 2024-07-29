@@ -11,6 +11,7 @@ const Layout = ({children, pageContext}) => {
       <Box
         as="main"
         mb="auto"
+        minHeight="100%"
         marginTop={
           pageContext?.templateKey !== 'index-page'
             ? {

@@ -18,8 +18,10 @@ function Header({heading, subheading}) {
       >
         <Heading
           as="h1"
-          fontSize={{base: '2xl', sm: '3xl', md: '4xl', lg: '5xl'}}
+          fontSize={{base: '2xl', sm: '3xl', md: '3xl', lg: '4xl'}}
           color="text.main"
+          maxW={'2xl'}
+          whiteSpace="pre-wrap"
         >
           {heading}
         </Heading>

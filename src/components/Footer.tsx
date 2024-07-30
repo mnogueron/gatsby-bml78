@@ -68,7 +68,7 @@ const footerSections: {
         to: '/infos-pratiques/avantages',
       },
       {
-        title: 'Les membres du bureau',
+        title: `Le Conseil d'Administration`,
         to: '/infos-pratiques/bureau',
       },
       {

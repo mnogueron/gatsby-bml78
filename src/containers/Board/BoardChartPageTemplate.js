@@ -48,6 +48,9 @@ function ContentPageTemplate({
         pt={{base: 2, md: 4, lg: 6}}
         pb={{base: 6, md: 10, lg: 20}}
       >
+        <Heading as="h3" fontSize={'2xl'} textAlign="center" py={8}>
+          {"Les Membres du conseil d'Administration"}
+        </Heading>
         <VStack spacing={{base: 4, sm: 6, md: 10}}>
           <Member title="Président" {...president} />
           <SimpleGrid

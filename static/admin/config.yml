@@ -310,7 +310,7 @@ collections:
         name: 'calendrier'
         fields: *CONTENT_PAGE
       - file: 'src/pages/infos-pratiques/bureau.md'
-        label: 'Le Bureau'
+        label: "Le Conseil d'Administration"
         name: 'bureau'
         fields:
           - <<: *TEMPLATE_BASE

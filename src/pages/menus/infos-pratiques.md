@@ -14,7 +14,7 @@ items:
   - title: Calendrier
     url: /infos-pratiques/calendrier
   - url: /infos-pratiques/bureau
-    title: Les Membres du Bureau
+    title: Le Conseil d'Administration
   - title: Tournois
     items:
       - url: /tournois/tournoi-2023

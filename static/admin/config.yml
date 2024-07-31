@@ -343,7 +343,7 @@ collections:
             widget: list
             fields:
               - { label: Nom, name: name, widget: string }
-              - { label: Titre, name: title, widget: string }
+              - { label: Titre, name: title, widget: text }
               - { label: Photo, name: picture, widget: image, required: false }
 
           - <<: *SEO

@@ -21,7 +21,7 @@ const Member = ({name, picture, title}) => {
       <Heading as="h4" size="md" textAlign="center">
         {name}
       </Heading>
-      <Text fontWeight="semibold" textAlign="center">
+      <Text fontWeight="semibold" textAlign="center" whiteSpace="pre-wrap">
         {title}
       </Text>
     </VStack>

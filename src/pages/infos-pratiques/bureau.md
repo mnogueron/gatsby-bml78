@@ -16,26 +16,41 @@ secretary:
   picture: /assets/kevin-held.jpg
 board:
   - name: Olivier Marechal
-    title: Co-Responsable Section Compétition
+    title: |-
+      Co-Responsable
+      Section Compétition
+    picture: /assets/olivier_marechal.jpg
   - name: Corentin Le Moulec
-    title: Co-Responsable Section Compétition
+    title: |-
+      Co-Responsable
+      Section Compétition
     picture: ""
   - name: Quentin Beauvisage
     title: Responsable Section Jeunes
     picture: /assets/quentin_beauvisage.jpg
   - name: Laetitia Morel
-    title: Responsable Événements et achats
+    title: |-
+      Responsable Événements et achats
+      Animation Section Adultes Jeu Libre
     picture: /assets/laetitia_morel.jpg
   - name: Joël Le Moulec
-    title: Responsable Section Adultes Jeu Libre
+    title: |-
+      Animation
+      Section Adultes Jeu Libre
   - name: Reatha Tith
-    title: Animation Section Adultes Jeu Libre
+    title: |-
+      Animation
+      Section Adultes Jeu Libre
     picture: /assets/reatha_tith.png
   - name: Candice Lesne
-    title: Reponsable Communication Digitale
+    title: |-
+      Reponsable
+      Communication Digitale
     picture: ""
   - name: Cassandre Lesne
-    title: Co-responsable Communication Digitale
+    title: |-
+      Co-responsable
+      Communication Digitale
   - name: Isabelle Laborie
     title: Responsable Formation
     picture: /assets/screenshot_20221202-175212_gallery.jpg
@@ -45,14 +60,14 @@ board:
   - name: Baptiste Caillé
     title: Responsable Partenariats
   - name: Matthieu Nogueron
-    title: Responsable Web
+    title: Responsable Web & Tech
     picture: /assets/matthieu_nogueron.jpg
 seo:
-  description: Les membres du Conseil d'Administration composent l'équipe gestionnaire du club. Il
-    participent au maintient et au développement des intérêts du club et des
-    intérêts de ses adhérents. Si vous avez des questions ou des problèmes liées
-    à une section n'hésitez pas à contacter ou rencontrer les personnes
-    représentantes de la section en question.
+  description: Les membres du Conseil d'Administration composent l'équipe
+    gestionnaire du club. Il participent au maintient et au développement des
+    intérêts du club et des intérêts de ses adhérents. Si vous avez des
+    questions ou des problèmes liées à une section n'hésitez pas à contacter ou
+    rencontrer les personnes représentantes de la section en question.
 ---
 Les membres du **Conseil d'Administration** composent l'équipe gestionnaire du club. Il participent au maintien et au développement des intérêts du club et des intérêts de ses adhérents.
 

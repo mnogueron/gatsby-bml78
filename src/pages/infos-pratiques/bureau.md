@@ -59,7 +59,7 @@ board:
     picture: /assets/photobasecv2023-2-1.png
   - name: Baptiste Caillé
     title: Responsable Partenariats
-    picture: /assets/baptiste_caillé.png
+    picture: /assets/baptiste_caille.png
   - name: Matthieu Nogueron
     title: Responsable Web & Tech
     picture: /assets/matthieu_nogueron.jpg

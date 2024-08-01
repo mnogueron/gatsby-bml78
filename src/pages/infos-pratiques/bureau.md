@@ -46,7 +46,7 @@ board:
     title: |-
       Reponsable
       Communication Digitale
-    picture: ""
+    picture: /assets/candice_lesne.png
   - name: Cassandre Lesne
     title: |-
       Co-responsable
@@ -59,6 +59,7 @@ board:
     picture: /assets/photobasecv2023-2-1.png
   - name: Baptiste Caillé
     title: Responsable Partenariats
+    picture: /assets/baptiste_caillé.png
   - name: Matthieu Nogueron
     title: Responsable Web & Tech
     picture: /assets/matthieu_nogueron.jpg

@@ -9,15 +9,19 @@ seo:
 ---
 ### Informations importantes
 
-**Le nombre de places restantes par section étant à présent limité, nous vous prions de bien vouloir contacter le responsable de la section qui vous intéresse si vous souhaitez nous rejoindre. Il vous transmettra le lien vers la plateforme qui vous permettra de vous inscrire si des places sont encore disponibles.**
+**<!-- Le nombre de places restantes par section étant à présent limité, nous vous prions de bien vouloir contacter le responsable de la section qui vous intéresse si vous souhaitez nous rejoindre. Il vous transmettra le lien vers la plateforme qui vous permettra de vous inscrire si des places sont encore disponibles. -->**
 
-**Les inscriptions devront obligatoirement être faites via la plateforme une fois votre demande pré-validée par le responsable de section.**
+**<!-- Les inscriptions devront obligatoirement être faites via la plateforme une fois votre demande pré-validée par le responsable de section. -->**
 
-Vous trouverez sur cette page les documents obligatoires à joindre à votre inscription, les tarifs pour la saison 2023-2024. Le détail des différentes sections pour choisir celle qui vous convient le plus est disponible sur la page [Nos sections](https://badml.com/infos-pratiques/sections) ainsi que les créneaux et gymnases sur la page [Accès & horaires.](https://badml.com/infos-pratiques/acces-horaires)
+Vous trouverez sur cette page les documents à joindre à votre inscription ainsi que les tarifs pour la saison 2024-2025.
+
+Le détail des différentes sections pour choisir celle qui vous convient le plus est disponible sur la page [Nos sections](https://badml.com/infos-pratiques/sections) ainsi que les créneaux et gymnases sur la page [Accès & horaires.](https://badml.com/infos-pratiques/acces-horaires)
 
 ### Comment s'inscrire au BML ?
 
-**Mode d'emploi et infos essentielles en un clin d'oeil sur [notre flyer de présentation](target_blank:/assets/v2-flyer_bml-23-24.pdf).**
+**🚧 Les informations d'inscription seront bientôt disponibles pour la saison 2024-2025. 🚧**
+
+<!-- **Mode d'emploi et infos essentielles en un clin d'oeil sur [notre flyer de présentation](target_blank:/assets/v2-flyer_bml-23-24.pdf).**
 
 ![Aperçu flyer de présentation 2023-2024](/assets/flyer-2023-2024-preview.png "Aperçu flyer de présentation 2023-2024")
 
@@ -57,10 +61,11 @@ Pour vous inscrire, vous trouverez ci-dessous la liste des documents dont vous a
 
     * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2021-2022**. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
 * la cotisation
+-->
 
 ### Cotisation
 
-#### Tarifs cotisations 2023-2024 (dont licence fédérale)
+#### Tarifs cotisations 2024-2025 (dont licence fédérale)
 
 |         |                                  | Prix     |
 | ------- | -------------------------------- | -------- |
@@ -73,7 +78,6 @@ Pour vous inscrire, vous trouverez ci-dessous la liste des documents dont vous a
 |         | 1 entraînement débutant/confirmé | **225€** |
 |         | 1 entraînement compétition       | **265€** |
 |         | 2 entraînements compétition      | **295€** |
-|         | 3 entraînements compétition      | **315€** |
 
 ***+10€ pour tout résident hors Maisons-Laffitte.***
 
@@ -82,8 +86,9 @@ Pour vous inscrire, vous trouverez ci-dessous la liste des documents dont vous a
 * **\-20€ de réduction** pour la 2ème adhésion au sein du même foyer.
 * **\-30€ de réduction** pour la 3ème, etc...
 
-Pour tous les adhérents, le règlement par **virement bancaire** **est à privilégier.** Merci de bien vouloir indiquer les nom et prénom de l'adhérent dans les références du virement. Vous trouverez le RIB du club ci-dessous :
+Pour tous les adhérents, le règlement par **virement bancaire** **est à privilégier.** Merci de bien vouloir indiquer les nom et prénom de l'adhérent dans les références du virement.
+<!-- Vous trouverez le RIB du club ci-dessous :
 
-![RIB BML](/assets/rib_bml.png "RIB BML")
+![RIB BML](/assets/rib_bml.png "RIB BML") -->
 
 Si vous ne souhaitez ou ne pouvez pas effectuer le paiement par virement, il vous est possible de le faire par chèque, espèces, Chèques Vacances, Coupons Sport, Pass + ou Pass'Sport.

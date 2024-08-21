@@ -63,7 +63,7 @@ const P = props => (
 );
 const Ul = props => (
   <UnorderedList
-    mb={{base: 4, md: 8}}
+    mb={{base: 4}}
     paddingStart={{base: 3, md: 8}}
     sx={{
       '& li::marker': {

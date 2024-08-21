@@ -19,19 +19,19 @@ La section **Jeunes** est destinée aux enfants, répartis en fonction de leur �
 
 | Catégorie    | Année de naissance - âge (2023-2024) | Public      | Formules entraînement(s)/semaine |
 | ------------ | ------------------------------------ | ----------- | -------------------------------- |
-| **Minibad**  | 2016 à 2017 - de 5 à 8 ans           | Loisir      | 1 ou 2                           |
-| **Poussin**  | 2014 et 2015 - 9 ou 10 ans           | Loisir      | 1 ou 2                           |
+| **Minibad**  | 2017 à 2018 - de 5 à 8 ans           | Loisir      | 1 ou 2                           |
+| **Poussin**  | 2015 et 2016 - 9 ou 10 ans           | Loisir      | 1 ou 2                           |
 |              |                                      | Compétiteur | 1, 2 ou 3                        |
-| **Benjamin** | 2012 et 2013  - 11 ou 12 ans         | Loisir      | 1 ou 2                           |
+| **Benjamin** | 2013 et 2014  - 11 ou 12 ans         | Loisir      | 1 ou 2                           |
 |              |                                      | Compétiteur | 1, 2 ou 3                        |
-| **Minime**   | 2010 et 2011 - 13 ou 14 ans          | Loisir      | 1 ou 2                           |
+| **Minime**   | 2011 et 2012 - 13 ou 14 ans          | Loisir      | 1 ou 2                           |
 |              |                                      | Compétiteur | 1, 2 ou 3                        |
-| **Cadet**    | 2008 et 2009 - 15 ou 16 ans          | Loisir      | 1 ou 2                           |
+| **Cadet**    | 2009 et 2010 - 15 ou 16 ans          | Loisir      | 1 ou 2                           |
 |              |                                      | Compétiteur | 1, 2 ou 3                        |
-| **Junior**   | 2006 et 2007 - 17 ou 18 ans          | Loisir      | 1 ou 2                           |
+| **Junior**   | 2007 et 2008 - 17 ou 18 ans          | Loisir      | 1 ou 2                           |
 |              |                                      | Compétiteur | 1, 2 ou 3                        |
 
-![Formules d'entraÏnement jeunes et créneaux 2023-2024](/assets/creneaux-jeunes-2023-2024.png "Formules d'entraÏnement jeunes et créneaux 2023-2024")
+![Formules d'entraÏnement jeunes et créneaux 2024-2025](/assets/creneaux-jeunes-2024-2025.png "Formules d'entraÏnement jeunes et créneaux 2024-2025")
 
 ### Adultes "Jeu libre"
 
@@ -41,12 +41,12 @@ Pour les joueuses et joueurs qui souhaiteraient débuter ou se perfectionner en 
 
 Enfin, de multiples événements sont organisés tout au long de la saison. N'hésitez pas à prendre contact avec nous si vous souhaitez faire une séance d'essai, gratuite et sans engagement !
 
-![Formules adultes loisirs et créneaux 2023-2024](/assets/creneaux-loisirs-2023-2024.png "Formules adultes loisirs et créneaux 2023-2024")
+![Formules adultes loisirs et créneaux 2024-2025](/assets/creneaux-loisirs-2024-2025.png "Formules adultes loisirs et créneaux 2024-2025")
 
 ### Adultes "Compétition"
 
-La section **Adultes "compétition"** rassemble les joueurs classés qui désirent jouer à un niveau plus élevé et peuvent participer aux Interclubs. Des formules de 1 à 3 séances d'entrainement sont proposées aux compétiteurs. Le BML a 6 équipes de Compétition : 3 en Ligue Départementale, 2 en Régionale, et 1 en Nationale.
+La section **Adultes "compétition"** rassemble les joueurs classés qui désirent jouer à un niveau plus élevé et peuvent participer aux Interclubs. Des formules de 1 à 3 séances d'entrainement sont proposées aux compétiteurs. Le BML a 7 équipes de Compétition : 4 en Ligue Départementale, 2 en Régionale, et 1 en Nationale.
 
 Contacter le responsable de la section pour plus d'infos.
 
-![Formules adultes compétiteurs et créneaux 2023-2024](/assets/creneaux-compet-2023-2024.png "Formules adultes compétiteurs et créneaux 2023-2024")
+![Formules adultes compétiteurs et créneaux 2024-2025](/assets/creneaux-compet-2024-2025.png "Formules adultes compétiteurs et créneaux 2024-2025")

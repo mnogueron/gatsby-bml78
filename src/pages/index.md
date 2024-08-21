@@ -10,8 +10,8 @@ subheading: |-
   Le badminton pour tous les niveaux, 
   tous les âges, toutes les envies à Maisons-Laffitte !
 banner:
-  text: "Saison 2024-2025 : les inscriptions ne sont pas encore ouvertes. Les
-    informations seront mises à jour au courant de l'été."
+  text: "Saison 2024-2025 : les inscriptions ouvrent bientôt ! N'hésitez pas à
+    consulter les informations d'inscriptions pour préparer vos dossiers."
   level: info
   hide: false
 ---

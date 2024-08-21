@@ -21,6 +21,7 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react';
 import ShortCode from '../components/ShortCode';
+import IFrame from '../components/IFrame';
 
 const Table = props => (
   <TableContainer>
@@ -154,5 +155,6 @@ export const renderAst = new RehypeReact({
     simplegrid: Grid,
     figcaption: FigCaption,
     code: ShortCode,
+    iframe: IFrame,
   },
 }).Compiler;

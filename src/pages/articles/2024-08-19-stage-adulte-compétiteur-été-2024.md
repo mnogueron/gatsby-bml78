@@ -27,7 +27,9 @@ Les séances seront adaptées aux niveaux technique, tactique et physique des st
 
 ### Inscriptions et renseignements
 
-Pour s'inscrire, merci de remplir le Google Form ici : <https://forms.gle/AEdoewE9ESwqSbP6A>
+Pour s'inscrire, merci de remplir le Google Form ci-dessous :
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnbi0R5K2EmBvCR8ehMy4BgMNGl7o9yYX8QC60oEwA-iAoAA/viewform?embedded=true" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
 
 #### Tarification[](https://forms.gle/HBiEfV8V4rcZR3Q46)
 

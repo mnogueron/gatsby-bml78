@@ -20,7 +20,7 @@ module.exports = {
     description:
       'Retrouvez toutes les actus et info du club de badminton de Maisons-Laffitte',
     siteUrl,
-    image: 'assets/meta-default.png',
+    image: '/assets/meta-default.png',
   },
   plugins: [
     {

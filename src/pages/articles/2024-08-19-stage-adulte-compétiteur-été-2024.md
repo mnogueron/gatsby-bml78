@@ -6,6 +6,8 @@ date: 2024-08-19T14:40:08.837Z
 featuredimage:
   alt: bannière stage adulte été 2024
   image: /assets/banner-stage-adulte-ete-2024.png
+seo:
+  image: /assets/hello-asso-etiquette.png
 ---
 ### Informations
 

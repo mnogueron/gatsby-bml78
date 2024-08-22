@@ -8,18 +8,18 @@ import {useScroll} from '../../hooks/useScroll';
 import Logo from '../Logo';
 import LegacyContainer from '../LegacyContainer';
 
-let badmintonMenuVisibility =
+let betaFeature =
   typeof localStorage !== 'undefined' &&
-  localStorage.getItem('menu-badminton') === 'enabled';
+  localStorage.getItem('beta') === 'enabled';
 
 if (typeof window !== 'undefined') {
-  window.toggleBadmintonMenu = () => {
-    if (!localStorage.getItem('menu-badminton')) {
-      localStorage.setItem('menu-badminton', 'enabled');
-      badmintonMenuVisibility = true;
+  window.toggleBetaFeature = () => {
+    if (!localStorage.getItem('beta')) {
+      localStorage.setItem('beta', 'enabled');
+      betaFeature = true;
     } else {
-      localStorage.removeItem('menu-badminton');
-      badmintonMenuVisibility = false;
+      localStorage.removeItem('beta');
+      betaFeature = false;
     }
   };
 }
@@ -118,9 +118,16 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
       {
         key: 'infospratiques',
         label: 'Infos Pratiques',
-        options: [...infoPratiquesCategories],
+        options: [
+          ...infoPratiquesCategories,
+          betaFeature && {
+            key: 'Boutique',
+            label: 'La Boutique',
+            to: '/boutique',
+          },
+        ].filter(Boolean),
       },
-      badmintonMenuVisibility && {
+      betaFeature && {
         key: 'badminton',
         label: 'Le Badminton',
         options: badmintonCategories,

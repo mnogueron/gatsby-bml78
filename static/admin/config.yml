@@ -281,6 +281,10 @@ collections:
                 ],
             }
           - <<: *SEO
+      - file: 'src/pages/boutique.md'
+        label: 'Boutique'
+        name: 'boutique'
+        fields: *CONTENT_PAGE
 
   - name: 'informations'
     label: 'Infos Pratiques'

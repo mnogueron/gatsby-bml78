@@ -45,7 +45,7 @@ Enfin, de multiples événements sont organisés tout au long de la saison. N'h�
 
 ### Adultes "Compétition"
 
-La section **Adultes "compétition"** rassemble les joueurs classés qui désirent jouer à un niveau plus élevé et peuvent participer aux Interclubs. Des formules de 1 à 3 séances d'entrainement sont proposées aux compétiteurs. Le BML a 7 équipes de Compétition : 4 en Ligue Départementale, 2 en Régionale, et 1 en Nationale.
+La section **Adultes "compétition"** rassemble les joueurs classés qui désirent jouer à un niveau plus élevé et peuvent participer aux Interclubs. Des formules de 1 à 2 séances d'entrainement sont proposées aux compétiteurs. Le BML a 7 équipes de Compétition : 4 en Ligue Départementale, 2 en Régionale, et 1 en Nationale.
 
 Contacter le responsable de la section pour plus d'infos.
 

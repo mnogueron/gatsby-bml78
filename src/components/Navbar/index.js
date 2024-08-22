@@ -116,16 +116,9 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         partial: true,
       },
       {
-        key: 'infospratiques',
-        label: 'Infos Pratiques',
-        options: [
-          ...infoPratiquesCategories,
-          betaFeature && {
-            key: 'Boutique',
-            label: 'La Boutique',
-            to: '/boutique',
-          },
-        ].filter(Boolean),
+        key: 'leclub',
+        label: 'Le Club',
+        options: [...infoPratiquesCategories],
       },
       betaFeature && {
         key: 'badminton',
@@ -133,16 +126,21 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         options: badmintonCategories,
       },
       {
-        key: 'resultats',
-        label: 'Résultats',
+        key: 'interclubs',
+        label: 'Interclubs',
         options: [
           {
-            key: 'allresults',
-            label: 'Tous les résultats',
+            key: 'allintercblusresults',
+            label: "Tous les résultats d'ICs",
             to: '/results',
           },
           ...resultsCategories,
         ],
+      },
+      betaFeature && {
+        key: 'Boutique',
+        label: 'La Boutique',
+        to: '/boutique',
       },
       {
         key: 'contact',
@@ -240,7 +238,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
 
         {/* Mobile Menu open: "block", Menu closed: "hidden" */}
         <Box display={{base: 'none', lg: 'flex'}} alignItems="center">
-          <HStack w="full" alignItems="center" mx={6} my={2}>
+          <HStack w="full" alignItems="center" mx={6} my={2} spacing={0}>
             {desktopMenu.map(menu => {
               if (menu.options) {
                 return (

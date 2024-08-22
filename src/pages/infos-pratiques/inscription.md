@@ -11,57 +11,73 @@ seo:
 
 **<!-- Le nombre de places restantes par section étant à présent limité, nous vous prions de bien vouloir contacter le responsable de la section qui vous intéresse si vous souhaitez nous rejoindre. Il vous transmettra le lien vers la plateforme qui vous permettra de vous inscrire si des places sont encore disponibles. -->**
 
-**<!-- Les inscriptions devront obligatoirement être faites via la plateforme une fois votre demande pré-validée par le responsable de section. -->**
-
-Vous trouverez sur cette page les documents à joindre à votre inscription ainsi que les tarifs pour la saison 2024-2025.
+Vous trouverez sur cette page toutes les informations pour votre inscription ainsi que les tarifs pour la saison 2024-2025.
 
 Le détail des différentes sections pour choisir celle qui vous convient le plus est disponible sur la page [Nos sections](https://badml.com/infos-pratiques/sections) ainsi que les créneaux et gymnases sur la page [Accès & horaires.](https://badml.com/infos-pratiques/acces-horaires)
 
 ### Comment s'inscrire au BML ?
 
-**🚧 Les informations d'inscription seront bientôt disponibles pour la saison 2024-2025. 🚧**
+Tout le processus d'inscription se fait en ligne sur le site de la fédération : [MyFFBad](https://www.myffbad.fr).
 
-<!-- **Mode d'emploi et infos essentielles en un clin d'oeil sur [notre flyer de présentation](target_blank:/assets/v2-flyer_bml-23-24.pdf).**
+Pour vous inscrire, vous trouverez ci-dessous les informations dont vous aurez besoin en fonction de la section que vous souhaitez rejoindre. Vous pourrez nous les faire parvenir directement via la plateforme en ligne.
 
-![Aperçu flyer de présentation 2023-2024](/assets/flyer-2023-2024-preview.png "Aperçu flyer de présentation 2023-2024")
+<!-- Les inscriptions devront obligatoirement être faites via la plateforme dédiée, une fois votre \\\\*\\\\*demande pré-validée par le responsable de section.\\\\*\\\\* -->
 
-Pour vous inscrire, vous trouverez ci-dessous la liste des documents dont vous aurez besoin en fonction de la section que vous souhaitez rejoindre. Vous pourrez nous les faire parvenir directement via la plateforme en ligne.
+**⚠️ Merci de noter que seuls les dossiers complets seront acceptés.**
 
-**Pour un renouvellement de licence, le formulaire en ligne sera automatiquement pré-rempli si vous vous connectez via votre Espace Licencié MyFFBad. Pour cela, vous aurez besoin de votre numéro de licence qui vous a été envoyé par email par la FFBad après votre dernière inscription.** \
+#### Renouvellement de licence
+
+Pour un renouvellement, le formulaire en ligne sera automatiquement pré-rempli si vous vous connectez via votre **Espace Licencié [MyFFBad](https://www.myffbad.fr)**. Pour cela, vous aurez besoin de votre **numéro de licence** qui vous a été envoyé par email par la FFBad après votre dernière inscription.
+
 **Si vous ne le retrouvez pas, vous pouvez obtenir votre numéro de licence ou celui de vos enfants [en recherchant un joueur sur le site MyFFBad](target_blank:https://www.myffbad.fr/recherche/joueur) (pas de compte nécessaire pour y accéder).**
 
-***Merci de noter que seuls les dossiers complets seront acceptés.***
+Une fois connecté, vous devriez recevoir une invitation, mais si ce n'est pas le cas, cliquez sur votre photo de profil. Vous aurez la possibilité de faire la demande de renouvellement ici.
 
-#### Pour une inscription en Jeunes
+![Option de renouvellement](/assets/screenshot_myffbad.png "Option de renouvellement")
 
-* envoyer un email au Responsable de la section : [coach.badml@gmail.com](mailto:coach.badml@gmail.com)
+#### Nouvelle licence ou changement de club
+
+Pour une nouvelle licence, le formulaire en ligne sera à cette adresse : <https://adherer.ffbad.club/bml78>
+
+#### Changement notable pour la saison 2024-2025
+
+À partir de cette saison le certificat médical n'est plus obligatoire pour faire une nouvelle inscription ou un renouvellement. Il est remplacé par un questionnaire de santé, pour lequel un certificat sera nécessaire seulement si vous avez des problèmes de santé qui peuvent être amplifiés par la pratique du sport.
+
+### Les types d'inscriptions
+
+#### 1. Pour une inscription en Jeunes
+
+<!-- * envoyer un email au Responsable de la section : \\\\[coach.badml@gmail.com](mailto:coach.badml@gmail.com) -->
+
 * lire la [feuille d'information Jeune](target_blank:/assets/information_jeune.pdf)
 * remplir le formulaire d'adhésion en ligne (pour un renouvellement de licence, il sera pré-rempli si vous vous connectez via votre Espace Licencié MyFFBad) avec :
 
-  * le [questionnaire de Santé Mineur](target_blank:/assets/ffbad_-_mineurs_questionnaire_sante.pdf)
+  * le [questionnaire de Santé Mineur](target_blank:/assets/ffbad_-_mineurs_questionnaire_sante.pdf) **OU** un [Certificat médical](target_blank:/assets/2024_certificat_ffbad_medical.pdf)
+
+    * **Certificat médical** : Si vous répondez OUI sur une des cases du questionnaire de santé. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
   * [l'attestation de sortie](target_blank:/assets/sortie-seances-jeunes.pdf) (à signer par les parents)
 * la cotisation
 
-#### Pour une inscription en Adultes - Jeu Libre ou Entraînement débutant/confirmé
+#### 2. Pour une inscription en Adultes - Jeu Libre ou Entraînement débutant/confirmé
 
-* envoyer un email au Responsable de la section : [loisirs.badml@gmail.com](mailto:loisirs.badml@gmail.com)
+<!-- * envoyer un email au Responsable de la section : \\\\[loisirs.badml@gmail.com](mailto:loisirs.badml@gmail.com) -->
+
 * remplir le formulaire d'adhésion en ligne (pour un renouvellement de licence, il sera pré-rempli si vous vous connectez via votre Espace Licencié MyFFBad) avec :
 
-  * un [Certificat médical](target_blank:/assets/2023_certificat_ffbad_medical.pdf) **OU** le [questionnaire de Santé](target_blank:/assets/ffbad_-_adultes_questionnaire_sante_1.pdf)
+  * le [questionnaire de Santé](target_blank:/assets/ffbad_-_adultes_questionnaire_sante_1.pdf) **OU** un [Certificat médical](target_blank:/assets/2024_certificat_ffbad_medical.pdf)
 
-    * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2021-2022**. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
+    * **Certificat médical** : Si vous répondez OUI sur une des cases du questionnaire de santé. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
 * la cotisation
 
-#### Pour une inscription en Adultes - Compétition
+#### 3. Pour une inscription en Adultes - Compétition
 
 * envoyer un email au Responsable de la section : [competition.badml@gmail.com](mailto:competition.badml@gmail.com)
 * remplir le formulaire d'adhésion en ligne (pour un renouvellement de licence, il sera pré-rempli si vous vous connectez via votre Espace Licencié MyFFBad) avec :
 
-  * un [Certificat médical](target_blank:/assets/2023_certificat_ffbad_medical.pdf) **OU** le [questionnaire de Santé](target_blank:/assets/ffbad_-_adultes_questionnaire_sante_1.pdf)
+  * le [questionnaire de Santé](target_blank:/assets/ffbad_-_adultes_questionnaire_sante_1.pdf) **OU** un [Certificat médical](target_blank:/assets/2024_certificat_ffbad_medical.pdf)
 
-    * **Certificat médical** : Pour tous les nouveaux adhérents au club et tous les adhérents qui renouvellent leur adhésion et ont fourni un certificat médical **avant la saison 2021-2022**. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
+    * **Certificat médical** : Si vous répondez OUI sur une des cases du questionnaire de santé. À imprimer, faire remplir et signer par son médecin traitant. **Aucun certificat sur papier libre ne sera accepté.**
 * la cotisation
--->
 
 ### Cotisation
 
@@ -86,9 +102,14 @@ Pour vous inscrire, vous trouverez ci-dessous la liste des documents dont vous a
 * **\-20€ de réduction** pour la 2ème adhésion au sein du même foyer.
 * **\-30€ de réduction** pour la 3ème, etc...
 
-Pour tous les adhérents, le règlement par **virement bancaire** **est à privilégier.** Merci de bien vouloir indiquer les nom et prénom de l'adhérent dans les références du virement.
-<!-- Vous trouverez le RIB du club ci-dessous :
-
-![RIB BML](/assets/rib_bml.png "RIB BML") -->
+Pour tous les adhérents, le règlement par **l'intermédiaire de MyFFBad** ou les **virements bancaire** **sont à privilégier.** Merci de bien vouloir indiquer les nom et prénom de l'adhérent dans les références du virement.
 
 Si vous ne souhaitez ou ne pouvez pas effectuer le paiement par virement, il vous est possible de le faire par chèque, espèces, Chèques Vacances, Coupons Sport, Pass + ou Pass'Sport.
+
+## Se tenir au courant
+
+Une fois inscrit au BML, n'oubliez pas de rejoindre le **Discord du club**, où sont transmises les dernières infos concernant les **créneaux**, les **entraînements**, les **évènements**, et où vous pourrez retrouver les autres membres du club pour parler badminton, organiser des sessions de jeu libre et profiter des conseils matériel d'autres membres.
+
+Pour s'inscrire, rien de plus simple, il suffira juste de suivre [ce lien Discord](target_blank:https://discord.gg/kVQygGKvH4). Une fois inscrit, pensez bien à vous signaler afin d'être ajouté dans les bons groupes de discussions.
+
+Si vous êtes parent d'un jeune joueur n'hésitez pas à rejoindre le salon de discussion pour rester à jour avec les dernières informations concernant les créneaux d'entraînements de vos enfants.

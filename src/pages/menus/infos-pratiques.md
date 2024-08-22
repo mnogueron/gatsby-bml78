@@ -11,8 +11,6 @@ items:
     url: /infos-pratiques/acces-horaires
   - title: Partenaires et Sponsors
     url: /infos-pratiques/avantages
-  - title: Calendrier
-    url: /infos-pratiques/calendrier
   - url: /infos-pratiques/bureau
     title: Le Conseil d'Administration
   - title: Tournois
@@ -23,4 +21,6 @@ items:
     items:
       - title: Stage jeune - Été 2024
         url: /articles/2024-07-19-stage-jeune-%C3%A9t%C3%A9-2024/
+      - title: Stage adulte - Été 2024
+        url: /articles/2024-08-19-stage-adulte-comp%C3%A9titeur-%C3%A9t%C3%A9-2024/
 ---

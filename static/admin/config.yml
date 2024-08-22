@@ -286,16 +286,16 @@ collections:
         name: 'boutique'
         fields: *CONTENT_PAGE
 
-  - name: 'informations'
-    label: 'Infos Pratiques'
+  - name: 'club-information'
+    label: 'Le Club'
     files:
       - file: 'src/pages/infos-pratiques/inscription.md'
         label: 'Inscription'
         name: 'inscription'
         fields: *CONTENT_PAGE
       - file: 'src/pages/infos-pratiques/avantages.md'
-        label: 'Avantages'
-        name: 'avantages'
+        label: 'Partenaires et sponsors'
+        name: 'partners-sponsors'
         fields: *CONTENT_PAGE
       - file: 'src/pages/infos-pratiques/entrainements.md'
         label: 'Entraînements'
@@ -376,9 +376,9 @@ collections:
     summary: '[{{day}}-{{month}}-{{year}}] {{title}}'
     fields: *ARTICLE_PAGE
 
-  - name: 'results'
-    label: 'Résultats'
-    label_singular: 'Résultat'
+  - name: 'ic-results'
+    label: 'Interclubs'
+    label_singular: "Résultat d'IC"
     folder: 'src/pages/results'
     filter: { field: 'templateKey', value: 'result-page' }
     create: true

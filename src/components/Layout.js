@@ -12,7 +12,7 @@ const Layout = ({children, pageContext}) => {
         as="main"
         mb="auto"
         minHeight="100%"
-        marginTop={
+        paddingTop={
           pageContext?.templateKey !== 'index-page'
             ? {
                 base: 'bml.navbar.height.base',

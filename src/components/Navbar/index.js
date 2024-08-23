@@ -245,6 +245,8 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
               icon={<Icon as={FiMenu} boxSize={6} />}
               onClick={() => setMenuOpen(!menuOpen)}
               variant="ghost"
+              color={isTransparent ? 'gray.100' : 'gray.500'}
+              colorScheme={isTransparent ? 'whiteAlpha' : 'gray'}
             />
           </Box>
         </Flex>

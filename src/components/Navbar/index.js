@@ -7,6 +7,15 @@ import NavLink from './NavLink';
 import {useScroll} from '../../hooks/useScroll';
 import Logo from '../Logo';
 import LegacyContainer from '../LegacyContainer';
+import {GiShuttlecock} from 'react-icons/gi';
+import {
+  FiAward,
+  FiHexagon,
+  FiHome,
+  FiMail,
+  FiRadio,
+  FiShoppingCart,
+} from 'react-icons/fi';
 
 let betaFeature =
   typeof localStorage !== 'undefined' &&
@@ -114,16 +123,20 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         label: 'Actualités',
         to: '/articles',
         partial: true,
+        icon: FiRadio,
       },
       {
         key: 'leclub',
         label: 'Le Club',
         options: [...infoPratiquesCategories],
+        isDefaultExpanded: true,
+        icon: FiHexagon,
       },
       betaFeature && {
         key: 'badminton',
         label: 'Le Badminton',
         options: badmintonCategories,
+        icon: GiShuttlecock,
       },
       {
         key: 'interclubs',
@@ -136,16 +149,19 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
           },
           ...resultsCategories,
         ],
+        icon: FiAward,
       },
       betaFeature && {
         key: 'Boutique',
         label: 'La Boutique',
         to: '/boutique',
+        icon: FiShoppingCart,
       },
       {
         key: 'contact',
         label: 'Contact',
         to: '/contact',
+        icon: FiMail,
       },
     ].filter(Boolean);
 
@@ -155,6 +171,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
           key: 'accueil',
           label: 'Accueil',
           to: '/',
+          icon: FiHome,
         },
         ...desktopMenu,
       ],

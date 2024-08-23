@@ -1,6 +1,6 @@
 import React, {useMemo, useState} from 'react';
 import {graphql, useStaticQuery} from 'gatsby';
-import {Box, Flex, HStack} from '@chakra-ui/react';
+import {Box, Flex, HStack, Icon, IconButton} from '@chakra-ui/react';
 import MobileMenu from './MobileMenu';
 import DropdownNavLink from './DropdownNavLink';
 import NavLink from './NavLink';
@@ -13,8 +13,10 @@ import {
   FiHexagon,
   FiHome,
   FiMail,
+  FiMenu,
   FiRadio,
   FiShoppingCart,
+  FiYoutube,
 } from 'react-icons/fi';
 
 let betaFeature =
@@ -32,6 +34,15 @@ if (typeof window !== 'undefined') {
     }
   };
 }
+
+const getMenuIcon = title => {
+  switch (title) {
+    case 'Toutes les vidéos':
+      return FiYoutube;
+    default:
+      return undefined;
+  }
+};
 
 // TODO use dark / light mode instead of isTransparent
 // TODO review animation on scroll with isTransparent
@@ -101,6 +112,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
             label: item.title,
             to: item.url,
           })),
+          icon: getMenuIcon(item.title),
         };
       }
 
@@ -108,6 +120,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         key: `${item.url} - ${item.title}`,
         label: item.title,
         to: item.url,
+        icon: getMenuIcon(item.title),
       };
     };
     const infoPratiquesCategories =
@@ -177,7 +190,11 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
       ],
       desktopMenu: desktopMenu,
     };
-  }, [infosPratiquesMenu, resultsMenu]);
+  }, [
+    badmintonMenu.frontmatter.items,
+    infosPratiquesMenu.frontmatter.items,
+    resultsMenu.frontmatter.items,
+  ]);
 
   const isTransparent = isTransparentAtTop && scrollY < 1;
 
@@ -223,27 +240,12 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
 
           {/* Mobile menu button */}
           <Box display={{base: 'flex', lg: 'none'}}>
-            <Box
-              as="button"
-              type="button"
-              _hover={{
-                color: isTransparent ? 'gray.200' : 'gray.600',
-              }}
-              _focus={{
-                color: isTransparent ? 'gray.200' : 'gray.600',
-                outline: 'none',
-              }}
-              color={isTransparent ? 'gray.100' : 'gray.500'}
-              aria-label="toggle menu"
+            <IconButton
+              aria-label={'menu'}
+              icon={<Icon as={FiMenu} boxSize={6} />}
               onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <Box as="svg" viewBox="0 0 24 24" w={6} h={6} fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                ></path>
-              </Box>
-            </Box>
+              variant="ghost"
+            />
           </Box>
         </Flex>
 

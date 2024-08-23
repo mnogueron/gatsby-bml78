@@ -1,5 +1,6 @@
-import React, {useMemo} from 'react';
+import React, {useEffect, useMemo} from 'react';
 import {graphql, PageProps} from 'gatsby';
+import CryptoJS from 'crypto-js';
 
 // @ts-ignore
 import IndexPageTemplate from '../containers/Home/IndexPageTemplate';
@@ -19,6 +20,37 @@ const IndexPage = ({data}: PageProps<Queries.IndexPageQuery>) => {
 
     return data.allVideosMarkdownRemark.edges[0].node.frontmatter!!.videos;
   }, [data.allVideosMarkdownRemark.edges]);
+
+  /*useEffect(() => {
+    const tokenGenerate = (e: string) => {
+      const t = new Date().getTime();
+      return (
+        CryptoJS.SHA256(
+          t + '.' + e + '.93046758d21048ae10e9fa249537aa79'
+        ).toString() +
+        '.' +
+        t
+      );
+    };
+
+    const fetchPlayer = async (licence: string) => {
+      const response = await fetch(
+        `https://www.myffbad.fr/api/person/${licence}/informationsLicence/undefined`,
+        {
+          headers: {
+            accept: 'application/json',
+            'caller-url': '/api/person/',
+            'verify-token': tokenGenerate('/api/person/'),
+          },
+          referrer: 'https://www.myffbad.fr/joueur/07379762',
+          method: 'GET',
+        }
+      );
+      const json = await response.json();
+      console.log(json);
+    };
+    fetchPlayer('06563656');
+  }, []);*/
 
   if (!fm) {
     return null;

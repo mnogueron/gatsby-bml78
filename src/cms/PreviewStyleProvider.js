@@ -2,6 +2,7 @@ import React, {useMemo, useState} from 'react';
 import createCache from '@emotion/cache';
 import {CacheProvider} from '@emotion/react';
 import {ChakraProvider} from '@chakra-ui/react';
+import theme from '../@chakra-ui/gatsby-plugin/theme';
 
 const FrameProvider = props => {
   const [container, setContainer] = useState(document.head);
@@ -33,7 +34,7 @@ const FrameProvider = props => {
 const PreviewStyleProvider = props => {
   return (
     <FrameProvider>
-      <ChakraProvider>{props.children}</ChakraProvider>
+      <ChakraProvider theme={theme}>{props.children}</ChakraProvider>
     </FrameProvider>
   );
 };

@@ -23,7 +23,15 @@ type BannerProps = {
 
 const Banner = ({banner}: BannerProps) => {
   const bodyRef = useRef(
-    typeof document !== 'undefined' ? document.body : null
+    typeof document !== 'undefined'
+      ? document.getElementById('preview-pane')
+        ? (
+            document.getElementById('preview-pane') as
+              | HTMLIFrameElement
+              | undefined
+          )?.contentDocument?.body || null
+        : document.body
+      : null
   );
   const {scrollY, scrollDirection} = useScroll();
   const {isOpen, onClose, onOpen} = useDisclosure();

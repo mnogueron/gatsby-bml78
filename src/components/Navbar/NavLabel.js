@@ -10,28 +10,16 @@ const NavLabel = ({label, icon, isTransparent, ...rest}) => {
         color: isTransparent ? 'text.inverted.main' : 'text.main',
         fontWeight: 'semibold',
         position: 'relative',
-        mx: 2,
-        p: 3,
+        px: 2,
+        py: 2,
         textAlign: 'center',
         '&:hover': {
           color: 'primary',
         },
       }}
     >
-      <Text mr={icon && 2}>{label}</Text>
-      {icon && (
-        <Flex
-          sx={{
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            right: '-0.5rem',
-            alignItems: 'center',
-          }}
-        >
-          {icon}
-        </Flex>
-      )}
+      <Text>{label}</Text>
+      {icon && <Flex width={4}>{icon}</Flex>}
     </Flex>
   );
 };

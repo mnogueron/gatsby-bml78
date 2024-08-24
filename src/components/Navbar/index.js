@@ -207,6 +207,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
       as="nav"
       shadow={scrollY < 1 ? undefined : 'xl'}
       backgroundColor={isTransparent ? 'transparent' : 'bg.main'}
+      borderBottomRadius={{base: 'xl', md: '2xl'}}
       sx={{
         w: '100%',
         zIndex: 30,
@@ -259,7 +260,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
 
         {/* Mobile Menu open: "block", Menu closed: "hidden" */}
         <Box display={{base: 'none', lg: 'flex'}} alignItems="center">
-          <HStack w="full" alignItems="center" mx={6} my={2} spacing={0}>
+          <HStack w="full" alignItems="center" mx={6} my={2} spacing={4}>
             {desktopMenu.map(menu => {
               if (menu.options) {
                 return (

@@ -134,7 +134,7 @@ const MenuItem = ({item, onClose, level}) => {
 
 const MobileMenu = ({onClose, isOpen, menu}) => {
   return (
-    <Drawer onClose={onClose} isOpen={isOpen} size="sm">
+    <Drawer onClose={onClose} isOpen={isOpen} size="xs">
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
@@ -159,7 +159,7 @@ const MobileMenu = ({onClose, isOpen, menu}) => {
           <Heading fontSize="sm">Badminton Maisons-Laffitte</Heading>
         </DrawerHeader>
 
-        <DrawerBody>
+        <DrawerBody px={3}>
           <Accordion allowMultiple>
             {menu.map(m => (
               <MenuItem key={m.key} item={m} onClose={onClose} level={0} />

@@ -164,7 +164,7 @@ const Navbar = ({isTransparentAtTop, ...rest}) => {
         ],
         icon: FiAward,
       },
-      betaFeature && {
+      {
         key: 'Boutique',
         label: 'La Boutique',
         to: '/boutique',

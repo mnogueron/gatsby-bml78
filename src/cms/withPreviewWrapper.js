@@ -31,6 +31,7 @@ const getSEOData = data => {
     case 'articles-page':
     case 'contact-page':
     case 'content-page':
+    case 'boutique-page':
     case 'board-chart-page':
     case 'index-page':
       return {

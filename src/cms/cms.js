@@ -30,6 +30,7 @@ const ContentPages = [
   'histoire-badminton',
   'regles-badminton',
   'interclubs',
+  'boutique',
 ];
 
 const previewTemplates = {

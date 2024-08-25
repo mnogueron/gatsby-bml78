@@ -127,6 +127,7 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          `gatsby-remark-autolink-headers`,
         ],
         /*excerpt: (file, options) => {
           file.excerpt = file.content

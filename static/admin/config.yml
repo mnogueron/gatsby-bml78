@@ -84,6 +84,15 @@ content_page: &CONTENT_PAGE
   - <<: *BODY
   - <<: *SEO
 
+boutique_page: &BOUTIQUE_PAGE
+  - <<: *TEMPLATE_BASE
+    default: 'boutique-page'
+  - <<: *TITLE
+  - <<: *HEADING
+  - <<: *SUBHEADING
+  - <<: *BODY
+  - <<: *SEO
+
 article_page: &ARTICLE_PAGE
   - <<: *TEMPLATE_BASE
     default: 'article-page'
@@ -284,7 +293,7 @@ collections:
       - file: 'src/pages/boutique.md'
         label: 'Boutique'
         name: 'boutique'
-        fields: *CONTENT_PAGE
+        fields: *BOUTIQUE_PAGE
 
   - name: 'club-information'
     label: 'Le Club'

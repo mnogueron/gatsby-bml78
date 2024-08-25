@@ -97,16 +97,22 @@ const useTimer = (timeout: number, onDone?: () => void, interval = SECOND) => {
 
 const MemberAccessGuard = ({children}: MemberAccessGuardProps) => {
   const [isLogged, setIsLogged] = useState(
-    Boolean(localStorage.getItem('memberLicence'))
+    typeof localStorage !== 'undefined'
+      ? Boolean(localStorage.getItem('memberLicence'))
+      : false
   );
   const [licence, setLicence] = useState('');
   const [error, setError] = useState<string>();
   const [throttleTimeout, setThrottleTimeout] = useState(
-    Number(localStorage.getItem('throttleTimeout') || 0)
+    typeof localStorage !== 'undefined'
+      ? Number(localStorage.getItem('throttleTimeout') || 0)
+      : 0
   );
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [throttleCounter, setThrottleCounter] = useState(
-    Number(localStorage.getItem('throttleCounter') || 0)
+    typeof localStorage !== 'undefined'
+      ? Number(localStorage.getItem('throttleCounter') || 0)
+      : 0
   );
   const {minutes, seconds, timespan} = useTimer(throttleTimeout, () => {
     setThrottleTimeout(0);

@@ -43,6 +43,10 @@ const theme = {
       body: {
         bg: 'bg.main',
       },
+      '.title-link-anchor.before': {
+        top: '50%',
+        transform: 'translate(-100%, -50%)',
+      },
     },
   },
   semanticTokens,

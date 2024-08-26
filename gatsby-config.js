@@ -134,6 +134,13 @@ module.exports = {
               className: 'title-link-anchor',
             },
           },
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`,
+            },
+          },
         ],
         /*excerpt: (file, options) => {
           file.excerpt = file.content

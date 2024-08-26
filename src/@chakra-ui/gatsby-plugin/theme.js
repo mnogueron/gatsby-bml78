@@ -36,6 +36,13 @@ const theme = {
   components,
   styles: {
     global: {
+      'html, body, #___gatsby, #gatsby-focus-wrapper': {
+        minHeight: '100vh',
+      },
+      '#gatsby-focus-wrapper': {
+        display: 'flex',
+        flexDirection: 'column',
+      },
       '.embedVideo-container': {
         maxWidth: 800,
         margin: 'auto',

@@ -18,22 +18,7 @@ import {
   FiShoppingCart,
   FiYoutube,
 } from 'react-icons/fi';
-
-let betaFeature =
-  typeof localStorage !== 'undefined' &&
-  localStorage.getItem('beta') === 'enabled';
-
-if (typeof window !== 'undefined') {
-  window.toggleBetaFeature = () => {
-    if (!localStorage.getItem('beta')) {
-      localStorage.setItem('beta', 'enabled');
-      betaFeature = true;
-    } else {
-      localStorage.removeItem('beta');
-      betaFeature = false;
-    }
-  };
-}
+import {useBetaFeature} from '../../hooks/useBetaFeature';
 
 const getMenuIcon = title => {
   switch (title) {
@@ -47,6 +32,7 @@ const getMenuIcon = title => {
 // TODO use dark / light mode instead of isTransparent
 // TODO review animation on scroll with isTransparent
 const Navbar = ({isTransparentAtTop, ...rest}) => {
+  const betaFeature = useBetaFeature();
   const {scrollY, scrollDirection} = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
   const {infosPratiquesMenu, badmintonMenu, resultsMenu} = useStaticQuery(

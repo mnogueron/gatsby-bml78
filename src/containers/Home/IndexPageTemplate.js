@@ -7,6 +7,8 @@ import LastResultsSection from './components/LastResultsSection';
 import VideosSection from './components/VideosSection';
 import {preparePosts} from '../../utils';
 import Banner from '../../components/Banner';
+import FeatherChaseIntroMessage from '../FeatherChase/FeatherChaseIntroMessage';
+import {useBetaFeature} from '../../hooks/useBetaFeature';
 
 const IndexPageTemplate = ({
   heading,
@@ -19,6 +21,7 @@ const IndexPageTemplate = ({
   results = [],
   videos = [],
 }) => {
+  const beta = useBetaFeature();
   const preparedPosts = useMemo(() => preparePosts(posts), [posts]);
   const preparedResults = useMemo(() => preparePosts(results), [results]);
 
@@ -35,6 +38,7 @@ const IndexPageTemplate = ({
         <Banner banner={banner} />
 
         <ClubQuoteSection content={clubSectionContent} />
+        {beta && <FeatherChaseIntroMessage />}
         <LastNewsSection posts={preparedPosts} />
         <LastResultsSection results={preparedResults} />
         <VideosSection videos={videos} />

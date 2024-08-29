@@ -1,25 +1,23 @@
-import React, {useLayoutEffect, useMemo, useState} from 'react';
+import React, {useLayoutEffect, useState} from 'react';
 import {Box, ResponsiveObject, useBreakpointValue} from '@chakra-ui/react';
 import Image from '../../components/Image';
 import {createPortal} from 'react-dom';
-import {FeatherType, EncodedFeatherType} from './types';
+import {FeatherType} from './types';
 import {Global} from '@emotion/react';
+import {useFeatherChaseContext} from './FeatherChaseProvider';
 
 type FeatherProps = {
-  encodedFeather: EncodedFeatherType;
+  f: FeatherType;
 };
 
-const Feather = ({encodedFeather}: FeatherProps) => {
+const Feather = ({f}: FeatherProps) => {
+  const {catchFeather} = useFeatherChaseContext();
   const [portalRef, setPortalRef] = useState<Element | null>(null);
-  const featherContent = useMemo(() => {
-    return JSON.parse(atob(encodedFeather.content)) as FeatherType;
-  }, [encodedFeather.content]);
   const portalSelector = useBreakpointValue(
-    typeof featherContent.portalSelector === 'object'
-      ? (featherContent.portalSelector as ResponsiveObject<string>)
-      : {base: featherContent.portalSelector}
+    typeof f.portalSelector === 'object'
+      ? (f.portalSelector as ResponsiveObject<string>)
+      : {base: f.portalSelector}
   );
-  //const portalRef = useRef<HTMLElement | null>(null);
 
   useLayoutEffect(() => {
     if (!portalSelector) {
@@ -28,24 +26,21 @@ const Feather = ({encodedFeather}: FeatherProps) => {
     const parentContainer = document.querySelector(portalSelector);
     if (parentContainer) {
       let portalContainer = parentContainer.children[0];
-      if (
-        !portalContainer ||
-        portalContainer.id !== `container-${featherContent.id}`
-      ) {
+      if (!portalContainer || portalContainer.id !== `container-${f.id}`) {
         portalContainer = document.createElement('div');
-        portalContainer.setAttribute('id', `container-${featherContent.id}`);
+        portalContainer.setAttribute('id', `container-${f.id}`);
         parentContainer.prepend(portalContainer);
       }
       if (portalContainer) {
         setPortalRef(portalContainer);
       }
     }
-  }, [featherContent, portalSelector]);
+  }, [f, portalSelector]);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
     e.preventDefault();
-    console.log('Found feather');
+    catchFeather(f.id);
   };
 
   if (!portalRef) {
@@ -63,14 +58,14 @@ const Feather = ({encodedFeather}: FeatherProps) => {
         <Box
           as={Image}
           image={{
-            url: `/assets/featherChase/plume_${featherContent.assetId}.svg`,
+            url: `/assets/featherChase/plume_${f.assetId}.svg`,
           }}
           alt=""
           position="absolute"
           height="32px"
           padding={2}
           boxSizing="content-box"
-          sx={featherContent.sx}
+          sx={f.sx}
           onClick={handleClick}
         />,
         portalRef

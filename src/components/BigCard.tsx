@@ -51,20 +51,22 @@ const BigCard = ({
       }}
       {...rest}
     >
-      <Box
-        as={Image}
-        width="100%"
-        height={
-          size === 'lg'
-            ? {base: 400, sm: 500, md: 500, lg: 600}
-            : size === 'md'
-              ? {base: 300, sm: 300, md: 400, lg: 400}
-              : {base: 250, sm: 250, md: 300, lg: 400}
-        }
-        borderRadius={20}
-        image={image?.image || {url: '/static/assets/shuttle.jpg'}}
-        alt={image?.alt || 'image de volant'}
-      />
+      <Box data-testid="card-image">
+        <Box
+          as={Image}
+          width="100%"
+          height={
+            size === 'lg'
+              ? {base: 400, sm: 500, md: 500, lg: 600}
+              : size === 'md'
+                ? {base: 300, sm: 300, md: 400, lg: 400}
+                : {base: 250, sm: 250, md: 300, lg: 400}
+          }
+          borderRadius={20}
+          image={image?.image || {url: '/static/assets/shuttle.jpg'}}
+          alt={image?.alt || 'image de volant'}
+        />
+      </Box>
       <Flex
         position="absolute"
         bottom={0}

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Text, Container, Heading, VStack, Stack} from '@chakra-ui/react';
 import Image from '../../components/Image';
+import {TypeAnimation} from 'react-type-animation';
 
 const FeatherChaseIntroMessage = () => {
   return (
@@ -17,6 +18,7 @@ const FeatherChaseIntroMessage = () => {
           borderRadius="md"
           spacing={3}
           alignItems="initial"
+          flex={1}
           sx={{
             position: 'relative',
             '&::before': {
@@ -49,7 +51,14 @@ const FeatherChaseIntroMessage = () => {
             fontFamily={'VT323, monospace'}
             lineHeight="short"
           >
-            {`À trop jouer au badminton, notre mascotte a perdu ses plumes qui se sont envolées au quatres coins du site.... Au total 16 morceaux de plumes sur 16 pages différentes. Bonne chasse !`}
+            <TypeAnimation
+              sequence={[
+                `À trop jouer au badminton, notre mascotte a perdu ses plumes... Elles ont pris la poudre d'escampette et se sont envolées au quatres coins du site.... Au total, 4 plumes brisées en 4 morceaux sur 16 pages différentes. Bonne chasse !`,
+              ]}
+              wrapper="span"
+              speed={60}
+              cursor={false}
+            />
           </Text>
         </VStack>
         <Box

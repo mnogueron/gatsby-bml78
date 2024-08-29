@@ -5,9 +5,10 @@ import {Post} from '../types/post';
 
 type CardGridProps = {
   posts: Post[];
+  getIdKey?: (index: number) => string;
 };
 
-const CardGrid = ({posts}: CardGridProps) => {
+const CardGrid = ({posts, getIdKey}: CardGridProps) => {
   return (
     <SimpleGrid
       columns={{base: 1, sm: 2, lg: 3}}
@@ -22,6 +23,7 @@ const CardGrid = ({posts}: CardGridProps) => {
             subtitle={post.cardSubtitle}
             date={post.date}
             url={post.fields.slug}
+            id={getIdKey ? getIdKey(idx) : undefined}
           />
         );
       })}

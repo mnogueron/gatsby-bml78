@@ -3,10 +3,11 @@ import {Box} from '@chakra-ui/react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import BreakpointTag from './BreakpointTag';
+import FeatherChaseProvider from '../containers/FeatherChase/FeatherChaseProvider';
 
 const Layout = ({children, pageContext}) => {
   return (
-    <>
+    <FeatherChaseProvider f={pageContext.feather}>
       <Navbar isTransparentAtTop={pageContext?.templateKey === 'index-page'} />
       <Box
         as="main"
@@ -28,7 +29,7 @@ const Layout = ({children, pageContext}) => {
 
       {/* small badge to display current break-point (only in dev mode) */}
       {process.env.NODE_ENV === 'development' && <BreakpointTag />}
-    </>
+    </FeatherChaseProvider>
   );
 };
 

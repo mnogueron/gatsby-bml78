@@ -27,12 +27,14 @@ const Card = ({image, heading, date, subtitle, url, ...rest}: CardProps) => {
       }}
       {...rest}
     >
-      <Image
-        image={image?.image || {url: '/static/assets/shuttle.jpg'}}
-        alt={image?.alt || 'image de volant'}
-        borderRadius="md"
-        overflow="hidden"
-      />
+      <Box data-testid="card-image">
+        <Image
+          image={image?.image || {url: '/static/assets/shuttle.jpg'}}
+          alt={image?.alt || 'image de volant'}
+          borderRadius="md"
+          overflow="hidden"
+        />
+      </Box>
       <VStack spacing={2} alignItems="initial" mt={4}>
         {date && (
           <Text color="text.secondary" fontSize="sm">

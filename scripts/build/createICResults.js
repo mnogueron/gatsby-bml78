@@ -1,4 +1,5 @@
 import {getComponent} from './utils.js';
+import {ALL_FEATHERS} from './feathers.js';
 
 const query = graphql =>
   graphql(`
@@ -97,6 +98,7 @@ export const createICResults = async ({graphql, actions}) => {
           previous && previous.frontmatter.category === category
             ? previous
             : undefined,
+        feather: ALL_FEATHERS.find(f => f.location === fields.slug),
       },
     });
   });

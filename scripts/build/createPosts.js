@@ -1,4 +1,5 @@
 import {getComponent} from './utils.js';
+import {ALL_FEATHERS} from './feathers.js';
 
 const query = graphql =>
   graphql(`
@@ -91,6 +92,7 @@ export const createPosts = async ({graphql, actions}) => {
         templateKey,
         next,
         previous,
+        feather: ALL_FEATHERS.find(f => f.location === fields.slug),
       },
     });
   });

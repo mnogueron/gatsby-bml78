@@ -1,5 +1,3 @@
-declare global {
-  interface Window {
-    toggleBetaFeature: () => void;
-  }
+interface Window {
+  toggleBetaFeature: () => void;
 }

@@ -1,4 +1,5 @@
 import {getComponent} from './utils.js';
+import {ALL_FEATHERS} from './feathers.js';
 
 const query = graphql =>
   graphql(`
@@ -69,6 +70,7 @@ export const createBasePages = async ({graphql, actions}) => {
           image: seo?.image?.childImageSharp?.fixed?.src || undefined,
         },
         templateKey,
+        feather: ALL_FEATHERS.find(f => f.location === fields.slug),
       },
     });
   });

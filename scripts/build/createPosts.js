@@ -5,11 +5,6 @@ const query = graphql =>
   graphql(
     `
       query loadPagesQuery($hiddenCheck: [Boolean]!) {
-        site {
-          siteMetadata {
-            nodeEnv
-          }
-        }
         allMarkdownRemark(
           sort: {frontmatter: {date: DESC}}
           filter: {

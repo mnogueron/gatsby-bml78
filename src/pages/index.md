@@ -6,11 +6,11 @@ headerImage: /assets/header.png
 heading: |-
   Badminton
   Maisons-Laffitte
-subheading: |-
-  Le badminton pour tous les niveaux, 
-  tous les âges, toutes les envies à Maisons-Laffitte !
+subheading: Le badminton pour tous les niveaux, tous les âges, toutes les envies
+  à Maisons-Laffitte !
 banner:
-  text: "Saison 2024-2025 : les inscriptions sont désormais ouvertes !"
+  text: "Dimanche 8 septembre : portes ouvertes au gymnase Jules Verne
+    (Sartrouville) de 10h à 13h !"
   level: info
   hide: false
 ---

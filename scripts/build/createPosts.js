@@ -2,60 +2,79 @@ import {getComponent} from './utils.js';
 import {ALL_FEATHERS} from './feathers.js';
 
 const query = graphql =>
-  graphql(`
-    {
-      allMarkdownRemark(
-        sort: {frontmatter: {date: DESC}}
-        filter: {frontmatter: {templateKey: {eq: "article-page"}}}
-      ) {
-        edges {
-          node {
-            id
-            fields {
-              slug
+  graphql(
+    `
+      query loadPagesQuery($hiddenCheck: [Boolean]!) {
+        site {
+          siteMetadata {
+            nodeEnv
+          }
+        }
+        allMarkdownRemark(
+          sort: {frontmatter: {date: DESC}}
+          filter: {
+            frontmatter: {
+              templateKey: {eq: "article-page"}
+              hidden: {in: $hiddenCheck}
             }
-            frontmatter {
-              title
-              templateKey
-              seo {
+          }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
                 title
-                description
-                image {
-                  childImageSharp {
-                    fixed {
-                      src
+                templateKey
+                seo {
+                  title
+                  description
+                  image {
+                    childImageSharp {
+                      fixed {
+                        src
+                      }
                     }
                   }
                 }
+                hidden
               }
             }
-          }
-          next {
-            fields {
-              slug
+            next {
+              fields {
+                slug
+              }
+              frontmatter {
+                cardTitle
+                title
+                heading
+                templateKey
+              }
             }
-            frontmatter {
-              cardTitle
-              title
-              heading
-              templateKey
-            }
-          }
-          previous {
-            fields {
-              slug
-            }
-            frontmatter {
-              cardTitle
-              title
-              heading
-              templateKey
+            previous {
+              fields {
+                slug
+              }
+              frontmatter {
+                cardTitle
+                title
+                heading
+                templateKey
+              }
             }
           }
         }
       }
+    `,
+    {
+      hiddenCheck:
+        process.env.NODE_ENV === 'development'
+          ? [null, false, true]
+          : [null, false],
     }
-  `);
+  );
 
 export const createPosts = async ({graphql, actions}) => {
   const {createPage} = actions;
@@ -93,6 +112,10 @@ export const createPosts = async ({graphql, actions}) => {
         next,
         previous,
         feather: ALL_FEATHERS.find(f => f.location === fields.slug),
+        hiddenCheck:
+          process.env.NODE_ENV === 'development'
+            ? [null, false, true]
+            : [null, false],
       },
     });
   });

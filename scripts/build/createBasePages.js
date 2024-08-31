@@ -71,6 +71,10 @@ export const createBasePages = async ({graphql, actions}) => {
         },
         templateKey,
         feather: ALL_FEATHERS.find(f => f.location === fields.slug),
+        hiddenCheck:
+          process.env.NODE_ENV === 'development'
+            ? [null, false, true]
+            : [null, false],
       },
     });
   });

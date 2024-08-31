@@ -9,6 +9,7 @@ date: 2024-08-29T15:36:54.165Z
 featuredimage:
   image: /assets/forum-des-associations-2024.jpg
   alt: forum associations ML 2024
+hidden: false
 ---
 Qui dit Septembre, dit rentrée, dit **Forum des Associations** !
 
@@ -18,4 +19,4 @@ Nos bénévoles ainsi que Quentin notre entraîneur seront présents sur le stan
 
 N'hésitez pas à venir nous rencontrer !
 
-*Si toutefois vous avez des questions que vous souhaiteriez nous poser avant le forum, vous pouvez retrouver les adresses mail de chaque section sur la page [Contact.](https://badml.com/contact)*
+*Si toutefois vous avez des questions que vous souhaiteriez nous poser avant le forum, vous pouvez retrouver les adresses mail de chaque section sur la page [Contact](/contact).*

@@ -45,6 +45,13 @@ template_base:
     name: 'templateKey',
     widget: 'hidden',
   }
+hiddenContent:
+  &HIDDEN_CONTENT {
+    label: 'Cacher le contenu',
+    name: 'hidden',
+    widget: boolean,
+    required: false
+  }
 seo: &SEO
   label: 'SEO'
   name: 'seo'
@@ -105,6 +112,7 @@ article_page: &ARTICLE_PAGE
   - <<: *FEATURED_IMAGE
   - <<: *BODY
   - <<: *SEO
+  - <<: *HIDDEN_CONTENT
   # - {label: "Tags", name: "tags", widget: "list"}
 
 tournament_page: &TOURNAMENT_PAGE

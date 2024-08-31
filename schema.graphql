@@ -914,6 +914,7 @@ type Frontmatter {
   items: [MarkdownRemarkFrontmatterItems]
   videos: [MarkdownRemarkFrontmatterVideos]
   contactform: MarkdownRemarkFrontmatterContactform
+  hidden: Boolean
 }
 
 type MarkdownRemarkFrontmatterFeaturedimage {
@@ -1166,6 +1167,7 @@ input FrontmatterFilterInput {
   items: MarkdownRemarkFrontmatterItemsFilterListInput
   videos: MarkdownRemarkFrontmatterVideosFilterListInput
   contactform: MarkdownRemarkFrontmatterContactformFilterInput
+  hidden: BooleanQueryOperatorInput
 }
 
 input MemberFilterInput {
@@ -1496,6 +1498,7 @@ input FrontmatterFieldSelector {
   items: MarkdownRemarkFrontmatterItemsFieldSelector
   videos: MarkdownRemarkFrontmatterVideosFieldSelector
   contactform: MarkdownRemarkFrontmatterContactformFieldSelector
+  hidden: FieldSelectorEnum
 }
 
 input MemberFieldSelector {
@@ -1739,6 +1742,7 @@ input FrontmatterSortInput {
   items: MarkdownRemarkFrontmatterItemsSortInput
   videos: MarkdownRemarkFrontmatterVideosSortInput
   contactform: MarkdownRemarkFrontmatterContactformSortInput
+  hidden: SortOrderEnum
 }
 
 input MemberSortInput {

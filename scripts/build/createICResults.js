@@ -99,6 +99,10 @@ export const createICResults = async ({graphql, actions}) => {
             ? previous
             : undefined,
         feather: ALL_FEATHERS.find(f => f.location === fields.slug),
+        hiddenCheck:
+          process.env.NODE_ENV === 'development'
+            ? [null, false, true]
+            : [null, false],
       },
     });
   });

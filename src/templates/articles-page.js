@@ -25,7 +25,7 @@ export const Head = ({data, pageContext}) => {
 export default ArticlesPage;
 
 export const articlesPageQuery = graphql`
-  query ArticlesPage($id: String!) {
+  query ArticlesPage($id: String!, $hiddenCheck: [Boolean]!) {
     markdownRemark(id: {eq: $id}) {
       html
       frontmatter {
@@ -37,7 +37,12 @@ export const articlesPageQuery = graphql`
     }
     allMarkdownRemark(
       sort: {frontmatter: {date: DESC}}
-      filter: {frontmatter: {templateKey: {eq: "article-page"}}}
+      filter: {
+        frontmatter: {
+          templateKey: {eq: "article-page"}
+          hidden: {in: $hiddenCheck}
+        }
+      }
     ) {
       edges {
         node {
@@ -51,6 +56,7 @@ export const articlesPageQuery = graphql`
             cardTitle
             heading
             templateKey
+            hidden
             date
             featuredimage {
               alt

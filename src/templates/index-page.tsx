@@ -49,7 +49,7 @@ export const Head = ({
 export default IndexPage;
 
 export const indexPageQuery = graphql`
-  query IndexPage($id: String!) {
+  query IndexPage($id: String!, $hiddenCheck: [Boolean]!) {
     markdownRemark(id: {eq: $id}) {
       htmlAst
       frontmatter {
@@ -90,7 +90,12 @@ export const indexPageQuery = graphql`
     }
     allPostsMarkdownRemark: allMarkdownRemark(
       sort: {frontmatter: {date: DESC}}
-      filter: {frontmatter: {templateKey: {eq: "article-page"}}}
+      filter: {
+        frontmatter: {
+          templateKey: {eq: "article-page"}
+          hidden: {in: $hiddenCheck}
+        }
+      }
       limit: 5
     ) {
       edges {
@@ -105,6 +110,7 @@ export const indexPageQuery = graphql`
             cardTitle
             heading
             templateKey
+            hidden
             date
             featuredimage {
               alt

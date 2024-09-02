@@ -24,7 +24,7 @@ const BigLogo = () => (
       backgroundColor="transparent"
       placeholder="blurred"
     />
-    <Heading size={'sm'} color="text.inverted.main">
+    <Heading size={'sm'} color="text.inverted.main" fontWeight="semibold">
       Badminton Maisons-Laffitte
     </Heading>
   </Link>

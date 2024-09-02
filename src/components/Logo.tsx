@@ -31,7 +31,11 @@ const BigLogo = ({color}: BigLogoProps) => {
           placeholder="blurred"
         />
       </Box>
-      <Heading fontSize={{base: 'md', sm: 'lg'}} color={color || 'text.main'}>
+      <Heading
+        fontSize={{base: 'md', sm: 'lg'}}
+        color={color || 'text.main'}
+        fontWeight="semibold"
+      >
         Badminton Maisons-Laffitte
       </Heading>
     </Link>

@@ -53,15 +53,11 @@ Au début d'un set et à chaque fois que le score du serveur est **pair**, le se
 
 ##### En double
 
-
-
 #### Le service
 
 #### Les fautes principales
 
 ### En compétitions
-
-
 
 Contenu $a^2 + b^2 = c^2$
 

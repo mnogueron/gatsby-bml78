@@ -22,6 +22,7 @@ import {
 } from '@chakra-ui/react';
 import ShortCode from '../components/ShortCode';
 import IFrame from '../components/IFrame';
+import TeamRanking from '../components/TeamRanking';
 
 const Table = props => (
   <TableContainer>
@@ -132,6 +133,7 @@ export const renderAst = new RehypeReact({
   components: {
     scoreboard: withChildrenAsJSONProps(Scoreboard),
     teamscoreboard: withChildrenAsJSONProps(TeamScoreboard),
+    teamranking: withChildrenAsJSONProps(TeamRanking),
     gallery: withChildrenAsJSONProps(Gallery),
     h1: H1,
     h2: H2,

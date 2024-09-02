@@ -1,21 +1,8 @@
 import React from 'react';
-import {Flex, HStack, Text} from '@chakra-ui/react';
+import {Flex, HStack, Text, Link} from '@chakra-ui/react';
 import ResultBadge from '../ResultBadge';
 import {TeamRankDetails} from './types';
-
-const HeaderCell = ({children}: {children: React.ReactNode}) => {
-  return (
-    <Flex
-      width={{base: '22px', sm: '26px', lg: '32px'}}
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Text color="text.secondary" fontSize="md">
-        {children}
-      </Text>
-    </Flex>
-  );
-};
+import {Link as GatsbyLink} from 'gatsby';
 
 type TeamRowProps = {
   details: TeamRankDetails;
@@ -26,13 +13,30 @@ type TeamRowProps = {
 
 const TeamRow = ({details, index, isFirst, isLast}: TeamRowProps) => {
   return (
-    <HStack width="100%" _hover={{bg: 'blackAlpha.100'}} borderRadius="md">
-      <HeaderCell>{index}</HeaderCell>
+    <HStack
+      width="100%"
+      _hover={{bg: 'blackAlpha.100'}}
+      borderRadius="md"
+      spacing={{base: 1, md: 2}}
+    >
+      <Flex
+        width={{base: '12px', sm: '26px', lg: '32px'}}
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Text
+          color="text.secondary"
+          fontWeight="semibold"
+          fontSize={{base: 'xs', md: 'md'}}
+        >
+          {index}
+        </Text>
+      </Flex>
 
       <Flex
         alignSelf="stretch"
         flex={1}
-        px={2}
+        px={{base: 1, sm: 2}}
         py={1}
         borderRightRadius="md"
         alignItems="center"
@@ -44,15 +48,42 @@ const TeamRow = ({details, index, isFirst, isLast}: TeamRowProps) => {
               : undefined
         }
       >
-        <Text color="text.secondary" fontSize="md">
-          {details.name}
-        </Text>
+        <Link
+          as={GatsbyLink}
+          href={`https://icbad.ffbad.org/equipe/${details.team.icBadTeamId}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          textDecoration="none"
+          _hover={{
+            textDecoration: 'underline',
+          }}
+        >
+          <Text
+            color="text.secondary"
+            fontSize="xs"
+            display={{base: 'block', md: 'none'}}
+          >
+            {details.team.shortName || details.team.longName}
+          </Text>
+          <Text
+            color="text.secondary"
+            fontSize="md"
+            display={{base: 'none', md: 'block'}}
+          >
+            {details.team.longName || details.team.shortName}
+          </Text>
+        </Link>
       </Flex>
 
       <ResultBadge score={details.playedDays} />
       <ResultBadge score={details.win} variant="win" />
       <ResultBadge score={details.equal} />
       <ResultBadge score={details.loss} variant="loss" />
+      <ResultBadge
+        score={details.retire}
+        variant="loss"
+        display={{base: 'none', sm: 'flex'}}
+      />
       <ResultBadge score={details.bonus} variant="win" />
       <ResultBadge score={details.malus} variant="loss" />
       <ResultBadge score={details.points} />

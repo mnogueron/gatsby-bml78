@@ -10,11 +10,17 @@ type TeamRankingProps = {
 
 const TeamRanking = ({teams, ...rest}: TeamRankingProps) => {
   return (
-    <VStack borderRadius={8} p={4} bg="bg.main" boxShadow="md" {...rest}>
+    <VStack
+      borderRadius={8}
+      p={{base: 2, md: 4}}
+      bg="bg.main"
+      boxShadow="md"
+      {...rest}
+    >
       <RankingHeader />
       {teams.map((t, index) => (
         <TeamRow
-          key={t.id}
+          key={`team-rank-${index}`}
           index={index + 1}
           isFirst={index === 0}
           details={t}

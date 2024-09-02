@@ -14,6 +14,7 @@ const ResultsPage = ({data}) => {
       heading={fm.heading}
       subheading={fm.subheading}
       posts={preparedPosts}
+      body={data.markdownRemark.htmlAst}
     />
   );
 };
@@ -28,6 +29,7 @@ export const resultsPageQuery = graphql`
   query ResultsPage($id: String!, $title: String!) {
     markdownRemark(id: {eq: $id}) {
       html
+      htmlAst
       frontmatter {
         title
         heading

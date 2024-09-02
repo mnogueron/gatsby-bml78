@@ -4,8 +4,8 @@ import Container from '../../components/Container';
 import CardGrid from '../../components/CardGrid';
 import {Center, Heading, SimpleGrid, VStack} from '@chakra-ui/react';
 import PostBigCard from '../../components/PostBigCard';
-import TeamRanking from '../../components/TeamRanking';
 import TeamCalendar from '../../components/TeamCalendar';
+import Content from '../../components/Content';
 
 const EmptyPlaceholder = () => {
   return (
@@ -21,64 +21,6 @@ const EmptyPlaceholder = () => {
     </Center>
   );
 };
-
-const mockTeams = [
-  {
-    id: 0,
-    name: 'Equipe 1',
-    playedDays: 10,
-    win: 10,
-    equal: 0,
-    loss: 0,
-    bonus: 1,
-    malus: 0,
-    points: 51,
-  },
-  {
-    id: 1,
-    name: 'Equipe 2',
-    playedDays: 10,
-    win: 7,
-    equal: 1,
-    loss: 2,
-    bonus: 2,
-    malus: -4,
-    points: 38,
-  },
-  {
-    id: 2,
-    name: 'Equipe 3',
-    playedDays: 10,
-    win: 4,
-    equal: 1,
-    loss: 5,
-    bonus: 4,
-    malus: 0,
-    points: 32,
-  },
-  {
-    id: 3,
-    name: 'Equipe 4',
-    playedDays: 10,
-    win: 3,
-    equal: 3,
-    loss: 4,
-    bonus: 1,
-    malus: -1,
-    points: 28,
-  },
-  {
-    id: 4,
-    name: 'Equipe 5',
-    playedDays: 10,
-    win: 2,
-    equal: 1,
-    loss: 7,
-    bonus: 4,
-    malus: 0,
-    points: 24,
-  },
-];
 
 const calendar = [
   {
@@ -144,15 +86,24 @@ const calendar = [
   },
 ];
 
-const ResultsPageTemplate = ({heading, subheading, posts = []}) => {
+const ResultsPageTemplate = ({heading, subheading, posts, body = []}) => {
   const [firstPost, secondPost, ...otherPosts] = posts;
   return (
     <>
       <Header heading={heading} subheading={subheading} />
-      <Container px={8} pt={8} pb={16} maxW="7xl" as={VStack} spacing={8}>
-        {/*<TeamRanking width="full" teams={mockTeams} />
 
-        <TeamCalendar calendar={calendar} width="full" />*/}
+      <Container
+        px={{base: 6, md: 8}}
+        pt={8}
+        pb={16}
+        maxW="7xl"
+        as={VStack}
+        spacing={0}
+      >
+        {body && (
+          <Content html={body} as="section" maxW="initial" p={'0 !important'} />
+        )}
+        {/*<TeamCalendar calendar={calendar} width="full" />*/}
 
         {firstPost ? (
           <>

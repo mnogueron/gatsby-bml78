@@ -12,6 +12,7 @@ import youtubeEditorComponent from './editor-components/youtube';
 import helloAssoEditorComponent from './editor-components/helloAsso';
 import scoreboardEditorComponent from './editor-components/scoreboard';
 import teamScoreboardEditorComponent from './editor-components/teamScoreboard';
+import teamTankingEditorComponent from './editor-components/teamTanking';
 import galleryEditorComponent from './editor-components/gallery';
 import withPreviewWrapper from './withPreviewWrapper';
 
@@ -48,7 +49,7 @@ const previewTemplates = {
   contact: ContactPagePreview,
 
   bureau: BoardChartPagePreview,
-  'result-sections': ArticlesPagePreview,
+  'result-sections': ResultsPagePreview,
   'all-results-index': ResultsPagePreview,
 };
 
@@ -62,6 +63,7 @@ CMS.registerEditorComponent(youtubeEditorComponent);
 CMS.registerEditorComponent(helloAssoEditorComponent);
 CMS.registerEditorComponent(scoreboardEditorComponent);
 CMS.registerEditorComponent(teamScoreboardEditorComponent);
+CMS.registerEditorComponent(teamTankingEditorComponent);
 CMS.registerEditorComponent(galleryEditorComponent);
 /*CMS.registerEditorComponent(fileEditorComponent);*/
 /*CMS.registerEditorComponent(gridEditorComponent);*/

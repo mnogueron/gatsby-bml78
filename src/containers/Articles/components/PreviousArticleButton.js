@@ -21,6 +21,7 @@ const PreviousArticleButton = ({to, title}) => {
         color="gray.700"
         fontSize="lg"
         lineHeight="tall"
+        textAlign="right"
         _groupHover={{
           textDecoration: 'underline',
         }}

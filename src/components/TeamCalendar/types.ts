@@ -1,18 +1,18 @@
-export type Meeting = {
+type TeamMeetingDetails = {
+  shortName?: string;
+  longName: string;
+  score?: number;
+  isHost?: boolean;
+};
+
+export type ParsedMeeting = {
   date: Date;
-  teamA: {
-    shortName?: string;
-    longName: string;
-    score?: number;
-    isBML?: boolean;
-    isHost?: boolean;
-  };
-  teamB: {
-    shortName?: string;
-    longName: string;
-    score?: number;
-    isBML?: boolean;
-    isHost?: boolean;
-  };
-  isBMLHosting: boolean;
+  teamA: TeamMeetingDetails;
+  teamB: TeamMeetingDetails;
+};
+
+export type Meeting = {
+  date: string;
+  teamA: TeamMeetingDetails;
+  teamB: TeamMeetingDetails;
 };

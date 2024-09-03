@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import RehypeReact from 'rehype-react';
 import Scoreboard from '../components/Scoreboard';
 import TeamScoreboard from '../components/TeamScoreboard';
+import TeamCalendar from '../components/TeamCalendar';
 import Gallery from '../components/Gallery';
 import {
   Heading,
@@ -134,6 +135,7 @@ export const renderAst = new RehypeReact({
     scoreboard: withChildrenAsJSONProps(Scoreboard),
     teamscoreboard: withChildrenAsJSONProps(TeamScoreboard),
     teamranking: withChildrenAsJSONProps(TeamRanking),
+    teamcalendar: withChildrenAsJSONProps(TeamCalendar),
     gallery: withChildrenAsJSONProps(Gallery),
     h1: H1,
     h2: H2,

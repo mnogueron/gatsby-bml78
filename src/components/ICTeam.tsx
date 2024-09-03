@@ -1,5 +1,6 @@
 import React from 'react';
-import {Flex, Text} from '@chakra-ui/react';
+import {Box, Flex, Text} from '@chakra-ui/react';
+import BMLHostTag from './TeamCalendar/BMLHostTag';
 
 type ICTeamProps = {
   order: 'left' | 'right';
@@ -8,9 +9,10 @@ type ICTeamProps = {
     longName: string;
   };
   win?: boolean;
+  isBMLHosting?: boolean;
 };
 
-const ICTeam = ({order, team, win}: ICTeamProps) => {
+const ICTeam = ({order, team, win, isBMLHosting}: ICTeamProps) => {
   const isRightAligned = order === 'right';
   return (
     <Flex
@@ -19,6 +21,8 @@ const ICTeam = ({order, team, win}: ICTeamProps) => {
       borderRightRadius={isRightAligned ? undefined : 'md'}
       borderLeftRadius={isRightAligned ? 'md' : undefined}
       alignItems="center"
+      justifyContent="space-between"
+      direction={isRightAligned ? 'row-reverse' : 'row'}
       px={2}
       py={1}
       bg={
@@ -32,22 +36,23 @@ const ICTeam = ({order, team, win}: ICTeamProps) => {
           : undefined
       }
     >
-      <Text
-        fontSize="md"
-        textAlign={{base: 'left', md: isRightAligned ? 'right' : 'left'}}
-        display={{base: 'block', md: 'none'}}
-        flex={1}
-      >
-        {team.shortName || team.longName}
-      </Text>
-      <Text
-        fontSize="md"
-        textAlign={{base: 'left', md: isRightAligned ? 'right' : 'left'}}
-        display={{base: 'none', md: 'block'}}
-        flex={1}
-      >
-        {team.longName || team.shortName}
-      </Text>
+      <Box flex={1}>
+        <Text
+          fontSize="md"
+          textAlign={{base: 'left', md: isRightAligned ? 'right' : 'left'}}
+          display={{base: 'block', md: 'none'}}
+        >
+          {team.shortName || team.longName}
+        </Text>
+        <Text
+          fontSize="md"
+          textAlign={{base: 'left', md: isRightAligned ? 'right' : 'left'}}
+          display={{base: 'none', md: 'block'}}
+        >
+          {team.longName || team.shortName}
+        </Text>
+      </Box>
+      {isBMLHosting && <BMLHostTag />}
     </Flex>
   );
 };

@@ -5,10 +5,10 @@ import TeamRow from './TeamRow';
 import {TeamRankDetails} from './types';
 
 type TeamRankingProps = {
-  teams: TeamRankDetails[];
+  teams?: TeamRankDetails[];
 } & BoxProps;
 
-const TeamRanking = ({teams, ...rest}: TeamRankingProps) => {
+const TeamRanking = ({teams = [], ...rest}: TeamRankingProps) => {
   return (
     <VStack
       borderRadius={8}

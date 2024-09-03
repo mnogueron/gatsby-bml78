@@ -4,14 +4,14 @@ import TeamResult from './TeamResult';
 import {TeamResultInfo} from './types';
 
 type TeamScoreboardProps = {
-  teamScore: {
-    teamA: TeamResultInfo;
-    teamB: TeamResultInfo;
+  teamScore?: {
+    teamA?: TeamResultInfo;
+    teamB?: TeamResultInfo;
   };
 };
 
-const TeamScoreboard = ({teamScore}: TeamScoreboardProps) => {
-  const {teamA, teamB} = teamScore || {};
+const TeamScoreboard = ({teamScore = {}}: TeamScoreboardProps) => {
+  const {teamA, teamB} = teamScore;
 
   if (!teamA || !teamB) {
     return null;

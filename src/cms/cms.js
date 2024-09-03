@@ -8,15 +8,10 @@ import ContentPagePreview from './preview-templates/ContentPagePreview';
 import ContactPagePreview from './preview-templates/ContactPagePreview';
 import BoardChartPagePreview from './preview-templates/BoardChartPagePreview';
 import ResultsPagePreview from './preview-templates/ResultsPagePreview';
-import youtubeEditorComponent from './editor-components/youtube';
-import helloAssoEditorComponent from './editor-components/helloAsso';
-import scoreboardEditorComponent from './editor-components/scoreboard';
-import teamScoreboardEditorComponent from './editor-components/teamScoreboard';
-import teamTankingEditorComponent from './editor-components/teamTanking';
-import galleryEditorComponent from './editor-components/gallery';
 import withPreviewWrapper from './withPreviewWrapper';
 
 import './cms-utils';
+import {registerEditorComponents} from './editor-components';
 
 console.log(CMS);
 
@@ -59,13 +54,6 @@ Object.entries(previewTemplates).forEach(([pageTitle, TemplateComponent]) => {
   CMS.registerPreviewTemplate(pageTitle, withPreviewWrapper(TemplateComponent));
 });
 
-CMS.registerEditorComponent(youtubeEditorComponent);
-CMS.registerEditorComponent(helloAssoEditorComponent);
-CMS.registerEditorComponent(scoreboardEditorComponent);
-CMS.registerEditorComponent(teamScoreboardEditorComponent);
-CMS.registerEditorComponent(teamTankingEditorComponent);
-CMS.registerEditorComponent(galleryEditorComponent);
-/*CMS.registerEditorComponent(fileEditorComponent);*/
-/*CMS.registerEditorComponent(gridEditorComponent);*/
+registerEditorComponents();
 
 CMS.init();

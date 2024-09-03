@@ -1,19 +1,24 @@
 import React from 'react';
 import {Heading, HStack, Icon, VStack} from '@chakra-ui/react';
 import DateBadge from './DateBadge';
-import {Meeting} from './types';
+import {ParsedMeeting} from './types';
 import ICTeam from '../ICTeam';
 import ResultBadge from '../ResultBadge';
 import {MdFlashOn} from 'react-icons/md';
 
 type TeamCalendarRowProps = {
-  meeting: Meeting;
+  meeting: ParsedMeeting;
   isFuture?: boolean;
 };
 
 const TeamCalendarRow = ({meeting, isFuture}: TeamCalendarRowProps) => {
-  const scoreA = meeting.teamA.score;
-  const scoreB = meeting.teamB.score;
+  const {teamA, teamB, date} = meeting;
+  if (!teamA || !teamB) {
+    return null;
+  }
+
+  const scoreA = teamA.score;
+  const scoreB = teamB.score;
   const teamAWin =
     typeof scoreA !== 'undefined' &&
     typeof scoreB !== 'undefined' &&
@@ -22,11 +27,17 @@ const TeamCalendarRow = ({meeting, isFuture}: TeamCalendarRowProps) => {
     typeof scoreA !== 'undefined' &&
     typeof scoreB !== 'undefined' &&
     scoreB > scoreA;
+
   return (
     <HStack width="100%" _hover={{bg: 'blackAlpha.100'}} borderRadius="md">
-      <DateBadge date={meeting.date} />
+      <DateBadge date={date} />
 
-      <ICTeam order="left" team={meeting.teamA} win={teamAWin} />
+      <ICTeam
+        order="left"
+        team={teamA}
+        win={teamAWin}
+        isBMLHosting={teamA.shortName === 'BML' && teamA.isHost}
+      />
 
       {isFuture ? (
         <VStack width="72px" spacing={0}>
@@ -48,7 +59,12 @@ const TeamCalendarRow = ({meeting, isFuture}: TeamCalendarRowProps) => {
         </>
       )}
 
-      <ICTeam order="right" team={meeting.teamB} win={teamBWin} />
+      <ICTeam
+        order="right"
+        team={meeting.teamB}
+        win={teamBWin}
+        isBMLHosting={teamB.shortName === 'BML' && teamB.isHost}
+      />
 
       {/*<Flex
         alignSelf="stretch"

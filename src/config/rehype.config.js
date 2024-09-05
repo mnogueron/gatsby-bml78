@@ -1,4 +1,5 @@
 import React, {useMemo} from 'react';
+import {useLocation} from '@reach/router';
 import RehypeReact from 'rehype-react';
 import Scoreboard from '../components/Scoreboard';
 import TeamScoreboard from '../components/TeamScoreboard';
@@ -47,12 +48,57 @@ const A = props => {
   );
 };
 
-const H1 = props => <Heading as="h1" size="2xl" mt={10} mb={8} {...props} />;
-const H2 = props => <Heading as="h2" size="xl" mt={8} mb={7} {...props} />;
-const H3 = props => <Heading as="h3" size="lg" mt={7} mb={6} {...props} />;
-const H4 = props => <Heading as="h4" size="md" mt={6} mb={4} {...props} />;
-const H5 = props => <Heading as="h5" size="sm" mt={5} mb={3} {...props} />;
-const H6 = props => <Heading as="h6" size="xs" mt={4} mb={2} {...props} />;
+const HeadingLink = props => {
+  const {hash} = useLocation();
+  const highlightSx = useMemo(() => {
+    if (!hash) {
+      return {};
+    }
+
+    const headerLevel = parseInt(props.as.match(/h(\d)/)[1]);
+    const headerArray = Array.from({length: headerLevel}, (_, i) => i + 1);
+
+    return {
+      [`&:has(a[href="${hash}"])`]: {
+        bg: 'yellow.100',
+        borderRadius: 'md',
+        '& ~ *': {
+          bg: 'yellow.100',
+          borderRadius: 'md',
+        },
+        // Select all next headers and reset background color
+        [headerArray.map(hLevel => `& ~ h${hLevel}`).join(', ')]: {
+          bg: 'initial',
+          borderRadius: 'initial',
+        },
+        // Select all next headers siblings and reset background color
+        [headerArray.map(hLevel => `& ~ h${hLevel} ~ *`).join(', ')]: {
+          bg: 'initial',
+          borderRadius: 'initial',
+        },
+      },
+    };
+  }, [hash, props.as]);
+
+  return (
+    <Heading
+      {...props}
+      sx={{
+        ...props.sx,
+        ...highlightSx,
+      }}
+    />
+  );
+};
+
+const H1 = props => (
+  <HeadingLink as="h1" size="2xl" mt={10} mb={8} {...props} />
+);
+const H2 = props => <HeadingLink as="h2" size="xl" mt={8} mb={7} {...props} />;
+const H3 = props => <HeadingLink as="h3" size="lg" mt={7} mb={6} {...props} />;
+const H4 = props => <HeadingLink as="h4" size="md" mt={6} mb={4} {...props} />;
+const H5 = props => <HeadingLink as="h5" size="sm" mt={5} mb={3} {...props} />;
+const H6 = props => <HeadingLink as="h6" size="xs" mt={4} mb={2} {...props} />;
 
 const P = props => (
   <Text

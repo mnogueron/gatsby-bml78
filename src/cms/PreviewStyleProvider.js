@@ -3,6 +3,7 @@ import createCache from '@emotion/cache';
 import {CacheProvider} from '@emotion/react';
 import {ChakraProvider} from '@chakra-ui/react';
 import theme from '../@chakra-ui/gatsby-plugin/theme';
+import {LocationProvider} from '@reach/router';
 
 const FrameProvider = props => {
   const [container, setContainer] = useState(document.head);
@@ -33,9 +34,11 @@ const FrameProvider = props => {
 
 const PreviewStyleProvider = props => {
   return (
-    <FrameProvider>
-      <ChakraProvider theme={theme}>{props.children}</ChakraProvider>
-    </FrameProvider>
+    <LocationProvider>
+      <FrameProvider>
+        <ChakraProvider theme={theme}>{props.children}</ChakraProvider>
+      </FrameProvider>
+    </LocationProvider>
   );
 };
 

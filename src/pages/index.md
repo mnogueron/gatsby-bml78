@@ -11,7 +11,7 @@ subheading: >-
   Maisons-Laffitte !
 
 
-  ⛔ Tous les créneaux sont complets. Inscription seulement sur liste d'attente ⛔
+  ⛔ Les créneaux sont presque tous complets ! ⛔
 banner:
   text: "Dimanche 8 septembre : portes ouvertes au gymnase Jules Verne
     (Sartrouville) de 10h à 13h !"

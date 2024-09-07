@@ -7,11 +7,13 @@ team: []
 seo:
   description: Retrouvez ici toutes les infos pour vous inscrire au BML.
 ---
-**⛔ Le créneau Jeune de 19h15 / 20h30 est complet ! Toute nouvelle inscription sur ce créneau ne pourra pas être acceptée. ⛔**
+⛔ **Les créneaux sont tous complets !** ⛔
+
+Le **nombre de places** restantes par section étant à présent **limité**, nous vous prions de bien vouloir **contacter le responsable de la section** qui vous intéresse si vous souhaitez nous rejoindre. Vous serez mis sur liste d'attente et on vous avertira si une place se libère. 
+
+Toute nouvelle inscription **ne pourra pas être acceptée** en dehors de ce cadre.
 
 ### Informations importantes
-
-**<!-- Le nombre de places restantes par section étant à présent limité, nous vous prions de bien vouloir contacter le responsable de la section qui vous intéresse si vous souhaitez nous rejoindre. Il vous transmettra le lien vers la plateforme qui vous permettra de vous inscrire si des places sont encore disponibles. -->**
 
 Vous trouverez sur cette page toutes les informations pour votre inscription ainsi que les tarifs pour la saison 2024-2025.
 
@@ -25,8 +27,6 @@ Tout le processus d'inscription se fait en ligne sur le site de la fédération 
 
 Pour vous inscrire, vous trouverez ci-dessous les informations et documents dont vous aurez besoin en fonction de la section que vous souhaitez rejoindre. Vous pourrez nous les faire parvenir directement via la plateforme en ligne.
 
-<!-- Les inscriptions devront obligatoirement être faites via la plateforme dédiée, une fois votre \\\\\\\*\\\\\\\*demande pré-validée par le responsable de section.\\\\\\\*\\\\\\\* -->
-
 #### Accès rapide
 
 Je connais déjà la section dans laquelle je souhaite m'inscrire et ai connaissance de la cotisation applicable :
@@ -39,9 +39,7 @@ Je connais déjà la section dans laquelle je souhaite m'inscrire et ai connaiss
 
 #### 1. Pour une inscription en Jeunes
 
-**⛔ Le créneau Jeune de 19h15 / 20h30 est complet ! Toute nouvelle inscription sur ce créneau ne pourra pas être acceptée. ⛔**
-
-<!-- * envoyer un email au Responsable de la section : \\\\\\\[coach.badml@gmail.com](mailto:coach.badml@gmail.com) -->
+<!-- * envoyer un email au Responsable de la section : \\\\\\\\[coach.badml@gmail.com](mailto:coach.badml@gmail.com) -->
 
 * lire la [feuille d'information Jeune](target_blank:/assets/information_jeune.pdf)
 * remplir le formulaire d'adhésion en ligne (pour un renouvellement de licence, il sera pré-rempli si vous vous connectez via votre Espace Licencié MyFFBad) avec :
@@ -54,7 +52,7 @@ Je connais déjà la section dans laquelle je souhaite m'inscrire et ai connaiss
 
 #### 2. Pour une inscription en Adultes - Jeu Libre ou Entraînement débutant/confirmé
 
-<!-- * envoyer un email au Responsable de la section : \\\\\\\[loisirs.badml@gmail.com](mailto:loisirs.badml@gmail.com) -->
+<!-- * envoyer un email au Responsable de la section : \\\\\\\\[loisirs.badml@gmail.com](mailto:loisirs.badml@gmail.com) -->
 
 * remplir le formulaire d'adhésion en ligne (pour un renouvellement de licence, il sera pré-rempli si vous vous connectez via votre Espace Licencié MyFFBad) avec :
 
@@ -106,17 +104,21 @@ Si vous ne souhaitez ou ne pouvez pas effectuer le paiement par virement, il vou
 
 #### 🆕 Nouvelle licence ou changement de club
 
-Pour une nouvelle licence, le formulaire en ligne sera à cette adresse : <https://adherer.ffbad.club/bml78>
+⛔ **Les créneaux sont tous complets !** ⛔
+
+<!-- Pour une nouvelle licence, le formulaire en ligne sera à cette adresse : <https://adherer.ffbad.club/bml78> -->
 
 #### 🔄 Renouvellement de licence
 
-Pour un renouvellement, le formulaire en ligne sera automatiquement pré-rempli si vous vous connectez via votre **Espace Licencié [MyFFBad](https://www.myffbad.fr)**. Pour cela, vous aurez besoin de votre **numéro de licence** qui vous a été envoyé par email par la FFBad après votre dernière inscription.
+⛔ **Les créneaux sont tous complets !** ⛔
+
+<!-- Pour un renouvellement, le formulaire en ligne sera automatiquement pré-rempli si vous vous connectez via votre **Espace Licencié [MyFFBad](https://www.myffbad.fr)**. Pour cela, vous aurez besoin de votre **numéro de licence** qui vous a été envoyé par email par la FFBad après votre dernière inscription.
 
 **Si vous ne le retrouvez pas, vous pouvez obtenir votre numéro de licence ou celui de vos enfants [en recherchant un joueur sur le site MyFFBad](target_blank:https://www.myffbad.fr/recherche/joueur) (pas de compte nécessaire pour y accéder).**
 
 Une fois connecté, vous devriez recevoir une invitation, mais si ce n'est pas le cas, cliquez sur votre photo de profil. Vous aurez la possibilité de faire la demande de renouvellement ici.
 
-![Option de renouvellement](/assets/screenshot_myffbad.png "Option de renouvellement")
+![Option de renouvellement](/assets/screenshot_myffbad.png "Option de renouvellement") -->
 
 #### Changement notable pour la saison 2024-2025
 

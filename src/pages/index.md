@@ -11,7 +11,7 @@ subheading: >-
   Maisons-Laffitte !
 
 
-  ⛔ Créneau jeune complet : le jeudi 19h15 - 20h30 ⛔
+  ⛔ Tous les créneaux sont complets. Inscription seulement sur liste d'attente ⛔
 banner:
   text: "Dimanche 8 septembre : portes ouvertes au gymnase Jules Verne
     (Sartrouville) de 10h à 13h !"

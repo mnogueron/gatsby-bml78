@@ -4,6 +4,8 @@ items:
   - url: ""
     title: Équipe 1 - National
     items:
+      - title: Saison 2024-2025
+        url: /results/equipe-1-s24-25
       - title: Saison 2023-2024
         url: /results/equipe-1-s23-24
       - title: Saison 2022-2023

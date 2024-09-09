@@ -78,14 +78,13 @@ const TeamRow = ({details, index, isFirst, isLast}: TeamRowProps) => {
       <ResultBadge score={details.playedDays} />
       <ResultBadge score={details.win} variant="win" />
       <ResultBadge score={details.equal} />
-      <ResultBadge score={details.loss} variant="loss" />
+      <ResultBadge score={details.loss} variant="auto-reverse" />
       <ResultBadge
         score={details.retire}
-        variant="loss"
+        variant="auto-reverse"
         display={{base: 'none', sm: 'flex'}}
       />
-      <ResultBadge score={details.bonus} variant="win" />
-      <ResultBadge score={details.malus} variant="loss" />
+      <ResultBadge score={details.penalties} variant="auto" />
       <ResultBadge score={details.points} />
     </HStack>
   );

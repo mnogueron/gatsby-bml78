@@ -24,19 +24,33 @@ const TeamCalendar = ({calendar = [], ...rest}: TeamCalendarProps) => {
   const {passedMeetings, futureMeetings} = useMemo(() => {
     const sortedCalendar = calendar
       .map(a => ({...a, date: new Date(a.date)}))
-      .sort((a, b) => dateFns.compareAsc(a.date, b.date));
+      .sort((a, b) => dateFns.compareDesc(a.date, b.date));
     const now = new Date();
     return {
       passedMeetings: sortedCalendar.filter(m => dateFns.isBefore(m.date, now)),
-      futureMeetings: sortedCalendar.filter(m => dateFns.isAfter(m.date, now)),
+      futureMeetings: sortedCalendar
+        .filter(m => dateFns.isAfter(m.date, now))
+        .sort((a, b) => dateFns.compareAsc(a.date, b.date)),
     };
   }, [calendar]);
 
   const {slicedPassedMeetings, slicedFutureMeetings} = useMemo(() => {
     return {
-      slicedPassedMeetings: passedMeetings.slice(
+      /*slicedPassedMeetings: passedMeetings.slice(
         -((passedPageNumber + 1) * PASSED_PAGE_SIZE)
       ),
+      slicedFutureMeetings: futureMeetings.slice(
+        0,
+        (futurePageNumber + 1) * FUTURE_PAGE_SIZE
+      ),*/
+
+      slicedPassedMeetings: passedMeetings.slice(
+        0,
+        (passedPageNumber + 1) * PASSED_PAGE_SIZE
+      ),
+      /*slicedFutureMeetings: futureMeetings.slice(
+        -((futurePageNumber + 1) * FUTURE_PAGE_SIZE)
+      ),*/
       slicedFutureMeetings: futureMeetings.slice(
         0,
         (futurePageNumber + 1) * FUTURE_PAGE_SIZE
@@ -60,65 +74,57 @@ const TeamCalendar = ({calendar = [], ...rest}: TeamCalendarProps) => {
   return (
     <VStack
       borderRadius={8}
-      p={4}
+      p={{base: 2, md: 4}}
       bg="bg.main"
       boxShadow="md"
       alignItems="initial"
-      spacing={6}
+      spacing={{base: 1, md: 6}}
       {...rest}
     >
-      {passedMeetings.length > 0 && (
-        <VStack spacing={2}>
-          <VStack spacing={1} width="100%" py={2}>
-            <Flex
-              direction="row"
-              alignItems="center"
-              justifyContent="space-between"
-              width="100%"
-            >
-              <Heading fontSize="md">{'Rencontres passées'}</Heading>
-              {canSeeMorePassed && (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={handleSeeMorePassedMeetings}
-                >
-                  {'Voir plus'}
-                </Button>
-              )}
-            </Flex>
-            <Divider />
-          </VStack>
-          {slicedPassedMeetings.map((m, index) => (
-            <TeamCalendarRow key={index} meeting={m} />
-          ))}
-        </VStack>
-      )}
       {futureMeetings.length > 0 && (
-        <VStack spacing={2}>
-          <VStack spacing={1} width="100%" py={2}>
-            <Flex
-              direction="row"
-              alignItems="center"
-              justifyContent="space-between"
-              width="100%"
-            >
-              <Heading fontSize="md">{'Rencontres à venir'}</Heading>
-              {canSeeMoreFuture && (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={handleSeeMoreFutureMeetings}
-                >
-                  {'Voir plus'}
-                </Button>
-              )}
-            </Flex>
+        <VStack spacing={{base: 1, md: 2}}>
+          <VStack spacing={1} width="100%" py={2} alignItems="initial">
+            <Heading fontSize="md">{'Rencontres à venir'}</Heading>
             <Divider />
           </VStack>
           {slicedFutureMeetings.map((m, index) => (
             <TeamCalendarRow key={index} meeting={m} isFuture={true} />
           ))}
+          {canSeeMoreFuture && (
+            <Flex justifyContent="flex-end" width="100%" mt={{base: 1, md: 2}}>
+              <Button
+                variant="outline"
+                size={{base: 'xs', md: 'sm'}}
+                onClick={handleSeeMoreFutureMeetings}
+              >
+                {'Voir plus'}
+              </Button>
+            </Flex>
+          )}
+        </VStack>
+      )}
+      {passedMeetings.length > 0 && (
+        <VStack spacing={{base: 1, md: 2}}>
+          <VStack spacing={1} width="100%" py={2} alignItems="initial">
+            <Heading fontSize="md" color="text.secondary">
+              {'Rencontres passées'}
+            </Heading>
+            <Divider />
+          </VStack>
+          {slicedPassedMeetings.map((m, index) => (
+            <TeamCalendarRow key={index} meeting={m} />
+          ))}
+          {canSeeMorePassed && (
+            <Flex justifyContent="flex-end" width="100%" mt={{base: 1, md: 2}}>
+              <Button
+                variant="outline"
+                size={{base: 'xs', md: 'sm'}}
+                onClick={handleSeeMorePassedMeetings}
+              >
+                {'Voir plus'}
+              </Button>
+            </Flex>
+          )}
         </VStack>
       )}
     </VStack>

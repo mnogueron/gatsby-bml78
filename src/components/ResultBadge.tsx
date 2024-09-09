@@ -1,13 +1,46 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import {BoxProps, Center, Text} from '@chakra-ui/react';
 
 type ResultBadgeProps = {
   score: number | undefined;
-  variant?: 'win' | 'loss';
+  variant?: 'win' | 'loss' | 'auto' | 'auto-reverse';
 } & BoxProps;
 
 const ResultBadge = ({score, variant, ...rest}: ResultBadgeProps) => {
-  const isEmpty = typeof score === 'undefined';
+  const textColor = useMemo(() => {
+    if (!variant) {
+      return 'gray.500';
+    }
+
+    if (typeof score === 'undefined') {
+      return 'gray.500';
+    }
+
+    if (variant === 'win') {
+      return 'green.500';
+    }
+
+    if (variant === 'loss') {
+      return 'red.500';
+    }
+
+    if (variant === 'auto') {
+      return score > 0 ? 'green.500' : score < 0 ? 'red.500' : 'gray.500';
+    }
+
+    if (variant === 'auto-reverse') {
+      return score > 0 ? 'red.500' : score < 0 ? 'green.500' : 'gray.500';
+    }
+  }, [score, variant]);
+
+  const fontWeight = useMemo(() => {
+    if (typeof score === 'undefined') {
+      return 'normal';
+    }
+
+    return variant === 'win' && score > 0 ? 'semibold' : 'normal';
+  }, [score, variant]);
+
   return (
     <Center
       borderRadius={4}
@@ -18,14 +51,8 @@ const ResultBadge = ({score, variant, ...rest}: ResultBadgeProps) => {
     >
       <Text
         fontSize={{base: 'xs', sm: 'sm', lg: 'md'}}
-        textColor={
-          isEmpty || !variant
-            ? 'gray.500'
-            : variant === 'win'
-              ? 'green.500'
-              : 'red.500'
-        }
-        fontWeight={variant === 'win' ? 'semibold' : 'normal'}
+        textColor={textColor}
+        fontWeight={fontWeight}
       >
         {score ?? '-'}
       </Text>

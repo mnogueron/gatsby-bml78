@@ -15,6 +15,7 @@ const TeamRanking = ({teams = [], ...rest}: TeamRankingProps) => {
       p={{base: 2, md: 4}}
       bg="bg.main"
       boxShadow="md"
+      spacing={{base: 1, md: 2}}
       {...rest}
     >
       <RankingHeader />

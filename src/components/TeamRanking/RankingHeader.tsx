@@ -46,8 +46,7 @@ const RankingHeader = () => {
         <HeaderCell>N</HeaderCell>
         <HeaderCell>P</HeaderCell>
         <HeaderCell display={{base: 'none', sm: 'flex'}}>F</HeaderCell>
-        <HeaderCell>B+</HeaderCell>
-        <HeaderCell>P-</HeaderCell>
+        <HeaderCell>B</HeaderCell>
         <HeaderCell>P</HeaderCell>
       </HStack>
       <Divider height="1px" />

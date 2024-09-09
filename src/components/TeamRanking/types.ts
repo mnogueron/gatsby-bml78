@@ -12,7 +12,5 @@ export type TeamRankDetails = {
   loss: number;
   retire: number;
   penalties: number;
-  bonus: number;
-  malus: number;
   points: number;
 };

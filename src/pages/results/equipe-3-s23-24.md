@@ -1,6 +1,15 @@
 ---
 templateKey: results-page
 title: equipe-3-s23-24
-heading: Équipe 3 - Régional
-subheading: Saison 2023 - 2024
+heading: Équipe 3 - Régional 3
+subheading: Saison 2023-2024
 ---
+### Classement
+
+<teamranking>{"teams":[{"team":{"shortName":"BCS92-1","longName":"Badminton Club Suresnois - 1"},"playedDays":10,"win":10,"equal":0,"loss":0,"retire":0,"penalties":5,"points":45},{"team":{"shortName":"SB77-2","longName":"Sénart Badminton - 2"},"playedDays":10,"win":7,"equal":0,"loss":3,"retire":0,"penalties":2,"points":30},{"team":{"shortName":"BIM93-1","longName":"Bad in Montreuil - 1"},"playedDays":10,"win":3,"equal":2,"loss":5,"retire":0,"penalties":3,"points":19},{"team":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3"},"playedDays":10,"win":3,"equal":2,"loss":5,"retire":0,"penalties":2,"points":18},{"team":{"shortName":"USV94-1","longName":"Union Sportive Villejuif - 1"},"playedDays":10,"win":3,"equal":0,"loss":7,"retire":0,"penalties":1,"points":13},{"team":{"shortName":"SMM92-4","longName":"Stade Multisports De Montrouge - 4"},"playedDays":10,"win":1,"equal":2,"loss":7,"retire":0,"penalties":5,"points":13}]}</teamranking>
+
+### Calendrier
+
+<teamcalendar>{"calendar":[{"date":"2023-11-26T08:00:00.000Z","teamA":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":2,"isHost":true},"teamB":{"shortName":"SB77-2","longName":"Sénart Badminton - 2","score":6}},{"date":"2023-11-26T12:00:00.000Z","teamA":{"shortName":"BIM93-1","longName":"Bad in Montreuil - 1","score":3,"isHost":true},"teamB":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":5}},{"date":"2023-12-02T09:00:00.000Z","teamA":{"shortName":"SMM92-4","longName":"Stade Multisports De Montrouge - 4","score":4,"isHost":true},"teamB":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":4}},{"date":"2023-12-02T12:30:00.000Z","teamA":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":1,"isHost":true},"teamB":{"shortName":"BCS92-1","longName":"Badminton Club Suresnois - 1","score":7}},{"date":"2023-12-17T09:00:00.000Z","teamA":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":6,"isHost":true},"teamB":{"shortName":"USV94-1","longName":"Union Sportive Villejuif - 1","score":2}},{"date":"2023-12-17T12:30:00.000Z","teamA":{"shortName":"BCS92-1","longName":"Badminton Club Suresnois - 1","score":8,"isHost":true},"teamB":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":0}},{"date":"2024-01-28T09:00:00.000Z","teamA":{"shortName":"SB77-2","longName":"Sénart Badminton - 2","score":5,"isHost":true},"teamB":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":3}},{"date":"2024-01-28T12:30:00.000Z","teamA":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":5,"isHost":true},"teamB":{"shortName":"SMM92-4","longName":"Stade Multisports De Montrouge - 4","score":3}},{"date":"2024-03-24T08:00:00.000Z","teamA":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":4,"isHost":true},"teamB":{"shortName":"BIM93-1","longName":"Bad in Montreuil - 1","score":4}},{"date":"2024-03-24T12:00:00.000Z","teamA":{"shortName":"USV94-1","longName":"Union Sportive Villejuif - 1","score":5,"isHost":true},"teamB":{"shortName":"BML78-3","longName":"Badminton Maisons-Laffitte - 3","score":3}}]}</teamcalendar>
+
+### Résultats

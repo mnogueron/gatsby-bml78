@@ -11,7 +11,7 @@ const DateBadge = ({date, ...rest}: DateBadgeProps) => {
   return (
     <Center
       width={{base: 12, md: 16}}
-      padding={2}
+      padding={{base: 1, md: 2}}
       bg="white"
       borderRadius={8}
       boxShadow="md"
@@ -21,7 +21,7 @@ const DateBadge = ({date, ...rest}: DateBadgeProps) => {
         overflowWrap="anywhere"
         textAlign="center"
         textTransform="uppercase"
-        fontSize="md"
+        fontSize={{base: 'xs', md: 'md'}}
       >
         {label}
       </Heading>

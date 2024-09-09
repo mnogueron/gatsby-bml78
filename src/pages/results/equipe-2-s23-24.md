@@ -1,6 +1,15 @@
 ---
 templateKey: results-page
 title: equipe-2-s23-24
-heading: Équipe 2 - Régional
-subheading: Saison 2023 - 2024
+heading: Équipe 2 - Régional 2
+subheading: Saison 2023-2024
 ---
+### Classement
+
+<teamranking>{"teams":[{"team":{"shortName":"VSSM94-3","longName":"Vga Stella Saint Maur - 3"},"playedDays":10,"win":8,"equal":1,"loss":1,"retire":0,"penalties":0,"points":34},{"team":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2"},"playedDays":10,"win":7,"equal":1,"loss":2,"retire":0,"penalties":1,"points":31},{"team":{"shortName":"BAD1875-1","longName":"Badminton Paris 18eme - 1"},"playedDays":10,"win":5,"equal":3,"loss":2,"retire":0,"penalties":2,"points":28},{"team":{"shortName":"ASPS77-1","longName":"Ass. Sport. Plessis-savigny - 1"},"playedDays":10,"win":3,"equal":2,"loss":5,"retire":0,"penalties":1,"points":17},{"team":{"shortName":"BCN77-2","longName":"Badminton Club De Noisiel - 2"},"playedDays":10,"win":1,"equal":2,"loss":7,"retire":0,"penalties":6,"points":14},{"team":{"shortName":"ESV94-1","longName":"Entente Sportive De Vitry - 1"},"playedDays":10,"win":1,"equal":1,"loss":8,"retire":0,"penalties":5,"points":11}]}</teamranking>
+
+### Calendrier
+
+<teamcalendar>{"calendar":[{"date":"2023-10-08T08:00:00.000Z","teamA":{"shortName":"ASPS77-1","longName":"Ass. Sport. Plessis-savigny - 1","score":5,"isHost":true},"teamB":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":3}},{"date":"2023-10-08T11:30:00.000Z","teamA":{"shortName":"BCN77-2","longName":"Badminton Club De Noisiel - 2","score":3,"isHost":true},"teamB":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":5}},{"date":"2023-11-26T09:00:00.000Z","teamA":{"shortName":"VSSM94-3","longName":"Vga Stella Saint Maur - 3","score":6,"isHost":true},"teamB":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":2}},{"date":"2023-11-26T12:30:00.000Z","teamA":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":5,"isHost":true},"teamB":{"shortName":"ESV94-1","longName":"Entente Sportive De Vitry - 1","score":3}},{"date":"2023-12-17T09:00:00.000Z","teamA":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":4,"isHost":true},"teamB":{"shortName":"BAD1875-1","longName":"Badminton Paris 18eme - 1","score":4}},{"date":"2023-12-17T12:30:00.000Z","teamA":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":6,"isHost":true},"teamB":{"shortName":"ASPS77-1","longName":"Ass. Sport. Plessis-savigny - 1","score":2}},{"date":"2024-01-28T08:00:00.000Z","teamA":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":6,"isHost":true},"teamB":{"shortName":"VSSM94-3","longName":"Vga Stella Saint Maur - 3","score":2}},{"date":"2024-01-28T12:00:00.000Z","teamA":{"shortName":"BAD1875-1","longName":"Badminton Paris 18eme - 1","score":3,"isHost":true},"teamB":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":5}},{"date":"2024-03-24T09:00:00.000Z","teamA":{"shortName":"ESV94-1","longName":"Entente Sportive De Vitry - 1","score":3,"isHost":true},"teamB":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":5}},{"date":"2024-03-24T12:30:00.000Z","teamA":{"shortName":"BML78-2","longName":"Badminton Maisons-Laffitte - 2","score":5,"isHost":true},"teamB":{"shortName":"BCN77-2","longName":"Badminton Club De Noisiel - 2","score":3}}]}</teamcalendar>
+
+### Résultats

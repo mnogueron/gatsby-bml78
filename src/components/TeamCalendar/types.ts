@@ -1,6 +1,7 @@
-type TeamMeetingDetails = {
+export type TeamMeetingDetails = {
   shortName?: string;
   longName: string;
+  icBadTeamId?: string;
   score?: number;
   isHost?: boolean;
 };

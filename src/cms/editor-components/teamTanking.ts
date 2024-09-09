@@ -67,13 +67,8 @@ const teamRankFields: EditorComponentField[] = [
     widget: 'number',
   },
   {
-    name: 'bonus',
-    label: 'Bonus',
-    widget: 'number',
-  },
-  {
-    name: 'malus',
-    label: 'Malus',
+    name: 'penalties',
+    label: 'Pénalités',
     widget: 'number',
   },
   {

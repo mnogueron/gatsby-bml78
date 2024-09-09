@@ -29,22 +29,30 @@ const TeamCalendarRow = ({meeting, isFuture}: TeamCalendarRowProps) => {
     scoreB > scoreA;
 
   return (
-    <HStack width="100%" _hover={{bg: 'blackAlpha.100'}} borderRadius="md">
-      <DateBadge date={date} />
+    <HStack
+      width="100%"
+      _hover={{bg: 'blackAlpha.100'}}
+      borderRadius="md"
+      spacing={{base: 1, md: 2}}
+    >
+      <DateBadge
+        date={date}
+        {...(isFuture ? {bg: 'gray.600', color: 'white'} : {})}
+      />
 
       <ICTeam
         order="left"
         team={teamA}
         win={teamAWin}
-        isBMLHosting={teamA.shortName === 'BML' && teamA.isHost}
+        isBMLHosting={teamA.shortName?.includes('BML') && teamA.isHost}
       />
 
       {isFuture ? (
-        <VStack width="72px" spacing={0}>
-          <Heading fontSize="md" color="text.secondary">
+        <VStack width="60px" spacing={0} height="38px">
+          <Heading fontSize="sm" color="text.secondary">
             {'vs'}
           </Heading>
-          <Icon as={MdFlashOn} boxSize={6} />
+          <Icon as={MdFlashOn} boxSize={5} />
         </VStack>
       ) : (
         <>

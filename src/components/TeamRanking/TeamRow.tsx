@@ -1,8 +1,8 @@
 import React from 'react';
-import {Flex, HStack, Text, Link} from '@chakra-ui/react';
+import {Flex, HStack, Text} from '@chakra-ui/react';
 import ResultBadge from '../ResultBadge';
 import {TeamRankDetails} from './types';
-import {Link as GatsbyLink} from 'gatsby';
+import TeamName from '../TeamName';
 
 type TeamRowProps = {
   details: TeamRankDetails;
@@ -48,31 +48,10 @@ const TeamRow = ({details, index, isFirst, isLast}: TeamRowProps) => {
               : undefined
         }
       >
-        <Link
-          as={GatsbyLink}
-          href={`https://icbad.ffbad.org/equipe/${details.team.icBadTeamId}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          textDecoration="none"
-          _hover={{
-            textDecoration: 'underline',
-          }}
-        >
-          <Text
-            color="text.secondary"
-            fontSize="xs"
-            display={{base: 'block', md: 'none'}}
-          >
-            {details.team.shortName || details.team.longName}
-          </Text>
-          <Text
-            color="text.secondary"
-            fontSize="md"
-            display={{base: 'none', md: 'block'}}
-          >
-            {details.team.longName || details.team.shortName}
-          </Text>
-        </Link>
+        <TeamName
+          team={details.team}
+          textProps={{fontSize: {base: 'xs', md: 'md'}}}
+        />
       </Flex>
 
       <ResultBadge score={details.playedDays} />

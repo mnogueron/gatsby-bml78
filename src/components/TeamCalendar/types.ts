@@ -1,7 +1,11 @@
-export type TeamMeetingDetails = {
+export type TeamDetails = {
   shortName?: string;
   longName: string;
   icBadTeamId?: string;
+};
+
+// TODO extract team info in its own type
+export type TeamMeetingDetails = TeamDetails & {
   score?: number;
   isHost?: boolean;
 };

@@ -45,7 +45,7 @@ const validatePlayer = async (licence: string) => {
   );
   if (response.status === 200) {
     const json = await response.json();
-    return json.player.name === 'Badminton Maisons-laffitte';
+    return json?.player?.name === 'Badminton Maisons-laffitte';
   }
   return false;
 };
@@ -161,8 +161,8 @@ const MemberAccessGuard = ({children}: MemberAccessGuardProps) => {
   if (!isLogged) {
     return (
       <VStack
-        height="60vh"
-        pt={24}
+        minHeight="40vh"
+        py={{base: 16, md: 24}}
         alignItems="center"
         maxW="2xl"
         margin="auto"
@@ -184,7 +184,7 @@ Si vous n'avez pas encore de licence ou si vous avez choisi de ne pas apparaîtr
           </FormControl>
           <Button
             onClick={handleLicenceCheck}
-            isDisabled={Boolean(error) || timespan > 0}
+            isDisabled={!licence || Boolean(error) || timespan > 0}
           >
             {timespan > 0
               ? `${(minutes + '').padStart(2, '0')}:${(seconds + '').padStart(

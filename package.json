@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "build:ci": "gatsby clean & gatsby build",
+    "build:ci": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "decap:proxy": "decap-server",

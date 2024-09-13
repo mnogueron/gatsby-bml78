@@ -1,20 +1,38 @@
 import React, {useMemo} from 'react';
-import {graphql} from 'gatsby';
+import {graphql, navigate} from 'gatsby';
 import ArticlesPageTemplate from '../containers/Articles/ArticlesPageTemplate';
 import {preparePosts} from '../utils';
 import PageHead from '../components/PageHead';
+import Pagination from '../components/Pagination/Pagination';
 
-const ArticlesPage = ({data}) => {
+const ArticlesPage = ({data, pageContext}) => {
   const {frontmatter: fm} = data.markdownRemark;
+  const {currentPage, numPages} = pageContext;
   const {edges: posts} = data.allMarkdownRemark;
   const preparedPosts = useMemo(() => preparePosts(posts), [posts]);
+
+  const handlePageChange = page => {
+    if (page === 1) {
+      navigate(`/articles`);
+    } else {
+      navigate(`/articles/${page}`);
+    }
+  };
 
   return (
     <ArticlesPageTemplate
       heading={fm.heading}
       subheading={fm.subheading}
       posts={preparedPosts}
-    />
+      disableHighlight={currentPage > 1}
+    >
+      <Pagination
+        mt={16}
+        currentPage={currentPage}
+        totalPages={numPages}
+        onPageChange={handlePageChange}
+      />
+    </ArticlesPageTemplate>
   );
 };
 
@@ -25,7 +43,12 @@ export const Head = ({data, pageContext}) => {
 export default ArticlesPage;
 
 export const articlesPageQuery = graphql`
-  query ArticlesPage($id: String!, $hiddenCheck: [Boolean]!) {
+  query ArticlesPage(
+    $id: String!
+    $hiddenCheck: [Boolean]!
+    $skip: Int!
+    $limit: Int!
+  ) {
     markdownRemark(id: {eq: $id}) {
       html
       frontmatter {
@@ -43,6 +66,8 @@ export const articlesPageQuery = graphql`
           hidden: {in: $hiddenCheck}
         }
       }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {

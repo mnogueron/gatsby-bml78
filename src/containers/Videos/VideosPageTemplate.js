@@ -4,7 +4,7 @@ import Container from '../../components/Container';
 import {SimpleGrid} from '@chakra-ui/react';
 import YoutubeVideo from '../Home/components/YoutubeVideo';
 
-function VideosPageTemplate({heading, subheading, videos = []}) {
+function VideosPageTemplate({heading, subheading, videos = [], children}) {
   return (
     <>
       <Header heading={heading} subheading={subheading} />
@@ -17,6 +17,7 @@ function VideosPageTemplate({heading, subheading, videos = []}) {
             <YoutubeVideo key={video.id} id={video.id} />
           ))}
         </SimpleGrid>
+        {children}
       </Container>
     </>
   );

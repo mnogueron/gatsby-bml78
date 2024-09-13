@@ -1,10 +1,19 @@
 import React from 'react';
-import {Box, Text, Container, Heading, VStack, Stack} from '@chakra-ui/react';
+import {
+  Box,
+  Text,
+  Container,
+  Heading,
+  VStack,
+  Stack,
+  Flex,
+  HStack,
+} from '@chakra-ui/react';
 import Image from '../../components/Image';
 import {useFeatherChaseContext} from './FeatherChaseProvider';
 
 const FeatherChaseIntroMessage = () => {
-  const {playerId} = useFeatherChaseContext();
+  const {playerId, caughtFeathers, totalFeather} = useFeatherChaseContext();
   return (
     <Container maxW="5xl" mt={{base: 8, md: 12, lg: 16}} as="section">
       <Stack
@@ -54,15 +63,34 @@ const FeatherChaseIntroMessage = () => {
           >
             {`À trop jouer au badminton, notre mascotte a perdu ses plumes... Elles ont pris la poudre d'escampette et se sont envolées aux quatres coins du site... Un coup de raquette les a brisées et se sont réparties sur 16 pages différentes. Bonne chasse !`}
           </Text>
-          <Text
-            color="text.inverted.main"
-            fontSize={'sm'}
-            fontFamily={'VT323, monospace'}
-            lineHeight="short"
-            textAlign="right"
-          >
-            {`ID : #${playerId}`}
-          </Text>
+          <Flex justifyContent="space-between">
+            <HStack spacing="2px" justifyContent="center">
+              <Text
+                color="text.inverted.main"
+                fontSize={'sm'}
+                fontFamily={'VT323, monospace'}
+                lineHeight="short"
+              >
+                {`${caughtFeathers.length} / ${totalFeather}`}
+              </Text>
+              <Box
+                as={Image}
+                image={{
+                  url: `/assets/featherChase/plume_1.svg`,
+                }}
+                alt=""
+                height="18px"
+              />
+            </HStack>
+            <Text
+              color="text.inverted.main"
+              fontSize={'sm'}
+              fontFamily={'VT323, monospace'}
+              lineHeight="short"
+            >
+              {`ID : #${playerId}`}
+            </Text>
+          </Flex>
         </VStack>
         <Box
           as={Image}

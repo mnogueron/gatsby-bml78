@@ -107,6 +107,7 @@
     "./gatsby-browser.js",
     "./gatsby-config.ts",
     "./gatsby-config.js",
-    "./plugins/**/*"
+    "./plugins/**/*",
+    "./netlify/**/*"
   ]
 }

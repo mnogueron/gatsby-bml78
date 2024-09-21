@@ -73,6 +73,11 @@ export type Option = {
   optionId: number;
 };
 
+export enum ItemType {
+  PRODUCT = 'Product',
+  REGISTRATION = 'Registration',
+}
+
 export type Item = {
   name: string;
   customFields?: CustomField[];
@@ -82,10 +87,39 @@ export type Item = {
   tierId: number;
   id: number;
   amount: number;
-  type: 'Product'; // TODO type that
   initialAmount: number;
   state: 'Processed';
 } & ItemPricing;
+
+export type Product = Item & {
+  type: ItemType.PRODUCT;
+};
+
+export type Registration = Item & {
+  user: {
+    firstName: string;
+    lastName: string;
+  };
+  ticketUrl: string;
+  type: ItemType.REGISTRATION;
+};
+
+export enum FormType {
+  SHOP = 'Shop',
+  EVENT = 'Event',
+}
+
+export type FormShopData = {
+  items: Product[];
+  formType: FormType.SHOP;
+};
+
+export type FormEventData = {
+  items: Registration[];
+  formType: FormType.EVENT;
+};
+
+export type FormData = FormShopData | FormEventData;
 
 export type OrderEvent = {
   data: {
@@ -95,12 +129,10 @@ export type OrderEvent = {
       firstName: string;
       lastName: string;
     };
-    items: Item[];
     amount: {total: number; vat: number; discount: number};
     id: number;
     date: string;
     formSlug: string;
-    formType: 'Shop';
     organizationName: string;
     organizationSlug: string;
     organizationType: string;
@@ -111,7 +143,7 @@ export type OrderEvent = {
     };
     isAnonymous: boolean;
     isAmountHidden: boolean;
-  };
+  } & FormData;
   eventType: EventType.ORDER;
 };
 

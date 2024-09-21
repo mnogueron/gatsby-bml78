@@ -6,6 +6,9 @@ import {
   OrderEvent,
   CustomFieldType,
   Option,
+  Product,
+  FormType,
+  Registration,
 } from './types';
 
 const helloAsso = {
@@ -68,60 +71,108 @@ const getOrderEventEmbeds = (order: OrderEvent) => {
   const {data} = order;
   const {formSlug, formType, payer, items} = data;
 
-  const url = `${helloAsso.url}/${
-    formType === 'Shop' ? 'boutiques' : undefined
-  }/${formSlug}`;
+  switch (formType) {
+    case FormType.SHOP: {
+      const products = (items as Product[]).reduce<{
+        [key: string]: {name: string; quantity: number; value: string};
+      }>((acc, item) => {
+        const value = [
+          ...(item.customFields || []).map(parseCustomField),
+          ...(item.options || []).map(parseOption),
+        ]
+          .filter(Boolean)
+          .join('\n');
+        if (acc[item.name]) {
+          acc[item.name] = {
+            ...item,
+            quantity: acc[item.name].quantity + 1,
+            value:
+              acc[item.name].value === value
+                ? acc[item.name].value
+                : acc[item.name].value + '\n\n' + value,
+          };
+        } else {
+          acc[item.name] = {
+            name: item.name,
+            quantity: 1,
+            value,
+          };
+        }
 
-  const products = items.reduce<{
-    [key: string]: {name: string; quantity: number; value: string};
-  }>((acc, item) => {
-    const value = [
-      ...(item.customFields || []).map(parseCustomField),
-      ...(item.options || []).map(parseOption),
-    ]
-      .filter(Boolean)
-      .join('\n');
-    if (acc[item.name]) {
-      acc[item.name] = {
-        ...item,
-        quantity: acc[item.name].quantity + 1,
-        value:
-          acc[item.name].value === value
-            ? acc[item.name].value
-            : acc[item.name].value + '\n\n' + value,
-      };
-    } else {
-      acc[item.name] = {
-        name: item.name,
-        quantity: 1,
-        value,
-      };
-    }
+        return acc;
+      }, {});
 
-    return acc;
-  }, {});
+      const url = `${helloAsso.url}/boutiques/${formSlug}`;
 
-  return [
-    {
-      color: 0x1f8b4c,
-      title: `Nouvel achat`,
-      description: `Un nouvel achat vient d'être effectué sur [${formSlug}](${url})`,
-      fields: [
+      return [
         {
-          name: 'Acheteur',
-          value: `${payer.lastName.toUpperCase()} ${payer.firstName}`,
+          color: 0x1f8b4c,
+          title: `Nouvel achat`,
+          description: `Un nouvel achat vient d'être effectué sur [${formSlug}](${url})`,
+          fields: [
+            {
+              name: 'Acheteur',
+              value: `${payer.lastName.toUpperCase()} ${payer.firstName}`,
+            },
+            ...Object.values(products).map(p => ({
+              name: p.name,
+              value: [`*Quantité :* **${p.quantity}**`, p.value]
+                .filter(Boolean)
+                .join('\n\n'),
+            })),
+          ],
         },
-        ...Object.values(products).map(p => ({
-          name: p.name,
-          value: `*Quantité :* **${p.quantity}**` + '\n\n' + p.value,
-        })),
-      ],
-    },
-  ];
+      ];
+    }
+    case FormType.EVENT: {
+      const registrations = (items as Registration[]).map(item => {
+        const value = [
+          ...(item.customFields || []).map(parseCustomField),
+          ...(item.options || []).map(parseOption),
+        ]
+          .filter(Boolean)
+          .join('\n');
+
+        return {
+          name: item.name,
+          value: [
+            `:badminton: *Inscrit :* **${item.user.lastName.toUpperCase()} ${
+              item.user.firstName
+            }**`,
+            value,
+          ]
+            .filter(Boolean)
+            .join('\n\n'),
+        };
+      });
+
+      const url = `${helloAsso.url}/evenements/${formSlug}`;
+
+      return [
+        {
+          color: 0x1f8b4c,
+          title: `Nouvel enregistrement`,
+          description: `Un nouvel enregistrement vient d'être effectué pour l'événement [${formSlug}](${url})`,
+          fields: [
+            {
+              name: 'Acheteur',
+              value: `${payer.lastName.toUpperCase()} ${payer.firstName}`,
+            },
+            ...Object.values(registrations).map(p => ({
+              name: p.name,
+              value: p.value,
+            })),
+          ],
+        },
+      ];
+    }
+    default:
+      throw new Error('Not a supported form type for HelloAsso webhook.');
+  }
 };
 
 const getPayload = async (body: Event) => {
-  let embeds: any[] = [];
+  let embeds = undefined;
 
   switch (body.eventType) {
     case EventType.ORDER:
@@ -129,6 +180,12 @@ const getPayload = async (body: Event) => {
       break;
     default:
       break;
+  }
+
+  if (!embeds) {
+    throw new Error(
+      'No valid embed associated to event for HelloAsso webhook.'
+    );
   }
 
   return {

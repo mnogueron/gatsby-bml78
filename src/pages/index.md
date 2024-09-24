@@ -16,7 +16,7 @@ banner:
   text: "Dimanche 8 septembre : portes ouvertes au gymnase Jules Verne
     (Sartrouville) de 10h à 13h !"
   level: info
-  hide: false
+  hide: true
 ---
 Le **BML** vous accueille à **Maisons-Laffitte** et **Sartrouville** (78) pour découvrir la pratique du **badminton**, approfondir ses connaissances ou bien se lancer dans la compétition.
 

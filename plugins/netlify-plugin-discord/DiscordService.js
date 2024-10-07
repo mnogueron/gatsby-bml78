@@ -18,7 +18,7 @@ const getCommitUrl = sha => `${process.env['REPOSITORY_URL']}/commit/${sha}`;
 const getDiffUrl = (head, commitSha) =>
   `${process.env['REPOSITORY_URL']}/compare/${head}...${commitSha}`;
 
-const getPayload = (buildStatus, git) => {
+const getPayload = buildStatus => {
   const title = buildStatus === 'success' ? `Build deployed` : `Build failed`;
   const status = buildStatus === 'success' ? `deployed` : `failed to deploy`;
   const color = buildStatus === 'success' ? 0x1f8b4c : 0x992d22;
@@ -85,14 +85,13 @@ const getPayload = (buildStatus, git) => {
 
 const Discord = {
   sendBuildReport: async (buildStatus, utils) => {
-    const {git} = utils;
     try {
       const webhook = process.env['DISCORD_WEBHOOK_URL'];
       if (!webhook) {
         console.log('No webhook set. Skipping.');
         return;
       }
-      await axios.post(webhook, getPayload(buildStatus, git));
+      await axios.post(webhook, getPayload(buildStatus));
 
       switch (buildStatus) {
         case BuildStatus.ERROR:

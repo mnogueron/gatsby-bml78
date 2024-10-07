@@ -15,6 +15,8 @@ items:
   - url: /results/equipe-2
     title: Équipe 2 - Régional
     items:
+      - title: Saison 2024-2025
+        url: /results/equipe-2-s24-25
       - title: Saison 2023-2024
         url: /results/equipe-2-s23-24
       - title: Saison 2022-2023
@@ -24,6 +26,8 @@ items:
   - url: /results/equipe-3
     title: Équipe 3 - Régional
     items:
+      - title: Saison 2024-2025
+        url: /results/equipe-3-s24-25
       - title: Saison 2023-2024
         url: /results/equipe-3-s23-24
       - title: Saison 2022-2023

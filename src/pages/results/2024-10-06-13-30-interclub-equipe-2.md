@@ -1,0 +1,17 @@
+---
+templateKey: result-page
+title: interclub-equipe-2
+cardTitle: Saison 24-25 - Équipe 2 - BML78-2 vs VSSM94-3 
+heading: |-
+  Saison 24-25 - Équipe 2
+  BML78-2 vs VSSM94-3
+date: 2024-10-06T11:30:00.000Z
+category: equipe-2-s24-25
+featuredimage:
+  image: /assets/2024-2025/2024-10-06-13-30-E2.png
+---
+![](/assets/2024-2025/2024-10-06-13-30-E2.png "BML2 - J1")
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"BML78-2","longName":"Badminton Maisons-laffitte - 2","result":4},"teamB":{"shortName":"VSSM94-3","longName":"Vga Stella Saint Maur","result":4}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"firstname":"Julia","lastname":"GALVE","ranking":"R4","club":"BML78-2"},{"firstname":"Juliette","lastname":"LARDET","ranking":"R4","club":"BML78-2"}],"teamB":[{"firstname":"Apolline","lastname":"ARDOIN","ranking":"R6","club":"VSSM94-3"},{"firstname":"Jeanne","lastname":"RAFFIN","ranking":"N3","club":"VSSM94-3"}],"score":{"set":[{"scoreA":21,"scoreB":17},{"scoreA":15,"scoreB":21},{"scoreA":21,"scoreB":18}]},"type":"DD","hideClub":true},{"teamA":[{"firstname":"Corentin","lastname":"LE MOULEC","ranking":"N2","club":"BML78-2"},{"firstname":"William","lastname":"POUDENS","ranking":"N3","club":"BML78-2"}],"teamB":[{"firstname":"Nathanael","lastname":"BARRIER","ranking":"R5","club":"VSSM94-3"},{"firstname":"Victor","lastname":"LE ROUX","ranking":"R5","club":"VSSM94-3"}],"score":{"set":[{"scoreA":21,"scoreB":18},{"scoreA":21,"scoreB":13}]},"type":"DH","hideClub":true},{"teamA":[{"firstname":"Célica","lastname":"LIM","ranking":"D8","club":"BML78-2"}],"teamB":[{"firstname":"Yaelle","lastname":"BARRIER","ranking":"R6","club":"VSSM94-3"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":11,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"firstname":"Nicolas","lastname":"CLISANT","ranking":"N2","club":"BML78-2"}],"teamB":[{"firstname":"Julien","lastname":"MUZOLF","ranking":"N2","club":"VSSM94-3"}],"score":{"set":[{"scoreA":18,"scoreB":21},{"scoreA":14,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"firstname":"Juliette","lastname":"LARDET","ranking":"R4","club":"BML78-2","status":"AB."}],"teamB":[{"firstname":"Jeanne","lastname":"RAFFIN","ranking":"N3","club":"VSSM94-3"}],"score":{"set":[{"scoreA":6,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"firstname":"Maxime","lastname":"GIRAULT","ranking":"N2","club":"BML78-2"}],"teamB":[{"firstname":"Victor","lastname":"LE ROUX","ranking":"N3","club":"VSSM94-3"}],"score":{"set":[{"scoreA":21,"scoreB":18},{"scoreA":17,"scoreB":21},{"scoreA":16,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"firstname":"Corentin","lastname":"LE MOULEC","ranking":"N2","club":"BML78-2"},{"firstname":"Julia","lastname":"GALVE","ranking":"N3","club":"BML78-2"}],"teamB":[{"firstname":"Julien","lastname":"MUZOLF","ranking":"R4","club":"VSSM94-3"},{"firstname":"Apolline","lastname":"ARDOIN","ranking":"R4","club":"VSSM94-3"}],"score":{"set":[{"scoreA":14,"scoreB":21},{"scoreA":26,"scoreB":24},{"scoreA":21,"scoreB":19}]},"type":"MX","hideClub":true},{"teamA":[{"firstname":"Nicolas","lastname":"CLISANT","ranking":"N2","club":"BML78-2"},{"firstname":"Célica","lastname":"LIM","ranking":"R6","club":"BML78-2"}],"teamB":[{"firstname":"Nathanael","lastname":"BARRIER","ranking":"R5","club":"VSSM94-3"},{"firstname":"Yaelle","lastname":"BARRIER","ranking":"R6","club":"VSSM94-3"}],"score":{"set":[{"scoreA":21,"scoreB":16},{"scoreA":21,"scoreB":15}]},"type":"MX","hideClub":true}]}</scoreboard>

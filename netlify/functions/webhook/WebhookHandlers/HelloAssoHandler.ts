@@ -10,6 +10,7 @@ import {
   FormType,
   Registration,
 } from './types';
+import HelloAssoOrderHandler from './HelloAssoOrderHandler';
 
 const helloAsso = {
   name: 'HelloAsso',
@@ -67,7 +68,10 @@ const parseOption = (option: Option) => {
   ].join('\n');
 };
 
-const getOrderEventEmbeds = (order: OrderEvent) => {
+const getOrderEventEmbeds = (
+  order: OrderEvent,
+  spreadsheetLink: string | undefined
+) => {
   const {data} = order;
   const {formSlug, formType, payer, items} = data;
 
@@ -108,7 +112,11 @@ const getOrderEventEmbeds = (order: OrderEvent) => {
         {
           color: 0x1f8b4c,
           title: `Nouvel achat`,
-          description: `Un nouvel achat vient d'être effectué sur [${formSlug}](${url})`,
+          description:
+            `Un nouvel achat vient d'être effectué sur [${formSlug}](${url})` +
+            (spreadsheetLink
+              ? ` ([:bar_chart: suivi de commande](${spreadsheetLink}))`
+              : ''),
           fields: [
             {
               name: 'Acheteur',
@@ -136,7 +144,7 @@ const getOrderEventEmbeds = (order: OrderEvent) => {
         return {
           name: item.name,
           value: [
-            `:badminton: *Inscrit :* **${item.user.lastName.toUpperCase()} ${
+            `:badminton: *Participant :* **${item.user.lastName.toUpperCase()} ${
               item.user.firstName
             }**`,
             value,
@@ -151,8 +159,8 @@ const getOrderEventEmbeds = (order: OrderEvent) => {
       return [
         {
           color: 0x1f8b4c,
-          title: `Nouvel enregistrement`,
-          description: `Un nouvel enregistrement vient d'être effectué pour l'événement [${formSlug}](${url})`,
+          title: `Nouvelle inscription`,
+          description: `Une nouvelle inscription vient d'être effectuée pour l'événement [${formSlug}](${url})`,
           fields: [
             {
               name: 'Acheteur',
@@ -171,12 +179,12 @@ const getOrderEventEmbeds = (order: OrderEvent) => {
   }
 };
 
-const getPayload = async (body: Event) => {
+const getPayload = async (body: Event, spreadsheetLink: string | undefined) => {
   let embeds = undefined;
 
   switch (body.eventType) {
     case EventType.ORDER:
-      embeds = getOrderEventEmbeds(body as OrderEvent);
+      embeds = getOrderEventEmbeds(body as OrderEvent, spreadsheetLink);
       break;
     default:
       break;
@@ -212,7 +220,8 @@ const HelloAssoHandler = async (req: Request) => {
     );
   }
 
-  const payload = await getPayload(body);
+  const spreadsheetLink = await HelloAssoOrderHandler(body);
+  const payload = await getPayload(body, spreadsheetLink);
   await axios.post(discordWebhook, payload);
 };
 

@@ -1,6 +1,7 @@
 import {GoogleAuth} from 'google-auth-library';
 import {google} from 'googleapis';
 import {Event, EventType, FormType, OrderEvent, Product} from './types';
+import * as dateFns from 'date-fns';
 
 const credentials = JSON.parse(Netlify.env.get('DRIVE_SHEET_CREDENTIALS'));
 
@@ -40,7 +41,7 @@ export const handleSheetUpdate = async (body: OrderEvent) => {
     return [
       '',
       data.id + '',
-      data.date,
+      dateFns.format(new Date(data.date), 'dd/MM/yyy HH:mm:ss'),
       item.state === 'Processed' ? 'Validé' : 'En cours',
       payer.lastName,
       payer.firstName,
@@ -48,9 +49,9 @@ export const handleSheetUpdate = async (body: OrderEvent) => {
       '',
       'Carte bancaire',
       item.name,
-      item.initialAmount / 1000,
+      item.initialAmount / 100,
       item.discount?.code,
-      item.discount?.amount / 1000,
+      item.discount?.amount / 100,
       ...(item.customFields?.map(cf => cf.answer) || []),
     ];
   });

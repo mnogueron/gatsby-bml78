@@ -904,35 +904,23 @@ type Frontmatter {
   category: String
   featuredimage: MarkdownRemarkFrontmatterFeaturedimage
   subheading: String
+  menuKey: String
+  items: [MarkdownRemarkFrontmatterItems]
+  seo: MarkdownRemarkFrontmatterSeo
+  featured: Boolean
+  hidden: Boolean
+  videos: [MarkdownRemarkFrontmatterVideos]
+  contactform: MarkdownRemarkFrontmatterContactform
+  slug: String
   image: File
   headerImage: File
   banner: MarkdownRemarkFrontmatterBanner
-  featured: Boolean
-  seo: MarkdownRemarkFrontmatterSeo
-  slug: String
-  menuKey: String
-  items: [MarkdownRemarkFrontmatterItems]
-  videos: [MarkdownRemarkFrontmatterVideos]
-  contactform: MarkdownRemarkFrontmatterContactform
-  hidden: Boolean
 }
 
 type MarkdownRemarkFrontmatterFeaturedimage {
   image: File
   alt: String
   hidden: Boolean
-}
-
-type MarkdownRemarkFrontmatterBanner {
-  text: String
-  level: String
-  hide: Boolean
-}
-
-type MarkdownRemarkFrontmatterSeo {
-  title: String
-  description: String
-  image: File
 }
 
 type MarkdownRemarkFrontmatterItems {
@@ -942,7 +930,13 @@ type MarkdownRemarkFrontmatterItems {
 }
 
 type MarkdownRemarkFrontmatterItemsItems {
+  title: String
   url: String
+}
+
+type MarkdownRemarkFrontmatterSeo {
+  description: String
+  image: File
   title: String
 }
 
@@ -954,6 +948,12 @@ type MarkdownRemarkFrontmatterContactform {
   heading: String
   description: String
   image: File
+}
+
+type MarkdownRemarkFrontmatterBanner {
+  text: String
+  level: String
+  hide: Boolean
 }
 
 type Member {
@@ -1157,17 +1157,17 @@ input FrontmatterFilterInput {
   category: StringQueryOperatorInput
   featuredimage: MarkdownRemarkFrontmatterFeaturedimageFilterInput
   subheading: StringQueryOperatorInput
+  menuKey: StringQueryOperatorInput
+  items: MarkdownRemarkFrontmatterItemsFilterListInput
+  seo: MarkdownRemarkFrontmatterSeoFilterInput
+  featured: BooleanQueryOperatorInput
+  hidden: BooleanQueryOperatorInput
+  videos: MarkdownRemarkFrontmatterVideosFilterListInput
+  contactform: MarkdownRemarkFrontmatterContactformFilterInput
+  slug: StringQueryOperatorInput
   image: FileFilterInput
   headerImage: FileFilterInput
   banner: MarkdownRemarkFrontmatterBannerFilterInput
-  featured: BooleanQueryOperatorInput
-  seo: MarkdownRemarkFrontmatterSeoFilterInput
-  slug: StringQueryOperatorInput
-  menuKey: StringQueryOperatorInput
-  items: MarkdownRemarkFrontmatterItemsFilterListInput
-  videos: MarkdownRemarkFrontmatterVideosFilterListInput
-  contactform: MarkdownRemarkFrontmatterContactformFilterInput
-  hidden: BooleanQueryOperatorInput
 }
 
 input MemberFilterInput {
@@ -1231,18 +1231,6 @@ input MarkdownRemarkFrontmatterFeaturedimageFilterInput {
   hidden: BooleanQueryOperatorInput
 }
 
-input MarkdownRemarkFrontmatterBannerFilterInput {
-  text: StringQueryOperatorInput
-  level: StringQueryOperatorInput
-  hide: BooleanQueryOperatorInput
-}
-
-input MarkdownRemarkFrontmatterSeoFilterInput {
-  title: StringQueryOperatorInput
-  description: StringQueryOperatorInput
-  image: FileFilterInput
-}
-
 input MarkdownRemarkFrontmatterItemsFilterListInput {
   elemMatch: MarkdownRemarkFrontmatterItemsFilterInput
 }
@@ -1258,7 +1246,13 @@ input MarkdownRemarkFrontmatterItemsItemsFilterListInput {
 }
 
 input MarkdownRemarkFrontmatterItemsItemsFilterInput {
+  title: StringQueryOperatorInput
   url: StringQueryOperatorInput
+}
+
+input MarkdownRemarkFrontmatterSeoFilterInput {
+  description: StringQueryOperatorInput
+  image: FileFilterInput
   title: StringQueryOperatorInput
 }
 
@@ -1274,6 +1268,12 @@ input MarkdownRemarkFrontmatterContactformFilterInput {
   heading: StringQueryOperatorInput
   description: StringQueryOperatorInput
   image: FileFilterInput
+}
+
+input MarkdownRemarkFrontmatterBannerFilterInput {
+  text: StringQueryOperatorInput
+  level: StringQueryOperatorInput
+  hide: BooleanQueryOperatorInput
 }
 
 input MarkdownRemarkFieldsFilterInput {
@@ -1488,17 +1488,17 @@ input FrontmatterFieldSelector {
   category: FieldSelectorEnum
   featuredimage: MarkdownRemarkFrontmatterFeaturedimageFieldSelector
   subheading: FieldSelectorEnum
+  menuKey: FieldSelectorEnum
+  items: MarkdownRemarkFrontmatterItemsFieldSelector
+  seo: MarkdownRemarkFrontmatterSeoFieldSelector
+  featured: FieldSelectorEnum
+  hidden: FieldSelectorEnum
+  videos: MarkdownRemarkFrontmatterVideosFieldSelector
+  contactform: MarkdownRemarkFrontmatterContactformFieldSelector
+  slug: FieldSelectorEnum
   image: FileFieldSelector
   headerImage: FileFieldSelector
   banner: MarkdownRemarkFrontmatterBannerFieldSelector
-  featured: FieldSelectorEnum
-  seo: MarkdownRemarkFrontmatterSeoFieldSelector
-  slug: FieldSelectorEnum
-  menuKey: FieldSelectorEnum
-  items: MarkdownRemarkFrontmatterItemsFieldSelector
-  videos: MarkdownRemarkFrontmatterVideosFieldSelector
-  contactform: MarkdownRemarkFrontmatterContactformFieldSelector
-  hidden: FieldSelectorEnum
 }
 
 input MemberFieldSelector {
@@ -1513,18 +1513,6 @@ input MarkdownRemarkFrontmatterFeaturedimageFieldSelector {
   hidden: FieldSelectorEnum
 }
 
-input MarkdownRemarkFrontmatterBannerFieldSelector {
-  text: FieldSelectorEnum
-  level: FieldSelectorEnum
-  hide: FieldSelectorEnum
-}
-
-input MarkdownRemarkFrontmatterSeoFieldSelector {
-  title: FieldSelectorEnum
-  description: FieldSelectorEnum
-  image: FileFieldSelector
-}
-
 input MarkdownRemarkFrontmatterItemsFieldSelector {
   title: FieldSelectorEnum
   url: FieldSelectorEnum
@@ -1532,7 +1520,13 @@ input MarkdownRemarkFrontmatterItemsFieldSelector {
 }
 
 input MarkdownRemarkFrontmatterItemsItemsFieldSelector {
+  title: FieldSelectorEnum
   url: FieldSelectorEnum
+}
+
+input MarkdownRemarkFrontmatterSeoFieldSelector {
+  description: FieldSelectorEnum
+  image: FileFieldSelector
   title: FieldSelectorEnum
 }
 
@@ -1544,6 +1538,12 @@ input MarkdownRemarkFrontmatterContactformFieldSelector {
   heading: FieldSelectorEnum
   description: FieldSelectorEnum
   image: FileFieldSelector
+}
+
+input MarkdownRemarkFrontmatterBannerFieldSelector {
+  text: FieldSelectorEnum
+  level: FieldSelectorEnum
+  hide: FieldSelectorEnum
 }
 
 input MarkdownRemarkFieldsFieldSelector {
@@ -1732,17 +1732,17 @@ input FrontmatterSortInput {
   category: SortOrderEnum
   featuredimage: MarkdownRemarkFrontmatterFeaturedimageSortInput
   subheading: SortOrderEnum
+  menuKey: SortOrderEnum
+  items: MarkdownRemarkFrontmatterItemsSortInput
+  seo: MarkdownRemarkFrontmatterSeoSortInput
+  featured: SortOrderEnum
+  hidden: SortOrderEnum
+  videos: MarkdownRemarkFrontmatterVideosSortInput
+  contactform: MarkdownRemarkFrontmatterContactformSortInput
+  slug: SortOrderEnum
   image: FileSortInput
   headerImage: FileSortInput
   banner: MarkdownRemarkFrontmatterBannerSortInput
-  featured: SortOrderEnum
-  seo: MarkdownRemarkFrontmatterSeoSortInput
-  slug: SortOrderEnum
-  menuKey: SortOrderEnum
-  items: MarkdownRemarkFrontmatterItemsSortInput
-  videos: MarkdownRemarkFrontmatterVideosSortInput
-  contactform: MarkdownRemarkFrontmatterContactformSortInput
-  hidden: SortOrderEnum
 }
 
 input MemberSortInput {
@@ -1757,18 +1757,6 @@ input MarkdownRemarkFrontmatterFeaturedimageSortInput {
   hidden: SortOrderEnum
 }
 
-input MarkdownRemarkFrontmatterBannerSortInput {
-  text: SortOrderEnum
-  level: SortOrderEnum
-  hide: SortOrderEnum
-}
-
-input MarkdownRemarkFrontmatterSeoSortInput {
-  title: SortOrderEnum
-  description: SortOrderEnum
-  image: FileSortInput
-}
-
 input MarkdownRemarkFrontmatterItemsSortInput {
   title: SortOrderEnum
   url: SortOrderEnum
@@ -1776,7 +1764,13 @@ input MarkdownRemarkFrontmatterItemsSortInput {
 }
 
 input MarkdownRemarkFrontmatterItemsItemsSortInput {
+  title: SortOrderEnum
   url: SortOrderEnum
+}
+
+input MarkdownRemarkFrontmatterSeoSortInput {
+  description: SortOrderEnum
+  image: FileSortInput
   title: SortOrderEnum
 }
 
@@ -1788,6 +1782,12 @@ input MarkdownRemarkFrontmatterContactformSortInput {
   heading: SortOrderEnum
   description: SortOrderEnum
   image: FileSortInput
+}
+
+input MarkdownRemarkFrontmatterBannerSortInput {
+  text: SortOrderEnum
+  level: SortOrderEnum
+  hide: SortOrderEnum
 }
 
 input MarkdownRemarkFieldsSortInput {

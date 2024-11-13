@@ -37,6 +37,8 @@ items:
   - url: /results/equipe-4
     title: Équipe 4 - Départemental
     items:
+      - title: Saison 2024-2025
+        url: /results/equipe-4-s24-25
       - title: Saison 2023-2024
         url: /results/equipe-4-s23-24
       - title: Saison 2022-2023
@@ -46,6 +48,8 @@ items:
   - url: /results/equipe-5
     title: Équipe 5 - Départemental
     items:
+      - title: Saison 2024-2025
+        url: /results/equipe-5-s24-25
       - title: Saison 2023-2024
         url: /results/equipe-5-s23-24
       - title: Saison 2022-2023 - Mixte
@@ -55,12 +59,19 @@ items:
   - url: ""
     title: Équipe 6 - Départemental
     items:
+      - title: Saison 2024-2025
+        url: /results/equipe-6-s24-25
       - title: Saison 2023-2024 - Mixte
         url: /results/equipe-6-s23-24
       - title: Saison 2022-2023 - Homme
         url: /results/equipe-6-s22-23
-  - title: Équipe 7 - Départemental Homme
-    url: /results/equipe-7-s23-24
+  - url: ""
+    title: Équipe 7 - Départemental - Homme
+    items:
+      - title: Saison 2024-2025
+        url: /results/equipe-7-s24-25
+      - title: Saison 2023-2024
+        url: /results/equipe-7-s23-24
   - title: Toutes les vidéos
     url: /results/videos
 ---

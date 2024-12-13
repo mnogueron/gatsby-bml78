@@ -8,9 +8,9 @@ heading: |-
 date: 2024-09-21T10:30:00.000Z
 category: equipe-1-s24-25
 featuredimage:
-  image: /assets/2024-2025/2024-09-21-E1.png
+  image: /assets/2024-2025/2024-09-21-12-30-E1.png
 ---
-![](/assets/2024-2025/2024-09-21-E1.png "BML1 - J1")
+![](/assets/2024-2025/2024-09-21-12-30-E1.png "BML1 - J1")
 
 <teamscoreboard>{"teamScore":{"teamA":{"shortName":"BCCO60 2","longName":"B.C. CHAMBLY OISE","result":5},"teamB":{"shortName":"BML78 1","longName":"Badminton Maisons-laffitte","result":3}}}</teamscoreboard>
 

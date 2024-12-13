@@ -1,0 +1,17 @@
+---
+templateKey: result-page
+title: interclub-equipe-2
+cardTitle: Saison 24-25 - Équipe 2 - CSM2075-2 vs BML78-2 
+heading: |-
+  Saison 24-25 - Équipe 2
+  CSM2075-2 vs BML78-2
+date: 2024-11-17T12:30:00.000Z
+category: equipe-2-s24-25
+featuredimage:
+  image: /assets/2024-2025/2024-11-17-13-30-E2.png
+---
+![](/assets/2024-2025/2024-11-17-13-30-E2.png "BML2 - J2")
+
+<teamscoreboard>{"teamScore":{"teamA":{"shortName":"CSM2075-2","longName":"Club Sportif Multisports 20eme","result":1},"teamB":{"shortName":"BML78-2","longName":"Badminton Maisons-laffitte - 2","result":7}}}</teamscoreboard>
+
+<scoreboard>{"matches":[{"teamA":[{"firstname":"Thomas","lastname":"JULLIEN","ranking":"R5","club":"CSM2075-2"},{"firstname":"Orama","lastname":"NIVET","ranking":"R5","club":"CSM2075-2"}],"teamB":[{"firstname":"Corentin","lastname":"LE MOULEC","ranking":"N2","club":"BML78-2"},{"firstname":"Julia","lastname":"GALVE","ranking":"N3","club":"BML78-2"}],"score":{"set":[{"scoreA":14,"scoreB":21},{"scoreA":15,"scoreB":21}]},"type":"MX","hideClub":true},{"teamA":[{"firstname":"Julien","lastname":"BAUDELET","ranking":"R5","club":"CSM2075-2"},{"firstname":"Emmy","lastname":"NABAJOTH","ranking":"R6","club":"CSM2075-2"}],"teamB":[{"firstname":"Nicolas","lastname":"CLISANT","ranking":"N2","club":"BML78-2"},{"firstname":"Célica","lastname":"LIM","ranking":"R6","club":"BML78-2"}],"score":{"set":[{"scoreA":13,"scoreB":21},{"scoreA":14,"scoreB":21}]},"type":"MX","hideClub":true},{"teamA":[{"firstname":"Nannan","lastname":"SHEN","ranking":"R6","club":"CSM2075-2"}],"teamB":[{"firstname":"Juliette","lastname":"LARDET","ranking":"R4","club":"BML78-2"}],"score":{"set":[{"scoreA":23,"scoreB":21},{"scoreA":21,"scoreB":17}]},"type":"SD","hideClub":true},{"teamA":[{"firstname":"Cyriaque","lastname":"BLANCHET","ranking":"R4","club":"CSM2075-2"}],"teamB":[{"firstname":"Maxime","lastname":"GIRAULT","ranking":"N2","club":"BML78-2"}],"score":{"set":[{"scoreA":20,"scoreB":22},{"scoreA":19,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"firstname":"Orama","lastname":"NIVET","ranking":"R4","club":"CSM2075-2"}],"teamB":[{"firstname":"Julia","lastname":"GALVE","ranking":"R4","club":"BML78-2"}],"score":{"set":[{"scoreA":20,"scoreB":22},{"scoreA":9,"scoreB":21}]},"type":"SD","hideClub":true},{"teamA":[{"firstname":"Thomas","lastname":"JULLIEN","ranking":"R4","club":"CSM2075-2"}],"teamB":[{"firstname":"Nicolas","lastname":"CLISANT","ranking":"N2","club":"BML78-2"}],"score":{"set":[{"scoreA":12,"scoreB":21},{"scoreA":15,"scoreB":21}]},"type":"SH","hideClub":true},{"teamA":[{"firstname":"Julien","lastname":"BAUDELET","ranking":"R5","club":"CSM2075-2"},{"firstname":"Jean-vincent","lastname":"FRAYSSINET","ranking":"R4","club":"CSM2075-2"}],"teamB":[{"firstname":"Corentin","lastname":"LE MOULEC","ranking":"N2","club":"BML78-2"},{"firstname":"William","lastname":"POUDENS","ranking":"N3","club":"BML78-2"}],"score":{"set":[{"scoreA":17,"scoreB":21},{"scoreA":16,"scoreB":21}]},"type":"DH","hideClub":true},{"teamA":[{"firstname":"Emmy","lastname":"NABAJOTH","ranking":"R6","club":"CSM2075-2"},{"firstname":"Nannan","lastname":"SHEN","ranking":"R5","club":"CSM2075-2"}],"teamB":[{"firstname":"Juliette","lastname":"LARDET","ranking":"R4","club":"BML78-2"},{"firstname":"Célica","lastname":"LIM","ranking":"R6","club":"BML78-2"}],"score":{"set":[{"scoreA":9,"scoreB":21},{"scoreA":13,"scoreB":21}]},"type":"DD","hideClub":true}]}</scoreboard>

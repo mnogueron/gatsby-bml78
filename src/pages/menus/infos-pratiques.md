@@ -25,4 +25,6 @@ items:
         url: /articles/2024-07-19-stage-jeune-%C3%A9t%C3%A9-2024/
       - title: Stage adulte - Été 2024
         url: /articles/2024-08-19-stage-adulte-comp%C3%A9titeur-%C3%A9t%C3%A9-2024/
+      - title: Stage jeune - Hiver 2025
+        url: /articles/2024-12-10-stage-jeune-hiver-2025/
 ---

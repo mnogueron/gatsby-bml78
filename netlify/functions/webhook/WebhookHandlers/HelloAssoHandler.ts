@@ -160,7 +160,11 @@ const getOrderEventEmbeds = (
         {
           color: 0x1f8b4c,
           title: `Nouvelle inscription`,
-          description: `Une nouvelle inscription vient d'être effectuée pour l'événement [${formSlug}](${url})`,
+          description:
+            `Une nouvelle inscription vient d'être effectuée pour l'événement [${formSlug}](${url})` +
+            (spreadsheetLink
+              ? ` ([:bar_chart: suivi d'inscription](${spreadsheetLink}))`
+              : ''),
           fields: [
             {
               name: 'Acheteur',

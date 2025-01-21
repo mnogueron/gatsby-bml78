@@ -78,7 +78,7 @@ export enum ItemType {
   REGISTRATION = 'Registration',
 }
 
-export type Item = {
+export type BaseItem = {
   name: string;
   customFields?: CustomField[];
   options?: Option[];
@@ -89,7 +89,13 @@ export type Item = {
   amount: number;
   initialAmount: number;
   state: 'Processed';
-} & ItemPricing;
+};
+
+export type ItemFixedPrice = BaseItem & ItemFixedPricing;
+export type ItemFreePrice = BaseItem & ItemFreePricing;
+export type ItemPwywPrice = BaseItem & ItemPwywPricing;
+
+export type Item = ItemFixedPrice | ItemFreePrice | ItemPwywPrice;
 
 export type Product = Item & {
   type: ItemType.PRODUCT;
@@ -102,6 +108,10 @@ export type Registration = Item & {
   };
   ticketUrl: string;
   type: ItemType.REGISTRATION;
+};
+
+export type DiscountableItem = Item & {
+  discount?: {code: string; amount: number};
 };
 
 export enum FormType {

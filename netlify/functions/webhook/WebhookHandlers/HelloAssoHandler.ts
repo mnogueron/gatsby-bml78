@@ -10,7 +10,7 @@ import {
   FormType,
   Registration,
 } from './types';
-import HelloAssoOrderHandler from './HelloAssoOrderHandler';
+import HelloAssoSpreadsheetHandler from './HelloAssoSpreadsheetHandler';
 
 const helloAsso = {
   name: 'HelloAsso',
@@ -220,7 +220,7 @@ const HelloAssoHandler = async (req: Request) => {
     );
   }
 
-  const spreadsheetLink = await HelloAssoOrderHandler(body);
+  const spreadsheetLink = await HelloAssoSpreadsheetHandler(body);
   const payload = await getPayload(body, spreadsheetLink);
   await axios.post(discordWebhook, payload);
 };

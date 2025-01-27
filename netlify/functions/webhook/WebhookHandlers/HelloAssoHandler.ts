@@ -207,14 +207,16 @@ const getPayload = async (body: Event, spreadsheetLink: string | undefined) => {
   };
 };
 
+const getDiscordWebhook = (body: Event) => {
+  return (
+    Netlify.env.get(`DISCORD_WEBHOOK_URL_HELLO_ASSO_${body.data.formSlug}`) ||
+    Netlify.env.get('DISCORD_WEBHOOK_URL_HELLO_ASSO')
+  );
+};
+
 const HelloAssoHandler = async (req: Request) => {
   if (req.method !== 'POST') {
     throw new Error('Not a valid method for HelloAsso webhook.');
-  }
-
-  const discordWebhook = Netlify.env.get('DISCORD_WEBHOOK_URL_HELLO_ASSO');
-  if (!discordWebhook) {
-    throw new Error('No webhook set for the HelloAsso X Discord.');
   }
 
   const body = await req.json();
@@ -222,6 +224,11 @@ const HelloAssoHandler = async (req: Request) => {
     throw new Error(
       `'${body.eventType}' is not a supported event for HelloAsso integration.`
     );
+  }
+
+  const discordWebhook = getDiscordWebhook(body);
+  if (!discordWebhook) {
+    throw new Error('No webhook set for the HelloAsso X Discord.');
   }
 
   const spreadsheetLink = await HelloAssoSpreadsheetHandler(body);

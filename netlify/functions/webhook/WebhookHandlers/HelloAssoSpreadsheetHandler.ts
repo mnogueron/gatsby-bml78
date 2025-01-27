@@ -27,7 +27,9 @@ const toBase26 = (decimal: number): string => {
   return out.toUpperCase();
 };
 
-const credentials = JSON.parse(Netlify.env.get('DRIVE_SHEET_CREDENTIALS'));
+const credentials = JSON.parse(
+  Netlify.env.get('DRIVE_SHEET_CREDENTIALS') || ''
+);
 
 const auth = new GoogleAuth({
   scopes: 'https://www.googleapis.com/auth/spreadsheets',

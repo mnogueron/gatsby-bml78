@@ -209,8 +209,11 @@ const getPayload = async (body: Event, spreadsheetLink: string | undefined) => {
 
 const getDiscordWebhook = (body: Event) => {
   return (
-    Netlify.env.get(`DISCORD_WEBHOOK_URL_HELLO_ASSO_${body.data.formSlug}`) ||
-    Netlify.env.get('DISCORD_WEBHOOK_URL_HELLO_ASSO')
+    Netlify.env.get(
+      `DISCORD_WEBHOOK_URL_HELLO_ASSO_${body.data.formSlug
+        .replaceAll('-', '_')
+        .toUpperCase()}`
+    ) || Netlify.env.get('DISCORD_WEBHOOK_URL_HELLO_ASSO')
   );
 };
 

@@ -122,6 +122,10 @@ const getOrderEventEmbeds = (
               name: 'Acheteur',
               value: `${payer.lastName.toUpperCase()} ${payer.firstName}`,
             },
+            {
+              name: 'Total',
+              value: `:moneybag: ${data.amount.total / 100} €`,
+            },
             ...Object.values(products).map(p => ({
               name: p.name,
               value: [`*Quantité :* **${p.quantity}**`, p.value]
@@ -169,6 +173,10 @@ const getOrderEventEmbeds = (
             {
               name: 'Acheteur',
               value: `${payer.lastName.toUpperCase()} ${payer.firstName}`,
+            },
+            {
+              name: 'Total',
+              value: `:moneybag: ${data.amount.total / 100} €`,
             },
             ...Object.values(registrations).map(p => ({
               name: p.name,

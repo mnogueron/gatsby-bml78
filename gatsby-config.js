@@ -119,6 +119,7 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 800,
               showCaptions: ['title'],
+              wrapperStyle: `box-shadow: none;`,
             },
           },
           {

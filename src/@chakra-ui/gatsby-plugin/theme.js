@@ -54,6 +54,9 @@ const theme = {
         top: '50%',
         transform: 'translate(-100%, -50%)',
       },
+      '.gatsby-resp-image-image': {
+        boxShadow: 'none !important',
+      },
     },
   },
   fonts: {

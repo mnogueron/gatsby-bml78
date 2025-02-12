@@ -5,6 +5,7 @@ import {
   Event,
   EventType,
   FormType,
+  Option,
   OrderEvent,
   Product,
   Registration,
@@ -95,7 +96,6 @@ const prepareSpreadsheets = async (body: OrderEvent) => {
 const eventDataMapper = (body: OrderEvent, skippedColumns: number) => {
   const {data} = body;
   const {items, payer} = data;
-  // TODO handle options
   return (items as Registration[]).map(item => {
     const {discount} = item as DiscountableItem;
     return [
@@ -114,6 +114,11 @@ const eventDataMapper = (body: OrderEvent, skippedColumns: number) => {
       discount?.code,
       discount?.amount ? discount?.amount / 100 : '',
       ...(item.customFields?.map(cf => cf.answer) || []),
+      ...(item.options?.flatMap(o => [
+        o.name,
+        o.amount,
+        ...(o.customFields?.map(cf => cf.answer).filter(Boolean) || []),
+      ]) || []),
     ];
   });
 };

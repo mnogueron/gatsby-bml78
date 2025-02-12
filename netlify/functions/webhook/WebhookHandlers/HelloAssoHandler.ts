@@ -61,11 +61,8 @@ const parseCustomField = (customField: CustomField) => {
 const parseOption = (option: Option) => {
   return [
     `:control_knobs: *Option :* **${option.name}**`,
-    (option.customFields || [])
-      .map(parseCustomField)
-      .filter(Boolean)
-      .map(v => `\t${v}`),
-  ].join('\n');
+    ...((option.customFields || []).map(parseCustomField) || []),
+  ];
 };
 
 const getOrderEventEmbeds = (
@@ -82,7 +79,7 @@ const getOrderEventEmbeds = (
       }>((acc, item) => {
         const value = [
           ...(item.customFields || []).map(parseCustomField),
-          ...(item.options || []).map(parseOption),
+          ...(item.options || []).flatMap(parseOption),
         ]
           .filter(Boolean)
           .join('\n');

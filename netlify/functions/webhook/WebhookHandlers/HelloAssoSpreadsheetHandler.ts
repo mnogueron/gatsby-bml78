@@ -116,7 +116,7 @@ const eventDataMapper = (body: OrderEvent, skippedColumns: number) => {
       ...(item.customFields?.map(cf => cf.answer) || []),
       ...(item.options?.flatMap(o => [
         o.name,
-        o.amount,
+        o.amount / 100,
         ...(o.customFields?.map(cf => cf.answer).filter(Boolean) || []),
       ]) || []),
     ];

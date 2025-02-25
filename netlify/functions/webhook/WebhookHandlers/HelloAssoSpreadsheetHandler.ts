@@ -5,7 +5,6 @@ import {
   Event,
   EventType,
   FormType,
-  Option,
   OrderEvent,
   Product,
   Registration,
@@ -66,7 +65,7 @@ const fetchSpreadsheetData = async (
 ): Promise<SpreadsheetData | undefined> => {
   const response = await service.spreadsheets.values.get({
     spreadsheetId: '1Bg9TnQsTZpU3rxEx43FosW5zHr7HH6u1LNBU-MYUmHs',
-    range: 'A2:D',
+    range: 'A2:E',
   });
   const handlerRow = response.data.values?.find(
     v => v[0] === body.data.formSlug

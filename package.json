@@ -33,6 +33,7 @@
     "date-fns": "^2.30.0",
     "decap-cms-app": "^3.0.12",
     "decap-cms-locales": "^3.1.2",
+    "form-data": "^4.0.2",
     "framer-motion": "^6.3.11",
     "gatsby": "^5.13.3",
     "gatsby-plugin-decap-cms": "^4.0.4",

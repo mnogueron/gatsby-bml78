@@ -1,24 +1,18 @@
 import axios from 'axios';
 import {
   CustomField,
-  EventType,
-  Event,
-  OrderEvent,
   CustomFieldType,
-  Option,
-  Product,
+  Event,
+  EventType,
   FormType,
+  Option,
+  OrderEvent,
+  Product,
   Registration,
 } from './types';
 import HelloAssoSpreadsheetHandler from './HelloAssoSpreadsheetHandler';
-
-const helloAsso = {
-  name: 'HelloAsso',
-  logo: 'https://cdn.helloasso.com/img/logos/helloasso-44ac081445ee450f9906e9399ed0c7da.png?resize=fill:140:140',
-  url: 'https://www.helloasso.com/associations/badminton-maisons-laffitte',
-};
-
-const supportedEventTypes = [EventType.ORDER];
+import {notifyError, WebhookError, WebhookErrorType} from './error';
+import {helloAsso, supportedEventTypes} from './constants';
 
 const parseCustomField = (customField: CustomField) => {
   if (customField.name.includes('Date de retrait')) {
@@ -223,25 +217,36 @@ const getDiscordWebhook = (body: Event) => {
 };
 
 const HelloAssoHandler = async (req: Request) => {
-  if (req.method !== 'POST') {
-    throw new Error('Not a valid method for HelloAsso webhook.');
-  }
-
   const body = await req.json();
-  if (!supportedEventTypes.includes(body.eventType)) {
-    throw new Error(
-      `'${body.eventType}' is not a supported event for HelloAsso integration.`
-    );
-  }
+  try {
+    if (req.method !== 'POST') {
+      throw new WebhookError(
+        'Not a valid method for HelloAsso webhook.',
+        WebhookErrorType.INVALID_METHOD
+      );
+    }
 
-  const discordWebhook = getDiscordWebhook(body);
-  if (!discordWebhook) {
-    throw new Error('No webhook set for the HelloAsso X Discord.');
-  }
+    if (!supportedEventTypes.includes(body.eventType)) {
+      throw new WebhookError(
+        `'${body.eventType}' is not a supported event for HelloAsso integration.`,
+        WebhookErrorType.NON_SUPPORTED_EVENT
+      );
+    }
 
-  const spreadsheetLink = await HelloAssoSpreadsheetHandler(body);
-  const payload = await getPayload(body, spreadsheetLink);
-  await axios.post(discordWebhook, payload);
+    const discordWebhook = getDiscordWebhook(body);
+    if (!discordWebhook) {
+      throw new WebhookError(
+        'No webhook set for the HelloAsso X Discord.',
+        WebhookErrorType.NO_WEBHOOK
+      );
+    }
+
+    const spreadsheetLink = await HelloAssoSpreadsheetHandler(body);
+    const payload = await getPayload(body, spreadsheetLink);
+    await axios.post(discordWebhook, payload);
+  } catch (err) {
+    await notifyError(body, err);
+  }
 };
 
 export default HelloAssoHandler;

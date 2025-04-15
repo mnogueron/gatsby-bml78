@@ -28,7 +28,7 @@ const toBase26 = (decimal: number): string => {
 };
 
 const credentials = JSON.parse(
-  Netlify.env.get('DRIVE_SHEET_CREDENTIALS') || ''
+  Netlify.env.get('DRIVE_SHEET_CREDENTIALS') || '{}'
 );
 
 const auth = new GoogleAuth({

@@ -2,6 +2,10 @@
 @import '~katex/dist/katex.min.css';
 @import './fonts.css';
 
+.katex {
+  overflow: auto hidden;
+}
+
 @media screen and (min-width: 62em) {
   .image-gallery-content:not(.fullscreen) .image-gallery-slides {
     height: 500px; /*your desired fix-height*/

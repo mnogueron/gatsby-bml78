@@ -48,6 +48,7 @@ const MediumRankBadge = ({rank, ...rest}: MediumRankBadgeProps) => {
         fontWeight="semibold"
         fontSize="md"
         letterSpacing="tight"
+        as="span"
       >
         {rank}
       </Text>

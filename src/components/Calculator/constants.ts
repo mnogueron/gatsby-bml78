@@ -1,4 +1,5 @@
 import {RankingSeuils, Seuils} from './types';
+import {Rank} from '../Scoreboard/types';
 
 const MyFFBadSeuils2 = {
   GeneratedDate: '2025-04-16',
@@ -535,7 +536,7 @@ type MyFFBadSeuil = (typeof MyFFBadSeuils2.ValuesLow)['0'];
 
 const getSeuils = <K extends keyof MyFFBadSeuil>(key: K) => {
   return Object.values(MyFFBadSeuils2.ValuesLow)
-    .map<[string, number | undefined, number | undefined]>(
+    .map<[Rank, number | undefined, number | undefined]>(
       (s, index: number, array) => {
         const maxInterval =
           index === 0
@@ -543,17 +544,17 @@ const getSeuils = <K extends keyof MyFFBadSeuil>(key: K) => {
             : array[index - 1][key];
         const value = s[key];
         return [
-          s.SubLevel,
+          s.SubLevel as Rank,
           value ? parseFloat(value) : undefined,
           maxInterval ? parseFloat(maxInterval) : undefined,
         ];
       }
     )
     .filter(
-      (seuil): seuil is [string, number, number] =>
+      (seuil): seuil is [Rank, number, number] =>
         typeof seuil[1] !== 'undefined' && typeof seuil[2] !== 'undefined'
     )
-    .sort((a, b) => a[1] - b[1]);
+    .sort((a, b) => b[1] - a[1]);
 };
 
 export const OLD_SEUILS: {male: RankingSeuils; female: RankingSeuils} = {
@@ -573,101 +574,101 @@ export const NEW_SEUILS: {male: RankingSeuils; female: RankingSeuils} = {
   male: {
     single: (
       [
-        ['N1', 2600, 2800],
-        ['N2', 2400, 2600],
-        ['N3', 2200, 2400],
-        ['R4', 2000, 2200],
-        ['R5', 1800, 2000],
-        ['R6', 1600, 1800],
-        ['D7', 1400, 1600],
-        ['D8', 1200, 1400],
-        ['D9', 1000, 1200],
-        ['P10', 800, 1000],
-        ['P11', 600, 800],
-        ['P12', 400, 600],
+        [Rank.N1, 2600, 2800],
+        [Rank.N2, 2400, 2600],
+        [Rank.N3, 2200, 2400],
+        [Rank.R4, 2000, 2200],
+        [Rank.R5, 1800, 2000],
+        [Rank.R6, 1600, 1800],
+        [Rank.D7, 1400, 1600],
+        [Rank.D8, 1200, 1400],
+        [Rank.D9, 1000, 1200],
+        [Rank.P10, 800, 1000],
+        [Rank.P11, 600, 800],
+        [Rank.P12, 400, 600],
       ] satisfies Seuils
-    ).sort((a, b) => a[1] - b[1]),
+    ).sort((a, b) => b[1] - a[1]),
     double: (
       [
-        ['N1', 2600, 2800],
-        ['N2', 2400, 2600],
-        ['N3', 2200, 2400],
-        ['R4', 2000, 2200],
-        ['R5', 1800, 2000],
-        ['R6', 1600, 1800],
-        ['D7', 1400, 1600],
-        ['D8', 1200, 1400],
-        ['D9', 1000, 1200],
-        ['P10', 800, 1000],
-        ['P11', 600, 800],
-        ['P12', 400, 600],
+        [Rank.N1, 2600, 2800],
+        [Rank.N2, 2400, 2600],
+        [Rank.N3, 2200, 2400],
+        [Rank.R4, 2000, 2200],
+        [Rank.R5, 1800, 2000],
+        [Rank.R6, 1600, 1800],
+        [Rank.D7, 1400, 1600],
+        [Rank.D8, 1200, 1400],
+        [Rank.D9, 1000, 1200],
+        [Rank.P10, 800, 1000],
+        [Rank.P11, 600, 800],
+        [Rank.P12, 400, 600],
       ] satisfies Seuils
-    ).sort((a, b) => a[1] - b[1]),
+    ).sort((a, b) => b[1] - a[1]),
     mixed: (
       [
-        ['N1', 2600, 2800],
-        ['N2', 2400, 2600],
-        ['N3', 2200, 2400],
-        ['R4', 2000, 2200],
-        ['R5', 1800, 2000],
-        ['R6', 1600, 1800],
-        ['D7', 1400, 1600],
-        ['D8', 1200, 1400],
-        ['D9', 1000, 1200],
-        ['P10', 800, 1000],
-        ['P11', 600, 800],
-        ['P12', 400, 600],
+        [Rank.N1, 2600, 2800],
+        [Rank.N2, 2400, 2600],
+        [Rank.N3, 2200, 2400],
+        [Rank.R4, 2000, 2200],
+        [Rank.R5, 1800, 2000],
+        [Rank.R6, 1600, 1800],
+        [Rank.D7, 1400, 1600],
+        [Rank.D8, 1200, 1400],
+        [Rank.D9, 1000, 1200],
+        [Rank.P10, 800, 1000],
+        [Rank.P11, 600, 800],
+        [Rank.P12, 400, 600],
       ] satisfies Seuils
-    ).sort((a, b) => a[1] - b[1]),
+    ).sort((a, b) => b[1] - a[1]),
   },
   female: {
     single: (
       [
-        ['N1', 2200, 2400],
-        ['N2', 2000, 2200],
-        ['N3', 1800, 2000],
-        ['R4', 1600, 1800],
-        ['R5', 1400, 1600],
-        ['R6', 1200, 1400],
-        ['D7', 1050, 1200],
-        ['D8', 900, 1050],
-        ['D9', 750, 900],
-        ['P10', 600, 750],
-        ['P11', 500, 600],
-        ['P12', 400, 500],
+        [Rank.N1, 2200, 2400],
+        [Rank.N2, 2000, 2200],
+        [Rank.N3, 1800, 2000],
+        [Rank.R4, 1600, 1800],
+        [Rank.R5, 1400, 1600],
+        [Rank.R6, 1200, 1400],
+        [Rank.D7, 1050, 1200],
+        [Rank.D8, 900, 1050],
+        [Rank.D9, 750, 900],
+        [Rank.P10, 600, 750],
+        [Rank.P11, 500, 600],
+        [Rank.P12, 400, 500],
       ] satisfies Seuils
-    ).sort((a, b) => a[1] - b[1]),
+    ).sort((a, b) => b[1] - a[1]),
     double: (
       [
-        ['N1', 2200, 2400],
-        ['N2', 2000, 2200],
-        ['N3', 1800, 2000],
-        ['R4', 1600, 1800],
-        ['R5', 1400, 1600],
-        ['R6', 1200, 1400],
-        ['D7', 1050, 1200],
-        ['D8', 900, 1050],
-        ['D9', 750, 900],
-        ['P10', 600, 750],
-        ['P11', 500, 600],
-        ['P12', 400, 500],
+        [Rank.N1, 2200, 2400],
+        [Rank.N2, 2000, 2200],
+        [Rank.N3, 1800, 2000],
+        [Rank.R4, 1600, 1800],
+        [Rank.R5, 1400, 1600],
+        [Rank.R6, 1200, 1400],
+        [Rank.D7, 1050, 1200],
+        [Rank.D8, 900, 1050],
+        [Rank.D9, 750, 900],
+        [Rank.P10, 600, 750],
+        [Rank.P11, 500, 600],
+        [Rank.P12, 400, 500],
       ] satisfies Seuils
-    ).sort((a, b) => a[1] - b[1]),
+    ).sort((a, b) => b[1] - a[1]),
     mixed: (
       [
-        ['N1', 2600, 2800],
-        ['N2', 2400, 2600],
-        ['N3', 2200, 2400],
-        ['R4', 2000, 2200],
-        ['R5', 1800, 2000],
-        ['R6', 1600, 1800],
-        ['D7', 1400, 1600],
-        ['D8', 1200, 1400],
-        ['D9', 1000, 1200],
-        ['P10', 800, 1000],
-        ['P11', 600, 800],
-        ['P12', 400, 600],
+        [Rank.N1, 2600, 2800],
+        [Rank.N2, 2400, 2600],
+        [Rank.N3, 2200, 2400],
+        [Rank.R4, 2000, 2200],
+        [Rank.R5, 1800, 2000],
+        [Rank.R6, 1600, 1800],
+        [Rank.D7, 1400, 1600],
+        [Rank.D8, 1200, 1400],
+        [Rank.D9, 1000, 1200],
+        [Rank.P10, 800, 1000],
+        [Rank.P11, 600, 800],
+        [Rank.P12, 400, 600],
       ] satisfies Seuils
-    ).sort((a, b) => a[1] - b[1]),
+    ).sort((a, b) => b[1] - a[1]),
   },
 };

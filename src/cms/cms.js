@@ -30,6 +30,8 @@ const ContentPages = [
   'histoire',
   'regles',
   'interclubs',
+  'transition-classements-25-26',
+  'calcul-classements-25-26',
 ];
 
 const previewTemplates = {

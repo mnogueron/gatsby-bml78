@@ -25,6 +25,7 @@ import {
 import ShortCode from '../components/ShortCode';
 import IFrame from '../components/IFrame';
 import TeamRanking from '../components/TeamRanking';
+import ELOCoteConverter from '../components/Calculator/ELOCoteConverter';
 
 const Table = props => (
   <TableContainer>
@@ -183,6 +184,7 @@ export const renderAst = new RehypeReact({
     teamranking: withChildrenAsJSONProps(TeamRanking),
     teamcalendar: withChildrenAsJSONProps(TeamCalendar),
     gallery: withChildrenAsJSONProps(Gallery),
+    elocoteconverter: ELOCoteConverter,
     h1: H1,
     h2: H2,
     h3: H3,

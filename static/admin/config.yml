@@ -383,6 +383,14 @@ collections:
         label: 'Les Interclubs'
         name: 'interclubs'
         fields: *CONTENT_PAGE
+      - file: 'src/pages/badminton/classements-25-26/transition.md'
+        label: 'Transition des classements'
+        name: 'transition-classements-25-26'
+        fields: *CONTENT_PAGE
+      - file: 'src/pages/badminton/classements-25-26/calcul.md'
+        label: 'Calcul des classements'
+        name: 'calcul-classements-25-26'
+        fields: *CONTENT_PAGE
 
   - name: 'articles'
     label: 'Articles'

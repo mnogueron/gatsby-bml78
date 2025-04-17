@@ -1,6 +1,6 @@
 import {Gender, Seuils} from './types';
 import {NEW_SEUILS, OLD_SEUILS} from './constants';
-import {Rank} from '../Scoreboard/types';
+import {Rank} from '../../Scoreboard/types';
 
 const getInterval = (
   cote: number,

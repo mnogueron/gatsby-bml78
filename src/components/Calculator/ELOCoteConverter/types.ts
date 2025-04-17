@@ -1,4 +1,4 @@
-import {Rank} from '../Scoreboard/types';
+import {Rank} from '../../Scoreboard/types';
 
 export enum Gender {
   FEMALE = 'female',

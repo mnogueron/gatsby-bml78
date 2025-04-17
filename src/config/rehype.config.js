@@ -26,6 +26,7 @@ import ShortCode from '../components/ShortCode';
 import IFrame from '../components/IFrame';
 import TeamRanking from '../components/TeamRanking';
 import ELOCoteConverter from '../components/Calculator/ELOCoteConverter';
+import Tables from '../components/Tables';
 
 const Table = props => (
   <TableContainer>
@@ -208,5 +209,6 @@ export const renderAst = new RehypeReact({
     figcaption: FigCaption,
     code: ShortCode,
     iframe: IFrame,
+    customtables: withChildrenAsJSONProps(Tables),
   },
 }).Compiler;

@@ -13,8 +13,8 @@ import {
 } from '@chakra-ui/react';
 import {Gender} from './types';
 import {convertCotesToELO} from './ELOConverterUtils';
-import MediumRankBadge from '../Scoreboard/RankBadge/MediumRankBadge';
-import {Rank} from '../Scoreboard/types';
+import MediumRankBadge from '../../Scoreboard/RankBadge/MediumRankBadge';
+import {Rank} from '../../Scoreboard/types';
 import {HiArrowNarrowDown, HiArrowNarrowRight} from 'react-icons/hi';
 import {OLD_SEUILS} from './constants';
 

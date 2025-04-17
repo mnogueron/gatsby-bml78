@@ -5,7 +5,9 @@ heading: |-
   Transition des classements
   24-25 vers 25-26
 ---
-À la rentrée 2025 - 2026, les méthodes de calcul du CPPH sont mises à jour pour intégrer un système de classement linéaire (actuellement exponentiel). À date du **04/09/2025**, les cotes des joueurs seront transférés vers ce nouveau système.
+À la rentrée 2025 - 2026 la FFBad introduit de nouvelles méthodes de calcul du CPPH. Elles permettront de mettre en place un système de classement linéaire à l'opposé de l'actuel exponentiel, pour stopper l'inflation des scores. À date du **04/09/2025**, les cotes des joueurs seront transférés vers ce nouveau système.
+
+Cette page vous donnera les informations nécessaire pour comprendre comment la transition se fera. Pour plus d'infos concernant les nouvelles méthodes de calcul du CPPH, c'est [ici 👉 (Calcul des classements - 25-26)](/badminton/classements-25-26/calcul).
 
 ### Ajustements
 Lors de la transition des points, les principes "d'insuffisance de résultats" et "d'ajustement annuel de l'inflation" du nouveau classement ne seront pas appliqués. Cependant, les principes de cote minimum 1 et 2 seront appliqués au préalable, avant changement d'échelle.
@@ -31,14 +33,7 @@ Les seuils du nouveau classement sont définis selon le tableau ci-dessous, les 
 
 #### Tableau des nouveaux seuils
 
-|              | Max  | N1   | N2   | N3   | R4   | R5   | R6   | D7   | D8   | D9   | P10 | P11 | P12 |
-|--------------|------|------|------|------|------|------|------|------|------|------|-----|-----|-----|
-| Simple Dame  | 2400 | 2200 | 2000 | 1800 | 1600 | 1400 | 1200 | 1050 | 900  | 750  | 600 | 500 | 400 |
-| Simple Homme | 2800 | 2600 | 2400 | 2200 | 2000 | 1800 | 1600 | 1400 | 1200 | 1000 | 800 | 600 | 400 |
-| Double Dame  | 2400 | 2200 | 2000 | 1800 | 1600 | 1400 | 1200 | 1050 | 900  | 750  | 600 | 500 | 400 |
-| Double Homme | 2800 | 2600 | 2400 | 2200 | 2000 | 1800 | 1600 | 1400 | 1200 | 1000 | 800 | 600 | 400 |
-| Mixte Dame   | 2800 | 2600 | 2400 | 2200 | 2000 | 1800 | 1600 | 1400 | 1200 | 1000 | 800 | 600 | 400 |
-| Mixte Homme  | 2800 | 2600 | 2400 | 2200 | 2000 | 1800 | 1600 | 1400 | 1200 | 1000 | 800 | 600 | 400 |
+<customtables>{"type": "ELOTransitionRankingNew"}</customtables>
 
 <sub>Dans le cas d'un joueur N1 qui fait parti du top BWF, les cotes après transition peuvent dépasser les max, et peuvent aller jusqu'à 4000 points.</sub>
 
@@ -78,19 +73,12 @@ Dans le nouveau classement il aura donc $2056$ points.
 
 ### Outil de conversion de cote
 
-Afin de vous donner une idée de votre cote à la rentrée 2025, nous vous proposons un convertisseur de cote. Attention, les résultats de ce calculateur sont à titre indicatif et peuvent différer de la valeur finale lors de la conversion du 4 Septembre 2025.
+Afin de vous donner une idée de votre cote à la rentrée 2025, nous vous proposons un convertisseur de cote. Attention, les résultats de ce calculateur sont à titre indicatif et peuvent différer de la valeur finale lors de la conversion du 4 Septembre 2025. Les seuils utilisés pour les calculs sont ceux présentés [ici pour les nouveaux](#tableau-des-nouveaux-seuils) et [ici pour les anciens (actuels)](#annexe---tableau-des-seuils).
 
 #### Convertisseur 
 
 <elocoteconverter></elocoteconverter>
 
 ### Annexe - Tableau des seuils
-##### Mis à jour le 17/04/2025
-|              | N1       | N2      | N3      | R4      | R5     | R6     | D7     | D8    | D9    | P10  | P11  | P12  |
-|--------------|----------|---------|---------|---------|--------|--------|--------|-------|-------|------|------|------|
-| Simple Dame  | 7609.50  | 3442.24 | 1214.45 | 653.08  | 326.69 | 135.25 | 56.10  | 21.93 | 8.15  | 3.74 | 0.51 | 0.00 |
-| Simple Homme | 3550.10  | 1176.74 | 428.71  | 211.83  | 95.43  | 41.64  | 21.65  | 12.48 | 6.86  | 3.16 | 0.49 | 0.00 |
-| Double Dame  | 12155.85 | 7170.28 | 3465.65 | 1861.15 | 896.12 | 355.66 | 136.67 | 43.43 | 10.56 | 5.06 | 0.48 | 0.00 |
-| Double Homme | 2717.38  | 1131.63 | 502.68  | 261.84  | 123.02 | 52.97  | 25.35  | 13.79 | 7.67  | 3.31 | 0.39 | 0.00 |
-| Mixte Dame   | 3952.16  | 2092.15 | 993.86  | 515.65  | 228.97 | 82.34  | 31.96  | 13.49 | 5.81  | 2.41 | 0.33 | 0.00 |
-| Mixte Homme  | 3952.16  | 2092.15 | 993.86  | 515.65  | 228.97 | 82.34  | 31.96  | 13.49 | 5.81  | 2.41 | 0.33 | 0.00 |
+
+<customtables>{"type": "ELOTransitionRankingOld"}</customtables>
